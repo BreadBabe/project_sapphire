@@ -12,12 +12,13 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueText = GetComponent<TextMeshProUGUI>();
-        dialogueText.color = Color.red;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        dialogueText.text = "Hello World";
+
     }
 }
