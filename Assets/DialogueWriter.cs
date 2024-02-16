@@ -50,8 +50,8 @@ public class DialogueWriter : MonoBehaviour
         if (timeSinceLetter + writingDelay < Time.realtimeSinceStartup)
         {
             if (currentLetter != sentenceCount)
-            {
-                timeSinceLetter = Time.realtimeSinceStartup;
+            {   
+                timeSinceLetter = Time.realtimeSinceStartup; 
                 incrementalSB.Append(importedText[currentLetter]);
                 dialogueText.text = incrementalSB.ToString();
                 currentLetter++;
