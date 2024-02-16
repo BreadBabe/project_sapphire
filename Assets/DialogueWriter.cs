@@ -19,7 +19,7 @@ public class DialogueWriter : MonoBehaviour
     //Stringbuilder
     private StringBuilder incrementalSB;
 
-    //
+    //Loop math
     private int sentenceCount;
     private int currentLetter;
     private float writingDelay;
