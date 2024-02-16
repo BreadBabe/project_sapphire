@@ -42,7 +42,6 @@ public class DialogueWriter : MonoBehaviour
     void Update()
     {
         TextWriter();
-
     }
 
     private void TextWriter()
