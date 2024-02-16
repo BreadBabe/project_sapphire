@@ -17,7 +17,7 @@ public class DialogueWriter : MonoBehaviour
     private string importedText;
 
     //Stringbuilder
-    StringBuilder incrementalSB;
+    private StringBuilder incrementalSB;
 
     //
     private int sentenceCount;
