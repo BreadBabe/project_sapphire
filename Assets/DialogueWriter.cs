@@ -41,17 +41,22 @@ public class DialogueWriter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextWriter();
+        TextWriter(importedText);
+        SpeakerLabelChanger("???");
     }
 
-    private void TextWriter()
+    /// <summary>
+    /// TextWriter method writes out the string in "currentText" letter for letter
+    /// when the method is called.
+    /// </summary>
+    private void TextWriter(string currentText)
     {
         if (timeSinceLetter + writingDelay < Time.realtimeSinceStartup)
         {
             if (currentLetter != sentenceCount)
             {   
                 timeSinceLetter = Time.realtimeSinceStartup; 
-                incrementalSB.Append(importedText[currentLetter]);
+                incrementalSB.Append(currentText[currentLetter]);
                 dialogueText.text = incrementalSB.ToString();
                 currentLetter++;
             }
@@ -60,5 +65,12 @@ public class DialogueWriter : MonoBehaviour
                 incrementalSB.Append("ERROR");
             }
         }
+    }
+    /// <summary>
+    /// Simply changes the speaker labels text
+    /// </summary>
+    private void SpeakerLabelChanger(string currentSpeaker)
+    {
+        dialogueSpeaker.text = currentSpeaker;
     }
 }
