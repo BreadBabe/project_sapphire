@@ -5,11 +5,25 @@ using UnityEngine.UI;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
 public class PizzaScript : MonoBehaviour {
+
     public static event Action<Story> OnCreateStory;
-	
+
+    [SerializeField] private TextAsset inkJSONAsset = null;
+    public Story story;
+
+
+    [SerializeField] private Image textBox = null;
+    [SerializeField] private Image choiceBox = null;
+
+    // UI Prefabs
+    [SerializeField] private Text textPrefab = null;
+    [SerializeField] private Button buttonPrefab = null;
+
     void Awake () {
-		// Remove the default message
-		RemoveChildren();
+		// Remove the default messages if any
+		RemoveChildren(textBox);
+		RemoveChildren(choiceBox);
+
 		StartStory();
 	}
 
@@ -24,17 +38,18 @@ public class PizzaScript : MonoBehaviour {
 	// Destroys all the old content and choices.
 	// Continues over all the lines of text, then displays all the choices. If there are no choices, the story is finished!
 	void RefreshView () {
-		// Remove all the UI on screen
-		RemoveChildren ();
-		
-		// Read all the content until we can't continue any more
-		while (story.canContinue) {
+        // Remove all the UI on screen
+        RemoveChildren(textBox);
+        RemoveChildren(choiceBox);
+
+        // Read all the content until we can't continue any more
+        while (story.canContinue) {
 			// Continue gets the next line of the story
 			string text = story.Continue ();
 			// This removes any white space from the text.
 			text = text.Trim();
-			// Display the text on screen!
-			CreateContentView(text);
+            // Display the text on screen!
+            CreateContentView(text);
 		}
 
 		// Display all the choices, if there are any!
@@ -58,8 +73,8 @@ public class PizzaScript : MonoBehaviour {
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
-	void OnClickChoiceButton (Choice choice) {
-		story.ChooseChoiceIndex (choice.index);
+	void OnClickChoiceButton(Choice choice) {
+		story.ChooseChoiceIndex(choice.index);
 		RefreshView();
 	}
 
@@ -67,18 +82,20 @@ public class PizzaScript : MonoBehaviour {
 	void CreateContentView (string text) {
 		Text storyText = Instantiate (textPrefab) as Text;
 		storyText.text = text;
-		storyText.transform.SetParent (canvas.transform, false);
+		storyText.transform.SetParent (textBox.transform, false);
+
 	}
 
 	// Creates a button showing the choice text
 	Button CreateChoiceView (string text) {
 		// Creates the button from a prefab
 		Button choice = Instantiate (buttonPrefab) as Button;
-		choice.transform.SetParent (canvas.transform, false);
+		choice.transform.SetParent (choiceBox.transform, false);
 		
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
+		choiceText.fontSize = 48;
 
 		// Make the button expand to fit the text
 		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
@@ -88,23 +105,10 @@ public class PizzaScript : MonoBehaviour {
 	}
 
 	// Destroys all the children of this gameobject (all the UI)
-	void RemoveChildren () {
-		int childCount = canvas.transform.childCount;
+	void RemoveChildren (Image removeChildFrom) {
+		int childCount = removeChildFrom.transform.childCount;
 		for (int i = childCount - 1; i >= 0; --i) {
-			Destroy (canvas.transform.GetChild (i).gameObject);
+			Destroy (removeChildFrom.transform.GetChild (i).gameObject);
 		}
 	}
-
-	[SerializeField]
-	private TextAsset inkJSONAsset = null;
-	public Story story;
-
-	[SerializeField]
-	private Canvas canvas = null;
-
-	// UI Prefabs
-	[SerializeField]
-	private Text textPrefab = null;
-	[SerializeField]
-	private Button buttonPrefab = null;
 }
