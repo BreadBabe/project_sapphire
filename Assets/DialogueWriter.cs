@@ -30,7 +30,7 @@ public class DialogueWriter : MonoBehaviour
     {
         incrementalSB = new StringBuilder();
         dialogueText = GetComponent<TextMeshProUGUI>();
-        importedText = "Hello World i am on TV";
+        importedText = "Hello World i am on TV and that is kinda cool okay not like it matter or anything like its just tv or or or or or or or or or or or or or or or or or or";
         importedText.ToCharArray();
         sentenceCount = importedText.Count();
         writingDelay = 0.1f;
