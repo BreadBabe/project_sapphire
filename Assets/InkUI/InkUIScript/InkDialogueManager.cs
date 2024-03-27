@@ -74,10 +74,11 @@ public class InkDialogueManager : MonoBehaviour {
 	Button CreateChoiceView (string text) {
 		// Creates the button from a prefab
 		Button choice = Instantiate (buttonPrefab) as Button;
-		choice.transform.SetParent (dialoguebox.transform, false);
-		
-		// Gets the text from the button prefab
-		Text choiceText = choice.GetComponentInChildren<Text> ();
+		choice.transform.SetParent (choicebox.transform, false);
+        
+
+        // Gets the text from the button prefab
+        Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
 
 		// Make the button expand to fit the text
@@ -93,6 +94,11 @@ public class InkDialogueManager : MonoBehaviour {
 		for (int i = childCount - 1; i >= 0; --i) {
 			Destroy (dialoguebox.transform.GetChild (i).gameObject);
 		}
+		childCount = choicebox.transform.childCount;
+		for (int j = childCount - 1; j >= 0; --j)
+		{
+			Destroy(choicebox.transform.GetChild (j).gameObject);
+		}
 	}
 
 	[SerializeField]
@@ -103,9 +109,11 @@ public class InkDialogueManager : MonoBehaviour {
 	private Canvas canvas = null;
     [SerializeField]
     private GameObject dialoguebox = null;
+    [SerializeField]
+    private GameObject choicebox = null;
 
-	// UI Prefabs
-	[SerializeField]
+    // UI Prefabs
+    [SerializeField]
 	private Text textPrefab = null;
 	[SerializeField]
 	private Button buttonPrefab = null;

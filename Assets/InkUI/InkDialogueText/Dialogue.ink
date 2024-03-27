@@ -1,18 +1,19 @@
 Before you stands a figure
-    * Shoot it
+    * [Shoot it]
         The bullet bounces right of it...It looks angry >:(
-        ** Run
+        ** [Run]
             youre too slow you fat rat...you die
-        ** Stand still.. you die... rat
-    * Wave
+        ** [Stand still..] 
+            you die... rat
+    * [Wave]
         It greets you with a :3
-        ** :3
+        ** [:3]
            :D
-        ** :)
+        ** [:)]
             :D
-        ** walk away
+        ** [walk away]
             it looks sad :(
-    * Look at it
+    * [Look at it]
         Nothing really happens
 --> END
     
