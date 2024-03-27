@@ -76,6 +76,7 @@ public class PizzaScript : MonoBehaviour {
 		// !!!
 
         // access ink varialbe story.variablesState["var_name"]
+		// love-gague that gets updated based on choice
     }
 
     // When we click the choice button, tell the story to choose that choice!
