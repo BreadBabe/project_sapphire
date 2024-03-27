@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dialogueText.text = "Hello World";
+        dialogueText.text = "Fuck. I forgot that I promised my dying grandma to meet my non-existent partner. Need to open -dating app- to find someone quickly.";
 
     }
 }
