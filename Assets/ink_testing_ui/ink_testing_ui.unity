@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8647cdf4020600243b74f07aee00d19e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSONAsset: {fileID: 4900000, guid: 8fa23755b59eb5b4f9abb36b349a39e4, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: e2e2f33edb318ee46ae41774dcc90bee, type: 3}
   textBox: {fileID: 1274766914}
   choiceBox: {fileID: 1467422910}
   textPrefab: {fileID: 11456674, guid: c715e5d2623298f4fb51c87429a7435b, type: 3}
