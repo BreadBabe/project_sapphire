@@ -31,6 +31,7 @@ public class PizzaScript : MonoBehaviour {
 	void StartStory () {
 		story = new Story (inkJSONAsset.text);
         if(OnCreateStory != null) OnCreateStory(story);
+
 		RefreshView();
 	}
 	
@@ -70,10 +71,15 @@ public class PizzaScript : MonoBehaviour {
 				StartStory();
 			});
 		}
-	}
 
-	// When we click the choice button, tell the story to choose that choice!
-	void OnClickChoiceButton(Choice choice) {
+        // update love-meter at the end of every refresh?
+		// !!!
+
+        // access ink varialbe story.variablesState["var_name"]
+    }
+
+    // When we click the choice button, tell the story to choose that choice!
+    void OnClickChoiceButton(Choice choice) {
 		story.ChooseChoiceIndex(choice.index);
 		RefreshView();
 	}
