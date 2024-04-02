@@ -1,4 +1,4 @@
-Before you stands a figure
+Before you stands a figure, aaaaaa aaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa
     * [Shoot it]
         The bullet bounces right of it...It looks angry >:(
         ** [Run]

@@ -102,7 +102,7 @@ public class PizzaScript : MonoBehaviour {
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
-		choiceText.fontSize = 48;
+		choiceText.fontSize = 32;
 
 		// Make the button expand to fit the text
 		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();
