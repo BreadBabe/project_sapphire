@@ -1,19 +1,19 @@
-Before you stands a figure
-    * [Shoot it]
-        The bullet bounces right of it...It looks angry >:(
-        ** [Run]
-            youre too slow you fat rat...you die
-        ** [Stand still..] 
-            you die... rat
+"Before you stands a dog"
+    * [Pet it]
+        "It looks happy"
+        ** [Pet again]
+            "It keeps looking at you happily wagging its tail"
+        ** [Get it a toy]
+            "It looks ecstatic!"
     * [Wave]
-        It greets you with a :3
-        ** [:3]
-           :D
-        ** [:)]
-            :D
+        "It simply sits there and smiles"
+        ** [smile at it]
+           ":3"
+        ** [Wave again]
+            "it keeps smiling"
         ** [walk away]
-            it looks sad :(
+            "it looks sad :("
     * [Look at it]
-        Nothing really happens
+        "the dog looks content"
 --> END
     
