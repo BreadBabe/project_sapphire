@@ -117,4 +117,8 @@ public class InkDialogueManager : MonoBehaviour {
 	private Text textPrefab = null;
 	[SerializeField]
 	private Button buttonPrefab = null;
+
+	//DialogueWriter
+	[SerializeField]
+	private GameObject DialogueWriter;
 }

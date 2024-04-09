@@ -541,7 +541,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 389, y: 31}
-  m_SizeDelta: {x: 359, y: 391}
+  m_SizeDelta: {x: 453, y: 387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1350309892
 MonoBehaviour:
@@ -1091,6 +1091,7 @@ MonoBehaviour:
   choicebox: {fileID: 1651890443}
   textPrefab: {fileID: 11456674, guid: 29169b3811cca0c42830a3d14887bf6c, type: 3}
   buttonPrefab: {fileID: 11455116, guid: e6419ff117d48f643961cc0a548978ef, type: 3}
+  DialogueWriter: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
