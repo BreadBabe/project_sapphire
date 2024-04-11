@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
+using System.Text;
 using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
@@ -85,13 +88,30 @@ public class PizzaScript : MonoBehaviour {
 		RefreshView();
 	}
 
-	// Creates a textbox showing the the line of text
+	// Creates a textbox showing the the line of text, display text one character at a time
 	void CreateContentView (string text) {
-		Text storyText = Instantiate (textPrefab) as Text;
-		storyText.text = text;
-		storyText.transform.SetParent (textBox.transform, false);
 
-	}
+		Text storyText = Instantiate (textPrefab) as Text;
+        storyText.transform.SetParent(textBox.transform, false);
+
+		StartCoroutine(Sleeper(storyText, text));
+    }
+
+	IEnumerator Sleeper(Text storyText, string text)
+	{
+        StringBuilder incremText = new StringBuilder();
+
+		for (int i = 0; i < text.Length; i++)
+		{
+            incremText.Append(text[i]);
+
+            storyText.text = incremText.ToString();
+
+			yield return new WaitForSeconds(.1f);
+		}
+
+		yield return null;
+    }
 
 	// Creates a button showing the choice text
 	Button CreateChoiceView (string text) {
