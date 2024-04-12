@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Text;
 using Ink.Runtime;
+using UnityEditor.Rendering;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 // This is a super bare bones example of how to play and display a ink story in Unity.
@@ -14,13 +14,18 @@ public class PizzaScript : MonoBehaviour {
     [SerializeField] private TextAsset inkJSONAsset = null;
     public Story story;
 
-
     [SerializeField] private Image textBox = null;
     [SerializeField] private Image choiceBox = null;
 
     // UI Prefabs
     [SerializeField] private Text textPrefab = null;
     [SerializeField] private Button buttonPrefab = null;
+
+	private bool duringWriting;
+
+    [SerializeField] private GameObject lovemeterShutter = null;
+
+	private float loveAmount;
 
     void Awake () {
 		// Remove the default messages if any
@@ -75,6 +80,10 @@ public class PizzaScript : MonoBehaviour {
 			});
 		}
 
+		// love meter updates on each refresh by fetching global variable in the ink script
+		loveAmount = (int)story.variablesState["loveAmount"];
+        lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
+
         // update love-meter at the end of every refresh?
 		// !!!
 
@@ -84,8 +93,13 @@ public class PizzaScript : MonoBehaviour {
 
     // When we click the choice button, tell the story to choose that choice!
     void OnClickChoiceButton(Choice choice) {
-		story.ChooseChoiceIndex(choice.index);
-		RefreshView();
+
+		// only when dialogue text currently isnt being written out
+		if (!duringWriting)
+		{
+            story.ChooseChoiceIndex(choice.index);
+            RefreshView();
+        }
 	}
 
 	// Creates a textbox showing the the line of text, display text one character at a time
@@ -94,11 +108,14 @@ public class PizzaScript : MonoBehaviour {
 		Text storyText = Instantiate (textPrefab) as Text;
         storyText.transform.SetParent(textBox.transform, false);
 
+		// begin incremental letter write
 		StartCoroutine(Sleeper(storyText, text));
     }
 
 	IEnumerator Sleeper(Text storyText, string text)
 	{
+		// lock choice picking with bool
+		duringWriting = true;
         StringBuilder incremText = new StringBuilder();
 
 		for (int i = 0; i < text.Length; i++)
@@ -107,9 +124,11 @@ public class PizzaScript : MonoBehaviour {
 
             storyText.text = incremText.ToString();
 
-			yield return new WaitForSeconds(.1f);
+			// sleep on coroutine thread between letter write
+			yield return new WaitForSeconds(.05f);
 		}
 
+		duringWriting = false;
 		yield return null;
     }
 
