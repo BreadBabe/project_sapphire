@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -711,7 +711,7 @@ MonoBehaviour:
   textBox: {fileID: 1040697832}
   choiceBox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: 29169b3811cca0c42830a3d14887bf6c, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: e6419ff117d48f643961cc0a548978ef, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 4158ea3fcfbb9014486ef794c5fdc5e3, type: 3}
   lovemeterShutter: {fileID: 1800950984}
   inkCanvas: {fileID: 1393977555}
 --- !u!4 &1190925971

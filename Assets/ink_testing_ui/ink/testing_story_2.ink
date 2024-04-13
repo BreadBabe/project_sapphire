@@ -12,16 +12,17 @@ Before you stands a figure
         ** [Run] # bad
             youre too slow you fat rat...you die
             ~ NegativeResponse()
-        ** [Stand still.. you die... rat] # bad
+        ** [Stand still] # bad
+            .. you die... rat
             ~ NegativeResponse()
     * [Wave] # good
         It greets you with a :3
         ~ PositiveResponse()
         ** [:3] # good
-           :D 
+       :D 
            ~ PositiveResponse()
         ** [:)] # good
-            :D
+        :D
             ~ PositiveResponse()
         ** [walk away] # bad
             it looks sad :(

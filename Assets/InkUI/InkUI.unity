@@ -1086,12 +1086,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 4900000, guid: 3a1e8274942593b44abbb894b0be2a62, type: 3}
-  canvas: {fileID: 1908123726}
-  dialoguebox: {fileID: 1004039808}
-  choicebox: {fileID: 1651890443}
+  textBox: {fileID: 1004039808}
+  choiceBox: {fileID: 1651890443}
   textPrefab: {fileID: 11456674, guid: 29169b3811cca0c42830a3d14887bf6c, type: 3}
   buttonPrefab: {fileID: 11455116, guid: e6419ff117d48f643961cc0a548978ef, type: 3}
-  DialogueWriter: {fileID: 0}
+  lovemeterShutter: {fileID: 0}
+  inkCanvas: {fileID: 1908123722}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
