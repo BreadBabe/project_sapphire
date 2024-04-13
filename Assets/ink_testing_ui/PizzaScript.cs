@@ -14,8 +14,8 @@ public class PizzaScript : MonoBehaviour {
     [SerializeField] private TextAsset inkJSONAsset = null;
     public Story story;
 
-    [SerializeField] private Image textBox = null;
-    [SerializeField] private Image choiceBox = null;
+    [SerializeField] private GameObject textBox = null;
+    [SerializeField] private GameObject choiceBox = null;
 
     // UI Prefabs
     [SerializeField] private Text textPrefab = null;
@@ -27,6 +27,18 @@ public class PizzaScript : MonoBehaviour {
 
 	private float loveAmount;
 
+    [SerializeField] private GameObject inkCanvas = null;
+
+    // dynamic sprites fetched during runtime, based on ink vars
+    private GameObject envPrefab;
+    private GameObject charPrefab;
+
+	private string charName;
+	private string charEmotion;
+
+	private string envName;
+
+
     void Awake () {
 		// Remove the default messages if any
 		RemoveChildren(textBox);
@@ -35,12 +47,38 @@ public class PizzaScript : MonoBehaviour {
 		StartStory();
 	}
 
-	// Creates a new Story object with the compiled story which we can then play!
-	void StartStory () {
+    private void Start()
+    {
+        
+    }
+
+    // Creates a new Story object with the compiled story which we can then play!
+    void StartStory () {
 		story = new Story (inkJSONAsset.text);
         if(OnCreateStory != null) OnCreateStory(story);
 
-		RefreshView();
+		// fetch dynamic content
+		charName = (string)story.variablesState["charName"];
+		charEmotion = (string)story.variablesState["charEmotion"];
+
+        string envName = (string)story.variablesState["envName"];
+
+        envPrefab = Instantiate((GameObject)Resources.Load($"{envName}Environment"));
+		charPrefab = Instantiate((GameObject)Resources.Load($"{charName}{charEmotion}"));
+
+		/*
+		Instantiate(envPrefab);
+		Instantiate(charPrefab);
+		*/
+
+		envPrefab.transform.SetParent(inkCanvas.transform, false);
+        charPrefab.transform.SetParent(inkCanvas.transform, false);
+
+		envPrefab.transform.SetAsFirstSibling();
+		charPrefab.transform.SetAsFirstSibling();
+
+        // call proceeding method
+        RefreshView();
 	}
 	
 	// This is the main function called every time the story changes. It does a few things:
@@ -84,11 +122,15 @@ public class PizzaScript : MonoBehaviour {
 		loveAmount = (int)story.variablesState["loveAmount"];
         lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
 
+		// doesnt function because all the prefabs have the same texture
+        charEmotion = (string)story.variablesState["charEmotion"];
+        charPrefab = (GameObject)Resources.Load($"{charName}{charEmotion}");
+
         // update love-meter at the end of every refresh?
-		// !!!
+        // !!!
 
         // access ink varialbe story.variablesState["var_name"]
-		// love-gague that gets updated based on choice
+        // love-gague that gets updated based on choice
     }
 
     // When we click the choice button, tell the story to choose that choice!
@@ -151,7 +193,7 @@ public class PizzaScript : MonoBehaviour {
 	}
 
 	// Destroys all the children of this gameobject (all the UI)
-	void RemoveChildren (Image removeChildFrom) {
+	void RemoveChildren (GameObject removeChildFrom) {
 		int childCount = removeChildFrom.transform.childCount;
 		for (int i = childCount - 1; i >= 0; --i) {
 			Destroy (removeChildFrom.transform.GetChild (i).gameObject);
