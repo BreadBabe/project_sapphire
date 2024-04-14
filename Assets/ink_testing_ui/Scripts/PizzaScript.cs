@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Ink.Runtime;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +25,7 @@ public class PizzaScript : MonoBehaviour {
     [SerializeField] private Button buttonPrefab = null;
 
 	private bool duringWriting;
+	private bool populatedScene;
 
     [SerializeField] private GameObject lovemeterShutter = null;
 
@@ -40,6 +44,10 @@ public class PizzaScript : MonoBehaviour {
 
 
     void Awake () {
+		// init
+		populatedScene = false;
+
+
 		// Remove the default messages if any
 		RemoveChildren(textBox);
 		RemoveChildren(choiceBox);
@@ -63,24 +71,33 @@ public class PizzaScript : MonoBehaviour {
 
         string envName = (string)story.variablesState["envName"];
 
-        envPrefab = Instantiate((GameObject)Resources.Load($"{envName}Environment"));
-		charPrefab = Instantiate((GameObject)Resources.Load($"{charName}{charEmotion}"));
-
 		/*
-		Instantiate(envPrefab);
-		Instantiate(charPrefab);
+		will replace background, char if story file has 
+		been switched before this method is called a second time
 		*/
 
-		envPrefab.transform.SetParent(inkCanvas.transform, false);
+		if (populatedScene)
+		{
+            Destroy(envPrefab);
+            Destroy(charPrefab);
+        }
+
+        envPrefab = Instantiate((GameObject)Resources.Load($"{envName}Environment"));
+        charPrefab = Instantiate((GameObject)Resources.Load($"{charName}{charEmotion}"));
+
+        envPrefab.transform.SetParent(inkCanvas.transform, false);
         charPrefab.transform.SetParent(inkCanvas.transform, false);
 
-		envPrefab.transform.SetAsFirstSibling();
-		charPrefab.transform.SetAsFirstSibling();
+        // sibling order matters here
+        charPrefab.transform.SetAsFirstSibling();
+        envPrefab.transform.SetAsFirstSibling();
+
+		populatedScene = true;
 
         // call proceeding method
         RefreshView();
 	}
-	
+
 	// This is the main function called every time the story changes. It does a few things:
 	// Destroys all the old content and choices.
 	// Continues over all the lines of text, then displays all the choices. If there are no choices, the story is finished!
@@ -122,15 +139,18 @@ public class PizzaScript : MonoBehaviour {
 		loveAmount = (int)story.variablesState["loveAmount"];
         lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
 
-		// doesnt function because all the prefabs have the same texture
+		// replace character after each response
         charEmotion = (string)story.variablesState["charEmotion"];
-        charPrefab = (GameObject)Resources.Load($"{charName}{charEmotion}");
 
-        // update love-meter at the end of every refresh?
-        // !!!
+		int previousIndex = charPrefab.transform.GetSiblingIndex();
+		Destroy(charPrefab);
 
-        // access ink varialbe story.variablesState["var_name"]
-        // love-gague that gets updated based on choice
+		charPrefab = Instantiate((GameObject)Resources.Load($"{charName}{charEmotion}"));
+		charPrefab.transform.SetParent(inkCanvas.transform, false);
+        charPrefab.transform.SetSiblingIndex(previousIndex);
+
+
+        Debug.Log("pizza");
     }
 
     // When we click the choice button, tell the story to choose that choice!
@@ -183,7 +203,9 @@ public class PizzaScript : MonoBehaviour {
 		// Gets the text from the button prefab
 		Text choiceText = choice.GetComponentInChildren<Text> ();
 		choiceText.text = text;
+
 		choiceText.fontSize = 32;
+		choiceText.fontStyle = FontStyle.Bold;
 
 		// Make the button expand to fit the text
 		HorizontalLayoutGroup layoutGroup = choice.GetComponent <HorizontalLayoutGroup> ();

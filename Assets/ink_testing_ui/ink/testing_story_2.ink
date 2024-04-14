@@ -4,34 +4,32 @@ VAR charName = "Astro"
 VAR charEmotion = "Neutral"
 VAR loveAmount = 8
 
-# story block
 Before you stands a figure
-    * [Shoot it] # bad
+    * [Shoot it]
         The bullet bounces right of it...It looks angry >:(
         ~ NegativeResponse()
-        ** [Run] # bad
+        ** [Run]
             youre too slow you fat rat...you die
             ~ NegativeResponse()
-        ** [Stand still] # bad
+        ** [Stand still]
             .. you die... rat
             ~ NegativeResponse()
-    * [Wave] # good
+    * [Wave]
         It greets you with a :3
         ~ PositiveResponse()
-        ** [:3] # good
+        ** [:3]
        :D 
            ~ PositiveResponse()
-        ** [:)] # good
+        ** [:)]
         :D
             ~ PositiveResponse()
-        ** [walk away] # bad
+        ** [walk away]
             it looks sad :(
             ~ NegativeResponse()
     * [Look at it]
         Nothing really happens
 --> END
 
-# function blocks
 === function PositiveResponse ===
         ~ loveAmount++
         ~ charEmotion = "Positive"

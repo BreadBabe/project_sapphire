@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -559,6 +559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1040697833}
   - component: {fileID: 1040697837}
+  - component: {fileID: 1040697838}
   - component: {fileID: 1040697836}
   - component: {fileID: 1040697835}
   - component: {fileID: 1040697834}
@@ -648,11 +649,11 @@ MonoBehaviour:
     m_Top: 20
     m_Bottom: 20
   m_ChildAlignment: 0
-  m_Spacing: 20
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -664,6 +665,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040697832}
   m_CullTransparentMesh: 1
+--- !u!114 &1040697838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040697832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &1190925968
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +725,7 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: e2e2f33edb318ee46ae41774dcc90bee, type: 3}
   textBox: {fileID: 1040697832}
   choiceBox: {fileID: 578973353}
-  textPrefab: {fileID: 11456674, guid: 29169b3811cca0c42830a3d14887bf6c, type: 3}
+  textPrefab: {fileID: 11456674, guid: c715e5d2623298f4fb51c87429a7435b, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 4158ea3fcfbb9014486ef794c5fdc5e3, type: 3}
   lovemeterShutter: {fileID: 1800950984}
   inkCanvas: {fileID: 1393977555}
