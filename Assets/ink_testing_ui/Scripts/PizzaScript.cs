@@ -89,7 +89,7 @@ public class PizzaScript : MonoBehaviour {
         charPrefab.transform.SetParent(inkCanvas.transform, false);
 
         // sibling order matters here
-        charPrefab.transform.SetAsFirstSibling();
+        charPrefab.transform.SetAsLastSibling();
         envPrefab.transform.SetAsFirstSibling();
 
 		populatedScene = true;
