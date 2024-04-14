@@ -148,9 +148,6 @@ public class PizzaScript : MonoBehaviour {
 		charPrefab = Instantiate((GameObject)Resources.Load($"{charName}{charEmotion}"));
 		charPrefab.transform.SetParent(inkCanvas.transform, false);
         charPrefab.transform.SetSiblingIndex(previousIndex);
-
-
-        Debug.Log("pizza");
     }
 
     // When we click the choice button, tell the story to choose that choice!
