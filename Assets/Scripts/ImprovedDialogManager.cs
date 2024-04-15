@@ -10,6 +10,25 @@ public class LunaInkManager : MonoBehaviour
 
     [SerializeField] private float typingSpeed;
 
+    [SerializeField] private TextAsset inkJSONAsset = null;
+    private Story story;
+
+    [SerializeField] private GameObject dialoguebox = null;
+    [SerializeField] private GameObject choicebox = null;
+
+    [SerializeField] private Text textPrefab = null;
+
+    [SerializeField] private Button buttonPrefab = null;
+
+    [SerializeField] private GameObject Character;
+
+    private string charName;
+    private string charEmotion;
+
+    [SerializeField] private GameObject lovemeterShutter = null;
+
+    private float loveAmount;
+
     private Text storyText;
     private string currentText;
     private bool isTyping;
@@ -24,11 +43,20 @@ public class LunaInkManager : MonoBehaviour
     {
         story = new Story(inkJSONAsset.text);
         if (OnCreateStory != null) OnCreateStory(story);
+       
+
+        charName = (string)story.variablesState["charName"];
+        charEmotion = (string)story.variablesState["charEmotion"];
+
         RefreshView();
     }
 
     void RefreshView()
     {
+ 
+
+        Debug.Log("pizza");
+        
         RemoveChildren();
 
         string text = story.Continue().Trim();
@@ -41,6 +69,7 @@ public class LunaInkManager : MonoBehaviour
 
     void OnClickChoiceButton(Choice choice)
     {
+ 
         story.ChooseChoiceIndex(choice.index);
         RefreshView();
     }
@@ -50,6 +79,16 @@ public class LunaInkManager : MonoBehaviour
         storyText = Instantiate(textPrefab) as Text;
         storyText.text = ""; // Start with empty text
         storyText.transform.SetParent(dialoguebox.transform, false);
+
+
+        charEmotion = (string)story.variablesState["charEmotion"];
+
+        Sprite spr = Resources.Load($"{charName}{charEmotion}", typeof(Sprite)) as Sprite;
+        Character.GetComponent<Image>().sprite = spr;
+
+        loveAmount = (int)story.variablesState["loveAmount"];
+        lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
+
         StartCoroutine(TypeText(text)); // Start typing effect
     }
 
@@ -124,18 +163,10 @@ public class LunaInkManager : MonoBehaviour
                     StartStory();
                 });
             }
+
         }
     }
 
-    [SerializeField] private TextAsset inkJSONAsset = null;
-    private Story story;
-
-    [SerializeField] private GameObject dialoguebox = null;
-    [SerializeField] private GameObject choicebox = null;
-
-    [SerializeField] private Text textPrefab = null;
-
-    [SerializeField] private Button buttonPrefab = null;
 }
 
 
