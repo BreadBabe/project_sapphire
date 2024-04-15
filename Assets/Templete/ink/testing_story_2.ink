@@ -2,7 +2,7 @@ VAR envName = "Home"
 VAR charName = "Astro"
 
 VAR charEmotion = "Neutral"
-VAR loveAmount = 8
+VAR loveAmount = 0
 
 Before you stands a figure
     * [Shoot it]
@@ -15,8 +15,9 @@ Before you stands a figure
             .. you die... rat
             ~ NegativeResponse()
     * [Wave]
+     ~ PositiveResponse()
         It greets you with a :3
-        ~ PositiveResponse()
+       
         ** [:3]
        :D 
            ~ PositiveResponse()
