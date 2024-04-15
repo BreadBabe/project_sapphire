@@ -15,9 +15,8 @@ Before you stands a figure
             .. you die... rat
             ~ NegativeResponse()
     * [Wave]
-     ~ PositiveResponse()
         It greets you with a :3
-       
+        ~ PositiveResponse()
         ** [:3]
        :D 
            ~ PositiveResponse()
