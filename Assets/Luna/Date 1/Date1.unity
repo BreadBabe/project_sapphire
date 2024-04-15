@@ -721,7 +721,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190925968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934e76416e41941c3aa1cd2790a1bb17, type: 3}
+  m_Script: {fileID: 11500000, guid: 83187ece2bec2422299cbf47df791d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   typingSpeed: 50
@@ -1120,8 +1120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: 191, y: -7}
-  m_SizeDelta: {x: 697, y: 700}
+  m_AnchoredPosition: {x: 289.29736, y: -66.00067}
+  m_SizeDelta: {x: 323.2234, y: 582.6166}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600876854
 MonoBehaviour:
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fd115b3421924fcab849e4a72eb7c6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1d36ae73886546059e27c39a56a8f3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
