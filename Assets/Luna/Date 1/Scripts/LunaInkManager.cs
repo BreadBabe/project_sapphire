@@ -63,11 +63,18 @@ public class LunaInkManager : MonoBehaviour
         Text choiceText = choice.GetComponentInChildren<Text>();
         choiceText.text = text;
 
+        choiceText.fontSize = 32; // Set the font size as desired
+
         HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
         layoutGroup.childForceExpandHeight = false;
 
+        // Adjust the spacing between buttons (in pixels)
+        layoutGroup.spacing = 1; // Change this value as needed
+
         return choice;
     }
+
+
 
     void RemoveChildren()
     {
