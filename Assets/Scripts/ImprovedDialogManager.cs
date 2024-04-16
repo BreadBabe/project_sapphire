@@ -22,9 +22,13 @@ public class LunaInkManager : MonoBehaviour
     [SerializeField] private Button buttonPrefab = null;
 
     [SerializeField] private GameObject Character;
+    [SerializeField] private GameObject Audio;
+
 
     private string charName;
     private string charEmotion;
+    private string charSound;
+
 
     [SerializeField] private GameObject lovemeterShutter = null;
 
@@ -43,11 +47,9 @@ public class LunaInkManager : MonoBehaviour
     void StartStory()
     {
         story = new Story(inkJSONAsset.text);
-        if (OnCreateStory != null) OnCreateStory(story);
-       
-
         charName = (string)story.variablesState["charName"];
         charEmotion = (string)story.variablesState["charEmotion"];
+
 
         RefreshView();
     }
@@ -86,6 +88,11 @@ public class LunaInkManager : MonoBehaviour
 
         Sprite spr = Resources.Load($"{charName}{charEmotion}", typeof(Sprite)) as Sprite;
         Character.GetComponent<Image>().sprite = spr;
+
+        charSound = (string)story.variablesState["charSound"];
+        AudioClip soundEffect = Resources.Load($"{charName}{charSound}", typeof(AudioClip)) as AudioClip;
+        Audio.GetComponent<AudioSource>().clip = soundEffect;
+        Audio.GetComponent<AudioSource>().Play();
 
         loveAmount = (int)story.variablesState["loveAmount"];
         lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
@@ -145,6 +152,8 @@ public class LunaInkManager : MonoBehaviour
         isTyping = false;
         DisplayChoices(); // Display choices after typing is complete
     }
+
+
 
 
 
