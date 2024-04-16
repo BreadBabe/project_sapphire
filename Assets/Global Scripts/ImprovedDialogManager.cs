@@ -7,6 +7,7 @@ using System.Collections;
 public class LunaInkManager : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
+    [SerializeField] private AudioSource typingAudioSource;
 
     [SerializeField] private float typingSpeed;
 
@@ -134,6 +135,10 @@ public class LunaInkManager : MonoBehaviour
         {
             currentText += letter;
             storyText.text = currentText;
+            if (typingAudioSource != null)
+            {
+                typingAudioSource.Play();
+            }
             yield return new WaitForSeconds(timePerCharacter); // Wait for timePerCharacter seconds per character
         }
 
