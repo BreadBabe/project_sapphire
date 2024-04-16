@@ -721,11 +721,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1190925968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83187ece2bec2422299cbf47df791d3b, type: 3}
+  m_Script: {fileID: 11500000, guid: 934e76416e41941c3aa1cd2790a1bb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   typingSpeed: 50
-  inkJSONAsset: {fileID: 4900000, guid: e2e2f33edb318ee46ae41774dcc90bee, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: e2c1a8a21bc324246b7e2f7cc5606348, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: e29963836c2c541ffbd58777de03ea4c, type: 3}
