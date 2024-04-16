@@ -60,12 +60,12 @@ Hey, Over here!
   ~charEmotion= "Neutral"
     Afraid of a little mud?
    ** [...No]
-    I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus If things get exiting we might even have to outrun the cops. 
+    I Had planned for us to go do some totally legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus we might even get to outrun the cops. 
         -> GRAVEROBBING
 
    **[No!]
    ~HappyResponse()
-    I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus If things get exiting we might even have to outrun the cops. 
+    I Had planned for us to go do some totally legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus we might even get to outrun the cops. 
              -> GRAVEROBBING
 
    **[yes?]
@@ -75,12 +75,13 @@ Hey, Over here!
     
 *[I don't want to get dirty]
      ~AnnoyedResponse()
-     C'mon, wheres your sense of adventure. A little dirt never hurt anybody.I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus If things get exiting we might even have to outrun the cops. 
+     C'mon, wheres your sense of adventure? A little dirt never hurt anybody. I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus we might even get to outrun the cops. 
              ->GRAVEROBBING
 
 * [...huh?]
     Afraid of a little mud? It doesn't bite 
    ** [...No]
+   SICK! Let's get down and dirty, but not in the sexual way. Or something. 
     ~HappyResponse()
          -> GRAVEROBBING
    **[No!]
@@ -94,15 +95,15 @@ Hey, Over here!
   
  == GRAVEROBBING==  
  
-   *[Hell yeah!] 
-         ~SmileResponse()
-         That's the spirit! C'mon , I've already picked out a few graves to choose from If were lucky we'll manage to dig up one of the really rich ones. No one says no to some free gold jewlry right.
-             -> CRIMES
- 
    *[Isn't that like, actually illegal tho?]
          ~charEmotion= "Indifferent"
           well, Only if you get caught, And I happen to be a profensional. C'mon it even say's so in my bio. I promise it will be fun, we might even make profit. 
-         -> CRIMES
+             -> CRIMES
+             
+    *[Fuck yes!]
+    That's the spirit! C'mon, I've already picked out a few graves to choose from. If we're lucky we'll manage to dig up one of the really rich ones. No one says no to some free gold jewellery right?
+    -> CRIMES   
+    
 
    *[uhm, What The Actual Fuck?]
          ~AnnoyedResponse()
