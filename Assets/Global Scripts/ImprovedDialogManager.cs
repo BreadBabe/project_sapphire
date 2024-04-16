@@ -24,7 +24,6 @@ public class LunaInkManager : MonoBehaviour
     [SerializeField] private GameObject Character;
     [SerializeField] private GameObject Audio;
 
-
     private string charName;
     private string charEmotion;
     private string charSound;
