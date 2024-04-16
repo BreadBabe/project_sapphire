@@ -1,13 +1,15 @@
 VAR charName="Luna"
 
-VAR charEmotion="Neutral"
+VAR charEmotion="InDistance"
 VAR loveAmount=0
 
 
 Hey! I'm Luna. Pretty happy that you're not a catfish. I guess. Kind of.
 *[Ehm.. Hi?]
+     ~charEmotion= "Indifferent"
 Anyway.. This is awkward. I totally thought you would wear something else. Something more.. nice?
     ** [So, you don't like my outfit?]
+         ~charEmotion= "Indifferent"
         I mean, it's fine. But I'm not sure if that's enough.
         *** [Sorry...]
         ~SmileResponse()
@@ -22,9 +24,12 @@ Anyway.. This is awkward. I totally thought you would wear something else. Somet
         *** [I'm sorry, that was kind of rude.]
            ~HappyResponse()
            It's fine, wanna go grave robbing?
+           ~charEmotion= "Indifferent"
            ****[Eeeeh, what?]
+           
            Yeah, why did you think we went here anyway?
         *** [It was obviously a joke.]
+         ~charEmotion= "Indifferent"
             Haha, good joke man. Anyway, ready to rob some graves?
         *** [Soooo......]
             ..... Wanna check out some graves?
