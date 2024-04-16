@@ -38,10 +38,19 @@ public class LunaInkManager : MonoBehaviour
     private string currentText;
     private bool isTyping;
 
-    void Awake()
+    public void StartStoryAfterButtonClick()
     {
+        // Enable the LunaInkManager script to start its logic
+        enabled = true;
         RemoveChildren();
+        // Initialize the story and display the initial dialogue
         StartStory();
+    }
+
+    void Start()
+    {
+        // Disable the LunaInkManager logic until the button is clicked
+        enabled = false;
     }
 
     void StartStory()
