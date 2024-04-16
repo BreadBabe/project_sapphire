@@ -5,7 +5,7 @@ VAR loveAmount=0
 
 
 Hey, Over here!
-*[!]
+*[__!__]
      ~charEmotion= "Indifferent"
      Sorry, not a lot of people come by here, I'm assuming you're my date for the evening?___ right?
     ** [Depends, are you Luna?]
@@ -112,15 +112,14 @@ Hey, Over here!
              ...No? Why did you else think I asked you to show up here after dark? And specificaly asked you to make sure you wern't being followed? And the fact that I asked you to bring a shovel maybe would have clued you in.
        ***[maybe you're right, it could be kinda fun]
             ~charEmotion= "Neutral"
-             Now that's the spirit! I got some fine ones picked out over here.
-              Okay so , Shovel in hand, Head in the right place. Lets. Do. This. You go ahead and pick one of the three graves, since it's your first time and all. 
+             Now that's the spirit! I got some fine ones picked out over here. Okay so, Shovel in hand, Head in the right place. Lets. Do. This. You go ahead and pick one of the three graves, since it's your first time and all. 
                  -> CRIMES
      
        ***[This is insane, I'm calling the cops]
           What? No, are really gonna do this? *sirens in the distance* shit! 
-          ****[Over here!] 
-                This is so not how I wanted today to go!
-                 ~charEmotion="InDistance"
+           ****[Over here!] 
+                ~charEmotion="InDistance"
+                 This is so not how I wanted today to go!
                  --> END
      
   == ARGUING ==  
@@ -150,25 +149,25 @@ Hey, Over here!
      Ok so, not too much stuff, but not too shabby either. He's got a really nice watch and we might be able to get something for the shoes bu that's about it. We gotta do this again sometime, if you want there to be a next time?
                 -> DATEEND
   
-    == DATEEND==
-    *[yes, this was fun]
-       ~SmileResponse()
-       I really thought so too, You'll have to text me and We'll get right on setting up our second date! Bye for now. 
-              --> END
-    *[...maybe]
-        ~charEmotion= "Neutral"
-        Oh, Was it not a fun first date? Or maybe not just your type of activity. Anyways I has fun, Jus send me a message if you'd be interested n hanging out a second time.
-                 --> END
-    *[No]
-     ~NegativeResponse()
-     Oh, If you really didn't enjoy the date then why did you stay the entirity of I?You could have just told me you wanted to do something else, now I kinda got my hopes up... Aw well. 
-             -->END
+  == DATEEND==
+ *[yes, this was fun]
+    ~SmileResponse()
+    I really thought so too, You'll have to text me and We'll get right on setting up our second date! Bye for now. 
+        --> END
+ *[...maybe]
+    ~charEmotion= "Neutral"
+    Oh, Was it not a fun first date? Or maybe not just your type of activity. Anyways I has fun, Jus send me a message if you'd be interested n hanging out a second time.
+        --> END
+ *[No]
+    ~NegativeResponse()
+    Oh, If you really didn't enjoy the date then why did you stay the entirity of I?You could have just told me you wanted to do something else, now I kinda got my hopes up... Aw well. 
+        -->END
 
 
 --> END
     
 === function SmileResponse===
-    ~ loveAmount++
+    ~ loveAmount+= 5
     
     ~ charEmotion="Smile"
 
