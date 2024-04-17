@@ -24,7 +24,6 @@ public class LunaInkManager : MonoBehaviour
     [SerializeField] private GameObject Character;
     [SerializeField] private GameObject Audio;
 
-
     private string charName;
     private string charEmotion;
     private string charSound;
@@ -38,19 +37,10 @@ public class LunaInkManager : MonoBehaviour
     private string currentText;
     private bool isTyping;
 
-    public void StartStoryAfterButtonClick()
+    void Awake()
     {
-        // Enable the LunaInkManager script to start its logic
-        enabled = true;
         RemoveChildren();
-        // Initialize the story and display the initial dialogue
         StartStory();
-    }
-
-    void Start()
-    {
-        // Disable the LunaInkManager logic until the button is clicked
-        enabled = false;
     }
 
     void StartStory()
