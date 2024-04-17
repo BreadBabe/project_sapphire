@@ -300,7 +300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: 434, y: 96}
+  m_AnchoredPosition: {x: 479, y: 96}
   m_SizeDelta: {x: 255.1891, y: 342.4184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562448296
@@ -817,12 +817,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 562448295}
-  - {fileID: 1148246756}
-  - {fileID: 2075395067}
   - {fileID: 708733040}
+  - {fileID: 562448295}
+  - {fileID: 2075395067}
   - {fileID: 1462862115}
   - {fileID: 1459774621}
+  - {fileID: 1148246756}
   m_Father: {fileID: 1489867720}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1013,10 +1013,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1459774621}
   - component: {fileID: 1459774624}
+  - component: {fileID: 1459774625}
   - component: {fileID: 1459774623}
   - component: {fileID: 1459774622}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1063,10 +1064,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1085,8 +1086,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1489867719}
-        m_TargetAssemblyTypeName: LunaInkManager, Assembly-CSharp
+      - m_Target: {fileID: 1489867721}
+        m_TargetAssemblyTypeName: HospitalDialogueManager, Assembly-CSharp
         m_MethodName: StartStoryAfterButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1096,7 +1097,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1459774623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.31764707}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1135,6 +1136,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459774620}
   m_CullTransparentMesh: 1
+--- !u!114 &1459774625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459774620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c51770da7a943ea8365d79ec1ee10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yourButton: {fileID: 1459774622}
 --- !u!1 &1462862114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489867720}
-  - component: {fileID: 1489867719}
+  - component: {fileID: 1489867721}
   m_Layer: 0
   m_Name: canvasController
   m_TagString: Untagged
@@ -1288,28 +1302,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1489867719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489867717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934e76416e41941c3aa1cd2790a1bb17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingAudioSource: {fileID: 0}
-  typingSpeed: 15
-  inkJSONAsset: {fileID: 4900000, guid: 9f1f05ce39dca4adb8ba9e4329b1f5f9, type: 3}
-  dialoguebox: {fileID: 708733039}
-  choicebox: {fileID: 1462862114}
-  textPrefab: {fileID: 11456674, guid: 0439cda2460274d6c8310c07125733ce, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: 48dc68bc4c34c4cecbf165f2b5b43010, type: 3}
-  Character: {fileID: 562448294}
-  Audio: {fileID: 1777606290}
-  lovemeterShutter: {fileID: 1362549573}
 --- !u!4 &1489867720
 Transform:
   m_ObjectHideFlags: 0
@@ -1327,6 +1319,29 @@ Transform:
   - {fileID: 2079574468}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489867721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489867717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95dbef8b48dc4a3daee54a0a6692c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingAudioSource: {fileID: 0}
+  typingSpeed: 60
+  inkJSONAsset: {fileID: 4900000, guid: 9f1f05ce39dca4adb8ba9e4329b1f5f9, type: 3}
+  dialoguebox: {fileID: 708733039}
+  choicebox: {fileID: 1462862114}
+  textPrefab: {fileID: 11456674, guid: 0439cda2460274d6c8310c07125733ce, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 48dc68bc4c34c4cecbf165f2b5b43010, type: 3}
+  Character: {fileID: 562448294}
+  Audio: {fileID: 1777606290}
+  startButton: {fileID: 1459774622}
+  lovemeterShutter: {fileID: 1362549573}
 --- !u!1 &1759189001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1609,7 @@ GameObject:
   - component: {fileID: 1879302080}
   - component: {fileID: 1879302079}
   - component: {fileID: 1879302078}
+  - component: {fileID: 1879302081}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1675,6 +1691,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1879302081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879302077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &2075395066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,6 +1747,7 @@ GameObject:
   - component: {fileID: 2075395070}
   - component: {fileID: 2075395069}
   - component: {fileID: 2075395068}
+  - component: {fileID: 2075395071}
   m_Layer: 5
   m_Name: WhiteFade
   m_TagString: Untagged
@@ -1758,6 +1819,7 @@ MonoBehaviour:
   screenImage: {fileID: 2075395068}
   fadeDuration: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
+  fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!222 &2075395070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1766,6 +1828,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075395066}
   m_CullTransparentMesh: 1
+--- !u!210 &2075395071
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075395066}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 800
+  m_SortAtRoot: 0
 --- !u!1 &2079574467
 GameObject:
   m_ObjectHideFlags: 0

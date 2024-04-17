@@ -43,6 +43,9 @@ public class HospitalDialogueManager : MonoBehaviour
     public void StartStoryAfterButtonClick()
     {
         // Enable the LunaInkManager script to start its logic
+        dialoguebox.SetActive(true); // Show the dialogue box
+        choicebox.SetActive(true); // Show the choice box
+        Character.SetActive(true);
         enabled = true;
         RemoveChildren();
         // Initialize the story and display the initial dialogue
