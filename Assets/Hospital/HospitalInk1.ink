@@ -10,6 +10,7 @@ VAR charSound=""
     *** [I promise, Grandma.]
     Though my time here is fading, your love will forever light your path. I trust you have a companion who brings you joy. I'll always be with you, my sweet grandchild, in heart and spirit.
     ****[I won't let you down!]
+    *****[Gotta get home...]
         -->END
        
 

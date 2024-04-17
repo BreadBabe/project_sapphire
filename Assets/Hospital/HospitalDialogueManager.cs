@@ -3,6 +3,7 @@ using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HospitalDialogueManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class HospitalDialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject Character;
     [SerializeField] private GameObject Audio;
+    [SerializeField] private Button startButton;
 
 
     private string charName;
@@ -45,6 +47,7 @@ public class HospitalDialogueManager : MonoBehaviour
         RemoveChildren();
         // Initialize the story and display the initial dialogue
         StartStory();
+        startButton.interactable = false;
     }
 
     void Start()
@@ -181,13 +184,22 @@ public class HospitalDialogueManager : MonoBehaviour
             }
             else
             {
-                Button choice = CreateChoiceView("End of story.\nRestart?");
-                choice.onClick.AddListener(delegate {
-                    StartStory();
-                });
+                ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+                if (screenFader != null)
+                {
+                    screenFader.StartFadeOut();
+                    StartCoroutine(LoadSceneAfterDelay(2f, 1)); // Load scene index 1 after a delay of 2 seconds
+                }
+
             }
 
         }
+    }
+
+    IEnumerator LoadSceneAfterDelay(float delay, int sceneIndex)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneIndex);
     }
 
 }
