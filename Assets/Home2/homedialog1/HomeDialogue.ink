@@ -18,6 +18,7 @@ VAR charSound=""
                ****[You’re a genius!]
                 I can totally do this. Time to put on my game face and dive into the wacky world of dating apps, and maybe even a little online stalking. Let the games begin!!
                 ~ NeutralResponse()
+                *****[Time to open this stupid app...]
              
        
 --> END

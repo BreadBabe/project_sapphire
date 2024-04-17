@@ -191,7 +191,8 @@ public class HospitalDialogueManager : MonoBehaviour
                 if (screenFader != null)
                 {
                     screenFader.StartFadeOut();
-                    StartCoroutine(LoadSceneAfterDelay(2f, 1)); // Load scene index 1 after a delay of 2 seconds
+
+                    StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
                 }
 
             }
@@ -199,10 +200,19 @@ public class HospitalDialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadSceneAfterDelay(float delay, int sceneIndex)
+    IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(sceneIndex);
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "HospitalStart") // Adjust the scene name as needed
+        {
+            SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
+        }
+        else if (currentScene.name == "Home2")
+        {
+            SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
+        }
+        // Add more conditions for other scenes if needed
     }
 
 }

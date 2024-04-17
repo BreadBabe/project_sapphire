@@ -429,7 +429,7 @@ MonoBehaviour:
   startButtonImage: {fileID: 2105068476}
   fadeDuration: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
-  fadeOutColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeOutColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!222 &306712249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -466,14 +466,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f59b2fb2689242028a37cb8378db10b, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.069
+  m_PlayOnAwake: 0
+  m_Volume: 0.152
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 251
+  Priority: 203
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 783354944}
-  typingSpeed: 60
+  typingSpeed: 40
   inkJSONAsset: {fileID: 4900000, guid: 5e4242c57044547f98b91cfcabcbab63, type: 3}
   dialoguebox: {fileID: 1940692181}
   choicebox: {fileID: 1044220001}
