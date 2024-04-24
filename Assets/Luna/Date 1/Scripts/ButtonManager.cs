@@ -1,29 +1,72 @@
 using UnityEngine;
-using UnityEngine.UI;  // Import the UI namespace to work with UI components
+using UnityEngine.UI;
+using System.Collections; // Required for IEnumerator
+using System.Collections.Generic; // Needed for using Lists
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] Button buttonToDeactivate;  // Assign in the inspector
-    [SerializeField] GameObject objectToActivate;  // Assign in the inspector
-    [SerializeField] GameObject objectToDeactivate;
+    [SerializeField] Button buttonToDeactivate;
+    [SerializeField] Button buttonToActivate;
+    [SerializeField] List<GameObject> objectsToActivate;
+    [SerializeField] List<GameObject> objectsToDeactivate;
+    [SerializeField] AudioSource audioSource; // Assign this in the inspector
 
     void Start()
     {
-        // Optional: Add a listener to the button click
-        buttonToDeactivate.onClick.AddListener(HandleButtonClick);
+        // Add listener to each button
+        if (buttonToDeactivate != null)
+        {
+            buttonToDeactivate.onClick.AddListener(HandleButtonClick);
+        }
     }
 
     void HandleButtonClick()
     {
-        // Disable the button
-        buttonToDeactivate.interactable = false;
+        Debug.Log("Button clicked, attempting to play sound.");
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play(); // Play the sound only if a clip is available
+            StartCoroutine(DeactivateButtonAfterSound(audioSource.clip.length));
+        }
+        else
+        {
+            Debug.Log("No AudioClip found, proceeding without sound.");
+            StartCoroutine(DeactivateButtonAfterSound(0)); // Proceed immediately if no sound
+        }
+    }
 
-        // Activate the other object or feature
-        objectToActivate.SetActive(true);
+    IEnumerator DeactivateButtonAfterSound(float delayTime)
+    {
+        if (delayTime > 0)
+        {
+            Debug.Log("Coroutine started, waiting for sound to finish.");
+            yield return new WaitForSeconds(delayTime); // Wait for the sound to finish if there is a delay
+        }
 
-        objectToDeactivate.SetActive(false);
+        Debug.Log("Updating button and objects.");
+        // Deactivate all specified buttons
+        if (buttonToDeactivate != null)
+        {
+            buttonToDeactivate.interactable = false;
+        }
 
-        // Optionally, remove the listener if it's no longer needed
-        buttonToDeactivate.onClick.RemoveListener(HandleButtonClick);
+        if (buttonToActivate != null)
+        {
+            buttonToActivate.interactable = true;
+        }
+
+        // Activate all specified objects
+        foreach (GameObject obj in objectsToActivate)
+        {
+            if (obj != null)
+                obj.SetActive(true);
+        }
+
+        // Deactivate all specified objects
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            if (obj != null)
+                obj.SetActive(false);
+        }
     }
 }
