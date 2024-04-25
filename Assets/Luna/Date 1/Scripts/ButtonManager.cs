@@ -49,11 +49,12 @@ public class ButtonManager : MonoBehaviour
         {
             buttonToDeactivate.interactable = false;
         }
-
         if (buttonToActivate != null)
         {
             buttonToActivate.interactable = true;
         }
+
+
 
         // Activate all specified objects
         foreach (GameObject obj in objectsToActivate)
