@@ -1124,14 +1124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 781151970}
   typingSpeed: 0
-  inkJSONAsset: {fileID: 0}
+  inkJSONAsset: {fileID: 4900000, guid: ece983740aede0345be116bc06f0affb, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
-  textPrefab: {fileID: 0}
-  buttonPrefab: {fileID: 0}
-  Character: {fileID: 0}
-  Audio: {fileID: 0}
-  lovemeterShutter: {fileID: 0}
+  textPrefab: {fileID: 11456674, guid: c9b5c632b681acf438b345b9efe2d728, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 193fab920f4ecba459c4cc05c96ee339, type: 3}
+  Character: {fileID: 1600876852}
+  Audio: {fileID: 781151968}
+  lovemeterShutter: {fileID: 1800950984}
 --- !u!1 &1386198199
 GameObject:
   m_ObjectHideFlags: 0
