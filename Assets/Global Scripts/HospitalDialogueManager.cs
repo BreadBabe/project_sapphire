@@ -212,6 +212,10 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
         }
+        else if (currentScene.name == "Date1")
+        {
+            SceneManager.LoadScene(3);
+        }
         // Add more conditions for other scenes if needed
     }
 
