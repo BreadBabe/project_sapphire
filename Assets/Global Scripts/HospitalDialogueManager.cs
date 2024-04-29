@@ -208,7 +208,7 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
         }
-        else if (currentScene.name == "Home2")
+        else if (currentScene.name == "Home1")
         {
             SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
         }
