@@ -21,6 +21,11 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] GameObject character;
     [SerializeField] HospitalDialogueManager hospitalManager;
 
+    [SerializeField] SpriteRenderer datingAppSpriteRenderer;
+    [SerializeField] Sprite[] datingAppSprites;
+
+
+
     private float scalingSpeed = 4.0f;
 
     public bool datePicked;
@@ -32,7 +37,7 @@ public class PhoneUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhoneIcon.SetActive(false);
+        PhoneIcon.SetActive(true);
         PhoneUI.SetActive(false);
         datingApp.SetActive(false);
         datingAppUI.SetActive(false);
@@ -41,6 +46,9 @@ public class PhoneUIManager : MonoBehaviour
         {
             button.SetActive(false);
         }
+
+        UpdateDatingAppSprite();
+
     }
 
     public void PhoneIconOnClick()
@@ -83,6 +91,8 @@ public class PhoneUIManager : MonoBehaviour
                 datingAppState = DatingAppStates.Quinn;
                 break;
         }
+
+        UpdateDatingAppSprite();
     }
 
     public void LeftButtonPressed()
@@ -102,6 +112,14 @@ public class PhoneUIManager : MonoBehaviour
                 datingAppState = DatingAppStates.Noah;
                 break;
         }
+
+        UpdateDatingAppSprite();
+    }
+
+    void UpdateDatingAppSprite()
+    {
+        // Update sprite renderer with the sprite corresponding to the current dating app state
+        datingAppSpriteRenderer.sprite = datingAppSprites[(int)datingAppState];
     }
 
 
@@ -124,7 +142,7 @@ public class PhoneUIManager : MonoBehaviour
         Vector3 initialScale = datingAppUI.transform.localScale;
         Vector3 targetScale = initialScale * 10f; // Example: double the size
         Vector3 initialPosition = datingAppUI.transform.position;
-        Vector3 targetPosition = new Vector3(960, 540, 0);
+        Vector3 targetPosition = new Vector3(960, 590,0);
 
         float elapsedTime = 0f;
         while (elapsedTime < 1f)
@@ -164,6 +182,12 @@ public class PhoneUIManager : MonoBehaviour
 
             StartCoroutine(TransitionToDate(2f));
         }
+    }
+
+    public void DateRejected()
+    {
+        DateQUESTIONMARK.SetActive(false);
+
     }
 
     IEnumerator TransitionToDate(float delay)
