@@ -1,48 +1,59 @@
 VAR charName="Luna"
 
-VAR charEmotion="InDistance"
+VAR charEmotion="Indifferent"
 VAR loveAmount=0
 
-
-Hey, Over here!
-*[__!__]
+Hey! Why are you wandering around here all by yourself?
+*[Huh?]
      ~charEmotion= "Indifferent"
-     Sorry, not a lot of people come by here, I'm assuming you're my date for the evening? ___ right?
+     Sorry, it's just so rare to see someone else out here at this time. You must be my date, right? I mean, this isn't exactly a hotspot unless you're into eerie places or just generally lost.
     ** [Depends, are you Luna?]
         ~charEmotion= "Neutral"
-        That would be me. I know this isn't most peoples ideal first date, so I'm happy you showed up. Although you oufit choice is... interesting. I guess.
+        That would be me. Surprised you actually showed up, this place isn't known for its charm. Actually, neither am I. And your outfit... it definitely makes a statement. Intriguing, really.
             -> OUTFITDILLEMA
         
     ** [Yep, nice to meet you!]
            ~HappyResponse()
-        Nice to meet you too. I know this isn't most peoples ideal first date, so I'm happy you showed up, although you oufit choice is... interesting. I guess.
+        Nice to meet you too. I'm honestly a bit relieved that you didn't freak out and bail, considering where we are. Though your outfit, let's just say it's... unexpected.
              -> OUTFITDILLEMA
                
                
  == OUTFITDILLEMA ==
  * [Oh, was I supposed to wear something special?]
      ~SmileResponse()
-      nah, I'm just kidding with you, I like it, Gives you personality. Your clothes might get a bit dirty tho.
+      No worries, you look fine. It gives you a bit of an edge, really. Just a heads-up though, where we're headed might be a bit rough on your clothes. Hope you're not too attached to them.
+      **[What do you mean?]
+      Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
             -> DIRTY
                         
 * [I don't really care what you think]
       ~AnnoyedResponse()
-       Ouch, dude. Someone's in a bad mood. 
+       Ouch, dude. Hit a nerve, did I? I guess we're skipping the small talk then? Fine by me. Just be prepared, the night could get messy, and I'm not just talking about our interaction. 
         **[...Sorry]
          ~charEmotion= "Neutral"
-          Your clothes might get a bit dirty tho.
+          It's alright, no harm done. We've got an interesting evening ahead, and honestly, your outfit might endure more than a few scratches and stains.
+          ***[What do you mean?]
+          Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
          -> DIRTY
+         
          **[Yeah, well, it wasn't a very nice thing to say]
-            Whatever. Don't be so dramatic, I'm sorry okay?
-           *** [...Fine]
-            Your clothes might get a bit dirty though.
+         ~AnnoyedResponse()
+            That's a bit dramatic. I'm sorry okay? I guess my sense of humor isn't for everyone. Anyway, let's not ruin your outfit more than we have to. 
+           *** [What do you mean?]
+            Your clothes might get a bit dirty.
             -> DIRTY
             ***[Maybe you should think before you speak]
              ~NegativeResponse()
-             Really? C'mon. It was supposed to be a joke.
+             Really? It was obviously a joke. Probably not my best one, but nevertherless. Let's not ruin the night over a bad joke.
               ****[Good joke]
-               I've already apologized, what more do you want? If we can't even get along on one date then maybe this was a mistake.
-                   -> ARGUING
+              ~charEmotion="Indifferent"
+               I've already apologized, what more do you want? If we can't even get along on one date then maybe this was a mistake. Do you want to do this or not? I'm done wasting my time.
+               *****[I do!]
+               ~SmileResponse()
+               Great, let's start over. No harm done, but your clothes might get a bit dirty..
+               ->DIRTY
+               *****[I'm out.]
+               ->END
                       
               ****[Just don't do it again]
                      ~charEmotion= "Indifferent"
@@ -52,119 +63,102 @@ Hey, Over here!
             
 *[Is there something wrong with my outfit?]
     ~charEmotion= "Indifferent"
-     No it’s fine, I was just expecting.. ah it doesn’t matter. Your clothes might get a bit dirty though.
+     No it’s fine, I was just expecting something more... whatever, it's cool. Your clothes might get a bit dirty though.
      -> DIRTY
             
  == DIRTY ==  
 *[Dirty?]
   ~charEmotion= "Neutral"
-    Afraid of a little mud?
+    Don't worry, its all part of the plan. Afraid of a little mud?
    ** [...No]
-    I had planned for us to go do some totally legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus we might even get to outrun the cops. 
+   ~SmileResponse()
+    I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Let's just say, it's a bonding experience like no other.
         -> GRAVEROBBING
 
    **[No!]
    ~HappyResponse()
-    I had planned for us to go do some totally legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus we might even get to outrun the cops. 
+    That's the spirit! We're going to dig up some history - literally. Graverobbing, but in a fun, "this could totally be legal" way. Nothing brings two souls together than good old theft from dead people. Plus, a skeleton is honestly pretty interesting to examine. Except for the smell.
              -> GRAVEROBBING
 
    **[Yes?]
-      I gad planned for us to go do some totally legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus If things get exiting we might even have to outrun the cops. 
+      I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Plus, a skeleton is honestly pretty interesting to examine. Except for the smell.
         -> GRAVEROBBING
 
     
 *[I don't want to get dirty]
      ~AnnoyedResponse()
-     C'mon, where's your sense of adventure? A little dirt never hurt anybody. I had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. 
+     Where's your sense of adventure? A little dirt never hurt anybody. I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Get out of your comfort zone!
              ->GRAVEROBBING
 
-* [...huh?]
-    Afraid of a little mud? It doesn't bite.
+* [...Huh?]
+    Not a fan of getting your hands dirty? Well, tonight might change your mind. We're about to dive into something that's definitely not your average date activity.
    ** [...No]
-   SICK! Let's get down and dirty, but not in the sexual way. Or something. 
+   SICK! Let's get down and dirty, but not in the sexual way. Or something. Sorry?
     ~HappyResponse()
          -> GRAVEROBBING
    **[No!]
-    I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people. Plus If things get exiting we might even have to outrun the cops. 
+   ~SmileResponse()
+    I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Plus, a skeleton is honestly pretty interesting to examine.
          -> GRAVEROBBING
  
    
    **[Yes?]
-       I Had planned for us to go do some totaly legal graverobbing together. Nothing brings to souls together than good old theft from dead people.
-             -> GRAVEROBBING
+   ~AnnoyedResponse()
+       I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Plus, a skeleton is honestly pretty interesting to examine.
+             --> GRAVEROBBING
   
  == GRAVEROBBING==  
  
-   *[Isn't that like, actually illegal tho?]
+   *[Isn't that like, actually illegal though?]
          ~charEmotion= "Indifferent"
-          Well, Only if you get caught, And I happen to be a professional. C'mon, it even says so in my bio. I promise it will be fun, we might even make profit. 
-             -> CRIMES
+          Well, only if you get caught, And I happen to be a professional. I promise it will be fun, we might even make a profit out of it. 
+          **[Alright!]
+             -> ENDING
              
     *[Fuck yes!]
-    That's the spirit! C'mon, I've already picked out a few graves to choose from. If we're lucky we'll manage to dig up one of the really rich ones. No one says no to some free gold jewellery right?
-    -> CRIMES   
+    That's the spirit! If we're lucky we might find something of value. Or not, but wouldn't you love to see a dead person anyway? SPOOKY.
+    **[Alright!]
+    -> ENDING
     
 
-   *[uhm, What The Actual Fuck?]
+   *[Uhm, what the actual fuck?]
          ~AnnoyedResponse()
-         C'mon, It was litterally in my bio that i enjoy spending time with my cat and digging up the dead...You did read it right? Because if you didn't then kinda weird showing up at a graveyard.Like I litterally asked you to bring a shovel!
+         Hey, don't freak out, okay? It was right there in my bio: 'I like chilling with my cat and occasionally, you know, exploring cemeteries'. You did read it, right? Showing up here in the dead of night sort of implies you were at least a little curious.
        **[I thougt you were joking!]
-             ...No? Why did you else think I asked you to show up here after dark? And specifically asked you to make sure you weren't being followed? And the fact that I asked you to bring a shovel may have clued you in.
+             Nope. What part of 'meeting in a graveyard at night' screams 'just kidding' to you? I thought the part where I told you to make sure you're not followed would have been a clear giveaway. 
        ***[Maybe you're right, it could be kinda fun]
             ~charEmotion= "Neutral"
-             Now that's the spirit! I got some fine ones picked out over here. Okay so, Shovel in hand, Head in the right place. Lets. Do. This. You go ahead and pick one of the three graves, since it's your first time and all. 
-                 -> CRIMES
-     
-       ***[This is insane, I'm calling the cops]
-          What? No, are really gonna do this? *sirens in the distance* shit! 
-           ****[Over here!] 
-                ~charEmotion="InDistance"
-                 This is so not how I wanted today to go! Fuck off.
-                 --> END
-     
-  == ARGUING ==  
-   ~AnnoyedResponse()
-   *[It seems like it was]
-     ~charEmotion="Upset"
-      Wow, really?, YOU messaged me first. What was this some sort of dare? Did you lose a bet so you had to go on a date with "emo girl" I'm done, you're just like the rest of them.
-       **[...]
-        ~charEmotion="InDistance"
-             -->END
-    *[No, I'm sorry, Ive just had a bad day]
-        ~charEmotion= "Neutral"
-        Okay, well no need to take it out on me. Next time just try to leave the negative energy at home, it doesn't make for a great first impression. Anyway
-             -> DIRTY
+             Now that's the spirit! There's something thrilling about uncovering stories, and hopefully gold, that was buried along with bones. So, shovel in hand, let's do this. It's your first time after all, and I want it to be memorable.
+             ****[Alright]
+                 ->ENDING
+                 
+                 
+                 
+
+== ENDING==  
+ So.. I kind of got here early, and decided to start digging on some graves. And I thought you could just pick one of them out and do the rest of the digging.
+   *[Oh, are you tired?]
+         ~charEmotion= "Indifferent"
+          Takes more than that to tire these massive arms. Haha. But honestly, a bit. Anyway, pick one of the three graves and I'll meet you back here when you're done!
+             -> ENDING
+             
+    *[Alright!]
+    Great! Just pick one of the three graves and I'll meet you back here when you're done collecting stuff from the dead!
+    -> ENDING
     
-  == CRIMES==
-  *[Grave to the right]
-  ~AnnoyedResponse()
-     Aweee, this must have been one of theese really poor guys. We really get unlucky, guy didn't even get buried in a nice suit or anything. Well, thats how it goes sometimes, better luck next time. if you want there to be a next time that is? 
-           -> DATEEND
- * [Grave in the midle]
-    ~HappyResponse()
-     Sick, This lady must have been someone really really important whilst she was alive. A watch, ruby, earings, several bracelets and a diamond ring. We really hit the jackpot with this one. We gotta do this again sometime, if you want there to be a next time?
-                -> DATEEND
- * [Grave to left]
-   ~charEmotion= "Neutral"
-     Ok so, not too much stuff, but not too shabby either. He's got a really nice watch and we might be able to get something for the shoes bu that's about it. We gotta do this again sometime, if you want there to be a next time?
-                -> DATEEND
-  
-  == DATEEND==
- *[Yeah, this was fun]
-    ~SmileResponse()
-    I really thought so too, You'll have to text me and We'll get right on setting up our second date! Bye for now. 
-        --> END
- *[...maybe]
-    ~charEmotion= "Neutral"
-    Oh, Was it not a fun first date? Or maybe not just your type of activity. Anyways I has fun, Jus send me a message if you'd be interested n hanging out a second time.
-        --> END
- *[No]
-    ~NegativeResponse()
-    Oh, If you really didn't enjoy the date then why did you stay the entirity of I? You could have just told me you wanted to do something else, now I kinda got my hopes up... Aw well. 
-        -->END
+
+   *[I'll dig faster than you anyway]
+         Damn, with those skinny excuses of "arms" I highly doubt it.
+         **[Funny...]
+         Are those your arms? Oh. Thought you had attached the arms of one of the skeletons. Anyway, pick one of the three graves and I'll meet you back here when you're done!
+         ->END
+         
+       **[Ouch.]
+             Wait...? Are those your arms? Oh. Thought you had attached the arms of one of the skeletons. Anyway, pick one of the three graves and I'll meet you back here when you're done!
+             ->END
 
 
---> END
+-->END
     
 === function SmileResponse===
     ~ loveAmount+= 5
