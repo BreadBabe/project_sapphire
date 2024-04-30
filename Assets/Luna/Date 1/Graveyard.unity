@@ -5452,10 +5452,7 @@ MonoBehaviour:
   buttonToDeactivate: {fileID: 1551740595}
   buttonToActivate: {fileID: 0}
   objectsToActivate:
-  - {fileID: 1996596561}
-  - {fileID: 615693353}
-  - {fileID: 0}
-  - {fileID: 61460762}
+  - {fileID: 1376618863}
   objectsToDeactivate:
   - {fileID: 1241058351}
   - {fileID: 20590702}
