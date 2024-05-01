@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 781151970}
-  typingSpeed: 0
+  typingSpeed: 10
   inkJSONAsset: {fileID: 4900000, guid: ece983740aede0345be116bc06f0affb, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 1600876855}
   - component: {fileID: 1600876854}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageNoah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
