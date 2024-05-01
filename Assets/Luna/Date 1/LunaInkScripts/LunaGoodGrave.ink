@@ -1,16 +1,20 @@
 VAR charName="Luna"
 
-VAR charEmotion="Indifferent"
+VAR charEmotion="Smile"
 VAR loveAmount=0
 
-Hey stranger! So, what do you think? Was it everything you've ever dreamed of?
+Hey stranger! So, what did you think? Was it everything you've ever dreamed of?
 *[I guess?]
+~charEmotion="Indifferent"
 Guess? Oh, I was hoping you'd find it as exhilirating as I do. Guess we can't all be thrill-seekers.
      ** [I guess we can't.]
+     Guess not. Kind of a letdown when you're hoping for a partner in crime and end up with a scaredy-cat. But hey, life's full of disappointments, right? Anyway, what did you find?
         ~AnnoyedResponse()
+        ->FINDINGS
      **[Nah, it was fun!]
+     Oh, color me impressed! There's hope for you yet. Maybe next time you'll even smile a bit, no promises though, I know how hard that can be. Anyway, what did you find?
         ~HappyResponse()
-        
+        ->FINDINGS
         
 *[It was actually pretty creepy.]
 Aww, come on! It's just a bit of harmless fun with the dearly departed. You're not going to tell me you're scared, are you? You are looking a bit pale... 
@@ -23,16 +27,15 @@ Aww, come on! It's just a bit of harmless fun with the dearly departed. You're n
         Sure, and I'm the Queen of England. Relax, I'll protect you from the scary old bones. So, come on, what did you find?!
         ->FINDINGS
     **[I am, so what are you gonna do about it?]
+    Ha! Maybe I'll just have to haunt your dreams tonight to toughen you up a bit. But seriously, let's focus on what you found- anything cool, or just cobwebs in your pockets?
         ->FINDINGS
-        
-        
         
 *[It was amazing, surprisingly!]
 Duh, that's what I've been saying. And those bones.. there's something eerily beautiful about them, don't you think?
         ** [Wait, what?]
         ~AnnoyedResponse()
-        Oh, don't give me that look. I can appreciate the aesthetics of a well-aged skeleton, can't I?
-        
+        Oh, don't give me that look. I can appreciate the aesthetics of a well-aged skeleton, can't I? So, spill the beans, what did you find? 
+        ->FINDINGS
         
 ==FINDINGS==
 *[A ruby!]
@@ -43,7 +46,7 @@ Woah, dude! You're totally coming for my graverobbing throne here. Should I be w
         ->RING
      **[Take that, sucker!]
         ~HappyResponse()
-        Oh, I love the competetive spirit! But hold on, don't get too cocky, rookie. Let's see if your luck holds out. What else did you find?
+        I love the competetive spirit! But hold on, don't get too cocky, rookie. Let's see if your luck holds out. What else did you find?
         ->RING
 
 ==RING==
@@ -60,7 +63,7 @@ What the hell! Seriously? The grave I was poking around in just had a pair of di
         
 ==COINS==
 *[Gold coins!]
-Seriously, you're making a killing tonight! Here I was thinking I waas the seasond pro, and you came along turning everything upside down.
+Seriously, you're making a killing tonight! Here I was thinking I was the seasond pro, and you came along turning everything upside down.
      ** [Feeling lucky I came along?]
         ~SmileResponse()
         Definitely, though at this rate, I might start wondering if satan had something to do with it. I should bring you along more often. Got anything else, or are you hoarding all the luck tonight?
@@ -71,7 +74,7 @@ Seriously, you're making a killing tonight! Here I was thinking I waas the seaso
         ->CHAIN
         
 ==CHAIN==
-*[A cold chain!]
+*[A gold chain!]
 Okay, at this point, I'm just pissed. You've officially outdone me on my own turf. How are you even doing this? Did you sacrifice a baby earlier today?
      ** [Sorry, not sorry!]
         ~AnnoyedResponse()
@@ -84,33 +87,59 @@ Okay, at this point, I'm just pissed. You've officially outdone me on my own tur
         
 ==ENDING==
 *[Can we really keep this stuff? It feels wrong..]
-
-     ** [I guess we can't.]
-        ~AnnoyedResponse()
-     **[Nah, it was fun!]
+Oh come on, don't start with the guilt now. These trinkets? They've been underground longer than we've been alive. Let's not get all sentimental over a few shiny things. 
+     ** [But what if it's important to the dead person?]
+     If they haven't come back for it yet, I think we're safe. Besides, they're dead- they've got bigger things to worry about than som earthly bling. Anyway, it's getting dark.
+     ->NEXTDATE
+        ~charEmotion="Indifferent"
+     **[Yeah, you're right!]
+     Absolutely! Glad you're seeing it my way. Who knows, maybe next time we can unearth something even cooler. But it's getting a bit late, gotta get home to my cat.
+     ->NEXTDATE
         ~HappyResponse()
-        
-        
 *[This is incredible! I can't believe I found all this!]
 I know, right? Totally worth the creepy factor. Now, imagine what we could do on future dates? The opportunities are endelss!
     ** [I'd love that!]
-        ~charEmotion="Indifferent"
-        Me too! This was so much fun. I really enjoyed your sense of adventure and that you came here with an open mind. I had a great night. 
-        -->END
+        ~SmileResponse()
+        Perfect! It's a date. There's a haunted house next town over that I've been dying to check out. Literally. It's gonna be a killer! Anyway, it's getting dark.
+        ->NEXTDATE
     **[I'm not so sure..]
     ~AnnoyedResponse()
-        Sure, and I'm the Queen of England. Relax, I'll protect you from the scary old bones. So, come on, what did you find?!
-        -->END
-        
-        
-        
+        Well, if you're having second thoughts, just remember tonight. You survived, right? That's more than these old suckers did. And hey, a little fear never hurt anyone.. Much. Anyway, it's getting dark.
+        ->NEXTDATE
 *[Shouldn't we put it back? It seems disrespectful..]
-Disrespectful? Those bones have been lying there for centuries. They won't miss a few trinkets. Don't be such a bummer. 
+Disrespectful? Those bones have been lying there for centuries. They won't miss a few trinkets. Don't be such a bummer.
         ** [You're right!]
         ~SmileResponse()
-        Oh, don't give me that look. I can appreciate the aesthetics of a well-aged skeleton, can't I?
+        Exactly! They've moved to the great beyond or whatever. What's a few missing trinkets to a skeleton? Anyway, it's getting dark.
+        ->NEXTDATE
         **[I'm gonna return it, sorry.]
-        -->END
+        Suit yourself, but you're missing out on all the fun. Remember, guilt is just a ghost haunting the living. Shake it off and enjoy the spoils. Anyway, it's getting dark.
+        ->NEXTDATE
+    
+    ==NEXTDATE==
+*[I'd really like to see you again.]
+Sure, why not? If you're brave enough to handle another night of mischief with me, how about we make it a bit more personal? My place, next time. I promise it's only slightly less creepy than here.
+     ** [I'd love that!]
+     Fantastic! Can't wait to show you my collection of oddities. Maybe we'll even stir up some spritis- if we're lucky. Catch you soon, devil!
+        ~HappyResponse()
+        ->END
+     **[I'm not so sure..]
+     Fine. Your loss, anyway. If you can't handle a little excitement, then maybe you're better off sticking to the mundane. Don't come crawling back when you realize how dull normal is. Good riddance, and try not to be too boring without me. Bye!
+        ~AnnoyedResponse()
+        ->END
+*[I had fun, but I'm not sure if we're a good match.]
+Really? What a shocker. Listen, I don't have time for half hearted whims. Either you're all in, or you're out. Seems like you've made your choice, so let's not waste any more of each other's time before one of us gets cursed.
+    ** [You know what, I do want to see you again!]
+        ~SmileResponse()
+        Fine, but don't expect me to hold your hand through it. If we're doing this, you're going to have to prove you can handle it. I'm not here to babysit, got it? Let's see if you can actually keep up next time. Talk to you later, I guess. Bye!
+        ->END
+    **[It's for the best.]
+    ~AnnoyedResponse()
+        Sure, run away. It's obviously too much for you. I need someone who can keep up with me anyway, not someone who gets cold feet. Good riddance, and try not to be too boring without me. Bye!
+        ->END
+        
+
+    
     
         //Can we really keep this stuff? It feels wrong..
         //Wrong? It's not like they were using it. Lighten up, it's all in good fun.
