@@ -1831,7 +1831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &522448824
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3752,7 +3752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &891681502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4877,8 +4877,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonToDeactivate: {fileID: 1149031732}
-  buttonToActivate: {fileID: 0}
-  objectsToActivate: []
+  buttonToActivate: {fileID: 1983626842}
+  objectsToActivate:
+  - {fileID: 1983626839}
   objectsToDeactivate:
   - {fileID: 1149031729}
   audioSource: {fileID: 464156716}
@@ -6467,7 +6468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1431232580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9290,7 +9291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1983626840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9463,8 +9464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonToDeactivate: {fileID: 1986717566}
-  buttonToActivate: {fileID: 0}
-  objectsToActivate: []
+  buttonToActivate: {fileID: 522448826}
+  objectsToActivate:
+  - {fileID: 522448823}
   objectsToDeactivate:
   - {fileID: 1986717563}
   audioSource: {fileID: 464156716}
