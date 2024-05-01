@@ -17,13 +17,14 @@ Guess? Oh, I was hoping you'd find it as exhilirating as I do. Guess we can't al
         ->FINDINGS
         
 *[It was actually pretty creepy.]
+~AnnoyedResponse()
 Aww, come on! It's just a bit of harmless fun with the dearly departed. You're not going to tell me you're scared, are you? You are looking a bit pale... 
     ** [I think I'm gonna pass out.]
         ~IndifferentResponse()
         Sure, and I'm the Queen of England. Relax, I'll protect you from the scary old bones. So, tell me, what did you find?!
         ->FINDINGS
     **[No!]
-    ~AnnoyedResponse()
+    ~AngryResponse()
         Sure, and I'm the Queen of England. Relax, I'll protect you from the scary old bones. So, come on, what did you find?!
         ->FINDINGS
     **[I am, so what are you gonna do about it?]
@@ -44,7 +45,7 @@ Duh, that's what I've been saying. And those bones.. there's something eerily be
 Earrings, huh? Well, they're classic. A bit too 'everyday undead' for my taste though. I mean, every skeleton in the closet has a pair, right? But there's a certain charm to outlasting your owner. But still, they must've meant something to someone once, right?
 ~IndifferentResponse()
      ** [I thought they were pretty neat.]
-        ~SmileResponse()
+        ~NeutralResponse()
         Neat? Sure, if you're into the whole 'eternally forgotten' aesthetic. Still, I'm all about surprises. So what else have you got lurking in your bag of macabre goodies?
         ->WATCH
      **[Maybe too simple for you, but I liked them.]
@@ -55,6 +56,7 @@ Earrings, huh? Well, they're classic. A bit too 'everyday undead' for my taste t
 ==WATCH==
 *[A pocket watch!]
 Oh, now that's more like it! A bit of old-world charm. Maybe it counted its last hour in a very dramatic moment. It seems like it's not working anymore, it's definitely not ticking.
+~charEmotion="Smile"
      ** [This one feels more your style, right?]
         ~SmileResponse()
         Definitely closer to the mark. There's a weight to it as well, a sense of past secrets I guess. But keep digging, what else is in your pockets?
@@ -80,7 +82,7 @@ Cowboy boots? That's delightfully bizarre, and honestly.. slay. What's the story
 ==KNIFE==
 *[A bloody knife!]
 Wait, a bloody knife? Now this is the kind of find that gets my blood pumping. Was it used in a duel? A crime of passion? There's something undeniably beautiful about blood, honestly. What if it's the murder weapon? 
-~IndifferentResponse()
+~charEmotion="Smile"
      ** [Just part of today's haul. You know, typical tuesday stuff.]
         ~NeutralResponse()
         Typical tuesday? Remind me not to bump into you in a dark alley! But seriously, if you keep finding stuff like this, we might need to start a detective agency- or a horror tour. Who knows, we might make a killing!
