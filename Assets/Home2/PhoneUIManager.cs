@@ -33,6 +33,11 @@ public class PhoneUIManager : MonoBehaviour
     public enum DatingAppStates { Quinn, Luna, Noah, Summer }
     public DatingAppStates datingAppState;
 
+    [SerializeField] Sprite quinnSprite;
+    [SerializeField] Sprite lunaSprite;
+    [SerializeField] Sprite noahSprite;
+    [SerializeField] Sprite summerSprite;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +52,7 @@ public class PhoneUIManager : MonoBehaviour
             button.SetActive(false);
         }
 
-        UpdateDatingAppSprite();
+
 
     }
 
@@ -92,7 +97,6 @@ public class PhoneUIManager : MonoBehaviour
                 break;
         }
 
-        UpdateDatingAppSprite();
     }
 
     public void LeftButtonPressed()
@@ -112,14 +116,6 @@ public class PhoneUIManager : MonoBehaviour
                 datingAppState = DatingAppStates.Noah;
                 break;
         }
-
-        UpdateDatingAppSprite();
-    }
-
-    void UpdateDatingAppSprite()
-    {
-        // Update sprite renderer with the sprite corresponding to the current dating app state
-        datingAppSpriteRenderer.sprite = datingAppSprites[(int)datingAppState];
     }
 
 
