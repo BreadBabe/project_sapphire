@@ -3,7 +3,7 @@ VAR charEmotion = "Neutral"
 VAR loveAmount = 0
 VAR charSound=""
 
-Hey! You found your way here, not too difficult i hope
+Hey! You found your way here, not too difficult I hope?!
 *[!!!]
     -> INTRODUCTION
 
