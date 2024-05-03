@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogueScreen2.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Quinn/Level1.unity
+    guid: a5af7538ef5d3474aa933dcd1e1dcc7d
+  - enabled: 1
+    path: Assets/Quinn/Level1.unity
+    guid: 2f754d6964f46cb4db643b0a47ba3bca
   m_configObjects: {}
