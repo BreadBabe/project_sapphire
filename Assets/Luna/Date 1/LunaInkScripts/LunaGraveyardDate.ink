@@ -20,7 +20,7 @@ Hey! Why are you wandering around here all by yourself?
                
  == OUTFITDILLEMA ==
  * [Oh, was I supposed to wear something special?]
-     ~SmileResponse()
+     ~IndifferentResponse()
       No worries, you look fine. It gives you a bit of an edge, really. Just a heads-up though, where we're headed might be a bit rough on your clothes. Hope you're not too attached to them.
       **[What do you mean?]
       Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
@@ -30,9 +30,10 @@ Hey! Why are you wandering around here all by yourself?
       ~AnnoyedResponse()
        Ouch, dude. Hit a nerve, did I? I guess we're skipping the small talk then? Fine by me. Just be prepared, the night could get messy, and I'm not just talking about our interaction. 
         **[...Sorry]
-         ~charEmotion= "Neutral"
+         ~charEmotion= "Indifferent"
           It's alright, no harm done. We've got an interesting evening ahead, and honestly, your outfit might endure more than a few scratches and stains.
           ***[What do you mean?]
+          ~charEmotion="Neutral"
           Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
          -> DIRTY
          
@@ -43,7 +44,7 @@ Hey! Why are you wandering around here all by yourself?
             Your clothes might get a bit dirty.
             -> DIRTY
             ***[Maybe you should think before you speak]
-             ~NegativeResponse()
+             ~AngryResponse()
              Really? It was obviously a joke. Probably not my best one, but nevertherless. Let's not ruin the night over a bad joke.
               ****[Good joke]
               ~charEmotion="Indifferent"
@@ -53,6 +54,7 @@ Hey! Why are you wandering around here all by yourself?
                Great, let's start over. No harm done, but your clothes might get a bit dirty..
                ->DIRTY
                *****[I'm out.]
+               Honestly, fuck off. I don't have time for people like you anyway. Good riddance, and try not to be too boring without me. Bye!
                ->END
                       
               ****[Just don't do it again]
@@ -81,6 +83,7 @@ Hey! Why are you wandering around here all by yourself?
              -> GRAVEROBBING
 
    **[Yes?]
+   ~AnnoyedResponse()
       I had planned for us to go do some totally legal graverobbing together. Nothing brings two souls together more than good old theft from dead people. Plus, a skeleton is honestly pretty interesting to examine. Except for the smell.
         -> GRAVEROBBING
 
@@ -91,6 +94,7 @@ Hey! Why are you wandering around here all by yourself?
              ->GRAVEROBBING
 
 * [...Huh?]
+~IndifferentResponse()
     Not a fan of getting your hands dirty? Well, tonight might change your mind. We're about to dive into something that's definitely not your average date activity.
    ** [...No]
    SICK! Let's get down and dirty, but not in the sexual way. Or something. Sorry?
@@ -116,6 +120,7 @@ Hey! Why are you wandering around here all by yourself?
              -> ENDING
              
     *[Fuck yes!]
+    ~HappyResponse()
     That's the spirit! If we're lucky we might find something of value. Or not, but wouldn't you love to see a dead person anyway? SPOOKY.
     **[Alright!]
     -> ENDING
@@ -125,9 +130,10 @@ Hey! Why are you wandering around here all by yourself?
          ~AnnoyedResponse()
          Hey, don't freak out, okay? It was right there in my bio: 'I like chilling with my cat and occasionally, you know, exploring cemeteries'. You did read it, right? Showing up here in the dead of night sort of implies you were at least a little curious.
        **[I thougt you were joking!]
+       ~IndifferentResponse()
              Nope. What part of 'meeting in a graveyard at night' screams 'just kidding' to you? I thought the part where I told you to make sure you're not followed would have been a clear giveaway. 
        ***[Maybe you're right, it could be kinda fun]
-            ~charEmotion= "Neutral"
+            ~NeutralResponse()
              Now that's the spirit! There's something thrilling about uncovering stories, and hopefully gold, that was buried along with bones. So, shovel in hand, let's do this. It's your first time after all, and I want it to be memorable.
              ****[Alright]
                  ->ENDING
@@ -136,33 +142,52 @@ Hey! Why are you wandering around here all by yourself?
                  
 
 == ENDING==  
+~charEmotion="Smile"
  So.. I kind of got here early, and decided to start digging on some graves. And I thought you could just pick one of them out and do the rest of the digging.
    *[Oh, are you tired?]
          ~charEmotion= "Indifferent"
           Takes more than that to tire these massive arms. Haha. But honestly, a bit. Anyway, pick one of the three graves and I'll meet you back here when you're done!
-             -> ENDING
+          **[Sounds like a plan!]
+             -> END
              
     *[Alright!]
+    ~SmileResponse()
     Great! Just pick one of the three graves and I'll meet you back here when you're done collecting stuff from the dead!
-    -> ENDING
+    **[Sounds like a plan!]
+    -> END
     
 
    *[I'll dig faster than you anyway]
+   ~HappyResponse()
          Damn, with those skinny excuses of "arms" I highly doubt it.
          **[Funny...]
+         ~NeutralResponse()
          Are those your arms? Oh. Thought you had attached the arms of one of the skeletons. Anyway, pick one of the three graves and I'll meet you back here when you're done!
+         ***[Sounds like a plan!]
          ->END
          
        **[Ouch.]
+       ~IndifferentResponse()
              Wait...? Are those your arms? Oh. Thought you had attached the arms of one of the skeletons. Anyway, pick one of the three graves and I'll meet you back here when you're done!
+             ***[Sounds like a plan!]
              ->END
 
 
 -->END
     
+
+=== function IndifferentResponse ===
+~charEmotion="Indifferent"
+
+=== function NeutralResponse ===
+~charEmotion="Neutral"
+
+=== function UpsetResponse ===
+~charEmotion="Upset"
+~loveAmount--
+
 === function SmileResponse===
-    ~ loveAmount+= 5
-    
+    ~ loveAmount++
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
@@ -173,7 +198,7 @@ Hey! Why are you wandering around here all by yourself?
         ~ loveAmount--
         ~ charEmotion="Annoyed"
 
-=== function NegativeResponse ===
+=== function AngryResponse ===
         ~ loveAmount--
         ~ charEmotion = "Angry"
         

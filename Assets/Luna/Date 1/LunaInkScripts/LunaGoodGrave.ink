@@ -149,9 +149,18 @@ Really? What a shocker. Listen, I don't have time for half hearted whims. Either
         //Disrespectful? Those bones have been lying there for centuries. They won't miss a few trinkets. Don't be such a spoil-sport.
         //So. Partner in crime, what do you say we do next time? Maybe a haunted house? O    
 
+=== function IndifferentResponse ===
+~charEmotion="Indifferent"
+
+=== function NeutralResponse ===
+~charEmotion="Neutral"
+
+=== function UpsetResponse ===
+~charEmotion="Upset"
+~loveAmount--
+
 === function SmileResponse===
-    ~ loveAmount+= 5
-    
+    ~ loveAmount++
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
@@ -162,7 +171,7 @@ Really? What a shocker. Listen, I don't have time for half hearted whims. Either
         ~ loveAmount--
         ~ charEmotion="Annoyed"
 
-=== function NegativeResponse ===
+=== function AngryResponse ===
         ~ loveAmount--
         ~ charEmotion = "Angry"
         
