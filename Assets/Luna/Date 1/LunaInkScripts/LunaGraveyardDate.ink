@@ -5,10 +5,10 @@ VAR loveAmount=0
 
 Hey! Why are you wandering around here all by yourself?
 *[Huh?]
-     ~charEmotion= "Indifferent"
+     ~charEmotion= "Neutral"
      Sorry, it's just so rare to see someone else out here at this time. You must be my date, right? I mean, this isn't exactly a hotspot unless you're into eerie places or just generally lost.
     ** [Depends, are you Luna?]
-        ~charEmotion= "Neutral"
+        ~charEmotion= "Smile"
         That would be me. Surprised you actually showed up, this place isn't known for its charm. Actually, neither am I. And your outfit... it definitely makes a statement. Intriguing, really.
             -> OUTFITDILLEMA
         
