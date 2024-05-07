@@ -25,6 +25,7 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] Sprite[] datingAppSprites;
 
 
+    private bool PhoneUp = false;
 
     private float scalingSpeed = 4.0f;
 
@@ -58,9 +59,19 @@ public class PhoneUIManager : MonoBehaviour
 
     public void PhoneIconOnClick()
     {
-        PhoneUI.SetActive(true);
-        datingApp.SetActive(true);
-   
+        if (PhoneUp)
+        {
+            PhoneUI.SetActive(false);
+            datingApp.SetActive(false);
+            PhoneUp = false;
+        }
+        else if (!PhoneUp)
+        {
+            PhoneUI.SetActive(true);
+            datingApp.SetActive(true);
+            PhoneUp = true;
+        }
+          
     }
 
     public void datingAppOnClick() 
@@ -138,7 +149,7 @@ public class PhoneUIManager : MonoBehaviour
         Vector3 initialScale = datingAppUI.transform.localScale;
         Vector3 targetScale = initialScale * 10f; // Example: double the size
         Vector3 initialPosition = datingAppUI.transform.position;
-        Vector3 targetPosition = new Vector3(960, 590,0);
+        Vector3 targetPosition = new Vector3(960,625,0);
 
         float elapsedTime = 0f;
         while (elapsedTime < 1f)
