@@ -55,8 +55,6 @@ public class NoahDialogueManager : MonoBehaviour
 
     void RefreshView()
     {
-
-
         Debug.Log("pizza");
 
         RemoveChildren();
