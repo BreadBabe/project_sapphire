@@ -689,7 +689,6 @@ RectTransform:
   - {fileID: 1925323382}
   - {fileID: 1461792286}
   - {fileID: 1800950987}
-  - {fileID: 639061996}
   m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -904,7 +903,7 @@ GameObject:
   - component: {fileID: 439031954}
   - component: {fileID: 439031953}
   m_Layer: 0
-  m_Name: Button
+  m_Name: YellowBookButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,8 +926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -227.67632, y: 25.77979}
-  m_SizeDelta: {x: 16.103, y: 48.5468}
+  m_AnchoredPosition: {x: -218.51317, y: 34.922012}
+  m_SizeDelta: {x: 25.2768, y: 69.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439031953
 MonoBehaviour:
@@ -1173,7 +1172,7 @@ GameObject:
   - component: {fileID: 639061998}
   - component: {fileID: 639061997}
   m_Layer: 0
-  m_Name: Button
+  m_Name: GreenBookButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,18 +1185,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639061995}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1671956352}
-  m_Father: {fileID: 381887187}
+  m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -333.28427, y: -139.47357}
-  m_SizeDelta: {x: 72.3712, y: 18.0418}
+  m_AnchoredPosition: {x: 97.36304, y: 113.52393}
+  m_SizeDelta: {x: 98.9754, y: 20.7939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639061997
 MonoBehaviour:
@@ -1221,7 +1220,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.56078434}
+    m_HighlightedColor: {r: 0.3584906, g: 0.28915986, b: 0.28915986, a: 0.56078434}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1242,7 +1241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 639061998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 752098011}
+        m_TargetAssemblyTypeName: ButtonUI, Assembly-CSharp
+        m_MethodName: NewGameButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &639061998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1491,7 +1502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4, y: -203}
+  m_AnchoredPosition: {x: -14, y: -251}
   m_SizeDelta: {x: 1049.3807, y: 162.3211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040697834
@@ -1875,6 +1886,7 @@ RectTransform:
   - {fileID: 1600876853}
   - {fileID: 1040697833}
   - {fileID: 578973354}
+  - {fileID: 639061996}
   - {fileID: 439031951}
   - {fileID: 381887187}
   m_Father: {fileID: 1190925971}
@@ -2157,7 +2169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: 284, y: -9}
+  m_AnchoredPosition: {x: 289, y: -53}
   m_SizeDelta: {x: 697, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600876854

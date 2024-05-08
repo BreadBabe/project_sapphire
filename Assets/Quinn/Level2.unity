@@ -689,8 +689,6 @@ RectTransform:
   - {fileID: 1925323382}
   - {fileID: 1461792286}
   - {fileID: 1800950987}
-  - {fileID: 1258155294}
-  - {fileID: 1993407807}
   m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -928,7 +926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -396.49023, y: 247.12915}
+  m_AnchoredPosition: {x: -486, y: 283.08}
   m_SizeDelta: {x: 55.1225, y: 32.2886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439031953
@@ -1061,7 +1059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.39783, y: -150.90039}
+  m_AnchoredPosition: {x: 186.3, y: -220.44}
   m_SizeDelta: {x: 307.4135, y: 55.0523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578973355
@@ -1371,7 +1369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.2085, y: -239.5316}
+  m_AnchoredPosition: {x: -15.2085, y: -311}
   m_SizeDelta: {x: 689.1507, y: 89.2581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040697834
@@ -1464,6 +1462,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!1 &1185342641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185342642}
+  - component: {fileID: 1185342644}
+  - component: {fileID: 1185342643}
+  m_Layer: 0
+  m_Name: FlowerImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1185342642
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185342641}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1393977559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 361, y: -142}
+  m_SizeDelta: {x: 95.4402, y: 101.8239}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1185342643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185342641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: dbd35767e939623448d57e8767f15bf3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1185342644
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185342641}
+  m_CullTransparentMesh: 1
 --- !u!1 &1190925968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1589,7 @@ MonoBehaviour:
   choicebox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: 381d5e3a622b685459341e23a74caa6b, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 5986722a0bffa1749a6e501d8ff77f9b, type: 3}
-  Character: {fileID: 1600876852}
+  Character: {fileID: 0}
   Audio: {fileID: 1436782131}
   lovemeterShutter: {fileID: 1800950984}
 --- !u!1 &1258155293
@@ -1544,16 +1617,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258155293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 381887187}
+  m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -605, y: -23.864685}
+  m_AnchoredPosition: {x: -190, y: 211.8}
   m_SizeDelta: {x: 200, y: 110.2706}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258155295
@@ -1578,50 +1651,47 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Title: Hedera helix: The Enigmatic Ivy
 
-    
 
     Abstract:
 
-    Hedera
-    helix, commonly known as ivy, is a resilient and versatile evergreen vine that
-    has fascinated botanists and gardeners for centuries. With its ability to thrive
-    in diverse habitats and its unique ecological and cultural significance, ivy
-    holds a prominent place in the botanical world. This paper explores the taxonomy,
-    morphology, ecological roles, cultural symbolism, and cultivation of ivy, shedding
-    light on its enduring appeal and importance.
+    Hedera helix,
+    commonly known as ivy, is a resilient and versatile evergreen vine that has fascinated
+    botanists and gardeners for centuries. With its ability to thrive in diverse
+    habitats and its unique ecological and cultural significance, ivy holds a prominent
+    place in the botanical world. This paper explores the taxonomy, morphology, ecological
+    roles, cultural symbolism, and cultivation of ivy, shedding light on its enduring
+    appeal and importance.
 
-    
 
     Introduction:
 
-    Hedera
-    helix, belonging to the family Araliaceae, is native to Europe, Western Asia,
-    and North Africa. Revered for its ornamental beauty and practical uses, ivy has
-    a rich history intertwined with human civilization, from its symbolic significance
-    in mythology and folklore to its practical applications in landscaping and traditional
-    medicine.
-
-    
-
-    Taxonomy and Morphology:
-
-    Taxonomically, Hedera helix
-    is classified within the genus Hedera, comprising several species and numerous
-    cultivars. Morphologically, ivy is characterized by its woody stems, glossy,
-    dark green leaves with distinctive lobes, and aerial rootlets that enable it
-    to cling to various surfaces. Its growth habit ranges from ground covers to climbing
-    vines, exhibiting remarkable adaptability to different environmental conditions.
+    Hedera helix, belonging to the
+    family Araliaceae, is native to Europe, Western Asia, and North Africa. Revered
+    for its ornamental beauty and practical uses, ivy has a rich history intertwined
+    with human civilization, from its symbolic significance in mythology and folklore
+    to its practical applications in landscaping and traditional medicine.
 
 
-    Ecological
-    Roles:
+    Taxonomy
+    and Morphology:
 
-    Ivy plays vital ecological roles in its native habitats and beyond,
-    providing shelter and food for diverse wildlife, including birds, insects, and
-    mammals. Its dense foliage offers nesting sites and protection for small animals,
-    while its flowers and berries serve as important food sources, particularly during
-    winter months. Moreover, ivy contributes to soil stabilization, erosion control,
-    and biodiversity conservation in urban and natural landscapes.'
+    Taxonomically, Hedera helix is classified within the genus
+    Hedera, comprising several species and numerous cultivars. Morphologically, ivy
+    is characterized by its woody stems, glossy, dark green leaves with distinctive
+    lobes, and aerial rootlets that enable it to cling to various surfaces. Its growth
+    habit ranges from ground covers to climbing vines, exhibiting remarkable adaptability
+    to different environmental conditions.
+
+
+    Ecological Roles:
+
+    Ivy plays
+    vital ecological roles in its native habitats and beyond, providing shelter and
+    food for diverse wildlife, including birds, insects, and mammals. Its dense foliage
+    offers nesting sites and protection for small animals, while its flowers and
+    berries serve as important food sources, particularly during winter months. Moreover,
+    ivy contributes to soil stabilization, erosion control, and biodiversity conservation
+    in urban and natural landscapes.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1630,8 +1700,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1648,8 +1718,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1684,7 +1754,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -23.845337, y: 0, z: -67.06964, w: -331.79327}
+  m_margin: {x: -99.33136, y: 0, z: -32.061584, w: -387.5872}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1932,8 +2002,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1600876853}
+  - {fileID: 1185342642}
   - {fileID: 1040697833}
   - {fileID: 578973354}
+  - {fileID: 1258155294}
+  - {fileID: 1993407807}
   - {fileID: 439031951}
   - {fileID: 381887187}
   m_Father: {fileID: 1190925971}
@@ -2216,8 +2289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: -37.2064, y: 28.547}
-  m_SizeDelta: {x: 1488.3242, y: 1055.8}
+  m_AnchoredPosition: {x: -43.7703, y: 1.744}
+  m_SizeDelta: {x: 1912.7959, y: 1351.1799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600876854
 MonoBehaviour:
@@ -2448,16 +2521,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993407806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 381887187}
+  m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.63226, y: -227.55228}
+  m_AnchoredPosition: {x: 192, y: -17}
   m_SizeDelta: {x: 274.7355, y: 385.1046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993407808
@@ -2490,18 +2563,18 @@ MonoBehaviour:
     ivy has inspired poets, artists, and writers, evoking themes of love, endurance,
     and the passage of time.
 
-    
+
 
     Cultivation and Management:
 
-    Ivy is
-    widely cultivated for its ornamental value in gardens, landscapes, and indoor
-    settings. With numerous cultivars offering different leaf shapes, colors, and
-    growth habits, ivy provides versatile options for horticultural enthusiasts.
-    However, its vigorous growth and climbing behavior require careful management
-    to prevent invasive tendencies and potential damage to structures and trees.
+    Ivy is widely
+    cultivated for its ornamental value in gardens, landscapes, and indoor settings.
+    With numerous cultivars offering different leaf shapes, colors, and growth habits,
+    ivy provides versatile options for horticultural enthusiasts. However, its vigorous
+    growth and climbing behavior require careful management to prevent invasive tendencies
+    and potential damage to structures and trees.
 
-    
+
 
     Conclusion:
 
@@ -2513,7 +2586,7 @@ MonoBehaviour:
     and underscores the importance of its conservation and sustainable management
     in an ever-changing world.
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -2524,8 +2597,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2542,8 +2615,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2578,7 +2651,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -21.697449, y: -61.475983, z: 10.848755, w: 0}
+  m_margin: {x: -21.697449, y: -61.475983, z: -71.611694, w: 55.74788}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
