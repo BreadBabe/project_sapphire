@@ -1758,7 +1758,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e13c8c182e2384286b8cf0723df15b0d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1158fb38c11144c1f94d5ba8f5010475, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 1607785478}
   typingSpeed: 25
-  inkJSONAsset: {fileID: 4900000, guid: 76de47c67d2ea4e2083714d7b0bdc276, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: d5addf63edca14358ba441759e6c229d, type: 3}
   dialoguebox: {fileID: 523488844}
   choicebox: {fileID: 1106619142}
   textPrefab: {fileID: 11456674, guid: 33bfd392f09c84cdaa2655de36216ed6, type: 3}
