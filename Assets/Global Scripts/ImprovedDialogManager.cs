@@ -56,10 +56,10 @@ public class LunaInkManager : MonoBehaviour
 
     void RefreshView()
     {
- 
+
 
         Debug.Log("pizza");
-        
+
         RemoveChildren();
 
         string text = story.Continue().Trim();
@@ -72,7 +72,7 @@ public class LunaInkManager : MonoBehaviour
 
     void OnClickChoiceButton(Choice choice)
     {
- 
+
         story.ChooseChoiceIndex(choice.index);
         RefreshView();
     }
@@ -154,9 +154,6 @@ public class LunaInkManager : MonoBehaviour
     }
 
 
-
-
-
     void DisplayChoices()
     {
         if (!story.canContinue && !isTyping)
@@ -173,14 +170,13 @@ public class LunaInkManager : MonoBehaviour
             else
             {
                 Button choice = CreateChoiceView("End of story.\nRestart?");
-                choice.onClick.AddListener(delegate {
+                choice.onClick.AddListener(delegate
+                {
                     StartStory();
                 });
             }
 
         }
     }
-
+    
 }
-
-
