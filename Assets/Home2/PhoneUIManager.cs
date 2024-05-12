@@ -11,6 +11,11 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] GameObject PhoneUI;
     [SerializeField] GameObject datingApp;
     [SerializeField] GameObject datingAppUI;
+    [SerializeField] GameObject messangerApp;
+    [SerializeField] GameObject messangerAppUI;
+    [SerializeField] GameObject homeButton;
+    [SerializeField] GameObject notif;
+    [SerializeField] GameObject lockedDate;
 
     [SerializeField] GameObject DateQUESTIONMARK;
   
@@ -30,6 +35,11 @@ public class PhoneUIManager : MonoBehaviour
     private float scalingSpeed = 4.0f;
 
     public bool datePicked;
+    bool dateDay;
+
+    bool datingappUp;
+    bool messangerAppUp;
+
 
     public enum DatingAppStates { Quinn, Luna, Noah, Summer }
     public DatingAppStates datingAppState;
@@ -44,8 +54,12 @@ public class PhoneUIManager : MonoBehaviour
     void Start()
     {
         PhoneIcon.SetActive(true);
+        notif.SetActive(false);
+        lockedDate.SetActive(false);
         PhoneUI.SetActive(false);
         datingApp.SetActive(false);
+        messangerApp.SetActive(false);
+        messangerAppUI.SetActive(false);
         datingAppUI.SetActive(false);
         DateQUESTIONMARK.SetActive(false);
         foreach (GameObject button in appButtons)
@@ -63,12 +77,16 @@ public class PhoneUIManager : MonoBehaviour
         {
             PhoneUI.SetActive(false);
             datingApp.SetActive(false);
+            messangerApp.SetActive(false);
+            homeButton.SetActive(false);
             PhoneUp = false;
         }
         else if (!PhoneUp)
         {
             PhoneUI.SetActive(true);
             datingApp.SetActive(true);
+            messangerApp.SetActive(true);
+            homeButton.SetActive(true);
             PhoneUp = true;
         }
           
@@ -77,42 +95,70 @@ public class PhoneUIManager : MonoBehaviour
     public void datingAppOnClick() 
     {
         datingAppUI.SetActive(true);
+        datingappUp = true;
         foreach (GameObject button in appButtons)
         {
             button.SetActive(false);
         }
-        StartCoroutine(ScaleObject());
+        StartCoroutine(ScaleUpObject());
         StartCoroutine(ShowAppButtons());
     }
 
-    public void UpdateAppUI()
+    public void homeBUttonOnClick()
     {
-        
+        if (messangerAppUp)
+        {
+            StartCoroutine(ScaleDownObjectApp());
+            messangerAppUp = false;
+        }
+        else if (datingappUp)
+        {
+            StartCoroutine(ScaleDownObject());
+            messangerAppUp = false;
+           
+        }
+    }
+
+    public void MessangerAppCLicked()
+    {
+        messangerAppUI.SetActive(true);
+        StartCoroutine(ScaleUpObjectApp());
+        messangerAppUp = true;
+        notif.SetActive(false);
+     
+
     }
 
     public void RightButtonPressed()
     {
-        switch (datingAppState)
+
+        if(!datePicked)
         {
-            case DatingAppStates.Quinn:
-                datingAppState = DatingAppStates.Luna;
-                break;
-            case DatingAppStates.Luna:
-                datingAppState = DatingAppStates.Noah;
-                break;
-            case DatingAppStates.Noah:
-                datingAppState = DatingAppStates.Summer;
-                break;
-            case DatingAppStates.Summer:
-                datingAppState = DatingAppStates.Quinn;
-                break;
+            switch (datingAppState)
+            {
+                case DatingAppStates.Quinn:
+                    datingAppState = DatingAppStates.Luna;
+                    break;
+                case DatingAppStates.Luna:
+                    datingAppState = DatingAppStates.Noah;
+                    break;
+                case DatingAppStates.Noah:
+                    datingAppState = DatingAppStates.Summer;
+                    break;
+                case DatingAppStates.Summer:
+                    datingAppState = DatingAppStates.Quinn;
+                    break;
+            }
         }
+      
 
     }
 
     public void LeftButtonPressed()
     {
-        switch (datingAppState)
+        if (!datePicked)
+        {
+               switch (datingAppState)
         {
             case DatingAppStates.Quinn:
                 datingAppState = DatingAppStates.Summer;
@@ -127,6 +173,8 @@ public class PhoneUIManager : MonoBehaviour
                 datingAppState = DatingAppStates.Noah;
                 break;
         }
+        }
+     
     }
 
 
@@ -141,11 +189,27 @@ public class PhoneUIManager : MonoBehaviour
     }
     public void DateMeCLicked()
     {
-        DateQUESTIONMARK.SetActive(true);
+        if (!datePicked)
+        {
+            DateQUESTIONMARK.SetActive(true);
+        }
+        if (datePicked)
+        {
+         
+        }
+    }
+
+    public void DateMessage()
+    {
+        notif.SetActive(true);
+        DateQUESTIONMARK.SetActive(false);
+        datePicked = true;
+        lockedDate.SetActive(true);
     }
     
-    IEnumerator ScaleObject()
+    IEnumerator ScaleUpObject()
     {
+       
         Vector3 initialScale = datingAppUI.transform.localScale;
         Vector3 targetScale = initialScale * 10f; // Example: double the size
         Vector3 initialPosition = datingAppUI.transform.position;
@@ -162,6 +226,70 @@ public class PhoneUIManager : MonoBehaviour
 
         datingAppUI.transform.localScale = targetScale;
         datingAppUI.transform.position = targetPosition;
+    }
+
+    IEnumerator ScaleUpObjectApp()
+    {
+        Vector3 initialScale = messangerAppUI.transform.localScale;
+        Vector3 targetScale = initialScale * 10f; // Example: double the size
+        Vector3 initialPosition = messangerAppUI.transform.position;
+        Vector3 targetPosition = new Vector3(960, 625, 0);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            messangerAppUI.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime);
+            messangerAppUI.transform.position = Vector3.Lerp(initialPosition, targetPosition, elapsedTime);
+            elapsedTime += Time.deltaTime * scalingSpeed;
+            yield return null;
+        }
+
+        messangerAppUI.transform.localScale = targetScale;
+        messangerAppUI.transform.position = targetPosition;
+    }
+
+    IEnumerator ScaleDownObject()
+    {
+        Vector3 initialScale = datingAppUI.transform.localScale;
+        Vector3 targetScale = initialScale / 10f; // Example: double the size
+        Vector3 initialPosition = datingAppUI.transform.position;
+        Vector3 targetPosition = new Vector3(960, 625, 0);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            datingAppUI.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime);
+            datingAppUI.transform.position = Vector3.Lerp(initialPosition, targetPosition, elapsedTime);
+            elapsedTime += Time.deltaTime * scalingSpeed;
+            yield return null;
+        }
+
+        datingAppUI.transform.localScale = targetScale;
+        datingAppUI.transform.position = targetPosition;
+        datingAppUI.SetActive(false);
+        messangerAppUI.SetActive(false);
+    }
+
+    IEnumerator ScaleDownObjectApp()
+    {
+        Vector3 initialScale = messangerAppUI.transform.localScale;
+        Vector3 targetScale = initialScale / 10f; // Example: double the size
+        Vector3 initialPosition = messangerAppUI.transform.position;
+        Vector3 targetPosition = new Vector3(960, 625, 0);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            messangerAppUI.transform.localScale = Vector3.Lerp(initialScale, targetScale, elapsedTime);
+            messangerAppUI.transform.position = Vector3.Lerp(initialPosition, targetPosition, elapsedTime);
+            elapsedTime += Time.deltaTime * scalingSpeed;
+            yield return null;
+        }
+
+        messangerAppUI.transform.localScale = targetScale;
+        messangerAppUI.transform.position = targetPosition;
+        messangerAppUI.SetActive(false);
+        messangerAppUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -201,7 +329,7 @@ public class PhoneUIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Home2" && datePicked)
+        if (currentScene.name == "Home2" && dateDay)
         {
             switch (datingAppState)
             {
