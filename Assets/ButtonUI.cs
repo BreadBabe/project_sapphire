@@ -42,7 +42,8 @@ public class ButtonUI : MonoBehaviour
 
         if (index + 1 == pictureList.Count) return;
 
-        currentPicture = pictureList[index];
+        //currentPicture = pictureList[index];
+        currentPicture = pictureList[0];
         currentLeftText = textLeftList[index];
         currentRightText = textRightList[index];
 

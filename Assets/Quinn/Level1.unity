@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472660344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -1903,8 +1903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.39783, y: -150.90039}
-  m_SizeDelta: {x: 307.4135, y: 55.0523}
+  m_AnchoredPosition: {x: 201.4, y: -210.45}
+  m_SizeDelta: {x: 289.0518, y: 31.6828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578973355
 MonoBehaviour:
@@ -2041,7 +2041,41 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Cultivation and Horticultural Significance:
+
+    Parrot''s Beak is prized
+    by horticulturists for its ornamental value and unique floral display. It is
+    cultivated as a potted plant or hanging basket specimen in temperate climates,
+    where it adds a splash of tropical color to gardens, conservatories, and indoor
+    spaces. Cultivation requires attention to environmental conditions, including
+    moderate temperatures, high humidity, and well-drained, acidic soil. Additionally,
+    propagation is typically achieved through stem cuttings or seed sowing, with
+    care taken to mimic its natural habitat requirements.
+
+
+
+    Conservation Status:
+
+    Despite
+    its popularity in cultivation, Parrot''s Beak faces threats in its native habitat
+    due to deforestation, habitat fragmentation, and illegal collection for the horticultural
+    trade. Overexploitation of wild populations poses a significant risk to its long-term
+    survival, prompting conservation organizations and botanical institutions to
+    prioritize its protection through habitat conservation, ex-situ conservation
+    programs, and community-based initiatives.
+
+
+
+    Conclusion:
+
+    Impatiens
+    psittacina, with its striking resemblance to a parrot''s beak and its ecological
+    importance in montane cloud forests, stands as a botanical marvel worthy of admiration
+    and conservation. Understanding its taxonomy, morphology, habitat requirements,
+    and conservation status is essential for safeguarding this unique plant species
+    and promoting its sustainable cultivation and appreciation worldwide. Parrot''s
+    Beak serves as a reminder of nature''s creativity and resilience, inspiring awe
+    and appreciation for the wonders of the plant kingdom.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2050,8 +2084,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2068,13 +2102,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2104,7 +2138,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -34.641968, y: 0, z: -64.66492, w: -356.53568}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2134,7 +2168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220.51001, y: -96}
+  m_AnchoredPosition: {x: 177.11, y: 153}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &685527146
@@ -2459,41 +2493,37 @@ MonoBehaviour:
   m_text: 'Moreover, ivy contributes to soil stabilization, erosion control, and
     biodiversity conservation in urban and natural landscapes.
 
-    
 
-    Cultural
-    Symbolism:
+    Cultural Symbolism:
 
-    Throughout history, ivy has held symbolic significance in various
-    cultures, representing resilience, longevity, and fidelity. In ancient Greek
-    mythology, ivy was associated with Dionysus, the god of wine and revelry, symbolizing
-    vitality and celebration. In Christianity, ivy symbolizes resurrection and eternal
-    life, often depicted in religious art and architecture. Additionally, ivy has
-    inspired poets, artists, and writers, evoking themes of love, endurance, and
-    the passage of time.
+    Throughout
+    history, ivy has held symbolic significance in various cultures, representing
+    resilience, longevity, and fidelity. In ancient Greek mythology, ivy was associated
+    with Dionysus, the god of wine and revelry, symbolizing vitality and celebration.
+    In Christianity, ivy symbolizes resurrection and eternal life, often depicted
+    in religious art and architecture. Additionally, ivy has inspired poets, artists,
+    and writers, evoking themes of love, endurance, and the passage of time.
 
-    
 
-    Cultivation and Management:
+    Cultivation
+    and Management:
 
-    Ivy is widely
-    cultivated for its ornamental value in gardens, landscapes, and indoor settings.
-    With numerous cultivars offering different leaf shapes, colors, and growth habits,
-    ivy provides versatile options for horticultural enthusiasts. However, its vigorous
-    growth and climbing behavior require careful management to prevent invasive tendencies
-    and potential damage to structures and trees.
+    Ivy is widely cultivated for its ornamental value in gardens,
+    landscapes, and indoor settings. With numerous cultivars offering different leaf
+    shapes, colors, and growth habits, ivy provides versatile options for horticultural
+    enthusiasts. However, its vigorous growth and climbing behavior require careful
+    management to prevent invasive tendencies and potential damage to structures
+    and trees.
 
-    
 
     Conclusion:
 
-    Hedera
-    helix, with its enigmatic beauty, ecological significance, cultural symbolism,
-    and horticultural versatility, stands as a timeless emblem of nature''s resilience
-    and human ingenuity. Understanding its taxonomy, morphology, ecological roles,
-    and cultural context enhances our appreciation for this iconic plant species
-    and underscores the importance of its conservation and sustainable management
-    in an ever-changing world.'
+    Hedera helix, with its enigmatic beauty, ecological
+    significance, cultural symbolism, and horticultural versatility, stands as a
+    timeless emblem of nature''s resilience and human ingenuity. Understanding its
+    taxonomy, morphology, ecological roles, and cultural context enhances our appreciation
+    for this iconic plant species and underscores the importance of its conservation
+    and sustainable management in an ever-changing world.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2610,50 +2640,45 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Title: Hedera helix: The Enigmatic Ivy
 
-    
 
     Abstract:
 
-    Hedera
-    helix, commonly known as ivy, is a resilient and versatile evergreen vine that
-    has fascinated botanists and gardeners for centuries. With its ability to thrive
-    in diverse habitats and its unique ecological and cultural significance, ivy
-    holds a prominent place in the botanical world. This paper explores the taxonomy,
-    morphology, ecological roles, cultural symbolism, and cultivation of ivy, shedding
-    light on its enduring appeal and importance.
+    Hedera helix,
+    commonly known as ivy, is a resilient and versatile evergreen vine that has fascinated
+    botanists and gardeners for centuries. With its ability to thrive in diverse
+    habitats and its unique ecological and cultural significance, ivy holds a prominent
+    place in the botanical world. This paper explores the taxonomy, morphology, ecological
+    roles, cultural symbolism, and cultivation of ivy, shedding light on its enduring
+    appeal and importance.
 
-    
 
     Introduction:
 
-    Hedera
-    helix, belonging to the family Araliaceae, is native to Europe, Western Asia,
-    and North Africa. Revered for its ornamental beauty and practical uses, ivy has
-    a rich history intertwined with human civilization, from its symbolic significance
-    in mythology and folklore to its practical applications in landscaping and traditional
-    medicine.
+    Hedera helix, belonging to the
+    family Araliaceae, is native to Europe, Western Asia, and North Africa. Revered
+    for its ornamental beauty and practical uses, ivy has a rich history intertwined
+    with human civilization, from its symbolic significance in mythology and folklore
+    to its practical applications in landscaping and traditional medicine.
 
-    
 
-    Taxonomy and Morphology:
+    Taxonomy
+    and Morphology:
 
-    Taxonomically, Hedera helix
-    is classified within the genus Hedera, comprising several species and numerous
-    cultivars. Morphologically, ivy is characterized by its woody stems, glossy,
-    dark green leaves with distinctive lobes, and aerial rootlets that enable it
-    to cling to various surfaces. Its growth habit ranges from ground covers to climbing
-    vines, exhibiting remarkable adaptability to different environmental conditions.
+    Taxonomically, Hedera helix is classified within the genus
+    Hedera, comprising several species and numerous cultivars. Morphologically, ivy
+    is characterized by its woody stems, glossy, dark green leaves with distinctive
+    lobes, and aerial rootlets that enable it to cling to various surfaces. Its growth
+    habit ranges from ground covers to climbing vines, exhibiting remarkable adaptability
+    to different environmental conditions.
 
-    
 
-    Ecological
-    Roles:
+    Ecological Roles:
 
-    Ivy plays vital ecological roles in its native habitats and beyond,
-    providing shelter and food for diverse wildlife, including birds, insects, and
-    mammals. Its dense foliage offers nesting sites and protection for small animals,
-    while its flowers and berries serve as important food sources, particularly during
-    winter months. '
+    Ivy plays
+    vital ecological roles in its native habitats and beyond, providing shelter and
+    food for diverse wildlife, including birds, insects, and mammals. Its dense foliage
+    offers nesting sites and protection for small animals, while its flowers and
+    berries serve as important food sources, particularly during winter months. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2781,13 +2806,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1613778320}
   m_Father: {fileID: 1393977559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.715, y: -223.06}
-  m_SizeDelta: {x: 689.1507, y: 89.2581}
+  m_AnchoredPosition: {x: 222.5441, y: -261.89023}
+  m_SizeDelta: {x: 383.7148, y: 42.9167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040697834
 MonoBehaviour:
@@ -2926,7 +2952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 373212629}
   typingSpeed: 50
-  inkJSONAsset: {fileID: 0}
+  inkJSONAsset: {fileID: 4900000, guid: e13c4a076cf2def4499746b39eabd2c0, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: 381d5e3a622b685459341e23a74caa6b, type: 3}
@@ -3461,8 +3487,6 @@ RectTransform:
   m_Children:
   - {fileID: 43616016}
   - {fileID: 2092936306}
-  - {fileID: 1040697833}
-  - {fileID: 578973354}
   - {fileID: 1878460472}
   - {fileID: 368412498}
   - {fileID: 931440484}
@@ -3473,6 +3497,8 @@ RectTransform:
   - {fileID: 1993407807}
   - {fileID: 656955560}
   - {fileID: 97204989}
+  - {fileID: 578973354}
+  - {fileID: 1040697833}
   - {fileID: 439031951}
   - {fileID: 472660345}
   - {fileID: 1883030956}
@@ -3859,6 +3885,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561114338}
   m_CullTransparentMesh: 1
+--- !u!1 &1613778319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613778320}
+  - component: {fileID: 1613778322}
+  - component: {fileID: 1613778321}
+  m_Layer: 5
+  m_Name: TextDialouge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1613778320
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613778319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1040697833}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1613778321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613778319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1613778322
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613778319}
+  m_CullTransparentMesh: 1
 --- !u!1 &1800950984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4003,7 +4163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.5217, y: 0.0206}
+  m_AnchoredPosition: {x: 18.519, y: 28.223}
   m_SizeDelta: {x: 1141.0386, y: 925.5483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1883030955
@@ -4299,7 +4459,52 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 'Title: Parrot''s Beak (Impatiens psittacina): Nature''s Floral Parrot
+
+
+    Abstract:
+
+    Impatiens
+    psittacina, commonly known as Parrot''s Beak, is a unique and captivating flowering
+    plant species renowned for its resemblance to a parrot''s vibrant plumage. Endemic
+    to the cloud forests of Southeast Asia, Parrot''s Beak boasts intricate floral
+    structures and striking coloration, making it a prized specimen among botanists
+    and horticultural enthusiasts. This paper explores the taxonomy, morphology,
+    habitat, cultivation, and conservation status of Parrot''s Beak, shedding light
+    on its ecological importance and cultural significance.
+
+
+    Introduction:
+
+    Impatiens
+    psittacina, a member of the genus Impatiens within the family Balsaminaceae,
+    is native to the montane forests of Thailand, Myanmar, and Laos. Its common name,
+    Parrot''s Beak, derives from the distinctive shape and coloration of its flowers,
+    which resemble the curved beak and vibrant plumage of a parrot. Parrot''s Beak
+    has captured the imagination of plant lovers worldwide, earning a place of honor
+    in botanical gardens and collections.
+
+
+    Taxonomy and Morphology:
+
+    Taxonomically,
+    Impatiens psittacina is classified within the diverse genus Impatiens, which
+    comprises over 1,000 species of annual and perennial herbs. Morphologically,
+    Parrot''s Beak is characterized by its pendulous, tubular flowers with curved
+    spurs and vibrant hues of red, purple, and green. The intricate floral structure,
+    including a unique hooded petal arrangement, serves as an adaptation for attracting
+    pollinators and facilitating successful reproduction.
+
+
+    Habitat and Distribution:
+
+    Parrot''s
+    Beak is typically found in the cool, moist environments of montane cloud forests,
+    where it thrives in the dappled sunlight and rich, well-drained soils. It often
+    grows as an epiphyte or lithophyte, clinging to tree branches or rocky outcrops,
+    where it benefits from the high humidity and abundant rainfall characteristic
+    of its native habitat. However, habitat loss and degradation threaten the survival
+    of wild populations, underscoring the importance of conservation efforts.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4308,8 +4513,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4326,13 +4531,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4362,7 +4567,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 102.736786, y: 132.27356, z: -231.15765, w: -638.2521}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4392,7 +4597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2922974, y: 0.0009765625}
+  m_AnchoredPosition: {x: -329, y: 294}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1993407806
