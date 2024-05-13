@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/DialogueScreen2.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Hospital/HospitalStart.unity
     guid: 2c9fb9dbadeb049609a786fcf6aff1d6
@@ -20,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Luna/Date 1/Graveyard.unity
     guid: 6f55d9c31aafc4b3cac9369c8da516b9
+  - enabled: 1
+    path: Assets/Noah/Date1/Date1Noah.unity
+    guid: 052fc93307ee26343a023e62c4cefb48
+  - enabled: 1
+    path: Assets/Noah/Date1/DrinkPickGame.unity
+    guid: 5e378f76ca7911f4fa703a243ef168e3
   m_configObjects: {}

@@ -3,6 +3,9 @@ using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEditor.Rendering;
+using UnityEditor.Experimental.GraphView;
 
 public class NoahDialogueManager : MonoBehaviour
 {
@@ -23,6 +26,8 @@ public class NoahDialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject Character;
     [SerializeField] private GameObject Audio;
+
+    private SceneChanger SceneChanger = new SceneChanger();
 
     private string charName;
     private string charEmotion;
@@ -169,10 +174,42 @@ public class NoahDialogueManager : MonoBehaviour
             }
             else
             {
-                Button choice = CreateChoiceView("End of story.\nRestart?");
-                choice.onClick.AddListener(delegate {
-                    StartStory();
-                });
+
+
+                //if (ScreenFader != null)
+                //{
+                //ScreenFader.StartFadeOut();
+
+                //StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                SceneChanger.ChangeScreen("DrinkPickGame");
+                 //}
+                //else
+                //{
+                //    Debug.Log("pizza not found");
+                //}
+                //Button choice = CreateChoiceView("End of story.\nRestart?");
+                //choice.onClick.AddListener(delegate {
+                //    StartStory();
+                //});
+            }
+
+            IEnumerator LoadNextSceneAfterDelay(float delay)
+            {
+                yield return new WaitForSeconds(delay);
+                Scene currentScene = SceneManager.GetActiveScene();
+                if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
+                {
+                    SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
+                }
+                else if (currentScene.name == "")
+                {
+                    SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
+                }
+                else if (currentScene.name == "")
+                {
+                    SceneManager.LoadScene(3);
+                }
+                // Add more conditions for other scenes if needed
             }
 
         }

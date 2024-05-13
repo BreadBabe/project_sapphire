@@ -55,6 +55,8 @@ You are who i think you are right? I am Noah.
         ***[mhm]
             ...
             -> TABLE_BAD_MOOD
+ *[GO TO END]
+    ->END
 
 == TABLE_DEFAULT ==
 *[Walk to table]
@@ -62,8 +64,8 @@ You are who i think you are right? I am Noah.
     **[Its been alright...]
         ~NeutralResponse()  
         ...alright, yeah good to hear...
-        ***[Should we get a drink?] 
-                ~HappyResponse()
+        ***[Should we get something to drink?]
+            ~HappyResponse()
                 Hell yeah! I'll get us something!
                 ->TABLE_DRINK()
         ***[...]
@@ -190,7 +192,8 @@ You are who i think you are right? I am Noah.
 == TABLE_BAD_MOOD ==
 *[Walk to table]
     -> BAD_DATE_END()
-    
+     //Might not be used in final product, time constraints:(
+
 == TABLE_DRINK ==
     ~SmileResponse()
     *[...]
@@ -221,8 +224,8 @@ You are who i think you are right? I am Noah.
 
 == BackstoryDialogue ==
 //Intended for conversation about being a bartender
-*[Ah so this is where you work!]
-    You atleast reed my profile i see, said i was a bartender but never said where! But yes this is the place
+    *[Ah so this is where you work!]
+        You atleast reed my profile i see, said i was a bartender but never said where! But yes this is the place
         **[Hows working here?]
             ~HappyResponse()
             Its great honestly would say it suits me perfectly! Get to talk to people serve drinks have a couple of laughs and party! What more can a man really ask for? Haha
@@ -248,29 +251,118 @@ You are who i think you are right? I am Noah.
                 ***[It seems to suit you quite well]
                     definetly
                     ->PickingDrink()
-*[You work here?] 
-    Sure do! Quite cozy dont you think?
+    *[You work here?] 
+        Sure do! Quite cozy dont you think?
         **[Sure is!]
             Glad you agree! Never am as relaxed as when i am behind the bar serving drinks and chatting up costumers! Suits me perfectly i would say
-                ***[Ill drink to that!]
-                    ~ContentResponse()
-                    Thats the spirit! haha
-                    ->PickingDrink()
+            ***[Ill drink to that!]
+                ~ContentResponse()
+                Thats the spirit! haha
+                ->PickingDrink()
         **[Bit too noise for me]
             ~NeutralResponse()
             It all just blends into the surroundings for me, kinda relaxing honestly not like a metal concert or anything thats fucking loud if anything.
-                ***[Got something against metal?]
-                    Meh, just not my thing really. Prefer other types of music but i dont have any grudge against it or anything, plenty of good bars out there playing metal on repeat if youre interested.
-                    ->MusicDiscourse()
-                ***[I mean sure] //Fix formating
-                    ->PickingDrink()
+            ***[Got something against metal?]
+                Meh, just not my thing really. Prefer other types of music but i dont have any grudge against it or anything, plenty of good bars out there playing metal on repeat if youre interested.
+                ->MusicDiscourse()
+            ***[I mean sure]
+                ->PickingDrink()
 
 == PickingDrink ==
 *[So about that drink?]
-    Ofcourse whats 
--> END
+    ~SmileResponse()
+    Ofcourse! Whats your poison?
+    **[Something non-alcholic]
+        ~ContentResponse()
+        What like apple juice or milk? Come on you could get something better!
+        ***[I dont drink alcohol]
+            ~SmileResponse()
+            Oh right, sorry... i get it, you will get something nice i promise! Not everything behind that counter is alcohol Ofcourse! Be right back!
+                ****[*Wait for Noah*]
+                    ->NoahGetsDrink()
+        ***[Rather not start with alcohol just yet]
+            ~SmileResponse()
+            Fair, but a little boring ill get you something good still! Not everything behind that counter is alcohol Ofcourse. Be right back!
+                ->NoahGetsDrink()
+    **[Something strong]
+        ~HappyResponse()
+        NOW WE ARE TALKING! This is how you start a night out! Will be right back!
+        ->NoahGetsDrink()
+    **[Something mild]
+        ~SmileResponse()
+        Alright Starting off light thats respectable, ill be right back!
+        ->NoahGetsDrink()
+    **[chefs choice!]
+        Bold haha, you wont regret it tho promise! Ill be right back!
+        ->NoahGetsDrink()
 
+==NoahGetsDrink==
+*[*Wait for Noah*] 
+    ~NoNoah()
+    ...*He marches over to the bar in a brisk pace... He starts talking to the bartender and hangs back on the counter. He smiles at you*
+    **[*Smile back*]
+        ...*He looks happy... The drinks seems to be done now... He walks back to the table*
+            ***[*Wait for him*]
+                ->DrinkAtTable1()
+    **[*Make a silly face*]
+        ...*He makes a face back and looks amused... The drinks seems to be done now... He walks back to the table*
+            ***[*Wait for him*]
+                ->DrinkAtTable1()
+    **[*Make a neutral face*]
+        ...*He leans back against the counter... The drinks seem to be done now... He walks back to the table
+            ***[*Wait for him*]
+                ->DrinkAtTable1()
 
+==DrinkAtTable1==
+*[Greet him!]
+    ~HappyResponse()
+    Alright her you go enjoy picked with special care by yours truly!
+    **[*Take a sip*]
+        .*Noah seems to have gotten a large pint of beer, and is chugging it down quite rapidly*...So hows your drink?
+        ***[Its great the flavours really come together]
+            ~ContentResponse()
+            Thats great to hear! I always prefer a nice flavorful one if am just getting a one or a few. Taking it slow and steady really getting to know all the flavours! 
+                ->DrinkAtTable2
+        ***[Its alright]
+            ~HappyResponse()
+            Thats good to hear. Old reliable is a great start as always and a common one at that gets people to come back to the bar, heh cant say we arent encouraged to get that effect going!
+                ->DrinkAtTable2
+        ***[Could have been better]
+            Ah thats a shame, getting a mediocre drink first is a bummer but always easy to fix on the second try! Experimenting with new drinks is a great way to find new favourites as well!
+                ->DrinkAtTable2
+
+==DrinkAtTable2==
+~SmileResponse()
+*[You sure have alot to say about drinks]
+    There is a reason i work here right? Its a bit of a passion of mine you could say, people that dont have a love for drinks dont do as well in my opinion.
+        **[You would think that]
+            Yeah, without that passion you will only get so far, true for any profession id say!
+                ***[...]
+                    ->MinigamePrelude()
+        **[Idk people can be good bartenders still]
+            Oh sure but the best in the business always got that passion, just working will only get you so far!
+                ***[...]
+                    ->MinigamePrelude()
+            ->END
+
+==MinigamePrelude==
+Say i got something special planned for tonight, privilege of having a chill boss you could say...
+    *[And what is that?]
+        ~HappyResponse()
+        You'll get to make your very own drink! Using some of the special stuff we got behind the counter! Hows that for a first date activity! Haha 
+            **[Fuck Yeah!]
+                ~BlushResponse()
+                Thats the spirit! I get the things ready right way! Just come behind the bar when youre all done with your drink
+                    -> END
+            **[Idk am not that good...]
+                ~HappyResponse()
+                Ah come on! It doesnt have to be amazing the first time! Just try and not kill me haha! Come behind the counter when youre all done!
+                    -> END
+            **[I'll give it a try!]
+                ~HappyResponse()
+                Just give it your all and it will go well trust me! Come behind the counter when youre all done!
+                    -> END
+                
 
 == MusicDiscourse ==
 ->PickingDrink()
@@ -367,5 +459,7 @@ You are who i think you are right? I am Noah.
         **[Not found a job yet so could be better]
             You will get there i belive in you!
             ->PickingDrink()
+            
+
 
 
