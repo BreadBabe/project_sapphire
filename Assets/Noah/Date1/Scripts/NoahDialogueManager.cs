@@ -6,6 +6,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor.Rendering;
 using UnityEditor.Experimental.GraphView;
+using Ink.UnityIntegration;
 
 public class NoahDialogueManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class NoahDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed;
 
     [SerializeField] private TextAsset inkJSONAsset = null;
+    
     private Story story;
 
     [SerializeField] private GameObject dialoguebox = null;
@@ -47,7 +49,12 @@ public class NoahDialogueManager : MonoBehaviour
     //Used for drink mix success calculation // DEFAULT: 0
     int mixingScore = 0;
 
-
+    //Get Set
+    public TextAsset InkFile
+    {
+        get {  return inkJSONAsset; }
+        set { inkJSONAsset = value; }
+    }
     public void StartStoryAfterButtonClick()
     {
         // Enable the LunaInkManager script to start its logic
@@ -117,7 +124,7 @@ public class NoahDialogueManager : MonoBehaviour
         Audio.GetComponent<AudioSource>().Play();
 
         loveAmount = (int)story.variablesState["loveAmount"];
-        lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
+        //lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
 
         StartCoroutine(TypeText(text)); // Start typing effect
     }

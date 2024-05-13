@@ -1,8 +1,10 @@
 using Ink.Parsed;
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +13,10 @@ public class DrinkMinigame : MonoBehaviour
     [SerializeField] private GameObject mgStart;
     [SerializeField] private GameObject mgParent;
     [SerializeField] private GameObject bottleChoice;
+    [SerializeField] private Button NoahButton;
+    [SerializeField] private NoahDialogueManager dialogue;
+    [SerializeField] private TextAsset BadEnding;
+    [SerializeField] private TextAsset GoodEnding;
 
     private int choiceAmount;
     private int mgWidth;
@@ -43,6 +49,7 @@ public class DrinkMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NoahButton.interactable = false;
     }
 
     // Update is called once per frame
@@ -90,6 +97,19 @@ public class DrinkMinigame : MonoBehaviour
                 Destroy(mgParent.transform.GetChild(i).gameObject);
 
             }
+
+            //Enables Noah the start button
+            NoahButton.interactable = true;
+            //
+            if(mixingScore == 0 ||  mixingScore < 0)
+            {
+                dialogue.InkFile = /*BadEnding*/GoodEnding;
+            }
+            if (mixingScore > 0)
+            {
+                dialogue.InkFile = GoodEnding;
+            }
+
         }
     }
 

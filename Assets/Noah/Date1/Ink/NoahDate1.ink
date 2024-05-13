@@ -56,7 +56,7 @@ You are who i think you are right? I am Noah.
             ...
             -> TABLE_BAD_MOOD
  *[GO TO END]
-    ->BackstoryDialogue()
+    ->END()
 
 == TABLE_DEFAULT ==
 *[Walk to table]
