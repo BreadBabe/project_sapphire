@@ -257,11 +257,12 @@ You are who i think you are right? I am Noah.
                     Thats the spirit! haha
                     ->PickingDrink()
         **[Bit too noise for me]
+            ~NeutralResponse()
             It all just blends into the surroundings for me, kinda relaxing honestly not like a metal concert or anything thats fucking loud if anything.
                 ***[Got something against metal?]
                     Meh, just not my thing really. Prefer other types of music but i dont have any grudge against it or anything, plenty of good bars out there playing metal on repeat if youre interested.
                     ->MusicDiscourse()
-                ***[]
+                ***[I mean sure] //Fix formating
                     ->PickingDrink()
 
 == PickingDrink ==
@@ -269,8 +270,7 @@ You are who i think you are right? I am Noah.
     Ofcourse whats 
 -> END
 
-== MinigameTemp ==
-*[]
+
 
 == MusicDiscourse ==
 ->PickingDrink()

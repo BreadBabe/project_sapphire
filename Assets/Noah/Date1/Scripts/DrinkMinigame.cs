@@ -31,7 +31,7 @@ public class DrinkMinigame : MonoBehaviour
             "Pepsi",
             "Cola",
             "Sprite",
-            "Dr. Pepper"
+            "Dr.Pepper"
         };
 
         pickList = new List<string>();
