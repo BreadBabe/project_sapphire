@@ -30,6 +30,13 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] Sprite[] datingAppSprites;
 
 
+    [SerializeField] GameObject DateMessages;
+    [SerializeField] GameObject unknownSenderMessage;
+    [SerializeField] GameObject backButton;
+
+    [SerializeField] GameObject messageUI;
+    [SerializeField] GameObject UnknownMessageUI;
+
     private bool PhoneUp = false;
 
     private float scalingSpeed = 4.0f;
@@ -44,16 +51,21 @@ public class PhoneUIManager : MonoBehaviour
     public enum DatingAppStates { Quinn, Luna, Noah, Summer }
     public DatingAppStates datingAppState;
 
-    [SerializeField] Sprite quinnSprite;
-    [SerializeField] Sprite lunaSprite;
-    [SerializeField] Sprite noahSprite;
-    [SerializeField] Sprite summerSprite;
+    //[SerializeField] Sprite quinnSprite;
+    //[SerializeField] Sprite lunaSprite;
+    //[SerializeField] Sprite noahSprite;
+    //[SerializeField] Sprite summerSprite;
+
+    //[SerializeField] Sprite quinnMessage;
+    //[SerializeField] Sprite noahMessage;
+    //[SerializeField] Sprite summerMessage;
+    //[SerializeField] Sprite lunaMessage;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        PhoneIcon.SetActive(true);
+        PhoneIcon.SetActive(false);
         notif.SetActive(false);
         lockedDate.SetActive(false);
         PhoneUI.SetActive(false);
@@ -62,13 +74,40 @@ public class PhoneUIManager : MonoBehaviour
         messangerAppUI.SetActive(false);
         datingAppUI.SetActive(false);
         DateQUESTIONMARK.SetActive(false);
+        DateMessages.SetActive(false); 
+        unknownSenderMessage.SetActive(false);
+
+        messageUI.SetActive(false);
+        UnknownMessageUI.SetActive(false);
+
+        backButton.SetActive(false);
+
         foreach (GameObject button in appButtons)
         {
             button.SetActive(false);
         }
 
 
+    }
 
+    public void DateMessageRecieved()
+    {
+        messageUI.SetActive(true);
+        backButton.SetActive(true );
+    }
+
+    public void UnknownMessageRecieved()
+    {
+     UnknownMessageUI.SetActive(true);
+     backButton.SetActive(true ) ;
+
+    }
+
+    public void BackButtonPressed()
+    {
+        messageUI.SetActive(false );
+       UnknownMessageUI.SetActive(false);
+        backButton.SetActive(false );
     }
 
     public void PhoneIconOnClick()
@@ -114,6 +153,7 @@ public class PhoneUIManager : MonoBehaviour
         else if (datingappUp)
         {
             StartCoroutine(ScaleDownObject());
+            DateQUESTIONMARK.SetActive(false);
             messangerAppUp = false;
            
         }
@@ -125,6 +165,12 @@ public class PhoneUIManager : MonoBehaviour
         StartCoroutine(ScaleUpObjectApp());
         messangerAppUp = true;
         notif.SetActive(false);
+
+        if (datePicked)
+        {
+            DateMessages.SetActive(true);
+            unknownSenderMessage.SetActive(true);
+        }
      
 
     }
@@ -209,7 +255,7 @@ public class PhoneUIManager : MonoBehaviour
     
     IEnumerator ScaleUpObject()
     {
-       
+     
         Vector3 initialScale = datingAppUI.transform.localScale;
         Vector3 targetScale = initialScale * 10f; // Example: double the size
         Vector3 initialPosition = datingAppUI.transform.position;
