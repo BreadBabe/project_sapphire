@@ -23,22 +23,14 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
      ~HappyResponse()
       Thank you! It kind of has a vibe, right? I usually don't invite people over here. It's kind of my sacred space. Make yourself at home.
       **[Thank's for the invite!]
-      Hey, any time. I need motivation for cleaning anyway. I could never be a clean girl. 
+      Hey, any time. I need motivation for cleaning anyway. How was your day?
             ***[HEJ]
-            AAAH
             -> DAY
-            ***[HEJ]
-            AAAH
+      **[Thank's for the invite!]
+      Hey, any time. I need motivation for cleaning anyway. How was your day?
+      ***[WOOO]
             -> DAY
-      **[Then why did you invite me?]
-      Oh, feeling special? I can assure you you're not.
-            ***[That's a bit harsh.]
-            Sure.
-            ->DAY
-            ***[WOOO]
-            Sure.
-            ->DAY
-                 
+        
                         
 * [Isn't it a bit too much?]
       ~AnnoyedResponse()
