@@ -1,25 +1,50 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    Buttons buttons;
+    public GameObject background;
+    private GameObject currentPicture;
+    [SerializeField] private List<GameObject> pictureList = new List<GameObject>();
+    public GameObject minigameButton;
+    int index = 0;
     void Start()
     {
-
+        if (pictureList.Count <= 0) return;
+        currentPicture = pictureList[0];
     }
- 
+    public void MiniGame() 
+    {
+        if (minigameButton.activeInHierarchy == true) 
+        {
+            minigameButton.SetActive(false);
+
+        }
+        else 
+        {
+            minigameButton.SetActive(true);
+        }
+    }
+    public void MiniGameScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+       
+    }
+    public void ChangeBackground()
+    {
+        currentPicture.SetActive(false);
+        if (index + 1 == pictureList.Count) return;
+        currentPicture = pictureList[++index];
+        currentPicture.SetActive(true);
+    }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if (buttons.l) 
-        //{
+    //void Update()
+    //{
 
-        //}
-
-    }
+    //}
 }

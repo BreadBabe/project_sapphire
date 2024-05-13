@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Quinn/Level1.unity
     guid: e7283ba327662944f8c36df97c1650e1
+  - enabled: 1
+    path: Assets/Quinn/Date2/Date2Quinn.unity
+    guid: c76ba1ddda0367c4ab09fa74d9f9d036
+  - enabled: 1
+    path: Assets/Quinn/Date2/MiniGame.unity
+    guid: c7c2b5a199a81a046b8f88e90c6ae449
   m_configObjects: {}
