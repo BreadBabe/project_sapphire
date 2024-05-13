@@ -179,7 +179,7 @@ You are who i think you are right? I am Noah.
                     ->TABLE_DRINK()
             ***[It was more about traffic really]
                     ~SmileResponse()
-                    I see well youre here now, could i get you something to drink?
+                    I see well you're here now, could i get you something to drink?
                     *****[That be great thank you!]
                             -> TABLE_DRINK()
                         *****[Sure thing!]
@@ -193,24 +193,91 @@ You are who i think you are right? I am Noah.
     
 == TABLE_DRINK ==
     ~SmileResponse()
+    *[...]
     Alirght now then what you want to start with the drinks are on me!
-    **[Youre gonna regret that]
+    **[You're gonna regret that]
         ~ContentResponse()
         Oh well maybe just the first one then haha
-            ***[]
+            ***[Too late! no taking it back now!]
+                ~HappyResponse()
+                NOOO! you cant do this to me think of my bank account! If only i had a discount to make the drinks cheaper... wouldnt that be nice?
+                    ****[You got a discount?]
+                        ~SmileResponse()
+                        Sure do! Working here certainly got its perks!
+                        -> BackstoryDialogue()
+                    ****[Yeah, those are hard to come by i hear]
+                        ~SmileResponse()
+                        Oh definetly, getting hold of one is not an easy task. Luckly for you tho i have already gone though that process so to say!
+                            *****[Really now?]
+                                you're currently speaking to this employee of the month! Or rather employee of the month 2 months ago haha
+                                    ->BackstoryDialogue()
+            ***[Dont worry i wont abuse it]
+                ~SmileResponse()
+                Good to hear! but the first one is on me really! Cant be sitting on an employee discount and not use it!
+                    ->BackstoryDialogue()
     **[Oh really now?]
-        Ofcourse! Got to flex that employee discount!
-        
-    **[]
+        Ofcourse! Got to flex that employee discount! Besides would have been rude not get you anything.
+            -> BackstoryDialogue()
 
 == BackstoryDialogue ==
 //Intended for conversation about being a bartender
+*[Ah so this is where you work!]
+    You atleast reed my profile i see, said i was a bartender but never said where! But yes this is the place
+        **[Hows working here?]
+            ~HappyResponse()
+            Its great honestly would say it suits me perfectly! Get to talk to people serve drinks have a couple of laughs and party! What more can a man really ask for? Haha
+                ***[Sounds like you found something that really suits you]
+                    ~ContentResponse()
+                    Yes! Spot on observation i would say, if i didnt make it so obvious ofcourse haha
+                        ****[Obvious is an understatment]
+                            ~SmileResponse()
+                            heh.
+                            *****[So about that drink]
+                                -> PickingDrink()
+                        ****[So about that drink you promised me]
+                            ->PickingDrink()
+                ***[You sure seem excited]
+                    What can i say i like my job, lots of people i meet while working dont have that luxury.
+                    ->JobTalk()
+        **[Seems like a stressful job]
+            Not at all! Never been as relaxed as when i am on the job talking to customers serving cold drinks, i mean sure people arent always behaving the best but its overhaul great!
+                ***[Its not for me]
+                    ~ConfusedResponse()
+                    Well, not for everybody i suppose... not sure i get why one would not like it but whatever...
+                        ->PickingDrink()
+                ***[It seems to suit you quite well]
+                    definetly
+                    ->PickingDrink()
+*[You work here?] 
+    Sure do! Quite cozy dont you think?
+        **[Sure is!]
+            Glad you agree! Never am as relaxed as when i am behind the bar serving drinks and chatting up costumers! Suits me perfectly i would say
+                ***[Ill drink to that!]
+                    ~ContentResponse()
+                    Thats the spirit! haha
+                    ->PickingDrink()
+        **[Bit too noise for me]
+            It all just blends into the surroundings for me, kinda relaxing honestly not like a metal concert or anything thats fucking loud if anything.
+                ***[Got something against metal?]
+                    Meh, just not my thing really. Prefer other types of music but i dont have any grudge against it or anything, plenty of good bars out there playing metal on repeat if youre interested.
+                    ->MusicDiscourse()
+                ***[]
+                    ->PickingDrink()
 
+== PickingDrink ==
+*[So about that drink?]
+    Ofcourse whats 
 -> END
+
+== MinigameTemp ==
+*[]
+
+== MusicDiscourse ==
+->PickingDrink()
 
 == BAD_DATE_END ==
 *[I dont think this is gonna work out...]
-    yeah... i had a feeling we should probably just call it right here save both of us some time, have a great evening...
+    yeah... i had a feeling... we should probably just call it right here save both of us some time, have a great evening...
         **[*Leave the bar*]
             -> END
 *[*say nothing*]
@@ -272,5 +339,33 @@ You are who i think you are right? I am Noah.
     ~SmileResponse()
     Haha yeah glad that wasnt me, a true moron that driver must have been right? Should get us some drinks to celebrate your continued survival! haha
     -> TABLE_DRINK()
+    
+==JobTalk==
+~SmileResponse()
+*[I can relate to that]
+    Jobs not to good aye? 
+    **[Just not happy with it]
+        A common sentiment, usually they are right but they just dont have luck,money or skill to get there. I am sure you will get something you like doing eventually if you work hard enough for it!
+            ***[Thanks!]
+                ~HappyResponse()
+                No problem!
+                ->PickingDrink()
+            ***[So about that drink you promised?]
+                ->PickingDrink()
+*[Guess i am lucky as well i enjoy my job]
+    Thats great! glad to hear it honestly! Wish more people had it that way. But enough about that how about i get you a drink?
+        ->PickingDrink()
+*[Not employed currently myself]
+    Feeling good about that?
+        **[I am actually studying]
+            ~HappyResponse()
+            I see, not sure that counts as proper unemployment tho Haha
+            ->PickingDrink()
+        **[Yeah works for the time being]
+            Thats nice! 
+            ->PickingDrink()
+        **[Not found a job yet so could be better]
+            You will get there i belive in you!
+            ->PickingDrink()
 
 

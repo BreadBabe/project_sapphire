@@ -459,7 +459,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fad894bfb41e379438f785eabd10cead, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -729,7 +729,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 60256d9bcfeb36e48a73caaf0148493f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fad894bfb41e379438f785eabd10cead, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1122,8 +1122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138ed3aa334a25c4bbb8767d838bce25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingAudioSource: {fileID: 781151970}
-  typingSpeed: 20
+  typingAudioSource: {fileID: 1132081282}
+  typingSpeed: 50
   inkJSONAsset: {fileID: 4900000, guid: ece983740aede0345be116bc06f0affb, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
