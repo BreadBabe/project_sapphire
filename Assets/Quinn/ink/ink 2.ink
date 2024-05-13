@@ -26,7 +26,7 @@ Hi , I'm Quinn, are you my date??
                     Can you help me find a book about plants?
                  ***[Lame]
                  ~AnnoyedResponse()
-                  Whatever! I need to find a book, you can do whatever i guess ...
+                  Whatever! I need to find a book, you can do whatever i guess...
       
     * [I suppose I am]
     ~AnnoyedResponse()

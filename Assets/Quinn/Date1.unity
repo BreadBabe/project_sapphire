@@ -926,7 +926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 394, y: 327}
+  m_AnchoredPosition: {x: 221, y: 336}
   m_SizeDelta: {x: 637.3295, y: 309.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439031953
@@ -1332,9 +1332,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  BookStore: {fileID: 0}
   pictureList: []
+  textLeftList: []
+  textRightList: []
   isClicked: 0
+  isPressed: 0
 --- !u!1 &1040697832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1518,7 @@ MonoBehaviour:
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: 381d5e3a622b685459341e23a74caa6b, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: 5986722a0bffa1749a6e501d8ff77f9b, type: 3}
+  buttonPrefab: {fileID: 0}
   Character: {fileID: 1600876852}
   Audio: {fileID: 1436782131}
   lovemeterShutter: {fileID: 1800950984}
