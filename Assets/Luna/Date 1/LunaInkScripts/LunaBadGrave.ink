@@ -89,7 +89,7 @@ Wait, you wanted to keep the dead cat? I'd rather the kitty gets to rest in peac
      ~HappyResponse()
      ->NEXTDATE
      **[Why not?]
-     Because it's a dead cat. It should stay with its human. If it was my dead cat and someone stole her, I'd probably stab them. Anyway, it's getting dark, and I gotta get home to my living, breathing cat.
+     Because it's a dead cat. It should stay with its human. If it was my dead cat and someone stole him, I'd probably stab them. Anyway, it's getting dark, and I gotta get home to my living, breathing cat.
      ~AngryResponse()
      ->NEXTDATE
 *[This is incredible! I can't believe I found all this!]
@@ -104,7 +104,7 @@ I know, right? Totally worth the creepy factor. Now, imagine what we could do on
         Well, if you're having second thoughts, just remember tonight. You survived, right? That's more than these old suckers did. And hey, a little fear never hurt anyone.. Much. Anyway, it's getting dark.
         ->NEXTDATE
 *[Shouldn't we put it back? It seems disrespectful..]
-Probably. It does feel a bit weird to walk away with these things, especially that dead cat. If it was my dead cat and someone stole her, I'd probably stab them.
+Probably. It does feel a bit weird to walk away with these things, especially that dead cat. If it was my dead cat and someone stole him, I'd probably stab them.
 ~IndifferentResponse()
         ** [I'm keeping it!]
         ~AngryResponse()

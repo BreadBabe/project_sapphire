@@ -4,71 +4,71 @@ VAR charEmotion="Indifferent"
 VAR loveAmount=0
 
 Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should probably take that shit down.
-*[Huh?]
+*[Oops!]
      ~charEmotion= "Neutral"
-     Sorry, it's just so rare to see someone else out here at this time. You must be my date, right? I mean, this isn't exactly a hotspot unless you're into eerie places or just generally lost.
-    ** [Depends, are you Luna?]
-        ~charEmotion= "Smile"
-        That would be me. Surprised you actually showed up, this place isn't known for its charm. Actually, neither am I. And your outfit... it definitely makes a statement. Intriguing, really.
-            -> OUTFITDILLEMA
+     It's fine, he can be a bit of a drama queen. Wondering where he got that? I'm happy you made it here and weren't swepped away in the rain!
+    ** [What's his name?]
+        ~SmileResponse()
+        Lucifer, of course. Would be weird if I named him something else.  Anyway, welcome to my palace!
+            -> APARTMENT
         
-    ** [Yep, nice to meet you!]
-           ~HappyResponse()
-        Nice to meet you too. I'm honestly a bit relieved that you didn't freak out and bail, considering where we are. Though your outfit, let's just say it's... unexpected.
-             -> OUTFITDILLEMA
+    ** [It probably got it from you!]
+           ~AngryResponse()
+        It? He has a name, Lucifer. I'd prefer it if you called him that from now on. Anyway, welcome to my palace!
+             -> APARTMENT
                
                
- == OUTFITDILLEMA ==
- * [Oh, was I supposed to wear something special?]
-     ~IndifferentResponse()
-      No worries, you look fine. It gives you a bit of an edge, really. Just a heads-up though, where we're headed might be a bit rough on your clothes. Hope you're not too attached to them.
-      **[What do you mean?]
-      Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
-            -> DIRTY
+ == APARTMENT ==
+ * [I love it!]
+     ~HappyResponse()
+      Thank you! It kind of has a vibe, right? I usually don't invite people over here. It's kind of my sacred space. Make yourself at home.
+      **[Thank's for the invite!]
+      Hey, any time. I need motivation for cleaning anyway.
+            -> NEXTDILEMMA
                         
-* [I don't really care what you think]
+* [Isn't it a bit too much?]
       ~AnnoyedResponse()
-       Ouch, dude. Hit a nerve, did I? I guess we're skipping the small talk then? Fine by me. Just be prepared, the night could get messy, and I'm not just talking about our interaction. 
-        **[...Sorry]
+       Too much? That's rich coming from someone whose idea of decoration is probably a poster and a beanbag chair. But hey, if you're not feeling it, I'm sure you'll get used to it. Or not.
+        **[I like too much.]
          ~charEmotion= "Indifferent"
-          It's alright, no harm done. We've got an interesting evening ahead, and honestly, your outfit might endure more than a few scratches and stains.
-          ***[What do you mean?]
+          Well, shit. Look who's the dramaqueen now. Lucifer definitely got it from me. 
+          ***[mm]
           ~charEmotion="Neutral"
-          Eh.. your clothes might get a bit dirty. And no, I'm not talking about doing Saltburn stuff.
-         -> DIRTY
+          mm
+         -> NEXTDILEMMA
          
-         **[Yeah, well, it wasn't a very nice thing to say]
-         ~AnnoyedResponse()
-            That's a bit dramatic. I'm sorry okay? I guess my sense of humor isn't for everyone. Anyway, let's not ruin your outfit more than we have to. 
-           *** [What do you mean?]
-            Your clothes might get a bit dirty.
-            -> DIRTY
-            ***[Maybe you should think before you speak]
+         **[I don't want to get used to it.]
+         ~AngryResponse()
+            Then why are you even here? Honestly, you dragged yourself here through a rainstorm and now you're critisizing my home?
+           *** [Alright, I'm sorry.]
+            Whatever. Just don't come over with that attitude again, I'm done with people like that in my life, its enough enduring that from my parents.
+            -> NEXTDILEMMA
+            ***[I was bored.]
              ~AngryResponse()
-             Really? It was obviously a joke. Probably not my best one, but nevertherless. Let's not ruin the night over a bad joke.
-              ****[Good joke]
+             Bored? You should really keep some thoughts for yourself, because guess what, not everyone gives a shit about your opinion. Especially not me.
+              ****[I don't care about your opinion either.]
               ~charEmotion="Indifferent"
-               I've already apologized, what more do you want? If we can't even get along on one date then maybe this was a mistake. Do you want to do this or not? I'm done wasting my time.
-               *****[I do!]
+               I can't imagine being that unoriginal. Has to be exhausting, trying to copy other people all the time in lack of personality.
+               *****[I'm sorry, I'm a dickhead.]
                ~SmileResponse()
-               Great, let's start over. No harm done, but your clothes might get a bit dirty..
-               ->DIRTY
-               *****[I'm out.]
-               Honestly, fuck off. I don't have time for people like you anyway. Good riddance, and try not to be too boring without me. Bye!
+               GOOD ANSWER HERE
+               ->NEXTDILEMMA
+               *****[Alright, I'm leaving.]
+               BAD ANSWER HERE
                ->END
                       
-              ****[Just don't do it again]
+              ****[That was rude of me.]
                      ~charEmotion= "Indifferent"
-                      Whatever. Your clothes might get a bit dirty though.
-                     ->DIRTY
+                      INDIFFERENT ANSWER HERE
+                     ->NEXTDILEMMA
              
             
-*[Is there something wrong with my outfit?]
+*[Just like I imagined..]
     ~charEmotion= "Indifferent"
-     No it’s fine, I was just expecting something more... whatever, it's cool. Your clothes might get a bit dirty though.
-     -> DIRTY
+     Shoot. Am I that predictable? Or maybe you just already know me too well. Either way, 0 points to me. 
+     -> NEXTDILEMMA
             
- == DIRTY ==  
+ == NEXTDILEMMA ==  
 *[Dirty?]
   ~charEmotion= "Neutral"
     Don't worry, its all part of the plan. Afraid of a little mud?
