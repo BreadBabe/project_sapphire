@@ -56,7 +56,7 @@ You are who i think you are right? I am Noah.
             ...
             -> TABLE_BAD_MOOD
  *[GO TO END]
-    ->END
+    ->NoahGetsDrink()
 
 == TABLE_DEFAULT ==
 *[Walk to table]
@@ -197,7 +197,7 @@ You are who i think you are right? I am Noah.
 == TABLE_DRINK ==
     ~SmileResponse()
     *[...]
-    Alirght now then what you want to start with the drinks are on me!
+    Alright now then what you want to start with the drinks are on me!
     **[You're gonna regret that]
         ~ContentResponse()
         Oh well maybe just the first one then haha
@@ -225,7 +225,7 @@ You are who i think you are right? I am Noah.
 == BackstoryDialogue ==
 //Intended for conversation about being a bartender
     *[Ah so this is where you work!]
-        You atleast reed my profile i see, said i was a bartender but never said where! But yes this is the place
+        You atleast read my profile i see, said i was a bartender but never said where! But yes this is the place
         **[Hows working here?]
             ~HappyResponse()
             Its great honestly would say it suits me perfectly! Get to talk to people serve drinks have a couple of laughs and party! What more can a man really ask for? Haha
@@ -275,10 +275,9 @@ You are who i think you are right? I am Noah.
     **[Something non-alcholic]
         ~ContentResponse()
         What like apple juice or milk? Come on you could get something better!
-        ***[I dont drink alcohol]
+        ***[I don't drink alcohol]
             ~SmileResponse()
             Oh right, sorry... i get it, you will get something nice i promise! Not everything behind that counter is alcohol Ofcourse! Be right back!
-                ****[*Wait for Noah*]
                     ->NoahGetsDrink()
         ***[Rather not start with alcohol just yet]
             ~SmileResponse()
@@ -297,7 +296,7 @@ You are who i think you are right? I am Noah.
         ->NoahGetsDrink()
 
 ==NoahGetsDrink==
-*[*Wait for Noah*] 
+*[*Wait for Noah*]
     ~NoNoah()
     ...*He marches over to the bar in a brisk pace... He starts talking to the bartender and hangs back on the counter. He smiles at you*
     **[*Smile back*]
@@ -316,7 +315,7 @@ You are who i think you are right? I am Noah.
 ==DrinkAtTable1==
 *[Greet him!]
     ~HappyResponse()
-    Alright her you go enjoy picked with special care by yours truly!
+    Alright here you go, enjoy! Its been picked with special care by yours truly!
     **[*Take a sip*]
         .*Noah seems to have gotten a large pint of beer, and is chugging it down quite rapidly*...So hows your drink?
         ***[Its great the flavours really come together]
