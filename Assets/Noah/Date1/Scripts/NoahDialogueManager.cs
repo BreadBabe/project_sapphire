@@ -26,6 +26,8 @@ public class NoahDialogueManager : MonoBehaviour
 
     [SerializeField] private GameObject Character;
     [SerializeField] private GameObject Audio;
+    [SerializeField] private Button startButton;
+    [SerializeField] private Image startButtonImage;
 
     private SceneChanger SceneChanger = new SceneChanger();
 
@@ -42,11 +44,29 @@ public class NoahDialogueManager : MonoBehaviour
     private string currentText;
     private bool isTyping;
 
-    void Awake()
+    //Used for drink mix success calculation // DEFAULT: 0
+    int mixingScore = 0;
+
+
+    public void StartStoryAfterButtonClick()
     {
+        // Enable the LunaInkManager script to start its logic
+        dialoguebox.SetActive(true); // Show the dialogue box
+        choicebox.SetActive(true); // Show the choice box
+        Character.SetActive(true);
+        enabled = true;
         RemoveChildren();
+        // Initialize the story and display the initial dialogue
         StartStory();
+        startButton.interactable = false;
+        
     }
+
+    //void Awake() Legacy Start
+    //{
+    //    RemoveChildren();
+    //    StartStory();
+    //}
 
     void StartStory()
     {

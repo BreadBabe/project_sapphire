@@ -15,6 +15,7 @@ public class DrinkMinigame : MonoBehaviour
     private int choiceAmount;
     private int mgWidth;
     private int pickAmount;
+    public int mixingScore;
 
     List<string> mixList;
     List<string> pickList;
@@ -27,10 +28,10 @@ public class DrinkMinigame : MonoBehaviour
 
         mixList = new List<string>()
         {
-            "Water",
-            "Pepsi",
-            "Cola",
-            "Sprite",
+            "Absolut Vodka",
+            "Schweppes Lemon",
+            "Coke",
+            "Orange Fanta",
             "Dr.Pepper"
         };
 
@@ -71,6 +72,8 @@ public class DrinkMinigame : MonoBehaviour
         pickAmount++;
         pickList.Add(choice.name);
 
+        ScoreCalculation(choice.name);
+
         Destroy(choice);
 
         Debug.Log($"player picked bottle index: {index}, bottle name: {choice.name}, has now picked: {pickAmount} bottle(s).");
@@ -87,6 +90,26 @@ public class DrinkMinigame : MonoBehaviour
                 Destroy(mgParent.transform.GetChild(i).gameObject);
 
             }
+        }
+    }
+
+    private void ScoreCalculation(string name)
+    {
+        switch (name)
+        {
+            case "Absolut Vodka":
+                break;
+            case "Coke":
+                mixingScore += 1;
+                break;
+            case "Orange Fanta":
+                break;
+            case "Schweppes Lemon":
+                mixingScore += 1;
+                break;
+            case "Dr.Pepper":
+                mixingScore -= 1;
+                break;
         }
     }
 }
