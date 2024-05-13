@@ -56,7 +56,7 @@ You are who i think you are right? I am Noah.
             ...
             -> TABLE_BAD_MOOD
  *[GO TO END]
-    ->NoahGetsDrink()
+    ->BackstoryDialogue()
 
 == TABLE_DEFAULT ==
 *[Walk to table]
@@ -251,7 +251,7 @@ You are who i think you are right? I am Noah.
                 ***[It seems to suit you quite well]
                     definetly
                     ->PickingDrink()
-    *[You work here?] 
+    *[You work here?]
         Sure do! Quite cozy dont you think?
         **[Sure is!]
             Glad you agree! Never am as relaxed as when i am behind the bar serving drinks and chatting up costumers! Suits me perfectly i would say
