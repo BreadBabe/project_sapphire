@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,7 +156,6 @@ RectTransform:
   - {fileID: 1466632550}
   - {fileID: 1309238244}
   - {fileID: 255055738}
-  - {fileID: 269444991}
   m_Father: {fileID: 1593204653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1080,13 +1079,13 @@ Transform:
   m_GameObject: {fileID: 269444990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -706, z: 0}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 783354945}
   - {fileID: 1316702038}
-  m_Father: {fileID: 44126997}
+  m_Father: {fileID: 1593204653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &269444992
 AudioSource:
@@ -2445,7 +2444,6 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 560af5550b2dd4fb1b77a73d00407647, type: 3}
   dialoguebox: {fileID: 1940692181}
   choicebox: {fileID: 1044220001}
-  phoneIcon: {fileID: 1716003757}
   textPrefab: {fileID: 11456674, guid: e29963836c2c541ffbd58777de03ea4c, type: 3}
   buttonPrefab: {fileID: 11455116, guid: 5c350d2d16c574a17866f09199dc9904, type: 3}
   Character: {fileID: 1370048059}
@@ -3673,6 +3671,7 @@ RectTransform:
   - {fileID: 317356941}
   - {fileID: 1716003758}
   - {fileID: 1314630003}
+  - {fileID: 269444991}
   - {fileID: 44126997}
   m_Father: {fileID: 1062447672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4864,7 +4863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1949309452
 RectTransform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed;
 
     [SerializeField] private TextAsset inkJSONAsset = null;
-    private Story story;
+    public Story story;
 
     [SerializeField] private GameObject dialoguebox = null;
     [SerializeField] private GameObject choicebox = null;
