@@ -90,6 +90,29 @@ public class PhoneUIManager : MonoBehaviour
 
     }
 
+    IEnumerator TransitionToDate(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Home1" && dateDay)
+        {
+            switch (datingAppState)
+            {
+                case PhoneUIManager.DatingAppStates.Quinn:
+                    SceneManager.LoadScene(1);
+                    break;
+                case PhoneUIManager.DatingAppStates.Luna:
+                    SceneManager.LoadScene(2);
+                    break;
+                case PhoneUIManager.DatingAppStates.Noah:
+                    SceneManager.LoadScene(4);
+                    break;
+                case PhoneUIManager.DatingAppStates.Summer:
+                    SceneManager.LoadScene(1);
+                    break;
+            }
+        }
+    }
     public void DateMessageRecieved()
     {
         messageUI.SetActive(true);
@@ -165,7 +188,7 @@ public class PhoneUIManager : MonoBehaviour
         StartCoroutine(ScaleUpObjectApp());
         messangerAppUp = true;
         notif.SetActive(false);
-
+        
         if (datePicked)
         {
             DateMessages.SetActive(true);
@@ -356,13 +379,14 @@ public class PhoneUIManager : MonoBehaviour
     public void DateSelected()
     {
         datePicked = true;
-        ScreenFader screenFader = FindObjectOfType<ScreenFader>();
-        if (screenFader != null)
-        {
-            screenFader.StartFadeOut();
+        dateDay = true;
+        //ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+        //if (screenFader != null)
+        //{
+            //screenFader.StartFadeOut();
 
             StartCoroutine(TransitionToDate(2f));
-        }
+        //}
     }
 
     public void DateRejected()
@@ -371,27 +395,5 @@ public class PhoneUIManager : MonoBehaviour
 
     }
 
-    IEnumerator TransitionToDate(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Home2" && dateDay)
-        {
-            switch (datingAppState)
-            {
-                case PhoneUIManager.DatingAppStates.Quinn:
-                    SceneManager.LoadScene(1);
-                    break;
-                case PhoneUIManager.DatingAppStates.Luna:
-                    SceneManager.LoadScene(2);
-                    break;
-                case PhoneUIManager.DatingAppStates.Noah:
-                    SceneManager.LoadScene(1);
-                    break;
-                case PhoneUIManager.DatingAppStates.Summer:
-                    SceneManager.LoadScene(1);
-                    break;
-            }
-        }
-    }
+   
 }
