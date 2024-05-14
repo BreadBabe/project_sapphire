@@ -13,10 +13,13 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed;
 
     [SerializeField] private TextAsset inkJSONAsset = null;
-    private Story story;
+    public Story story;
 
     [SerializeField] private GameObject dialoguebox = null;
     [SerializeField] private GameObject choicebox = null;
+    [SerializeField] private GameObject phoneIcon;
+
+
 
     [SerializeField] private Text textPrefab = null;
 
@@ -58,6 +61,7 @@ public class HospitalDialogueManager : MonoBehaviour
         // Disable the LunaInkManager logic until the button is clicked
         enabled = false;
     }
+
 
     void StartStory()
     {
@@ -192,7 +196,7 @@ public class HospitalDialogueManager : MonoBehaviour
                 {
                     screenFader.StartFadeOut();
 
-                    StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                    StartCoroutine(LoadHomeSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
                 }
 
             }
@@ -200,23 +204,16 @@ public class HospitalDialogueManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadNextSceneAfterDelay(float delay)
+   
+
+    IEnumerator LoadHomeSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "HospitalStart") // Adjust the scene name as needed
+        if (currentScene.name == "HospitalStart")
         {
-            SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
+            SceneManager.LoadScene(1); 
         }
-        else if (currentScene.name == "Home1")
-        {
-            SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
-        }
-        else if (currentScene.name == "Date1")
-        {
-            SceneManager.LoadScene(3);
-        }
-        // Add more conditions for other scenes if needed
     }
 
 }
