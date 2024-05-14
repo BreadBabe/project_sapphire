@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class ScreenFader : MonoBehaviour
 {
@@ -9,13 +8,10 @@ public class ScreenFader : MonoBehaviour
     [SerializeField] private Image startButtonImage; // Reference to the start button image
     [SerializeField] private float fadeDuration = 1.0f;
     [SerializeField] private Color startColor; // Default start color is white
-    [SerializeField] private Color fadeOutColor;// Default fade-out color is black
+    [SerializeField] private Color fadeOutColor; // Default fade-out color is black
     private Color transparentColor = new Color(1, 1, 1, 0); // Transparent color (fully faded)
-    private Color hospitalButtonColor = new Color(1, 1, 1, 0.4f);
 
-    private float currentFadeTime = 0f;
-
-    void Start()
+    private void Start()
     {
         // Start fading effect immediately
         StartFading();
@@ -23,18 +19,13 @@ public class ScreenFader : MonoBehaviour
 
     public void StartFading()
     {
-        StartCoroutine(Fade());
+        StartCoroutine(FadeInAndDisable());
     }
 
-    public void StartFadeOut()
-    {
-        StartCoroutine(FadeOut());
-    }
-
-    public IEnumerator Fade()
+    private IEnumerator FadeInAndDisable()
     {
         Color currentColor = startColor; // Start from the specified start color
-        currentFadeTime = 0f;
+        float currentFadeTime = 0f;
 
         while (currentFadeTime < fadeDuration)
         {
@@ -45,12 +36,21 @@ public class ScreenFader : MonoBehaviour
             startButtonImage.color = Color.Lerp(transparentColor, currentColor, t);
             yield return null;
         }
+
+        // After the fading effect is complete, disable the ScreenFader component
+        gameObject.SetActive(false);
     }
 
-    public IEnumerator FadeOut()
+    public void StartFadeOutAndEnable()
+    {
+        gameObject.SetActive(true); // Enable the ScreenFader component
+        StartCoroutine(FadeOut());
+    }
+
+    private IEnumerator FadeOut()
     {
         Color currentColor = transparentColor; // Start from the transparent color
-        currentFadeTime = 0f;
+        float currentFadeTime = 0f;
 
         while (currentFadeTime < fadeDuration)
         {

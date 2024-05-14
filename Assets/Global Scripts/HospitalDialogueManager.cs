@@ -188,11 +188,16 @@ public class HospitalDialogueManager : MonoBehaviour
             else
             {
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+                Scene currentScene = SceneManager.GetActiveScene();
                 if (screenFader != null)
                 {
-                    screenFader.StartFadeOut();
+                    screenFader.StartFadeOutAndEnable();
 
                     StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                }
+                else if (currentScene.name == "HomeDate")
+                {
+                    StartCoroutine(LoadNextSceneAfterDelay(0f));
                 }
 
             }
