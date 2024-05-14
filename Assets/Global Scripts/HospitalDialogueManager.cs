@@ -13,7 +13,7 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed;
 
     [SerializeField] private TextAsset inkJSONAsset = null;
-    private Story story;
+    public Story story;
 
     [SerializeField] private GameObject dialoguebox = null;
     [SerializeField] private GameObject choicebox = null;
@@ -188,16 +188,11 @@ public class HospitalDialogueManager : MonoBehaviour
             else
             {
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
-                Scene currentScene = SceneManager.GetActiveScene();
                 if (screenFader != null)
                 {
-                    screenFader.StartFadeOutAndEnable();
+                    screenFader.StartFadeOut();
 
                     StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
-                }
-                else if (currentScene.name == "HomeDate")
-                {
-                    StartCoroutine(LoadNextSceneAfterDelay(0f));
                 }
 
             }
@@ -226,7 +221,7 @@ public class HospitalDialogueManager : MonoBehaviour
         }
         else if (currentScene.name == "HomeDate")
         {
-            nextSceneName = "Snooping"; // Ensure this matches the actual scene name
+            nextSceneName = ""; // Ensure this matches the actual scene name
         }
 
         // Load the next scene
