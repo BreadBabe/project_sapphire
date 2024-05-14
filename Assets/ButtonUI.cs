@@ -25,7 +25,8 @@ public class ButtonUI : MonoBehaviour
         SceneManager.LoadScene(newGameLevel);
     }
 
-    public void ChangeBackground()
+    
+    public void BookBackground()
     {
         currentPicture.SetActive(false);
         foreach (GameObject textObj in textLeftList)
@@ -36,120 +37,59 @@ public class ButtonUI : MonoBehaviour
         {
             textRightObj.SetActive(false);
         }
-
-        //currentLeftText.SetActive(false);
-        //currentRightText.SetActive(false);
-
         if (index + 1 == pictureList.Count) return;
-
-        //currentPicture = pictureList[index];
-        currentPicture = pictureList[0];
-        currentLeftText = textLeftList[index];
-        currentRightText = textRightList[index];
-
+        
+    }
+    public void BookBackground2()
+    {
         currentPicture.SetActive(true);
         currentLeftText.SetActive(true);
         currentRightText.SetActive(true);
-
-        //index++;
+    }
+    public void ChangeBackground()
+    {
+        BookBackground();
+        currentPicture = pictureList[0];
+        currentLeftText = textLeftList[index];
+        currentRightText = textRightList[index];
+        BookBackground2();
     }
 
     public void GreenBookBackground()
     {
-        currentPicture.SetActive(false);
-        foreach (GameObject textObj in textLeftList)
-        {
-            textObj.SetActive(false);
-        }
-        foreach (GameObject textRightObj in textRightList)
-        {
-            textRightObj.SetActive(false);
-        }
-
-        if (index + 1 == pictureList.Count) return;
-
+        BookBackground();
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[1];
         currentRightText = textRightList[1];
-
-        currentPicture.SetActive(true);
-        currentLeftText.SetActive(true);
-        currentRightText.SetActive(true);
+        BookBackground2();
     }
 
     public void YellowBookBackground()
     {
-        currentPicture.SetActive(false);
-        foreach (GameObject textObj in textLeftList)
-        {
-            textObj.SetActive(false);
-        }
-        foreach (GameObject textRightObj in textRightList)
-        {
-            textRightObj.SetActive(false);
-        }
-
-        if (index + 1 == pictureList.Count) return;
-        if (index + 1 == textLeftList.Count) return;
-        if (index + 1 == textRightList.Count) return;
-
+        BookBackground();
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[2];
         currentRightText = textRightList[2];
-
-        currentPicture.SetActive(true);
-        currentLeftText.SetActive(true);
-        currentRightText.SetActive(true);
+        BookBackground2();
     }
 
     public void RedBookBackground()
     {
-        currentPicture.SetActive(false);
-        foreach (GameObject textObj in textLeftList)
-        {
-            textObj.SetActive(false);
-        }
-        foreach (GameObject textRightObj in textRightList)
-        {
-            textRightObj.SetActive(false);
-        }
-
-        if (index + 1 == pictureList.Count) return;
-        if (index + 1 == textLeftList.Count) return;
-        if (index + 1 == textRightList.Count) return;
-
+        BookBackground();
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[3];
         currentRightText = textRightList[3];
-
-        currentPicture.SetActive(true);
-        currentLeftText.SetActive(true);
-        currentRightText.SetActive(true);
+        BookBackground2();
     }
 
     public void BlueBookBackground()
     {
-        currentPicture.SetActive(false);
-        foreach (GameObject textObj in textLeftList)
-        {
-            textObj.SetActive(false);
-        }
-        foreach (GameObject textRightObj in textRightList)
-        {
-            textRightObj.SetActive(false);
-        }
-
-        if (index + 1 == pictureList.Count) return;
-        if (index + 1 == textLeftList.Count) return;
-        if (index + 1 == textRightList.Count) return;
+        BookBackground();
 
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[4];
         currentRightText = textRightList[4];
-
-        currentPicture.SetActive(true);
-        currentLeftText.SetActive(true);
-        currentRightText.SetActive(true);
+        BookBackground2();
     }
 
     void Start()
