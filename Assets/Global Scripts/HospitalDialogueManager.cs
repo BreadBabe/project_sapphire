@@ -13,13 +13,10 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private float typingSpeed;
 
     [SerializeField] private TextAsset inkJSONAsset = null;
-    public Story story;
+    private Story story;
 
     [SerializeField] private GameObject dialoguebox = null;
     [SerializeField] private GameObject choicebox = null;
-    [SerializeField] private GameObject phoneIcon;
-
-
 
     [SerializeField] private Text textPrefab = null;
 
@@ -61,7 +58,6 @@ public class HospitalDialogueManager : MonoBehaviour
         // Disable the LunaInkManager logic until the button is clicked
         enabled = false;
     }
-
 
     void StartStory()
     {
@@ -192,11 +188,16 @@ public class HospitalDialogueManager : MonoBehaviour
             else
             {
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+                Scene currentScene = SceneManager.GetActiveScene();
                 if (screenFader != null)
                 {
-                    screenFader.StartFadeOut();
+                    screenFader.StartFadeOutAndEnable();
 
-                    StartCoroutine(LoadHomeSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                    StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                }
+                else if (currentScene.name == "HomeDate")
+                {
+                    StartCoroutine(LoadNextSceneAfterDelay(0f));
                 }
 
             }
@@ -204,18 +205,41 @@ public class HospitalDialogueManager : MonoBehaviour
         }
     }
 
-   
-
-    IEnumerator LoadHomeSceneAfterDelay(float delay)
+    IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        string nextSceneName = "";
+
+        // Determine the next scene based on the current scene
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name == "HospitalStart")
         {
-            SceneManager.LoadScene(1); 
+            nextSceneName = "Home1"; // Change to the appropriate next scene name
+        }
+        else if (currentScene.name == "Home1")
+        {
+            nextSceneName = "Date1";
+        }
+        else if (currentScene.name == "Date1")
+        {
+            nextSceneName = "Graveyard";
+        }
+        else if (currentScene.name == "HomeDate")
+        {
+            nextSceneName = "Snooping"; // Ensure this matches the actual scene name
+        }
+
+        // Load the next scene
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Next scene name is not set.");
         }
     }
 
-}
 
+}
 
