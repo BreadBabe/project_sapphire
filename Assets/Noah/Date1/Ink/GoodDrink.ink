@@ -4,7 +4,7 @@ VAR loveAmount = 0
 VAR charSound = ""
 
 
-Noah tries the drink that you just concocted together... He maked a worried face at first but it turns into a smile after tasting!
+Noah tries the drink that you just concocted together... He makes a worried face at first but it turns into a smile after tasting!
     *[So... what do you think?!]
         ~ContentResponse()
         It's not bad at all! Good even.. You got a hidden talent!
