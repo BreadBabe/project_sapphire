@@ -11,10 +11,13 @@ public class ButtonUI : MonoBehaviour
     private GameObject currentPicture;
     private GameObject currentLeftText;
     private GameObject currentRightText;
+    private GameObject currentYesButton;
 
     [SerializeField] private List<GameObject> pictureList = new List<GameObject>();
     [SerializeField] private List<GameObject> textLeftList = new List<GameObject>();
     [SerializeField] private List<GameObject> textRightList = new List<GameObject>();
+    [SerializeField] private List<GameObject> buttonYesList = new List<GameObject>();
+    //Kan man inte sötta en serializefield för dialog tbx och en bool till det?
 
     public bool isClicked = false;
     int index = 0;
@@ -37,6 +40,10 @@ public class ButtonUI : MonoBehaviour
         {
             textRightObj.SetActive(false);
         }
+        foreach (GameObject buttonYesObj in buttonYesList)
+        {
+            buttonYesObj.SetActive(false);
+        }
         if (index + 1 == pictureList.Count) return;
         
     }
@@ -45,6 +52,23 @@ public class ButtonUI : MonoBehaviour
         currentPicture.SetActive(true);
         currentLeftText.SetActive(true);
         currentRightText.SetActive(true);
+        currentYesButton.SetActive(true);
+    }
+    public void YesButton()
+    {
+        BookBackground();
+        currentPicture = pictureList[0];
+        currentPicture.SetActive(true);
+    }
+    public void Yes2Button()
+    {
+
+    }
+    public void NoButton()
+    {
+        BookBackground();
+        currentPicture = pictureList[0];
+        currentPicture.SetActive(true);
     }
     public void ChangeBackground()
     {
@@ -61,7 +85,9 @@ public class ButtonUI : MonoBehaviour
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[1];
         currentRightText = textRightList[1];
+        currentYesButton = buttonYesList[0];
         BookBackground2();
+        
     }
 
     public void YellowBookBackground()
@@ -70,7 +96,9 @@ public class ButtonUI : MonoBehaviour
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[2];
         currentRightText = textRightList[2];
+        currentYesButton = buttonYesList[0];
         BookBackground2();
+
     }
 
     public void RedBookBackground()
@@ -79,19 +107,36 @@ public class ButtonUI : MonoBehaviour
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[3];
         currentRightText = textRightList[3];
+        currentYesButton = buttonYesList[0];
         BookBackground2();
+
     }
 
     public void BlueBookBackground()
     {
-        BookBackground();
+        //BookBackground();
+        currentPicture.SetActive(false);
+        foreach (GameObject textObj in textLeftList)
+        {
+            textObj.SetActive(false);
+        }
+        foreach (GameObject textRightObj in textRightList)
+        {
+            textRightObj.SetActive(false);
+        }
+        foreach (GameObject buttonYesObj in buttonYesList)
+        {
+            buttonYesObj.SetActive(false);
+        }
+        if (index + 1 == pictureList.Count) return;
 
         currentPicture = pictureList[1];
         currentLeftText = textLeftList[4];
         currentRightText = textRightList[4];
+        currentYesButton = buttonYesList[1];
         BookBackground2();
     }
-
+    
     void Start()
     {
         if (pictureList.Count <= 0) return;
