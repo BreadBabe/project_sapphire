@@ -203,22 +203,38 @@ public class HospitalDialogueManager : MonoBehaviour
     IEnumerator LoadNextSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        string nextSceneName = "";
+
+        // Determine the next scene based on the current scene
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "HospitalStart") // Adjust the scene name as needed
+        if (currentScene.name == "HospitalStart")
         {
-            SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
+            nextSceneName = "Home1"; // Change to the appropriate next scene name
         }
         else if (currentScene.name == "Home1")
         {
-            SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
+            nextSceneName = "Date1";
         }
         else if (currentScene.name == "Date1")
         {
-            SceneManager.LoadScene(3);
+            nextSceneName = "Graveyard";
         }
-        // Add more conditions for other scenes if needed
+        else if (currentScene.name == "HomeDate")
+        {
+            nextSceneName = "Snooping"; // Ensure this matches the actual scene name
+        }
+
+        // Load the next scene
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Next scene name is not set.");
+        }
     }
 
-}
 
+}
 
