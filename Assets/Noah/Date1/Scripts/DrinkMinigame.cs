@@ -11,12 +11,14 @@ using UnityEngine.UI;
 public class DrinkMinigame : MonoBehaviour
 {
     [SerializeField] private GameObject mgStart;
+    [SerializeField] private Image mgBackground;
     [SerializeField] private GameObject mgParent;
     [SerializeField] private GameObject bottleChoice;
     [SerializeField] private Button NoahButton;
     [SerializeField] private NoahDialogueManager dialogue;
     [SerializeField] private TextAsset BadEnding;
     [SerializeField] private TextAsset GoodEnding;
+    [SerializeField] private GameObject imageBox;
 
     private int choiceAmount;
     private int mgWidth;
@@ -49,7 +51,7 @@ public class DrinkMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NoahButton.interactable = false;
+        NoahButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,18 +61,27 @@ public class DrinkMinigame : MonoBehaviour
 
     void StartMinigame()
     {
+        mgStart.gameObject.SetActive(false);
+        mgBackground.gameObject.SetActive(true);
+
         int choiceDelta = mgWidth / choiceAmount;
+        int i = 0;
 
         foreach (var mix in mixList)
         {
             // add new instansiation to instance reference object
             GameObject insRef = Instantiate(bottleChoice, new Vector3((mixList.IndexOf(mix)+1) * choiceDelta, mgParent.transform.position.y, mgParent.transform.localPosition.z), Quaternion.identity, mgParent.transform);
 
+            Sprite spr = imageBox.transform.GetChild(i).GetComponent<Image>().sprite;
+
+            insRef.GetComponent<Image>().sprite = spr;
 
             insRef.name = mix;
-            insRef.GetComponentInChildren<TextMeshProUGUI>().text = mix;
+            insRef.GetComponentInChildren<TextMeshProUGUI>().text = "";
 
             insRef.GetComponent<Button>().onClick.AddListener(() => ChoiceClick(insRef, mixList.IndexOf(mix)));
+
+            i++;
         }
     }
 
@@ -99,11 +110,12 @@ public class DrinkMinigame : MonoBehaviour
             }
 
             //Enables Noah the start button
-            NoahButton.interactable = true;
+            NoahButton.gameObject.SetActive(true);
+            mgBackground.gameObject.SetActive(false);
             //
             if(mixingScore == 0 ||  mixingScore < 0)
             {
-                dialogue.InkFile = /*BadEnding*/GoodEnding;
+                dialogue.InkFile = BadEnding;
             }
             if (mixingScore > 0)
             {
