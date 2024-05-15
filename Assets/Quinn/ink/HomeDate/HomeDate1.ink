@@ -2,10 +2,10 @@ VAR charName = "Quinn"
 VAR charEmotion=""
 VAR loveAmount=0
 
-Hi , I'm Quinn, are you my date??
-    *[Yes!]
+Hello, Welcome to my home
+    *[Hi! ]
     ~HappyResponse()
-       Nice to meet you! Have you been here before?
+       
             **[ Yes I have]
                 Huh! Really? Not that many people have! Are you lying?
                 ***[..no?]
@@ -28,7 +28,7 @@ Hi , I'm Quinn, are you my date??
                  ~AnnoyedResponse()
                   Whatever! I need to find a book, you can do whatever i guess ...
       
-    * [I suppose I am]
+    * [ThankYou]
     ~AnnoyedResponse()
         You don't even know who you are? Well that's disapointing.
         **[I mean, yes I am]   
@@ -50,12 +50,12 @@ Hi , I'm Quinn, are you my date??
          Haha i guess you have a point!
          
     
-    *[um...sure]
-    ~AnnoyedResponse()
-        What do you even mean by that?
-        **[ Sorry, I did'nt mean it like that, nice to meet you]
-        ~SmileResponse()
-            Well then. Welcome to my favorite place, the library! Have you been here before?
+    *[Wow, You live in a jungle!]
+    ~SmileResponse()
+        Haha! Yes, when i said i really liked plants i meant it!
+        **[I can see that!]
+        ~EmbarrassedResponse()
+            
             ***[yes, i love it here]
                 Huh! Really? Not that many people have! Are you lying?
                 ****[..no?]
@@ -68,10 +68,10 @@ Hi , I'm Quinn, are you my date??
                 Welcome to the library then!
                 ****[What are we doing here?]
                     I need help to find a book about my plants, do you want to help me?
-        **[ Nothing, nice to meet you]
+        **[ Wow, i didn't realise how much ]
         ~AnnoyedResponse()
-                Nice to meet you to! Welcome to my favorite place, the library! I suppose that you're not here that often.
-            ***[Well I have been here some times! But what are we doing here?]
+               oh, sorry maybe i was not clear enough.
+            ***[No, not really]
                 Really? Okay, I need to get some books for my plants. Do you wanna help me look for them?
             ***[no never, what are we doing here?]
                 I need to get some books for my plants. Do you wanna help me look for them?
@@ -82,6 +82,8 @@ Hi , I'm Quinn, are you my date??
 
 - Help Quinn look around for the book.
     -> END
+    ===function EmbarrassedResponse===
+    ~ charEmotion ="Blush"
     === function SmileResponse===
     ~ loveAmount+= 5
 
@@ -98,4 +100,5 @@ Hi , I'm Quinn, are you my date??
 === function NegativeResponse ===
         ~ loveAmount--
         ~ charEmotion = "Angry"
+        
 
