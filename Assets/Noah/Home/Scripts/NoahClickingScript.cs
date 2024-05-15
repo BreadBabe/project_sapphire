@@ -11,6 +11,7 @@ internal class NoahClickingScript : MonoBehaviour
     [SerializeField] internal GameObject staticFolder;
     [SerializeField] internal GameObject buttonFolder;
     [SerializeField] internal GameObject boxFolder;
+    [SerializeField] internal GameObject wallFolder;
     [SerializeField] internal GameObject Startbutton;
     [SerializeField] internal GameObject BoxButton;
     [SerializeField] internal GameObject OpenButton;
