@@ -56,6 +56,8 @@ internal class NoahClickingScript : MonoBehaviour
         for (int i = 0; i < staticFolder.transform.childCount; i++)
         {
             staticFolder.transform.GetChild(i).gameObject.SetActive(false);
+
+            // disable bar button and temp background.
         }
     }
 }
