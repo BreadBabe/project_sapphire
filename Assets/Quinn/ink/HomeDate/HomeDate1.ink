@@ -2,33 +2,42 @@ VAR charName = "Quinn"
 VAR charEmotion=""
 VAR loveAmount=0
 
+~HappyResponse()
 Hello, Welcome to my home
-    *[Hi! ]
+    *[Hi! It so nice to see you again! ]
     ~HappyResponse()
-       
-            **[ Yes I have]
-                Huh! Really? Not that many people have! Are you lying?
-                ***[..no?]
+       Same! I was really happy you wanted to meet up again! It's not always that I want to see people again.
+            **[ oh, should I count myself lucky then?]
+             ~EmbarrassedResponse()
+                Well, I did when you accepted the second date
+                ***[aww]
                 ~AnnoyedResponse()
                     Well good for you! I have never seen you here before. 
                     Can you help me look for som books about my plants?
-                ***[maybe]
+                ***[you should!]
                 ~SmileResponse()
                     Haha, your'e funny!
                     Can you help me look for some books about my plants?
+                ***[well, when you put it like that, I did felt happy when you messaged me]
                 
-            **[ No, I have not]
+            **[ I felt the same! it was really fun last date! I hope the book helped]
             ~SmileResponse()
-                That what I expected, I come here all the time. 
-                This is where I learn to take care of my plants.
-                 ***[What kind of plants do you have?]
-                    I have all types of plants!
-                    Can you help me find a book about plants?
-                 ***[Lame]
+                Yes, it was the book i was looking for so it did!
+                or 
+                Well it would if I had gotten the right one. But no worries i found the book i was looking for by my self so
+                
+                 ***[Hehe, sorry plants aren't really my strong suit...]
+                    Yeah I noticed...
+                    
+                 ***[oh, well good that you found the right book]
                  ~AnnoyedResponse()
                   Whatever! I need to find a book, you can do whatever i guess ...
+                  
+                  ***[hey, not everyone can be i microbiologist!]
+                  ~AnnoyedResponse()
+                  Haha your right, I huess i Just thought everyone could read.
       
-    * [ThankYou]
+    * [Thank You, wow your house is really green!]
     ~AnnoyedResponse()
         You don't even know who you are? Well that's disapointing.
         **[I mean, yes I am]   
