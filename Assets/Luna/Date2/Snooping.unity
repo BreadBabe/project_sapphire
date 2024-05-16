@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3409,7 +3409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1017784547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3431,7 +3431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017784548
@@ -3448,7 +3448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 1607785478}
   typingSpeed: 25
-  inkJSONAsset: {fileID: 4900000, guid: d5addf63edca14358ba441759e6c229d, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 34997b3c90bde60468494e7f354bb35f, type: 3}
   dialoguebox: {fileID: 1535150258}
   choicebox: {fileID: 852670471}
   textPrefab: {fileID: 11456674, guid: 33bfd392f09c84cdaa2655de36216ed6, type: 3}
@@ -4053,7 +4053,7 @@ GameObject:
   - component: {fileID: 1155298712}
   - component: {fileID: 1155298711}
   - component: {fileID: 1155298710}
-  - component: {fileID: 1155298709}
+  - component: {fileID: 1155298713}
   m_Layer: 5
   m_Name: BackButton1
   m_TagString: Untagged
@@ -4080,34 +4080,6 @@ RectTransform:
   m_AnchoredPosition: {x: -832, y: 450}
   m_SizeDelta: {x: 114.1724, y: 73.1318}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1155298709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155298707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e4fe94caf1bd43b2a8984720d9b3da0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonToDeactivate: {fileID: 1155298710}
-  buttonToActivate: {fileID: 0}
-  objectsToActivate:
-  - {fileID: 1829304209}
-  objectsToDeactivate:
-  - {fileID: 737784819}
-  - {fileID: 2029402733}
-  - {fileID: 348322577}
-  - {fileID: 200465652}
-  - {fileID: 1202178652}
-  - {fileID: 1501738233}
-  - {fileID: 0}
-  - {fileID: 568545247}
-  - {fileID: 727406593}
-  - {fileID: 571410255}
-  audioSource: {fileID: 0}
 --- !u!114 &1155298710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4238,6 +4210,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155298707}
   m_CullTransparentMesh: 1
+--- !u!114 &1155298713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155298707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72f3d06dbedd5d4b9899ea3b8befd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonsToCheck:
+  - {fileID: 1435367051}
+  - {fileID: 899174374}
+  - {fileID: 810813040}
+  - {fileID: 1668710551}
+  - {fileID: 865958416}
+  - {fileID: 1656554476}
+  - {fileID: 994062363}
+  objectToActivate: {fileID: 1017784546}
+  buttonToDeactivate: {fileID: 1155298710}
+  buttonToActivate: {fileID: 0}
+  objectsToActivate:
+  - {fileID: 1829304209}
+  objectsToDeactivate:
+  - {fileID: 737784819}
+  - {fileID: 2029402733}
+  - {fileID: 348322577}
+  - {fileID: 200465652}
+  - {fileID: 1202178652}
+  - {fileID: 1501738233}
+  - {fileID: 568545247}
+  - {fileID: 727406593}
+  - {fileID: 571410255}
+  audioSource: {fileID: 0}
 --- !u!1 &1172090606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,7 +4413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: -226}
+  m_AnchoredPosition: {x: -13, y: -228}
   m_SizeDelta: {x: 500, y: 670}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194043670
@@ -4484,7 +4492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a04d3562888fc4247b871635156d691b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec4ffca85b25dd54797c67c2216073ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7121,7 +7129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1829304210
 RectTransform:
   m_ObjectHideFlags: 0
