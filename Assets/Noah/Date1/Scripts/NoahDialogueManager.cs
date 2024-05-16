@@ -15,7 +15,7 @@ public class NoahDialogueManager : MonoBehaviour
 
     [SerializeField] private float typingSpeed;
 
-    [SerializeField] private TextAsset inkJSONAsset = null;
+    [SerializeField] internal TextAsset inkJSONAsset = null;
     
     private Story story;
 
@@ -45,6 +45,7 @@ public class NoahDialogueManager : MonoBehaviour
     private Text storyText;
     private string currentText;
     private bool isTyping;
+    internal bool firstDialogue = true;
 
     //Used for drink mix success calculation // DEFAULT: 0
     int mixingScore = 0;
@@ -207,8 +208,8 @@ public class NoahDialogueManager : MonoBehaviour
                 //{
                 //ScreenFader.StartFadeOut();
 
-                //StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
-                SceneChanger.ChangeScreen("DrinkPickGame");
+                StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                //SceneChanger.ChangeScreen("DrinkPickGame");
                  //}
                 //else
                 //{
@@ -226,15 +227,26 @@ public class NoahDialogueManager : MonoBehaviour
                 Scene currentScene = SceneManager.GetActiveScene();
                 if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
                 {
-                    SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
+                    SceneManager.LoadScene("DrinkPickGame"); 
                 }
-                else if (currentScene.name == "")
+                else if (currentScene.name == "NoahClicking") //
                 {
-                    SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
+                    if (firstDialogue)
+                    {
+                        Character.SetActive(false);
+                        choicebox.SetActive(false);
+                        dialoguebox.SetActive(false);
+                        RemoveChildren();
+                        firstDialogue = false;
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("");
+                    }
                 }
-                else if (currentScene.name == "")
+                else if (currentScene.name == "DrinkPickGame")
                 {
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene("NoahClicking");
                 }
                 // Add more conditions for other scenes if needed
             }

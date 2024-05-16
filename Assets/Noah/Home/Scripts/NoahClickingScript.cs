@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ internal class NoahClickingScript : MonoBehaviour
     [SerializeField] internal GameObject BoxButton;
     [SerializeField] internal GameObject OpenButton;
     [SerializeField] internal NoahDialogueManager dialogue;
+    [SerializeField] internal TextAsset InkFile;
 
     internal Button[] btnArray;
 
@@ -39,14 +41,22 @@ internal class NoahClickingScript : MonoBehaviour
         //add listener to Box button
         BoxButton.GetComponent<Button>().onClick.AddListener(() => BoxButtonClick());
 
-        //add listner to Open button
+        //add listener to Open button
         OpenButton.GetComponent<Button>().onClick.AddListener(() => OpenBoxOnClick());
+
+        //add listener to HallwayNoah button
+        wallFolder.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(() => StartNoahHallwayOnClick());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!dialogue.firstDialogue)
+        {
+            BoxButton.SetActive(true);
+            wallFolder.SetActive(false);
+            dialogue.inkJSONAsset = InkFile;
+        }
     }
 
     void Click(Button btn)
@@ -123,4 +133,13 @@ internal class NoahClickingScript : MonoBehaviour
         }
 
     }
+
+    void StartNoahHallwayOnClick()
+    {
+        //disable button used
+        wallFolder.transform.GetChild(3).gameObject.SetActive(false);
+
+    }
+
+
 }

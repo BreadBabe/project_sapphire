@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NoahDoor : MonoBehaviour
@@ -35,8 +36,8 @@ public class NoahDoor : MonoBehaviour
 
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(5000);
-
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("NoahClicking");
         // switch scene
     }
 }
