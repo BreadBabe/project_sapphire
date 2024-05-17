@@ -16,8 +16,10 @@ internal class NoahClickingScript : MonoBehaviour
     [SerializeField] internal GameObject Startbutton;
     [SerializeField] internal GameObject BoxButton;
     [SerializeField] internal GameObject OpenButton;
+    [SerializeField] internal GameObject CloseButton;
     [SerializeField] internal NoahDialogueManager dialogue;
     [SerializeField] internal TextAsset InkFile;
+    [SerializeField] internal TextAsset InkFile2;
 
     internal Button[] btnArray;
 
@@ -46,6 +48,9 @@ internal class NoahClickingScript : MonoBehaviour
 
         //add listener to HallwayNoah button
         wallFolder.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(() => StartNoahHallwayOnClick());
+
+        //add listener to Special close button
+        CloseButton.GetComponent<Button>().onClick.AddListener(() => ClickBack());
     }
 
     // Update is called once per frame
@@ -89,7 +94,9 @@ internal class NoahClickingScript : MonoBehaviour
         {
             boxFolder.transform.GetChild(i).gameObject.SetActive(false);
         }
+        CloseButton.gameObject.SetActive(false);
     }
+
 
     void DisableAllButtons()
     {
@@ -124,6 +131,12 @@ internal class NoahClickingScript : MonoBehaviour
     {
         //Disable open button
         OpenButton.gameObject.SetActive(false);
+        //Disable normal back button
+        staticFolder.transform.GetChild(3).gameObject.SetActive(false);
+        CloseButton.gameObject.SetActive(true);
+
+        dialogue.firstDialogue = false;
+
         //Disable box image
         staticFolder.transform.GetChild(1).gameObject.SetActive(false);
         for (int i = 0; i <boxFolder.transform.childCount ; i++)
