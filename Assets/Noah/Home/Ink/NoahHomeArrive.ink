@@ -7,7 +7,7 @@ VAR charSound = ""
 Heya!... You actually came, that's great to see!
 *[Hello Noah..]
 ->InHall
-*[Heya!]
+*[Hey!]
 ->InHall
 *[Afraid I wouldn't show up?]
 ~HappyResponse()
