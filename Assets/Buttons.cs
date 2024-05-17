@@ -10,8 +10,9 @@ public class Buttons : MonoBehaviour
     public GameObject background;
     private GameObject currentPicture;
     [SerializeField] private List<GameObject> pictureList = new List<GameObject>();
+    [SerializeField] private GameObject ButtonActivate;
     public GameObject minigameButton;
-    int index = 0;
+    int index = 1;
     void Start()
     {
         if (pictureList.Count <= 0) return;
@@ -33,6 +34,13 @@ public class Buttons : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
        
+    }
+    public void BackButton ()
+    {
+        currentPicture.SetActive(false);
+        if (index + 1 == pictureList.Count) return;
+        currentPicture = pictureList[--index];
+        currentPicture.SetActive(true);
     }
     public void ChangeBackground()
     {
