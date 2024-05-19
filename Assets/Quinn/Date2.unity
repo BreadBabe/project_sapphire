@@ -1065,9 +1065,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
+  backText: {fileID: 0}
+  backWrongText: {fileID: 0}
   pictureList: []
   textLeftList: []
   textRightList: []
+  buttonYesList: []
   isClicked: 0
   isPressed: 0
 --- !u!1 &1040697832
@@ -1107,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.3398, y: -252}
+  m_AnchoredPosition: {x: -11, y: -210}
   m_SizeDelta: {x: 1012.1849, y: 131.5943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040697834
@@ -1772,7 +1775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: 254.2302, y: -77}
+  m_AnchoredPosition: {x: 258, y: -9}
   m_SizeDelta: {x: 557.9208, y: 662.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600876854

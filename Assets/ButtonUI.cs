@@ -12,16 +12,22 @@ public class ButtonUI : MonoBehaviour
     private GameObject currentLeftText;
     private GameObject currentRightText;
     private GameObject currentYesButton;
+    //private GameObject backText;
 
+    [SerializeField] private GameObject backText;
+    [SerializeField] private GameObject backWrongText;
+    //[SerializeField] private List<GameObject> backTextList = new List<GameObject>();
     [SerializeField] private List<GameObject> pictureList = new List<GameObject>();
     [SerializeField] private List<GameObject> textLeftList = new List<GameObject>();
     [SerializeField] private List<GameObject> textRightList = new List<GameObject>();
     [SerializeField] private List<GameObject> buttonYesList = new List<GameObject>();
     //Kan man inte sötta en serializefield för dialog tbx och en bool till det?
+    
 
     public bool isClicked = false;
     int index = 0;
     public bool isPressed = false;
+
 
     public void NewGameButton()
     {
@@ -32,6 +38,8 @@ public class ButtonUI : MonoBehaviour
     public void BookBackground()
     {
         currentPicture.SetActive(false);
+        backText.SetActive(false);
+        backWrongText.SetActive(false);
         foreach (GameObject textObj in textLeftList)
         {
             textObj.SetActive(false);
@@ -45,6 +53,7 @@ public class ButtonUI : MonoBehaviour
             buttonYesObj.SetActive(false);
         }
         if (index + 1 == pictureList.Count) return;
+
         
     }
     public void BookBackground2()
@@ -59,16 +68,19 @@ public class ButtonUI : MonoBehaviour
         BookBackground();
         currentPicture = pictureList[0];
         currentPicture.SetActive(true);
+        backWrongText.SetActive(true);
+        backText.SetActive(true);
     }
     public void Yes2Button()
     {
-
+        //Byta scen
     }
     public void NoButton()
     {
         BookBackground();
         currentPicture = pictureList[0];
         currentPicture.SetActive(true);
+        backText.SetActive(true);
     }
     public void ChangeBackground()
     {
@@ -76,6 +88,7 @@ public class ButtonUI : MonoBehaviour
         currentPicture = pictureList[0];
         currentLeftText = textLeftList[index];
         currentRightText = textRightList[index];
+
         BookBackground2();
     }
 
@@ -116,6 +129,8 @@ public class ButtonUI : MonoBehaviour
     {
         //BookBackground();
         currentPicture.SetActive(false);
+        backText.SetActive(false);
+        backWrongText.SetActive(false);
         foreach (GameObject textObj in textLeftList)
         {
             textObj.SetActive(false);
@@ -145,5 +160,6 @@ public class ButtonUI : MonoBehaviour
         currentPicture = pictureList[0];
         currentLeftText = textLeftList[0];
         currentRightText = textRightList[0];
+        backWrongText.SetActive(false);
     }
 }
