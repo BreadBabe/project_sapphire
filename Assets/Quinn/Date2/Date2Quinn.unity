@@ -345,8 +345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -451, y: -344}
-  m_SizeDelta: {x: 384.6122, y: 394.4065}
+  m_AnchoredPosition: {x: -446.14514, y: -314.0617}
+  m_SizeDelta: {x: 394.322, y: 454.2831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315213028
 MonoBehaviour:
@@ -362,6 +362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 0}
   pictureList: []
+  ButtonActivate: {fileID: 0}
   minigameButton: {fileID: 315213026}
 --- !u!114 &315213029
 MonoBehaviour:
@@ -385,7 +386,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5849056, g: 0.41660732, b: 0.41660732, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -893,8 +894,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 301, y: 474}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 240, y: 468}
+  m_SizeDelta: {x: 164.1555, y: 63.2438}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428821123
 MonoBehaviour:
@@ -965,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1509434, g: 0.12744749, b: 0.12744749, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1004,6 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 0}
   pictureList: []
+  ButtonActivate: {fileID: 1040697832}
   minigameButton: {fileID: 0}
 --- !u!1 &578973353
 GameObject:
@@ -1041,7 +1043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -86}
+  m_AnchoredPosition: {x: 409, y: -91}
   m_SizeDelta: {x: 664.3203, y: 233.5824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578973355
@@ -1385,8 +1387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96, y: -445}
-  m_SizeDelta: {x: 1049.3807, y: 162.3211}
+  m_AnchoredPosition: {x: -82.56818, y: -381.1989}
+  m_SizeDelta: {x: 1670.6019, y: 289.9233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040697834
 MonoBehaviour:
@@ -1416,7 +1418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5176471, g: 0.63529414, b: 0.5176471, a: 0.94509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1526,7 +1528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 373212629}
   typingSpeed: 50
-  inkJSONAsset: {fileID: 4900000, guid: d87be0aefa6c6974cb84802919a48156, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: c402a570fbacd854a9e533bc4651764d, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
   textPrefab: {fileID: 11456674, guid: 381d5e3a622b685459341e23a74caa6b, type: 3}
@@ -2052,8 +2054,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5538751, y: 0.5}
-  m_AnchoredPosition: {x: -338, y: -201}
-  m_SizeDelta: {x: 697, y: 700}
+  m_AnchoredPosition: {x: -432.992, y: -0.4114}
+  m_SizeDelta: {x: 625.7955, y: 968.6355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600876854
 MonoBehaviour:
@@ -2124,7 +2126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2202,7 +2204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856325035
@@ -2225,7 +2227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Have A Look around
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2234,8 +2236,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294243581
+  m_fontColor: {r: 0.990566, g: 0.9578586, b: 0.9578586, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2353,7 +2355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
