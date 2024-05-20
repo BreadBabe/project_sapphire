@@ -139,7 +139,9 @@ Ugh… sorry about the rant just brought up some old stuff...
 Idk what your problem is but you gotta cut it out, i invite you here to have a nice time and you just go around acting like this! Get yourself together for god's sake!
 *[You’re really annoying you know that?]
 	The door is right there! get out!
-	->END
+	**[*Open door*]
+    	You open the door but something is not right... You actually opened the door to the room instead. You try to close the door but it is too late, the things u witnessed... Before you can turn around you feel a big thud on your head and your vision fades out...
+    	    -> END
 *[*say nothing*]
 	we should probably call it right here…
 	->END
