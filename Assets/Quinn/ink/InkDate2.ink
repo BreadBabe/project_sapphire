@@ -1,5 +1,5 @@
 VAR charName = "Quinn"
-VAR charEmotion=""
+VAR charEmotion="Neutral"
 VAR loveAmount=0
 
 Oh you're back, did you manage to find the book?
@@ -13,7 +13,7 @@ Oh you're back, did you manage to find the book?
         ~AnnoyedResponse()
             Well, perhaps that's precisely why I need it.
                 *** [Sorry what did you say?]
-                    It's not toxic if you don't consume it. 
+                    Ehhh... It's not toxic if you don't consume it. 
                         **** [Okay that's good to know!]
                         ~SmileResponse()
                             It was kinda nice seeing you! I really need to go home and
