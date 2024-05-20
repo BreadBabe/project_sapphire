@@ -13,6 +13,8 @@ public class Buttons : MonoBehaviour
     [SerializeField] private GameObject ButtonActivate;
     public GameObject minigameButton;
     int index = 1;
+    private int clickCount;
+    public int requiredClicks = 5;
     void Start()
     {
         if (pictureList.Count <= 0) return;
@@ -48,6 +50,15 @@ public class Buttons : MonoBehaviour
         if (index + 1 == pictureList.Count) return;
         currentPicture = pictureList[++index];
         currentPicture.SetActive(true);
+    }
+    public void OnClick() 
+    {
+        clickCount++;
+        if (clickCount >= requiredClicks) 
+        {
+            minigameButton.SetActive(true);
+            Debug.Log(clickCount);
+        }
     }
 
     // Update is called once per frame
