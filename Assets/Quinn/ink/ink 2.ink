@@ -11,16 +11,18 @@ Hi , I'm Quinn, are you my date??
                 ***[..no?]
                 ~AnnoyedResponse()
                     Well good for you! I have never seen you here before. 
-                    Can you help me look for som books about my plants?
-                    ****[Okay fun!]
-                    ~HappyResponse()
-                        I need a book about euphorbias!
-                    ****[Sure? Is that the only reason that we met here?]
-                    ~NegativeResponse()
-                        Isn't the bookstore the perfect place to have the first date
-                        on? But if you don't like it here then you can leave if you
-                        want to I don't care. I will look for a book about euphorbias
-                        myself then.
+                    ****[Okay]
+                        Can you help me look for som books about my plants?
+                        *****[Okay fun!]
+                        ~HappyResponse()
+                            I need a book about euphorbias!
+                        *****[Sure? Is that the only reason that we met here?]
+                        ~NegativeResponse()
+                            Isn't the bookstore the perfect place to have the first date on? 
+                            ******[Yes i guess]
+                                But if you don't like it here then you can leave if you want to I don't care. I will look for a book about euphorbias myself then.
+                            ******[Maybe for you]
+                                Okay if you don't like it here then you can leave if you want to I don't care. I will look for a book about euphorbias myself then.
                 ***[maybe]
                 ~SmileResponse()
                     Haha, your'e funny!
@@ -61,11 +63,13 @@ Hi , I'm Quinn, are you my date??
                 Huh! Really? Not that many people have! Are you lying?
                 ****[..no?]
                     Well good for you! I have never seen you here before. 
-                    Can you help me look for som books about my plants?
+                    *****[Okay]
+                        Can you help me look for som books about my plants?
                 ****[maybe]
                 ~HappyResponse()
                     Haha, your'e funny!
-                    Can you help me look for some books about my plants?
+                    *****[Thanks!!]
+                        Can you help me look for some books about my plants?
             ***[no never, what are we doing here?]
                 I need to get some books for my plants. Do you wanna help me look for them?
         **[Does anybody really know who they are?]
@@ -77,15 +81,16 @@ Hi , I'm Quinn, are you my date??
             ***[I know]
                 I need to find a book about my plants! Can you help me find that book
                 ?
-                    ****[Okay fun!]
-                    ~HappyResponse()
-                        I need a book about euphorbias!
+                ****[Okay fun!]
+                ~HappyResponse()
+                    I need a book about euphorbias!
                     ****[Sure? Is that the only reason that we met here?]
-                    ~NegativeResponse()
-                        Isn't the bookstore the perfect place to have the first date
-                        on? But if you don't like it here then you can leave if you
-                        want to I don't care. I will look for a book about euphorbias
-                        myself then.
+                        ~NegativeResponse()
+                            Isn't the bookstore the perfect place to have the first date on? 
+                            *****[Yes i guess]
+                                But if you don't like it here then you can leave if you want to I don't care. I will look for a book about euphorbias myself then.
+                            *****[Maybe for you]
+                                Okay if you don't like it here then you can leave if you want to I don't care. I will look for a book about euphorbias myself then.
          
     *[um...sure]
     ~AnnoyedResponse()
@@ -142,7 +147,6 @@ Hi , I'm Quinn, are you my date??
     -> END
     === function SmileResponse===
     ~ loveAmount+= 5
-
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
