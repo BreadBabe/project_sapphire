@@ -137,7 +137,7 @@ Yeah that's not gonna be good enough.
  == ATONEMENT ==
  * [I don't know what to tell you. I'm sorry, it was rude.]
      ~HappyResponse()
-      Thank you! It kind of has a vibe, right? I usually don't invite people over here. It's kind of my sacred space. Make yourself at home.
+      
       **[Thank's for the invite!]
       ~charEmotion="Neutral"
       Hey, any time. I need motivation for cleaning anyway. I could never be one of those TikTok clean girls.
