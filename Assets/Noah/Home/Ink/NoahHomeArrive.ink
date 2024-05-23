@@ -19,7 +19,8 @@ Heya!... You actually came, that's great to see!
         **[Boo!!]
             ~ContentResponse()
 	        Haha new meaning to the term ghosting i see.
-            -> InHall
+	            ***[...]
+                -> InHall
 
 == InHall ==
 Anyhow welcome to my home you can put your things over here
