@@ -17,6 +17,7 @@ public class ButtonHomeManager : MonoBehaviour
     [SerializeField] GameObject CoffeCupButton;
     [SerializeField] GameObject PictureButton;
     [SerializeField] GameObject posterButton;
+
     [SerializeField] GameObject goToSleepButton;
 
     [SerializeField] GameObject closeUpImageObject;
@@ -46,6 +47,7 @@ public class ButtonHomeManager : MonoBehaviour
         PictureButton.SetActive(false);
         posterButton.SetActive(false);
         closeUpImageObject.SetActive(false);
+        goToSleepButton.SetActive(false);
 
 
         BackButton.SetActive(false);
@@ -91,6 +93,7 @@ public class ButtonHomeManager : MonoBehaviour
     public void bedroomClick()
     {
         image = CloseUpImage.Bedroom;
+        goToSleepButton.SetActive(true);
         Information();
     }
 
@@ -99,6 +102,7 @@ public class ButtonHomeManager : MonoBehaviour
         background.SetActive(false);
         BackButton.SetActive(false);
         closeUpImageObject.SetActive(false);
+        goToSleepButton.SetActive(false);
      }
 
     public void GoToSleepSelected()
@@ -120,7 +124,7 @@ public class ButtonHomeManager : MonoBehaviour
         switch (phoneUIManager.datingAppState)
         {
             case PhoneUIManager.DatingAppStates.Quinn:
-                nextSceneName = "";
+                nextSceneName = "Date1Quinn";
                 break;
             case PhoneUIManager.DatingAppStates.Luna:
                 nextSceneName = "Date1";
