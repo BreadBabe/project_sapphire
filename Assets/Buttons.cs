@@ -66,7 +66,7 @@ public class Buttons : MonoBehaviour
         if (clickCount >= requiredClicks) 
         {
             minigameButton.SetActive(true);
-            Debug.Log(clickCount);
+          
         }
     }
 
