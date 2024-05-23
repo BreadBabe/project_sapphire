@@ -50,7 +50,7 @@ internal class NoahClickingScript : MonoBehaviour
         wallFolder.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(() => StartNoahHallwayOnClick());
 
         //add listener to Special close button
-        CloseButton.GetComponent<Button>().onClick.AddListener(() => ClickBack());
+        CloseButton.GetComponent<Button>().onClick.AddListener(() => ClickBackOutBox());
     }
 
     // Update is called once per frame
@@ -96,7 +96,26 @@ internal class NoahClickingScript : MonoBehaviour
         }
         CloseButton.gameObject.SetActive(false);
     }
+    
+    void ClickBackOutBox()
+    {
+        // disable all children
+        for (int i = 0; i < staticFolder.transform.childCount; i++)
+        {
+            staticFolder.transform.GetChild(i).gameObject.SetActive(false);
 
+            // disable bar button and temp background.
+        }
+        for (int i = 0; i < boxFolder.transform.childCount; i++)
+        {
+            boxFolder.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        for (int i = 0; i < buttonFolder.transform.childCount; i++)
+        {
+            buttonFolder.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        CloseButton.gameObject.SetActive(false);
+    }
 
     void DisableAllButtons()
     {
@@ -129,8 +148,7 @@ internal class NoahClickingScript : MonoBehaviour
 
     void OpenBoxOnClick()
     {
-        //Disable open button
-        OpenButton.gameObject.SetActive(false);
+        
         //Disable normal back button
         staticFolder.transform.GetChild(3).gameObject.SetActive(false);
         CloseButton.gameObject.SetActive(true);
@@ -144,7 +162,8 @@ internal class NoahClickingScript : MonoBehaviour
             //if(boxFolder.transform.GetChild(1).gameObject)
             boxFolder.transform.GetChild(i).gameObject.SetActive(true);
         }
-
+        //Disable open button
+        OpenButton.gameObject.SetActive(false);
     }
 
     void StartNoahHallwayOnClick()
