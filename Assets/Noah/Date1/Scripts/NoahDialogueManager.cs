@@ -241,7 +241,14 @@ public class NoahDialogueManager : MonoBehaviour
                     }
                     else
                     {
-                        SceneManager.LoadScene("");
+                        if (loveAmount == -1000)
+                        {
+                            SceneManager.LoadScene("TheRoom");
+                        }
+                        else
+                        {
+                            SceneManager.LoadScene("");
+                        }
                     }
                 }
                 else if (currentScene.name == "DrinkPickGame")
