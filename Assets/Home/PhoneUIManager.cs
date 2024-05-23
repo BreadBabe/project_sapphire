@@ -270,7 +270,7 @@ public class PhoneUIManager : MonoBehaviour
     }
     public void DateMeCLicked()
     {
-        if (!datePicked)
+        if (!datePicked && datingAppState != DatingAppStates.Summer)
         {
             DateQUESTIONMARK.SetActive(true);
         }
