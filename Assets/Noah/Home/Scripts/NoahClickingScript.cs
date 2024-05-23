@@ -114,6 +114,7 @@ internal class NoahClickingScript : MonoBehaviour
         {
             buttonFolder.transform.GetChild(i).gameObject.SetActive(false);
         }
+        BoxButton.gameObject.SetActive(false);
         CloseButton.gameObject.SetActive(false);
     }
 
