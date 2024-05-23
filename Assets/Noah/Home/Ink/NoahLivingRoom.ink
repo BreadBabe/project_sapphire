@@ -379,10 +379,12 @@ Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert.
 === function HappyResponse ===
         ~ charEmotion = "Happy"
         ~ charSound=""
+        ~ loveAmount++
         
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
+        ~ loveAmount--
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -391,18 +393,22 @@ Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert.
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
+        ~ loveAmount--
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
+        ~ loveAmount--
         
 === function ContentResponse ====
         ~charEmotion="Content"
         ~charSound=""
+        ~ loveAmount++
         
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
+        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
@@ -411,7 +417,8 @@ Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert.
 === function BlushResponse ====
         ~charEmotion="Blush"
         ~charSound=""
+        ~ loveAmount++
         
 === function NoNoah ====
-    ~charEmotion="Empty"
-    ~charSound=""
+        ~charEmotion="Empty"
+        ~charSound=""

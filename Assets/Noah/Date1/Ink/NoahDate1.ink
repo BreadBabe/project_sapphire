@@ -378,10 +378,12 @@ Say i got something special planned for tonight, privilege of having a chill bos
 === function HappyResponse ===
         ~ charEmotion = "Happy"
         ~ charSound=""
+        ~ loveAmount++
         
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
+        ~ loveAmount--
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -390,18 +392,22 @@ Say i got something special planned for tonight, privilege of having a chill bos
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
+        ~ loveAmount--
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
+        ~ loveAmount--
         
 === function ContentResponse ====
         ~charEmotion="Content"
         ~charSound=""
+        ~ loveAmount++
         
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
+        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
@@ -410,10 +416,11 @@ Say i got something special planned for tonight, privilege of having a chill bos
 === function BlushResponse ====
         ~charEmotion="Blush"
         ~charSound=""
+        ~ loveAmount++
         
 === function NoNoah ====
-    ~charEmotion="Empty"
-    ~charSound=""
+        ~charEmotion="Empty"
+        ~charSound=""
         
         
 //Storing results for options that lead to same outcome to prevent too much clutter

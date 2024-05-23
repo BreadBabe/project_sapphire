@@ -111,10 +111,12 @@ Anyhow welcome to my home you can put your things over here
 === function HappyResponse ===
         ~ charEmotion = "Happy"
         ~ charSound=""
+        ~ loveAmount++
         
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
+        ~ loveAmount--
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -123,18 +125,22 @@ Anyhow welcome to my home you can put your things over here
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
+        ~ loveAmount--
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
+        ~ loveAmount--
         
 === function ContentResponse ====
         ~charEmotion="Content"
         ~charSound=""
+        ~ loveAmount++
         
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
+        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
@@ -143,7 +149,8 @@ Anyhow welcome to my home you can put your things over here
 === function BlushResponse ====
         ~charEmotion="Blush"
         ~charSound=""
+        ~ loveAmount++
         
 === function NoNoah ====
-    ~charEmotion="Empty"
-    ~charSound=""
+        ~charEmotion="Empty"
+        ~charSound=""
