@@ -19,7 +19,7 @@ public class DrinkMinigame : MonoBehaviour
     [SerializeField] private TextAsset BadEnding;
     [SerializeField] private TextAsset GoodEnding;
     [SerializeField] private GameObject imageBox;
-
+    [SerializeField] private GameObject Mixingdescription;
     private int choiceAmount;
     private int mgWidth;
     private int pickAmount;
@@ -52,6 +52,7 @@ public class DrinkMinigame : MonoBehaviour
     void Start()
     {
         NoahButton.gameObject.SetActive(false);
+        Mixingdescription.SetActive(false);
     }
 
     // Update is called once per frame
@@ -63,6 +64,7 @@ public class DrinkMinigame : MonoBehaviour
     {
         mgStart.gameObject.SetActive(false);
         mgBackground.gameObject.SetActive(true);
+        Mixingdescription.SetActive(true);
 
         int choiceDelta = mgWidth / choiceAmount;
         int i = 0;
@@ -112,7 +114,8 @@ public class DrinkMinigame : MonoBehaviour
             //Enables Noah the start button
             NoahButton.gameObject.SetActive(true);
             mgBackground.gameObject.SetActive(false);
-            //
+            Mixingdescription.gameObject.SetActive(false);
+            //Changes Script based on mixingscore
             if(mixingScore == 0 ||  mixingScore < 0)
             {
                 dialogue.InkFile = BadEnding;
