@@ -247,13 +247,13 @@ Oh okay… Thanks! I still miss him to this day…
 		-> NoahStopsCaring()
 
 
-
 == NoahStopsCaring ==
-~NeutralResponse()
-.*You sit down on the couch with Noah*
-	*[*brief silence*]
-		.*Noah grabs the box of memorobilia and takes out all the things one by one*
-			-> MemorobiliaAsk()
+*[....]
+    ~NeutralResponse()
+    \*You sit down on the couch with Noah*
+    	**[*brief silence*]
+    		.*Noah grabs the box of memorobilia and takes out all the things one by one*
+    			-> MemorobiliaAsk()
 
 == MemorobiliaAsk ==
 ~NeutralResponse()
