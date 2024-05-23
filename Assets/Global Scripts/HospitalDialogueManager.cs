@@ -219,6 +219,10 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = ""; // Ensure this matches the actual scene name
         }
+        else if (currentScene.name == "Date1")
+        {
+            nextSceneName = "Level1";
+        }
 
         // Load the next scene
         if (!string.IsNullOrEmpty(nextSceneName))
