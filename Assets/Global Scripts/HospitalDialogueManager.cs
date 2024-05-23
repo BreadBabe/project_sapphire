@@ -213,15 +213,15 @@ public class HospitalDialogueManager : MonoBehaviour
         }
         else if (currentScene.name == "Date1")
         {
+            nextSceneName = "Level1";
+        }
+        else if (currentScene.name == "Date1")
+        {
             nextSceneName = "Graveyard";
         }
         else if (currentScene.name == "HomeDate")
         {
             nextSceneName = ""; // Ensure this matches the actual scene name
-        }
-        else if (currentScene.name == "Date1")
-        {
-            nextSceneName = "Level1";
         }
 
         // Load the next scene
