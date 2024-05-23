@@ -20,6 +20,7 @@ public class Buttons : MonoBehaviour
         if (pictureList.Count <= 0) return;
         currentPicture = pictureList[0];
     }
+
     public void MiniGame() 
     {
         if (minigameButton.activeInHierarchy == true) 
@@ -27,9 +28,17 @@ public class Buttons : MonoBehaviour
             minigameButton.SetActive(false);
 
         }
-        else 
+        else if (minigameButton.activeInHierarchy == false)
         {
             minigameButton.SetActive(true);
+        }
+    }
+    public void DeActivate() 
+    {
+        if (minigameButton.activeInHierarchy == true)
+        {
+            minigameButton.SetActive(false);
+
         }
     }
     public void MiniGameScene(string sceneName)
