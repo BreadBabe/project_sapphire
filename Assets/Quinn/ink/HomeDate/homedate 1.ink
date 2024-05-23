@@ -140,7 +140,7 @@ Oh, okay, I’m gonna go get one for me. I’ll be right back. You can have a lo
 Okay! Let me go get one for you. I promise it’s really good! I’ll be right back
    
 
-- 
+-*[ I wonder what kind of person they are let me have a look around]
     -> END
     
 === function SmileResponse===
