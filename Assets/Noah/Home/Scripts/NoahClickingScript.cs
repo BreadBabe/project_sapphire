@@ -21,12 +21,14 @@ internal class NoahClickingScript : MonoBehaviour
     [SerializeField] internal TextAsset InkFile;
     [SerializeField] internal TextAsset InkFile2;
 
+    private bool boxStopper;
     internal Button[] btnArray;
 
     // Start is called before the first frame update
     void Start()
     {
         btnArray = buttonFolder.transform.GetComponentsInChildren<Button>();
+        boxStopper = false;
 
         // add listener to all buttons in folder
         foreach (var btn in btnArray)
@@ -58,7 +60,11 @@ internal class NoahClickingScript : MonoBehaviour
     {
         if (!dialogue.firstDialogue)
         {
-            BoxButton.SetActive(true);
+            if (!boxStopper)
+            {
+                BoxButton.SetActive(true);
+                boxStopper = true;
+            }
             wallFolder.SetActive(false);
             dialogue.inkJSONAsset = InkFile;
         }
