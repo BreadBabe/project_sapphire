@@ -39,6 +39,8 @@ public class PhoneUIManager : MonoBehaviour
 
     [SerializeField] GameObject likedMessage;
 
+    [SerializeField] GameObject ShowInteractiveButtons;
+
     public bool leisureTime = false;
 
     public bool PhoneUp = false;
@@ -284,6 +286,7 @@ public class PhoneUIManager : MonoBehaviour
         DateQUESTIONMARK.SetActive(false);
         datePicked = true;
         lockedDate.SetActive(true);
+        ShowInteractiveButtons.SetActive(true);
     }
     
     IEnumerator ScaleUpObject()
