@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEditor.Rendering;
-using UnityEditor.Experimental.GraphView;
-using Ink.UnityIntegration;
+//using UnityEditor.Experimental.GraphView;
+//using Ink.UnityIntegration;
 
 public class NoahDialogueManager : MonoBehaviour
 {

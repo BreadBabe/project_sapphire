@@ -37,7 +37,13 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] GameObject messageUI;
     [SerializeField] GameObject UnknownMessageUI;
 
-    private bool PhoneUp = false;
+    [SerializeField] GameObject likedMessage;
+
+    [SerializeField] GameObject ShowInteractiveButtons;
+
+    public bool leisureTime = false;
+
+    public bool PhoneUp = false;
 
     private float scalingSpeed = 4.0f;
 
@@ -65,7 +71,7 @@ public class PhoneUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhoneIcon.SetActive(false);
+        PhoneIcon.SetActive(true);
         notif.SetActive(false);
         lockedDate.SetActive(false);
         PhoneUI.SetActive(false);
@@ -75,6 +81,7 @@ public class PhoneUIManager : MonoBehaviour
         datingAppUI.SetActive(false);
         DateQUESTIONMARK.SetActive(false);
         DateMessages.SetActive(false); 
+        likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
 
         messageUI.SetActive(false);
@@ -124,6 +131,11 @@ public class PhoneUIManager : MonoBehaviour
      UnknownMessageUI.SetActive(true);
      backButton.SetActive(true ) ;
 
+    }
+
+    public void Youlikedmessage()
+    {
+        likedMessage.SetActive(true);
     }
 
     public void BackButtonPressed()
@@ -258,7 +270,7 @@ public class PhoneUIManager : MonoBehaviour
     }
     public void DateMeCLicked()
     {
-        if (!datePicked)
+        if (!datePicked && datingAppState != DatingAppStates.Summer)
         {
             DateQUESTIONMARK.SetActive(true);
         }
@@ -274,6 +286,7 @@ public class PhoneUIManager : MonoBehaviour
         DateQUESTIONMARK.SetActive(false);
         datePicked = true;
         lockedDate.SetActive(true);
+        ShowInteractiveButtons.SetActive(true);
     }
     
     IEnumerator ScaleUpObject()

@@ -27,6 +27,7 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private Button startButton;
 
 
+
     private string charName;
     private string charEmotion;
     private string charSound;
@@ -213,7 +214,7 @@ public class HospitalDialogueManager : MonoBehaviour
         }
         else if (currentScene.name == "Home1")
         {
-            nextSceneName = "Date1";
+           // nextSceneName = "Date1";
         }
         else if (currentScene.name == "Date1")
         {

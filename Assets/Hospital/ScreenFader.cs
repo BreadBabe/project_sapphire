@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ScreenFader : MonoBehaviour
 {
     [SerializeField] private Image screenImage; // Reference to the image that covers the screen
-    [SerializeField] private Image startButtonImage; // Reference to the start button image
+    [SerializeField] List<Image> startImages;
     [SerializeField] private float fadeDuration = 1.0f;
     [SerializeField] private Color startColor; // Default start color is white
     [SerializeField] private Color fadeOutColor;// Default fade-out color is black
@@ -42,7 +43,11 @@ public class ScreenFader : MonoBehaviour
             float t = currentFadeTime / fadeDuration;
             // Interpolate between current color and transparent color
             screenImage.color = Color.Lerp(currentColor, transparentColor, t);
-            startButtonImage.color = Color.Lerp(transparentColor, currentColor, t);
+            foreach(Image startImage in startImages)
+            {
+               startImage.color = Color.Lerp(transparentColor, currentColor, t);
+            }
+            
             yield return null;
         }
     }
@@ -58,7 +63,11 @@ public class ScreenFader : MonoBehaviour
             float t = currentFadeTime / fadeDuration;
             // Interpolate between transparent color and fade-out color
             screenImage.color = Color.Lerp(currentColor, fadeOutColor, t);
-            startButtonImage.color = Color.Lerp(fadeOutColor, currentColor, t);
+            foreach(Image startImage in startImages)
+            {
+                startImage.color = Color.Lerp(fadeOutColor, currentColor, t);
+            }
+            
             yield return null;
         }
     }
