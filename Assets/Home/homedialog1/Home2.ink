@@ -19,14 +19,16 @@ Hey Astro! I'm back! Missed you, buddy. Sorry for being gone for so long.
                 ~ NeutralResponse()
                 *****[Anyway, gotta stay focused.]
                   ~PhoneResponse()
+                  
                    Hold up, I think I just got a text. Is it Luna or the Pizza Hut delivery guy? Let's find out!
                         ******[I should open my phone!]
+                        ~NeutralResponse()
              
        
 --> END
 
 ===function PhoneResponse===
-~charEmotion="Positive"
+~charEmotion="Neutral"
 ~charSound="Phone"
 
 ===function HowlResponse===
