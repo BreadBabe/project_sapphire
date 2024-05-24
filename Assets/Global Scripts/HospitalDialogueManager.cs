@@ -214,7 +214,11 @@ public class HospitalDialogueManager : MonoBehaviour
         }
         else if (currentScene.name == "Home1")
         {
-           // nextSceneName = "Date1";
+           nextSceneName = "PHONE";
+        }
+        else if (currentScene.name == "Home2")
+        {
+            nextSceneName = "PHONE";
         }
         else if (currentScene.name == "Date1")
         {
@@ -228,7 +232,11 @@ public class HospitalDialogueManager : MonoBehaviour
         // Load the next scene
         if (!string.IsNullOrEmpty(nextSceneName))
         {
-            SceneManager.LoadScene(nextSceneName);
+            if (nextSceneName == "PHONE"){}
+            else
+            {
+                SceneManager.LoadScene(nextSceneName);
+            }
         }
         else
         {
