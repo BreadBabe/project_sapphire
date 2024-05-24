@@ -30,6 +30,10 @@ public class PhoneUIManHome2 : MonoBehaviour
 
     [SerializeField] GameObject   LoveMterShutter;
 
+    [SerializeField] GameObject nextDayScene;
+    [SerializeField] GameObject sleepButton;
+    [SerializeField] GameObject selectSleep;
+
 
     public bool leisureTime = false;
 
@@ -69,6 +73,9 @@ public class PhoneUIManHome2 : MonoBehaviour
         DateMessages.SetActive(false);
         likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
+        nextDayScene.SetActive(false);
+        sleepButton.SetActive(false);
+        selectSleep.SetActive(false);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -134,6 +141,7 @@ public class PhoneUIManHome2 : MonoBehaviour
             messangerApp.SetActive(false);
             homeButton.SetActive(false);
             notif.SetActive(false);
+            sleepButton.SetActive(true);
             PhoneUp = false;
         }
         else if (!PhoneUp)
@@ -160,6 +168,11 @@ public class PhoneUIManHome2 : MonoBehaviour
             StartCoroutine(ScaleDownObjectApp());
             messangerAppUp = false;
         }
+    }
+
+    public void Sleep()
+    {
+        selectSleep.SetActive(true);
     }
 
     public void MessangerAppCLicked()
@@ -241,8 +254,41 @@ public class PhoneUIManHome2 : MonoBehaviour
         //{
         //screenFader.StartFadeOut();
 
-        StartCoroutine(TransitionToDate2(2f));
+      
 
+    }
+
+    public void GoToSleepSelected()
+    {
+        nextDayScene.SetActive(true);
+        sleepButton.SetActive(false);
+
+        ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+        if (screenFader != null)
+        {
+
+
+            screenFader.StartFadeOut();
+
+            StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+        }
+    }
+
+    IEnumerator LoadNextSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        string nextSceneName = "";
+
+        nextSceneName = "Date2";   //Change this to the characters date
+  
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Kill yourself");
+        }
     }
 
 

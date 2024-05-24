@@ -188,6 +188,8 @@ public class HospitalDialogueManager : MonoBehaviour
             }
             else
             {
+                int newLove = PlayerPrefs.GetInt("love") + (int)loveAmount;
+                PlayerPrefs.SetInt("love", newLove);
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
                 if (screenFader != null)
                 {

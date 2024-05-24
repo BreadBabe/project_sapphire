@@ -43,6 +43,8 @@ public class PhoneUIManager : MonoBehaviour
 
     [SerializeField] GameObject LoveMterShutter;
 
+    [SerializeField]  GameObject nextDayScene;
+
     public bool leisureTime = false;
 
     public bool PhoneUp = false;
@@ -86,6 +88,7 @@ public class PhoneUIManager : MonoBehaviour
         likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
         LoveMterShutter.SetActive(true);
+        nextDayScene.SetActive(false);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -423,5 +426,12 @@ public class PhoneUIManager : MonoBehaviour
 
     }
 
-   
+    public void NextDate()
+    {
+        nextDayScene.SetActive(true);
+        StartCoroutine(TransitionToDate(2f));
+    }
+
+
+
 }

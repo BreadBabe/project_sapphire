@@ -24,6 +24,8 @@ public class ButtonHomeManager : MonoBehaviour
 
     [SerializeField] Sprite newspaper,bedroom,kitchen,dogToy,coffeCup,Picture,poster;
 
+    [SerializeField] GameObject nextDayScene;
+
     [SerializeField] GameObject BackButton;
     [SerializeField] GameObject background;
     Image closeUpImage;
@@ -103,13 +105,20 @@ public class ButtonHomeManager : MonoBehaviour
         BackButton.SetActive(false);
         closeUpImageObject.SetActive(false);
         goToSleepButton.SetActive(false);
-     }
+        nextDayScene.SetActive(false);
+    }
 
     public void GoToSleepSelected()
     {
+        closeUpImageObject.SetActive(false);
+        goToSleepButton.SetActive(false);
+        nextDayScene.SetActive(true);
+
         ScreenFader screenFader = FindObjectOfType<ScreenFader>();
         if (screenFader != null)
         {
+
+     
             screenFader.StartFadeOut();
 
             StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
