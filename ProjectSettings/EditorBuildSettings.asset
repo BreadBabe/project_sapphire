@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Noah/Date1/DrinkPickGame.unity
     guid: 5e378f76ca7911f4fa703a243ef168e3
+  - enabled: 1
+    path: Assets/Noah/Home/TheRoom.unity
+    guid: 5ce876253780c1040979239bc82ebfa1
   m_configObjects: {}
