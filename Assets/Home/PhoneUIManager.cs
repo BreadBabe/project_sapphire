@@ -41,6 +41,8 @@ public class PhoneUIManager : MonoBehaviour
 
     [SerializeField] GameObject ShowInteractiveButtons;
 
+    [SerializeField] GameObject LoveMterShutter;
+
     public bool leisureTime = false;
 
     public bool PhoneUp = false;
@@ -83,6 +85,7 @@ public class PhoneUIManager : MonoBehaviour
         DateMessages.SetActive(false); 
         likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
+        LoveMterShutter.SetActive(true);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -162,6 +165,15 @@ public class PhoneUIManager : MonoBehaviour
             messangerApp.SetActive(true);
             homeButton.SetActive(true);
             PhoneUp = true;
+
+            float loveAmount = 0;//(float)PlayerPrefs.GetInt("love");
+            //LoveMterShutter.transform.localScale.x
+            
+           LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
+
+            Debug.Log((loveAmount + 10) / 20);
+           
+    
         }
           
     }
@@ -386,6 +398,9 @@ public class PhoneUIManager : MonoBehaviour
                 choicebox.SetActive(false);
                 character.SetActive(false);
             }
+
+
+
         }      
     }
 

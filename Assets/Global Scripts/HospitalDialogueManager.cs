@@ -220,10 +220,6 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Graveyard";
         }
-        else if( currentScene.name == "Graveyard")
-        {
-            nextSceneName = "Home2";
-        }
         else if (currentScene.name == "HomeDate")
         {
             nextSceneName = ""; // Ensure this matches the actual scene name

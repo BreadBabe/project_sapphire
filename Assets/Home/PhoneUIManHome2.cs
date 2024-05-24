@@ -28,6 +28,8 @@ public class PhoneUIManHome2 : MonoBehaviour
 
     [SerializeField] GameObject likedMessage;
 
+    [SerializeField] GameObject   LoveMterShutter;
+
 
     public bool leisureTime = false;
 
@@ -70,6 +72,7 @@ public class PhoneUIManHome2 : MonoBehaviour
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
+        LoveMterShutter.SetActive(true);
 
         backButton.SetActive(false);
 
@@ -140,6 +143,12 @@ public class PhoneUIManHome2 : MonoBehaviour
             homeButton.SetActive(true);
             notif.SetActive(true);
             PhoneUp = true;
+
+            float loveAmount = (float)PlayerPrefs.GetInt("love");
+
+            LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
+
+            Debug.Log((loveAmount + 10) / 20);
         }
 
     }
