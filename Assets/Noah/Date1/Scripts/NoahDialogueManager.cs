@@ -202,7 +202,9 @@ public class NoahDialogueManager : MonoBehaviour
             }
             else
             {
-
+                // add love to global playerpreef
+                int newLove = PlayerPrefs.GetInt("love") + (int)loveAmount;
+                PlayerPrefs.SetInt("love", newLove);
 
                 //if (ScreenFader != null)
                 //{
