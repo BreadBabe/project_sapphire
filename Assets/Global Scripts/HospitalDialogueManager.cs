@@ -191,7 +191,7 @@ public class HospitalDialogueManager : MonoBehaviour
                 {
                     screenFader.StartFadeOut();
 
-                    StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                    StartCoroutine(LoadNextSceneAfterDelay(1f)); // Load scene index 1 after a delay of 2 seconds
                 }
 
             }
@@ -214,9 +214,9 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Graveyard";
         }
-        else if (currentScene.name == "HomeDate")
+        else if (currentScene.name == "LunaHome")
         {
-            nextSceneName = ""; // Ensure this matches the actual scene name
+            nextSceneName = "Snooping"; // Ensure this matches the actual scene name
         }
 
         // Load the next scene
