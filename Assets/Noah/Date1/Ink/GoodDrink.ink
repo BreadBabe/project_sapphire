@@ -4,7 +4,7 @@ VAR loveAmount = 0
 VAR charSound = ""
 
 
-Noah tries the drink that you just concocted together... He maked a worried face at first but it turns into a smile after tasting!
+Noah tries the drink that you just concocted together... He makes a worried face at first but it turns into a smile after tasting!
     *[So... what do you think?!]
         ~ContentResponse()
         It's not bad at all! Good even.. You got a hidden talent!
@@ -82,10 +82,12 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function HappyResponse ===
         ~ charEmotion = "Happy"
         ~ charSound=""
+        ~ loveAmount++
         
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
+        ~ loveAmount--
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -94,18 +96,22 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
+        ~ loveAmount--
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
+        ~ loveAmount--
         
 === function ContentResponse ====
         ~charEmotion="Content"
         ~charSound=""
+        ~ loveAmount++
         
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
+        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
@@ -114,8 +120,9 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function BlushResponse ====
         ~charEmotion="Blush"
         ~charSound=""
+        ~ loveAmount++
         
 === function NoNoah ====
-    ~charEmotion="Empty"
-    ~charSound=""
+        ~charEmotion="Empty"
+        ~charSound=""
         

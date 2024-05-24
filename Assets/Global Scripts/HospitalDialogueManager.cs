@@ -27,6 +27,7 @@ public class HospitalDialogueManager : MonoBehaviour
     [SerializeField] private Button startButton;
 
 
+
     private string charName;
     private string charEmotion;
     private string charSound;
@@ -73,6 +74,7 @@ public class HospitalDialogueManager : MonoBehaviour
     {
 
 
+        Debug.Log("pizza");
 
         RemoveChildren();
 
@@ -210,6 +212,14 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Home1"; // Change to the appropriate next scene name
         }
+        else if (currentScene.name == "Home1")
+        {
+           nextSceneName = "PHONE";
+        }
+        else if (currentScene.name == "Home2")
+        {
+            nextSceneName = "PHONE";
+        }
         else if (currentScene.name == "Date1")
         {
             nextSceneName = "Graveyard";
@@ -227,7 +237,11 @@ public class HospitalDialogueManager : MonoBehaviour
         // Load the next scene
         if (!string.IsNullOrEmpty(nextSceneName))
         {
-            SceneManager.LoadScene(nextSceneName);
+            if (nextSceneName == "PHONE"){}
+            else
+            {
+                SceneManager.LoadScene(nextSceneName);
+            }
         }
         else
         {
