@@ -48,9 +48,6 @@ public class PhoneUIManHome2 : MonoBehaviour
     bool messangerAppUp;
 
 
-    public enum DatingAppStates { Quinn, Luna, Noah, Summer }
-    public DatingAppStates datingAppState;
-
     //[SerializeField] Sprite quinnSprite;
     //[SerializeField] Sprite lunaSprite;
     //[SerializeField] Sprite noahSprite;
@@ -279,8 +276,20 @@ public class PhoneUIManHome2 : MonoBehaviour
         yield return new WaitForSeconds(delay);
         string nextSceneName = "";
 
-        nextSceneName = "Date2";   //Change this to the characters date
-  
+        if( phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Luna)
+        {
+            nextSceneName = "Date2";  // put Luna date2 name
+        }
+        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Noah)
+        {
+            nextSceneName = "NoahClicking";  // put Noah date2 name
+        }
+        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Quinn)
+        {
+            nextSceneName = "Date2";  // put Luna Quinn name
+        }
+
+
         if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);

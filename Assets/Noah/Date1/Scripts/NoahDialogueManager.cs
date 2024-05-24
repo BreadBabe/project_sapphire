@@ -224,6 +224,7 @@ public class NoahDialogueManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(delay);
                 Scene currentScene = SceneManager.GetActiveScene();
+               
                 if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
                 {
                     SceneManager.LoadScene(1); // Load the scene with index 1 (the next scene)
@@ -232,7 +233,7 @@ public class NoahDialogueManager : MonoBehaviour
                 {
                     SceneManager.LoadScene(2); // Load the scene with index 2 (the next scene)
                 }
-                else if (currentScene.name == "")
+                else if (currentScene.name == "DrinkPickGame")
                 {
                     SceneManager.LoadScene(3);
                 }
