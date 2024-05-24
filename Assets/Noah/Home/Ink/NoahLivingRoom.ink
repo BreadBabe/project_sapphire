@@ -136,6 +136,7 @@ Ugh… sorry about the rant just brought up some old stuff...
 
 ==Hell==
 ~MadResponse()
+~loveAmount = -1000
 Idk what your problem is but you gotta cut it out, i invite you here to have a nice time and you just go around acting like this! Get yourself together for god's sake!
 *[You’re really annoying you know that?]
 	The door is right there! get out!
