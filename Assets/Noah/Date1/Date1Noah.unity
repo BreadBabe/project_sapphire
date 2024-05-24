@@ -463,7 +463,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 1132081282}
-  typingSpeed: 50
+  typingSpeed: 28
   inkJSONAsset: {fileID: 4900000, guid: ece983740aede0345be116bc06f0affb, type: 3}
   dialoguebox: {fileID: 1040697832}
   choicebox: {fileID: 578973353}
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenImage: {fileID: 1956107047}
-  startButtonImage: {fileID: 1333443008}
+  startImages: []
   fadeDuration: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
   fadeOutColor: {r: 1, g: 1, b: 1, a: 0}

@@ -248,9 +248,13 @@ public class NoahDialogueManager : MonoBehaviour
                         {
                             SceneManager.LoadScene("TheRoom");
                         }
-                        else
+                        else if(loveAmount <= 0) 
                         {
-                            SceneManager.LoadScene("");
+                            SceneManager.LoadScene("NoahBadEnding");
+                        }
+                        else if (loveAmount >= -1)
+                        {
+                            SceneManager.LoadScene("NoahGoodEnding");
                         }
                     }
                 }
