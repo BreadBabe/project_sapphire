@@ -214,7 +214,12 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Graveyard";
         }
-        else if (currentScene.name == "HomeDate")
+        else if (currentScene.name == "Date2Quinn") 
+        {
+            Debug.Log("Mini");
+            nextSceneName = "MiniGameQuinn";
+        }
+        else if (currentScene.name == "")
         {
             nextSceneName = ""; // Ensure this matches the actual scene name
         }

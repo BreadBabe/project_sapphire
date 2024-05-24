@@ -1,5 +1,5 @@
 VAR charName = "Quinn"
-VAR charEmotion=""
+VAR charEmotion="Neutral"
 VAR loveAmount=0
 
 Hi , I'm Quinn, are you my date??

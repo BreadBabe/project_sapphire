@@ -8,13 +8,16 @@ Hi, welcome in!
     ~HappyResponse()
 
 *[Hi,it's so nice to see you again!]
-
+    **[sounds good] 
+        ->END
+    
 *[Thank you! Wow your house is really green]
+
 *[Wow, You live in a jungle!]
  Haha! Yes, when I said I really liked plants I meant it!
-**[I can see that!]
-Sorry if I didn't warn you. I’m so used to it. Now I think it’s weird when people don’t a minimum of 30 plants in their home.
- ***[Well..i’ll keep your secret if you keep mine ]
+    **[I can see that!]
+    Sorry if I didn't warn you. I’m so used to it. Now I think it’s weird when people don’t a minimum of 30 plants in their home.
+    ***[Well..i’ll keep your secret if you keep mine ]
  And what would be your secret?
   ****[All of my plants are plastic!]
   Haha I promise i’ll take it to the grave. 
@@ -58,7 +61,7 @@ Fair enough, not everyone has the same hobbies as me. Although i am a bit disapo
 ****[That sound incredible. I bet the forest is really beautiful]
 It really is! I love looking tha the sunset when i'm out there. it's like a completly different place at night!
 ****[oh, that seems dangerous. I would be so scared to be out there alone]
-Well it can be dangerous if you're not careful but I've been camping with my mom since i was 6 so I know how to handle most situations out there. Plus Basil always looks out for me when we're out there.
+Well it can be dangerous if you're not careful but I've been camping with my mom since i was 6 so I know how to handle most situations out there. Plus Basil always looks out for me when we're out there.->Drink
 *****[Basil? Like the herb?]
 Haha no not the herb. Basil is my dog! She's over there on her dogbed.
 Although the herb was actually used in India, it's belived to bring good luck and ward off evil.
@@ -92,55 +95,62 @@ Oh, well I guess it's not for everyone. Maybe if you gave it a chance you'd see 
 *****[I doubt it]
 Oh...ehm..okey...I guess thats fine. Anyway
 *****[Maybe]
-That's the spirit! By the way 
+That's the spirit! By the way ->Drink
 
 
 
 
 
-- Would you like something to drink? I have just figured out how to make my own drink using plants from my house. It’s really good!
+==Drink
+Would you like something to drink? I have just figured out how to make my own drink using plants from my house. It’s really good!
 *[ooh, sound nice]
 Yes, I've been experimenting with different tastes and trying to find the perfect drink. That's why i needed the book from that bookstore, Otherwise I usually loan the books from the library
 **[Ahh I see. That's why you needed the book]
 Yes, precisely! I was trying to find some information on how to safely cook some of my herbs
 ***[safetly? What do you mean?]
 Oh simply that some of the plants have a very strong taste that can overpower the drink if not prepared correctly. I was trying to find out how to do it without ruining the drink. 
+****[sounds good]  
 Would you like to try it? I promise it’s really good
+*****[sounds good] ->END 
 ***[ehh, sure sounds cool]
 Yay, i’ll go get some for you. I’ll be right back. You can hang out here with Basil until i'm back.
+****[sounds good]  ->END 
 ***[Sounds a little creepy. I think i’ll pass]
 Oh okay, I guess that's fine. I’ll just go get some for me. Are you sure you don’t want to try it?
+
 ****[Yeah, I’m gonna pass]
 If you’re sure. I’m gonna go get some for me. I’ll be right back. You can hang out here with basil until I'm back!
+*****[sounds good]  ->END 
 ****[Actually, i would like to try it!]
 Nice, I’ll go get some for you. I’ll be right back, you can hang out here with Basil if you’d like.
-
+*****[sounds good]  ->END 
 **[Wasn’t the book you got about poisonous plants?]
 What? Oh that one! yes but it’s not one of the herbs I used. I promise. So should I get you one?
 ***[Ehm sure!]
-
 Great! I’ll be right back!
+ ****[sounds good]  ->END 
 ***[I think I’ll pass]
-Oh, okay. I’m still gonna go get one for me. I be right back
-
-*[maybe, depende on what's in it]
+Oh, okay. I’m still gonna go get one for me. I be right back 
+****[sounds good]  ->END 
+*[maybe, depends on what's in it]
 Oh mostly the usual stuff like berries, sugar and other similar things. But I did use some of my herbs to make it taste better. I'm really happy with how it turned out.
 **[Sounds nice, I would love one]
-Great! I’ll go get one. Be right back! You can have a look around if you’d like
+Great! I’ll go get one. Be right back! You can have a look around if you’d like->END 
 **[Eh, maybe later]
 Suit yourself. I’m gonna go get one for me, I’ll be right back. Have a look around if you’d like.
+ ***[sounds good]  ->END 
 *[no thankyou, i'm good]
-
 Oh, are you sure? I promise it’s really good!
 **[Yeah I’m sure, maybe later]
-
 Oh, okay, I’m gonna go get one for me. I’ll be right back. You can have a look around if you’d like
+ ***[sounds good]  ->END 
 **[Actually I would love one!]
 
 Okay! Let me go get one for you. I promise it’s really good! I’ll be right back
-   
+ ***[sounds good] ->END 
+  ***[sounds good]  
 
--*[ I wonder what kind of person they are let me have a look around]
+ 
     -> END
     
 === function SmileResponse===
