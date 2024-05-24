@@ -316,15 +316,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237790148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.22229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1099849865}
+  m_Father: {fileID: 2105068475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.400024, y: -44.299988}
+  m_AnchoredPosition: {x: -1425.5, y: 497}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237790150
@@ -2156,8 +2156,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -2.22229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 237790149}
+  m_Children: []
   m_Father: {fileID: 2105068475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2248,6 +2247,7 @@ MonoBehaviour:
   messageUI: {fileID: 771225052}
   UnknownMessageUI: {fileID: 2118989679}
   likedMessage: {fileID: 53103135}
+  LoveMterShutter: {fileID: 1099849864}
   leisureTime: 0
   PhoneUp: 0
   datePicked: 0
@@ -3497,6 +3497,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 237790149}
   - {fileID: 1099849865}
   m_Father: {fileID: 1593204653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
