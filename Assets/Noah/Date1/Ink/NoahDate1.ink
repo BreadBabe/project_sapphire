@@ -1,6 +1,6 @@
 VAR charName = "Noah"
 VAR charEmotion = "Smile"
-VAR loveAmount = 0
+VAR loveAmount = 0  
 VAR charSound = ""
 
 HEY!! You found your way here, not too difficult I hope?!
@@ -413,11 +413,11 @@ Say i got something special planned for tonight, privilege of having a chill bos
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
-        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
         ~charSound=""
+        ~ loveAmount--
         
 === function BlushResponse ====
         ~charEmotion="Blush"

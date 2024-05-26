@@ -141,11 +141,11 @@ Hey!... You actually came, that's great to see!
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
-        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
         ~charSound=""
+        ~ loveAmount--
         
 === function BlushResponse ====
         ~charEmotion="Blush"

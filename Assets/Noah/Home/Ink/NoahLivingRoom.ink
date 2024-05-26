@@ -391,32 +391,32 @@ Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert.
         ~ charSound=""
         
 === function MadResponse ====
-        ~charEmotion="Mad"
-        ~charSound=""
+        ~ charEmotion="Mad"
+        ~ charSound=""
         ~ loveAmount--
         
 === function AnnoyedResponse ====
-        ~charEmotion="Annoyed"
-        ~charSound=""
+        ~ charEmotion="Annoyed"
+        ~ charSound=""
         ~ loveAmount--
         
 === function ContentResponse ====
-        ~charEmotion="Content"
-        ~charSound=""
+        ~ charEmotion="Content"
+        ~ charSound=""
         ~ loveAmount++
         
 === function SmileResponse ====
-        ~charEmotion="Smile"
-        ~charSound=""
-        ~ loveAmount++
+        ~ charEmotion="Smile"
+        ~ charSound=""
         
 === function ConfusedResponse ====
-        ~charEmotion="Confused"
-        ~charSound=""
+        ~ charEmotion="Confused"
+        ~ charSound=""
+        ~ loveAmount--
         
 === function BlushResponse ====
-        ~charEmotion="Blush"
-        ~charSound=""
+        ~ charEmotion="Blush"
+        ~ charSound=""
         ~ loveAmount++
         
 === function NoNoah ====
