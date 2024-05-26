@@ -52,7 +52,7 @@ Hi, I'm back! *Puts drink on table*... What do you think about the place?
 	**[Really liked the interior actually]
 ~HappyResponse()
 Oh? Just the layout or what I have done to the place? 
-	***[The layout…]’
+	***[The layout…]
 		~NeutralResponse()
 		It's pretty good yeah lots of room to put all my stuff and personal projects heh.
 		****[Personal projects?]
@@ -257,71 +257,76 @@ Oh okay… Thanks! I still miss him to this day…
 
 == MemorobiliaAsk ==
 ~NeutralResponse()
-* { not (MemorobiliaDuck or NoahCatchesYou2) }  [Ask about the duck..] -> MemorobiliaDuck()
-* { not MemorobiliaScarf } [Ask about the scarf..] -> MemorobiliaScarf()
-* { not MemorobiliaBottle } [Ask about the  bottle..] -> MemorobiliaBottle()
-* [Don’t ask anything more] -> NoahEnd()
+* { not (MemorobiliaDuck or NoahCatchesYou2) }  [Ask about the duck..] 
+-> MemorobiliaDuck()
+* { not MemorobiliaScarf } [Ask about the scarf..] 
+-> MemorobiliaScarf()
+* { not MemorobiliaBottle } [Ask about the  bottle..] 
+-> MemorobiliaBottle()
+* [Don’t ask anything more] 
+-> NoahEnd()
 
 
 
 
 == MemorobiliaDuck ==
-//
-Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert. Gilbert grew up to be the bestest, most handsomest duck of all time! He was truly great… I still miss him to this day…
-*[You should display the picture of Gilbert!]
-	Yeah maybe you’re right… I just thought it was a little embarrassing to keep it for our date… Maybe I will hang it back up later tonight…. Thank you.
-		-> MemorobiliaAsk()
-*[Don’t say anything]
-	-> MemorobiliaAsk()
+*[...]
+    Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert. Gilbert grew up to be the bestest, most handsomest duck of all time! He was truly great… I still miss him to this day…
+    **[You should display the picture of Gilbert!]
+    	Yeah maybe you’re right… I just thought it was a little embarrassing to keep it for our date… Maybe I will hang it back up later tonight…. Thank you.
+    		-> MemorobiliaAsk()
+    **[Don’t say anything]
+    	-> MemorobiliaAsk()
 
 == MemorobiliaScarf ==
+*[...]
 ~SmileResponse()
-	.*Noah holds the red scarf in his hands stroking his fingertips over it* This might be one of the oldest articles of clothing i own, was gifted to me by my grandma when i was idk 5 maybe? Was too big at inception. She wanted me to be able to keep it when I was an adult.
-	*[And how is your grandma doing?]
-		~SadResponse()
-		Not too well… I am sorry to say she died when I was 7. I didn't really get that much time to talk to her. Suppose there is a mercy in that since you don’t get enough time to get attached to them. Would hurt a lot more if she had died sometime close to now.
-		**[Yeah that would suck…]
-			~NeutralResponse()
-			yeah…
-			***[My grandma is actually in that situation]
-				~SadResponse()
-				Noooo I am sorry that sounds horrible. I should have inquired before I said anything. Didn't know sorry…
-				****[It's okay…]
-					Just tell me if you need anything, okay?
-					->MemorobiliaAsk()
-			***[Say nothing]
-				-> MemorobiliaAsk()
-			
-		**[You don't say…]
-			NeutralResponse()
-			Oh? What do you mean?
-***[My grandma is actually in that situation]
-				~SadResponse()
-				Noooo I am sorry that sounds horrible. I should have inquired before I said anything. Didn't know sorry…
-				****[It's okay…]
-					Just tell me if you need anything, okay?
-					->MemorobiliaAsk()
-			***[Its nothing…]
-				Okay, just tell me if you wanna talk about it
-				-> MemorobiliaAsk()
-
-	*[Don’t say anything]
-		-> MemorobiliaAsk()
+\*Noah holds the red scarf in his hands stroking his fingertips over it* This might be one of the oldest articles of clothing i own, was gifted to me by my grandma when i was idk 5 maybe? Was too big at inception. She wanted me to be able to keep it when I was an adult.
+    **[And how is your grandma doing?]
+    	~SadResponse()
+    	Not too well… I am sorry to say she died when I was 7. I didn't really get that much time to talk to her. Suppose there is a mercy in that since you don’t get enough time to get attached to them. Would hurt a lot more if she had died sometime close to now.
+    	***[Yeah that would suck…]
+    		~NeutralResponse()
+    		yeah…
+    		****[My grandma is actually in that situation]
+    			~SadResponse()
+    			Noooo I am sorry that sounds horrible. I should have inquired before I said anything. Didn't know sorry…
+    			*****[It's okay…]
+    				Just tell me if you need anything, okay?
+    				->MemorobiliaAsk()
+    		****[Say nothing]
+    			-> MemorobiliaAsk()
+    		
+    	***[You don't say…]
+    		NeutralResponse()
+    		Oh? What do you mean?
+            ****[My grandma is actually in that situation]
+            			~SadResponse()
+            			Noooo I am sorry that sounds horrible. I should have inquired before I said anything. Didn't know sorry…
+            			*****[It's okay…]
+            				Just tell me if you need anything, okay?
+            				->MemorobiliaAsk()
+    		****[Its nothing…]
+        			Okay, just tell me if you wanna talk about it
+        			-> MemorobiliaAsk()
+    
+    **[Don’t say anything]
+    	-> MemorobiliaAsk()
 
 
 
 == MemorobiliaBottle ==
-//
-.*Noah grabs the bottle reads the text on the label* This got to be one of the worst purchases ever, it was so damn expensive and I never got to use it! Was supposed to be for my ex but that didn't work out so well so never got to give it to anyone…
-	*[What were they like?]
+*[...]
+\*Noah grabs the bottle reads the text on the label* This got to be one of the worst purchases ever, it was so damn expensive and I never got to use it! Was supposed to be for my ex but that didn't work out so well so never got to give it to anyone…
+	**[What were they like?]
 		They were a party animal and drank LOTS… very fun to be around a lot of the time but just couldn't stop blaming everyone else for problems they caused. They would go on rants about everyone else being so fortunate and them being so unlucky and victimized… Got too much eventually, hope they’re doing well but It’s not my responsibility now…
-		**[It’s good you got out of that!]
+		***[It’s good you got out of that!]
 			Been better since yes but still got some stuff left from it
-			***[...]
+			****[...]
 			->MemorobiliaAsk()
-		**[Don’t say anything]
+		***[Don’t say anything]
 			->MemorobiliaAsk()
-	*[Don’t say anything]
+	**[Don’t say anything]
 		-> MemorobiliaAsk()
 
 
@@ -391,32 +396,32 @@ Oh…. my duck? He was a fierce duckling, a little warrior. I named him Gilbert.
         ~ charSound=""
         
 === function MadResponse ====
-        ~charEmotion="Mad"
-        ~charSound=""
+        ~ charEmotion="Mad"
+        ~ charSound=""
         ~ loveAmount--
         
 === function AnnoyedResponse ====
-        ~charEmotion="Annoyed"
-        ~charSound=""
+        ~ charEmotion="Annoyed"
+        ~ charSound=""
         ~ loveAmount--
         
 === function ContentResponse ====
-        ~charEmotion="Content"
-        ~charSound=""
+        ~ charEmotion="Content"
+        ~ charSound=""
         ~ loveAmount++
         
 === function SmileResponse ====
-        ~charEmotion="Smile"
-        ~charSound=""
-        ~ loveAmount++
+        ~ charEmotion="Smile"
+        ~ charSound=""
         
 === function ConfusedResponse ====
-        ~charEmotion="Confused"
-        ~charSound=""
+        ~ charEmotion="Confused"
+        ~ charSound=""
+        ~ loveAmount--
         
 === function BlushResponse ====
-        ~charEmotion="Blush"
-        ~charSound=""
+        ~ charEmotion="Blush"
+        ~ charSound=""
         ~ loveAmount++
         
 === function NoNoah ====

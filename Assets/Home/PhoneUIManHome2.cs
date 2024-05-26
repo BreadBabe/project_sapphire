@@ -287,7 +287,7 @@ public class PhoneUIManHome2 : MonoBehaviour
         }
         if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Noah)
         {
-            nextSceneName = "NoahClicking";  // put Noah date2 name
+            nextSceneName = "NoahDoor";  // put Noah date2 name
         }
         if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Quinn)
         {

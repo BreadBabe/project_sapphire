@@ -235,7 +235,7 @@ public class NoahDialogueManager : MonoBehaviour
                 }
                 else if(currentScene.name == "DrinkPickGame")
                 {
-                    SceneManager.LoadScene("Home2Noah");
+                    SceneManager.LoadScene("NoahDoor");
                 }
                 else if (currentScene.name == "NoahClicking") 
                 {
