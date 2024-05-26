@@ -249,7 +249,7 @@ public class NoahDialogueManager : MonoBehaviour
                     }
                     else
                     {
-                        if (loveAmount == -1000)
+                        if (loveAmount <= -100)
                         {
                             SceneManager.LoadScene("TheRoom");
                         }
