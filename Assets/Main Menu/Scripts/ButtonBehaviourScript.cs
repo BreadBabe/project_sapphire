@@ -18,6 +18,7 @@ public class ButtonBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         sceneChanger = new SceneChanger();
         startbutton.GetComponent<Button>().onClick.AddListener(OnClick);
     }
