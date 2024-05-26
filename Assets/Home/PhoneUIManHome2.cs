@@ -33,6 +33,7 @@ public class PhoneUIManHome2 : MonoBehaviour
     [SerializeField] GameObject nextDayScene;
     [SerializeField] GameObject sleepButton;
     [SerializeField] GameObject selectSleep;
+    [SerializeField] GameObject backround;
 
 
     public bool leisureTime = false;
@@ -62,7 +63,7 @@ public class PhoneUIManHome2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhoneIcon.SetActive(true);
+        PhoneIcon.SetActive(false);
         notif.SetActive(false);
         PhoneUI.SetActive(false);
         messangerApp.SetActive(false);
@@ -73,6 +74,7 @@ public class PhoneUIManHome2 : MonoBehaviour
         nextDayScene.SetActive(false);
         sleepButton.SetActive(false);
         selectSleep.SetActive(false);
+        backround.SetActive(false);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -80,6 +82,11 @@ public class PhoneUIManHome2 : MonoBehaviour
 
         backButton.SetActive(false);
 
+        float loveAmount = (float)PlayerPrefs.GetInt("love");
+
+        LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
+
+        Debug.Log((loveAmount + 10) / 20);
     }
 
     IEnumerator TransitionToDate2(float delay)
@@ -149,11 +156,7 @@ public class PhoneUIManHome2 : MonoBehaviour
             notif.SetActive(true);
             PhoneUp = true;
 
-            float loveAmount = (float)PlayerPrefs.GetInt("love");
-
-            LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
-
-            Debug.Log((loveAmount + 10) / 20);
+    
         }
 
     }
@@ -170,6 +173,7 @@ public class PhoneUIManHome2 : MonoBehaviour
     public void Sleep()
     {
         selectSleep.SetActive(true);
+        backround.SetActive(true);  
     }
 
     public void MessangerAppCLicked()
@@ -259,6 +263,7 @@ public class PhoneUIManHome2 : MonoBehaviour
     {
         nextDayScene.SetActive(true);
         sleepButton.SetActive(false);
+        backround.SetActive(false);
 
         ScreenFader screenFader = FindObjectOfType<ScreenFader>();
         if (screenFader != null)
