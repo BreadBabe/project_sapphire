@@ -4,7 +4,7 @@ VAR loveAmount = 0
 VAR charSound = ""
 
 
-Heya!... You actually came, that's great to see!
+Hey!... You actually came, that's great to see! 
 *[Hello Noah..]
     ->InHall
 *[Hey!]
