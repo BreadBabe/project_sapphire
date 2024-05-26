@@ -83,7 +83,7 @@ public class PhoneUIManHome2 : MonoBehaviour
         backButton.SetActive(false);
 
         float loveAmount = (float)PlayerPrefs.GetInt("love");
-
+        loveAmount = Mathf.Clamp(loveAmount, -10, 10);
         LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
 
         Debug.Log((loveAmount + 10) / 20);

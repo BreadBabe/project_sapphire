@@ -100,7 +100,14 @@ public class PhoneUIManager : MonoBehaviour
             button.SetActive(false);
         }
 
+              float loveAmount = (float)PlayerPrefs.GetInt("love");
+            Debug.Log(loveAmount);
+            //LoveMterShutter.transform.localScale.x
+            loveAmount = Mathf.Clamp(loveAmount, -10, 10);
+            LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
 
+            Debug.Log((loveAmount + 10) / 20);
+           
     }
 
     IEnumerator TransitionToDate(float delay)
@@ -169,14 +176,7 @@ public class PhoneUIManager : MonoBehaviour
             homeButton.SetActive(true);
             PhoneUp = true;
 
-            float loveAmount = (float)PlayerPrefs.GetInt("love");
-            Debug.Log(loveAmount);
-            //LoveMterShutter.transform.localScale.x
-            
-           LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
-
-            Debug.Log((loveAmount + 10) / 20);
-           
+      
     
         }
           
