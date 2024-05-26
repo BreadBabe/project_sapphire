@@ -192,6 +192,11 @@ You are who i think you are right? I am Noah.
 == TABLE_BAD_MOOD ==
 *[Walk to table]
     //-> BAD_DATE_END()
+    
+    ~MadResponse()
+    ~MadResponse()
+    ~MadResponse()
+    
     -> TABLE_DRINK()
      //Might not be used in final product, time constraints:(
 
