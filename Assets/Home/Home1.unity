@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1823,13 +1823,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -2.22229}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 974671897}
   m_Father: {fileID: 1593204653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -784, y: 475}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -620, y: 476.7}
+  m_SizeDelta: {x: 435.7, y: 96.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575551869
 MonoBehaviour:
@@ -1851,7 +1852,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fcf1d86def8e542348c78143e954d7ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c8559abbac537848972de7f1979980d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2814,16 +2815,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974671896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.22229}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1593204653}
+  m_Father: {fileID: 575551868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -834, y: 475}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -115.2847, y: 0.154}
+  m_SizeDelta: {x: 323.5666, y: 61.5283}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &974671898
 MonoBehaviour:
@@ -2838,7 +2839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.19245279, b: 0.82312685, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4859,7 +4860,6 @@ RectTransform:
   - {fileID: 2105068475}
   - {fileID: 1044220002}
   - {fileID: 575551868}
-  - {fileID: 974671897}
   - {fileID: 1036940562}
   - {fileID: 269444991}
   - {fileID: 2075804222}
@@ -6133,7 +6133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1945880396
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6779,13 +6779,13 @@ MonoBehaviour:
   posterButton: {fileID: 2043893365}
   goToSleepButton: {fileID: 947074220}
   closeUpImageObject: {fileID: 1572706914}
-  newspaper: {fileID: 21300000, guid: e34439f3a0479d544a69c56819ae2959, type: 3}
+  newspaper: {fileID: 21300000, guid: d0359f806f6ce6d418c5f72f5a9f5d76, type: 3}
   bedroom: {fileID: 21300000, guid: 4cac0826d18c544daa2611f427d51044, type: 3}
   kitchen: {fileID: 21300000, guid: b5887607509e46649afb4935b3439867, type: 3}
   dogToy: {fileID: 21300000, guid: 4cac0826d18c544daa2611f427d51044, type: 3}
-  coffeCup: {fileID: 21300000, guid: 1bba5a718f75f450eb2143c077c4f9b8, type: 3}
-  Picture: {fileID: 21300000, guid: eee3116ea7b1d4b178e40848139cf5b4, type: 3}
-  poster: {fileID: 21300000, guid: 995201ed984a644de91139458a66cade, type: 3}
+  coffeCup: {fileID: 21300000, guid: bec1a52086fdf574eb4da74b51e44cd8, type: 3}
+  Picture: {fileID: 21300000, guid: ac43d6ed2f7882247ad517c7f42240df, type: 3}
+  poster: {fileID: 21300000, guid: 2fba6954ef732564280713ef370b5799, type: 3}
   nextDayScene: {fileID: 1945880395}
   BackButton: {fileID: 1956261952}
   background: {fileID: 796355019}
