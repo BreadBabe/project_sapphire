@@ -118,7 +118,7 @@ You are who i think you are right? I am Noah.
                         *****[You're not funny!]
                                 ~MadResponse()
                                 ...*sigh*...*rolls his eyes*... You really aint no fun huh
-                                -> BAD_DATE_END()
+                                -> TABLE_DRINK()
         ***[I saw someone slip on a banana peel! Just like in the cartoons!]
             ~HappyResponse()
             Woah really?! I wish i could have seen that!
@@ -191,7 +191,8 @@ You are who i think you are right? I am Noah.
 
 == TABLE_BAD_MOOD ==
 *[Walk to table]
-    -> BAD_DATE_END()
+    //-> BAD_DATE_END()
+    -> TABLE_DRINK()
      //Might not be used in final product, time constraints:(
 
 == TABLE_DRINK ==
@@ -367,7 +368,7 @@ Say i got something special planned for tonight, privilege of having a chill bos
 ->PickingDrink()
 
 == BAD_DATE_END ==
-*[I dont think this is gonna work out...]
+*[well.... ]
     yeah... i had a feeling... we should probably just call it right here save both of us some time, have a great evening...
         **[*Leave the bar*]
             -> END
