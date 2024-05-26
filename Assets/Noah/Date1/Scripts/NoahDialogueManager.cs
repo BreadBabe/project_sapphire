@@ -88,8 +88,8 @@ public class NoahDialogueManager : MonoBehaviour
 
     void RefreshView()
     {
-        Debug.Log("pizza");
-        Debug.Log(loveAmount);
+        //Debug.Log("pizza");
+        Debug.Log(PlayerPrefs.GetInt("love") + loveAmount);
 
         RemoveChildren();
 
@@ -228,6 +228,7 @@ public class NoahDialogueManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(delay);
                 Scene currentScene = SceneManager.GetActiveScene();
+               
                 if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
                 {
                     SceneManager.LoadScene("DrinkPickGame"); 
@@ -252,11 +253,11 @@ public class NoahDialogueManager : MonoBehaviour
                         {
                             SceneManager.LoadScene("TheRoom");
                         }
-                        else if(loveAmount <= 0) 
+                        else if(PlayerPrefs.GetInt("love") <= 0) 
                         {
                             SceneManager.LoadScene("NoahBadEnding");
                         }
-                        else if (loveAmount >= -1)
+                        else if (PlayerPrefs.GetInt("love") >= -1)
                         {
                             SceneManager.LoadScene("NoahGoodEnding");
                         }

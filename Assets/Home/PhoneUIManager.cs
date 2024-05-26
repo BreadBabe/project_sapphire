@@ -42,6 +42,8 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] GameObject ShowInteractiveButtons;
 
     [SerializeField] GameObject LoveMterShutter;
+    [SerializeField] GameObject nextDayScene;
+
 
     public bool leisureTime = false;
 
@@ -86,6 +88,7 @@ public class PhoneUIManager : MonoBehaviour
         likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
         LoveMterShutter.SetActive(true);
+        nextDayScene.SetActive(false);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -166,7 +169,7 @@ public class PhoneUIManager : MonoBehaviour
             homeButton.SetActive(true);
             PhoneUp = true;
 
-            float loveAmount = 0;//(float)PlayerPrefs.GetInt("love");
+            float loveAmount = (float)PlayerPrefs.GetInt("love");
             //LoveMterShutter.transform.localScale.x
             
            LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
@@ -411,9 +414,8 @@ public class PhoneUIManager : MonoBehaviour
         //ScreenFader screenFader = FindObjectOfType<ScreenFader>();
         //if (screenFader != null)
         //{
-            //screenFader.StartFadeOut();
-
-            StartCoroutine(TransitionToDate(2f));
+        //screenFader.StartFadeOut();
+        StartCoroutine(TransitionToDate(2f));
         //}
     }
 
@@ -423,5 +425,12 @@ public class PhoneUIManager : MonoBehaviour
 
     }
 
-   
+    public void NextDate()
+    {
+        nextDayScene.SetActive(true);
+        StartCoroutine(TransitionToDate(2f));
+    }
+
+
+
 }
