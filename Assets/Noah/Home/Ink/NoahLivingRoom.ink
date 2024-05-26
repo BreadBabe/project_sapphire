@@ -25,8 +25,7 @@ Hi, I'm back! *Puts drink on table*... What do you think about the place?
 	Couldn't agree more, really happy with the view and proximity to work, a wonder i managed to get my hands on a place like this really.
 	**[Definitely lucky or is there something more to it?]
 		~HappyResponse()
-		Well alright might have had some connections to get this but that's what you got to
-In today's market, I won't get more than a single room otherwise… but it's not like I got it for free or anything and still got to pay rent every month!
+		Well alright might have had some connections to get this but that's what you got to do in today's market, I won't get more than a single room otherwise… but it's not like I got it for free or anything and still got to pay rent every month!
 		***[Hey not judging, glad you got something nice]
 			~NeutralResponse()
 			Oh sorry if that sounded a bit defensive, had people been annoying about it before, like yes i get it not everyone got it great but you don't have to ruin the mood… Anyhow glad you’re not like that!
