@@ -233,7 +233,11 @@ public class NoahDialogueManager : MonoBehaviour
                 {
                     SceneManager.LoadScene("DrinkPickGame"); 
                 }
-                else if (currentScene.name == "NoahClicking") //
+                else if(currentScene.name == "DrinkPickGame")
+                {
+                    SceneManager.LoadScene("Home2Noah");
+                }
+                else if (currentScene.name == "NoahClicking") 
                 {
                     if (firstDialogue)
                     {
@@ -262,6 +266,10 @@ public class NoahDialogueManager : MonoBehaviour
                 else if (currentScene.name == "DrinkPickGame")
                 {
                     SceneManager.LoadScene("NoahClicking");
+                }
+                else if (currentScene.name == "TheRoom")
+                {
+                    SceneManager.LoadScene("DeadEnding");
                 }
                 // Add more conditions for other scenes if needed
             }
