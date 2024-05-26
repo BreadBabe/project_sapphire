@@ -15,36 +15,37 @@ Hey!... You actually came, that's great to see!
         **[Me ghosting people? Wouldn’t dream of it]
 	        ~SmileResponse()
 	        Good to hear! If some doesn’t wanna meet up it’s always better to just say so! No need to leave the other person waiting and wasting time.
-	        -> InHall
+	            -> InHall
         **[Boo!!]
             ~ContentResponse()
 	        Haha new meaning to the term ghosting i see.
 	            ***[...]
-                -> InHall
+                    -> InHall
 
 == InHall ==
-Anyhow welcome to my home you can put your things over here
-*[Can I put my shoes here?..]
-    ~SmileResponse()
-	Yeah sure! Right there is fine and you can put your jacket over here. Just excuse the mess. I have a system I promise!
-	**[*Take your shoes off and hang up your jacket*]
-		Alright get yourself comfortable and I'll show you around the place! Sofa is one of my favorites, very comfortable 
-		***[Sorry already put dibs on it]
-			~HappyResponse()
-			What?! No you can't do this to me there is plenty of room!
-			****[Sorry it’s all mine now]
-				~SmileResponse()
-				Really need to learn to share you know haha
-                ->LivingRoom
-			****[Could probably share…]
-				~BlushResponse()
-				There we go, that sounds much better, no need to hog the entire sofa with plenty of space!
-				->LivingRoom
-		***[That sounds great]
-			~SmileResponse()
-			Good! You want something to drink?
-			****[Sure i could go for something!]
-				->LivingRoom
+*[...]
+    Anyhow welcome to my home you can put your things over here
+    **[Can I put my shoes here?..]
+        ~SmileResponse()
+    	Yeah sure! Right there is fine and you can put your jacket over here. Just excuse the mess. I have a system I promise!
+    	***[*Take your shoes off and hang up your jacket*]
+    		Alright get yourself comfortable and I'll show you around the place! Sofa is one of my favorites, very comfortable 
+    		****[Sorry already put dibs on it]
+    			~HappyResponse()
+    			What?! No you can't do this to me there is plenty of room!
+    			*****[Sorry it’s all mine now]
+    				~SmileResponse()
+    				Really need to learn to share you know haha
+                    ->LivingRoom
+    			*****[Could probably share…]
+    				~BlushResponse()
+    				There we go, that sounds much better, no need to hog the entire sofa with plenty of space!
+    				->LivingRoom
+    		****[That sounds great]
+    			~SmileResponse()
+    			Good! You want something to drink?
+    			*****[Sure i could go for something!]
+    				->LivingRoom
 
 *[*Put shoes in awkward place*]
 	~ConfusedResponse()
