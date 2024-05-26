@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -519,28 +519,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  - {fileID: 931440481}
-  - {fileID: 1258155293}
-  - {fileID: 1988406252}
-  - {fileID: 2055570530}
-  textRightList:
-  - {fileID: 1464946098}
-  - {fileID: 847662181}
-  - {fileID: 1993407806}
-  - {fileID: 656955557}
-  - {fileID: 97204986}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!114 &207431831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,28 +1292,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  - {fileID: 931440481}
-  - {fileID: 1258155293}
-  - {fileID: 1988406252}
-  - {fileID: 2055570530}
-  textRightList:
-  - {fileID: 1464946098}
-  - {fileID: 847662181}
-  - {fileID: 1993407806}
-  - {fileID: 656955557}
-  - {fileID: 97204986}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!114 &500339723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,28 +1444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  - {fileID: 931440481}
-  - {fileID: 1258155293}
-  - {fileID: 1988406252}
-  - {fileID: 2055570530}
-  textRightList:
-  - {fileID: 1464946098}
-  - {fileID: 847662181}
-  - {fileID: 1993407806}
-  - {fileID: 656955557}
-  - {fileID: 97204986}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!114 &531175297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1640,20 +1589,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  textRightList:
-  - {fileID: 1464946098}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!114 &543683263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,7 +1664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a940c8c631973f94595f7fdf56f5eb10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevelt: Date2
 --- !u!1 &548724651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3354,20 +3293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  textRightList:
-  - {fileID: 1464946098}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!1 &1172216310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3511,7 +3441,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190925971}
-  - component: {fileID: 1190925972}
   m_Layer: 0
   m_Name: canvasController
   m_TagString: Untagged
@@ -3535,28 +3464,6 @@ Transform:
   - {fileID: 1393977559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190925972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190925968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934e76416e41941c3aa1cd2790a1bb17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typingAudioSource: {fileID: 373212629}
-  typingSpeed: 50
-  inkJSONAsset: {fileID: 4900000, guid: e13c4a076cf2def4499746b39eabd2c0, type: 3}
-  dialoguebox: {fileID: 1040697832}
-  choicebox: {fileID: 578973353}
-  textPrefab: {fileID: 11456674, guid: 381d5e3a622b685459341e23a74caa6b, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: 5986722a0bffa1749a6e501d8ff77f9b, type: 3}
-  Character: {fileID: 0}
-  Audio: {fileID: 1436782131}
-  lovemeterShutter: {fileID: 1800950984}
 --- !u!1 &1215754001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3893,7 +3800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a940c8c631973f94595f7fdf56f5eb10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevelt: Date2
 --- !u!1 &1386198199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,20 +4607,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  textRightList:
-  - {fileID: 1464946098}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!1 &1561114338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5096,7 +4993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a898af30567f0224f89002a829664987, type: 3}
+  m_Texture: {fileID: 2800000, guid: aa2b47d90a21b364c97ba4174a82a431, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5277,28 +5174,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newGameLevel: Level1
-  backText: {fileID: 69147422}
-  backWrongText: {fileID: 773196671}
+  BookStore: {fileID: 0}
   pictureList:
   - {fileID: 472660344}
   - {fileID: 1878460469}
-  textLeftList:
-  - {fileID: 1464946098}
-  - {fileID: 931440481}
-  - {fileID: 1258155293}
-  - {fileID: 1988406252}
-  - {fileID: 2055570530}
-  textRightList:
-  - {fileID: 1464946098}
-  - {fileID: 847662181}
-  - {fileID: 1993407806}
-  - {fileID: 656955557}
-  - {fileID: 97204986}
-  buttonYesList:
-  - {fileID: 1133600680}
-  - {fileID: 543683260}
   isClicked: 0
-  isPressed: 0
 --- !u!1 &1925323381
 GameObject:
   m_ObjectHideFlags: 0
