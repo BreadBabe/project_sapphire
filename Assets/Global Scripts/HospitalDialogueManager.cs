@@ -221,7 +221,7 @@ public class HospitalDialogueManager : MonoBehaviour
         {
            nextSceneName = "PHONE";
         }
-        else if (currentScene.name == "Home2")
+        else if (currentScene.name == "Home2Noah")
         {
             nextSceneName = "PHONE";
         }
