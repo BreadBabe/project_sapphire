@@ -191,14 +191,15 @@ public class HospitalDialogueManager : MonoBehaviour
 
                 int newLove = PlayerPrefs.GetInt("love") + (int)loveAmount;
                 PlayerPrefs.SetInt("love", newLove);
+                Scene currentScene1 = SceneManager.GetActiveScene();
 
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
                 if (screenFader != null)
                 {
                     screenFader.StartFadeOut();
-
-                    StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
                 }
+
+                StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
 
             }
 
@@ -233,9 +234,20 @@ public class HospitalDialogueManager : MonoBehaviour
             Debug.Log("Mini");
             nextSceneName = "MiniGameQuinn";
         }
-        else if (currentScene.name == "")
+        else if (currentScene.name == "Snooping")
         {
-            nextSceneName = ""; // Ensure this matches the actual scene name
+            if (loveAmount <= -100)
+            {
+                nextSceneName="LunaMurder";
+            }
+            else if (PlayerPrefs.GetInt("love") <= 0)
+            {
+                nextSceneName = "LunaBadEnding";
+            }
+            else if (PlayerPrefs.GetInt("love") >= -1)
+            {
+                nextSceneName = "LunaGoodEnding";
+            }
         }
 
         // Load the next scene
