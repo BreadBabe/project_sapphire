@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1319,11 +1319,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 0}
   typingSpeed: 20
-  inkJSONAsset: {fileID: 4900000, guid: 9f1f05ce39dca4adb8ba9e4329b1f5f9, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 48b2eccfff06e467aae6104a5c519f8a, type: 3}
   dialoguebox: {fileID: 708733039}
   choicebox: {fileID: 1462862114}
   textPrefab: {fileID: 11456674, guid: 0439cda2460274d6c8310c07125733ce, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: 48dc68bc4c34c4cecbf165f2b5b43010, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 38cb33bc224304517a642e9624e86206, type: 3}
   Character: {fileID: 562448294}
   Audio: {fileID: 1777606290}
   startButton: {fileID: 1459774622}
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenImage: {fileID: 2075395068}
-  startButtonImage: {fileID: 1459774623}
+  startImages: []
   fadeDuration: 2
   startColor: {r: 1, g: 1, b: 1, a: 1}
   fadeOutColor: {r: 1, g: 1, b: 1, a: 1}
