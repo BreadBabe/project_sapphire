@@ -169,7 +169,7 @@ public class PhoneUIManager : MonoBehaviour
             homeButton.SetActive(true);
             PhoneUp = true;
 
-            float loveAmount = 0;//(float)PlayerPrefs.GetInt("love");
+            float loveAmount = (float)PlayerPrefs.GetInt("love");
             //LoveMterShutter.transform.localScale.x
             
            LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
