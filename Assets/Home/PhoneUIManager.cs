@@ -42,8 +42,8 @@ public class PhoneUIManager : MonoBehaviour
     [SerializeField] GameObject ShowInteractiveButtons;
 
     [SerializeField] GameObject LoveMterShutter;
+    [SerializeField] GameObject nextDayScene;
 
-    [SerializeField]  GameObject nextDayScene;
 
     public bool leisureTime = false;
 
@@ -414,9 +414,8 @@ public class PhoneUIManager : MonoBehaviour
         //ScreenFader screenFader = FindObjectOfType<ScreenFader>();
         //if (screenFader != null)
         //{
-            //screenFader.StartFadeOut();
-
-            StartCoroutine(TransitionToDate(2f));
+        //screenFader.StartFadeOut();
+        StartCoroutine(TransitionToDate(2f));
         //}
     }
 

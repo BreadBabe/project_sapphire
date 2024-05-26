@@ -26,6 +26,7 @@ public class ButtonHomeManager : MonoBehaviour
 
     [SerializeField] GameObject nextDayScene;
 
+
     [SerializeField] GameObject BackButton;
     [SerializeField] GameObject background;
     Image closeUpImage;
@@ -50,6 +51,7 @@ public class ButtonHomeManager : MonoBehaviour
         posterButton.SetActive(false);
         closeUpImageObject.SetActive(false);
         goToSleepButton.SetActive(false);
+
 
 
         BackButton.SetActive(false);
@@ -111,7 +113,10 @@ public class ButtonHomeManager : MonoBehaviour
     public void GoToSleepSelected()
     {
         closeUpImageObject.SetActive(false);
+        dogToyButton.SetActive(false);
+        newspaperButton.SetActive(false);
         goToSleepButton.SetActive(false);
+        
         nextDayScene.SetActive(true);
 
         ScreenFader screenFader = FindObjectOfType<ScreenFader>();
