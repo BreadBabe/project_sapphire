@@ -228,6 +228,7 @@ public class NoahDialogueManager : MonoBehaviour
             {
                 yield return new WaitForSeconds(delay);
                 Scene currentScene = SceneManager.GetActiveScene();
+               
                 if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
                 {
                     SceneManager.LoadScene("DrinkPickGame"); 

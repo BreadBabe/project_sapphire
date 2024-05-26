@@ -30,6 +30,10 @@ public class PhoneUIManHome2 : MonoBehaviour
 
     [SerializeField] GameObject   LoveMterShutter;
 
+    [SerializeField] GameObject nextDayScene;
+    [SerializeField] GameObject sleepButton;
+    [SerializeField] GameObject selectSleep;
+
 
     public bool leisureTime = false;
 
@@ -43,9 +47,6 @@ public class PhoneUIManHome2 : MonoBehaviour
     bool datingappUp;
     bool messangerAppUp;
 
-
-    public enum DatingAppStates { Quinn, Luna, Noah, Summer }
-    public DatingAppStates datingAppState;
 
     //[SerializeField] Sprite quinnSprite;
     //[SerializeField] Sprite lunaSprite;
@@ -69,6 +70,9 @@ public class PhoneUIManHome2 : MonoBehaviour
         DateMessages.SetActive(false);
         likedMessage.SetActive(false);
         unknownSenderMessage.SetActive(false);
+        nextDayScene.SetActive(false);
+        sleepButton.SetActive(false);
+        selectSleep.SetActive(false);
 
         messageUI.SetActive(false);
         UnknownMessageUI.SetActive(false);
@@ -134,6 +138,7 @@ public class PhoneUIManHome2 : MonoBehaviour
             messangerApp.SetActive(false);
             homeButton.SetActive(false);
             notif.SetActive(false);
+            sleepButton.SetActive(true);
             PhoneUp = false;
         }
         else if (!PhoneUp)
@@ -160,6 +165,11 @@ public class PhoneUIManHome2 : MonoBehaviour
             StartCoroutine(ScaleDownObjectApp());
             messangerAppUp = false;
         }
+    }
+
+    public void Sleep()
+    {
+        selectSleep.SetActive(true);
     }
 
     public void MessangerAppCLicked()
@@ -241,8 +251,53 @@ public class PhoneUIManHome2 : MonoBehaviour
         //{
         //screenFader.StartFadeOut();
 
-        StartCoroutine(TransitionToDate2(2f));
+      
 
+    }
+
+    public void GoToSleepSelected()
+    {
+        nextDayScene.SetActive(true);
+        sleepButton.SetActive(false);
+
+        ScreenFader screenFader = FindObjectOfType<ScreenFader>();
+        if (screenFader != null)
+        {
+
+
+            screenFader.StartFadeOut();
+
+            StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+        }
+    }
+
+    IEnumerator LoadNextSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        string nextSceneName = "";
+
+        if( phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Luna)
+        {
+            nextSceneName = "Date2";  // put Luna date2 name
+        }
+        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Noah)
+        {
+            nextSceneName = "NoahClicking";  // put Noah date2 name
+        }
+        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Quinn)
+        {
+            nextSceneName = "Date2";  // put Luna Quinn name
+        }
+
+
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogError("Kill yourself");
+        }
     }
 
 
