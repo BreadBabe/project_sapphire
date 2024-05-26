@@ -188,6 +188,9 @@ public class HospitalDialogueManager : MonoBehaviour
             }
             else
             {
+                int newLove = PlayerPrefs.GetInt("love") + (int)loveAmount;
+                PlayerPrefs.SetInt("love", newLove);
+
                 ScreenFader screenFader = FindObjectOfType<ScreenFader>();
                 if (screenFader != null)
                 {
@@ -232,6 +235,14 @@ public class HospitalDialogueManager : MonoBehaviour
         else if (currentScene.name == "")
         {
             nextSceneName = ""; // Ensure this matches the actual scene name
+        }
+        else if (currentScene.name == "Snooping")
+        {
+            if (loveAmount == -1000)
+            {
+                nextSceneName = "LunaMurder";
+            }
+
         }
 
         // Load the next scene

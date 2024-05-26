@@ -6,13 +6,17 @@ VAR loveAmount=0
 What the fuck?! Why are you going through my stuff?!
 *[I wasn't!]
      ~AnnoyedResponse()
+     ~loveAmount = -1000
      Yeah you fucking were, I'm not blind. What made you think that you have the right to do that? That's overstepping boundaries big time.
     ** [Calm down, it's not that serious.]
         ~MadResponse()
         Calm down? Don't you fucking talk to me like that. I've got some personal stuff in there that I don't want you to poke around in. If I wanted you to know my inner thoughts, I would tell you.
          ***[Then why don't you tell me?]
          It's our second date?! Why would I tell you my darkest secrets when I don't even know you yet? Why do you get to know more about me but I don't get to know anything about you? That's just unfair.
-         ->ATONEMENT
+               ****[But..]
+               ->END
+         
+         
          
          ***[It's really not that deep.]
          Maybe not for you, because you probably don't have anything that you value in your home and walk around like an open book. Accept that not everyone is like that. It's fucking rude.
