@@ -221,7 +221,11 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "PHONE";
         }
-        else if (currentScene.name == "Home2")
+        else if (currentScene.name == "Home2Noah")
+        {
+            nextSceneName = "PHONE";
+        }
+        else if (currentScene.name == "Home2Luna")
         {
             nextSceneName = "PHONE";
         }
@@ -233,6 +237,11 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             Debug.Log("Mini");
             nextSceneName = "MiniGameQuinn";
+        }
+        else if (currentScene.name == "QuinnDate1")
+        {
+            Debug.Log("Mini");
+            nextSceneName = "QuinnMinigame2";
         }
         else if (currentScene.name == "Snooping")
         {

@@ -83,7 +83,7 @@ public class PhoneUIManHome2 : MonoBehaviour
         backButton.SetActive(false);
 
         float loveAmount = (float)PlayerPrefs.GetInt("love");
-
+        loveAmount = Mathf.Clamp(loveAmount, -10, 10);
         LoveMterShutter.transform.localScale = new Vector3((loveAmount + 10) / 20, 1, 1);
 
         Debug.Log((loveAmount + 10) / 20);
@@ -287,7 +287,7 @@ public class PhoneUIManHome2 : MonoBehaviour
         }
         if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Noah)
         {
-            nextSceneName = "NoahClicking";  // put Noah date2 name
+            nextSceneName = "NoahDoor";  // put Noah date2 name
         }
         if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Quinn)
         {
