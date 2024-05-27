@@ -238,6 +238,11 @@ public class HospitalDialogueManager : MonoBehaviour
             Debug.Log("Mini");
             nextSceneName = "MiniGameQuinn";
         }
+        else if (currentScene.name == "QuinnDate1")
+        {
+            Debug.Log("Mini");
+            nextSceneName = "QuinnMinigame2";
+        }
         else if (currentScene.name == "Snooping")
         {
             if (loveAmount <= -100)
