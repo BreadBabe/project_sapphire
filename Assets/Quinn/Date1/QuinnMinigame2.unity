@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -296,26 +296,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ecological Roles:\r\nEuphorbias play diverse ecological roles in ecosystems
-    worldwide, serving as food sources, shelter, and breeding sites for numerous
-    organisms. Many species have evolved specialized adaptations to cope with harsh
-    environmental conditions, such as drought tolerance, salt tolerance, or fire
-    resistance. Additionally, some Euphorbia species engage in mutualistic relationships
-    with pollinators, seed dispersers, or mycorrhizal fungi, highlighting their ecological
-    interconnectedness and importance in maintaining ecosystem stability.\r\n\r\nChemical
-    Properties and Medicinal Uses:\r\nEuphorbias are renowned for their chemical
-    diversity, producing a wide array of secondary metabolites with pharmaceutical
-    potential. Many species contain bioactive compounds with anti-inflammatory, antimicrobial,
-    or cytotoxic properties, making them valuable sources of medicinal compounds
-    in traditional and modern pharmacology. However, it is important to note that
-    certain Euphorbia species, particularly those containing latex, may be toxic
-    if ingested or handled improperly, posing risks to human and animal health.\r\n\nConclusion:\r\nEuphorbia,
-    with its remarkable diversity, ecological versatility, and cultural significance,
-    stands as a botanical marvel worthy of scientific inquiry and conservation efforts.
-    Understanding its taxonomy, morphology, ecological roles, chemical properties,
-    and cultural uses, including its potential toxicity, is essential for appreciating
-    its evolutionary history and harnessing its benefits for human well-being and
-    environmental sustainability. \n\r\n"
+  m_text: "Chemical Properties and Medicinal Uses:\r\nMany species contain bioactive
+    compounds with anti-inflammatory, antimicrobial, or cytotoxic properties, making
+    them valuable sources of medicinal compounds in traditional and modern pharmacology.
+    However, it is important to note that certain Euphorbia species, particularly
+    those containing latex, may be toxic if ingested or handled improperly, posing
+    risks to human and animal health.\r\n\nConclusion:\r\nEuphorbia, with its remarkable
+    diversity, ecological versatility, and cultural significance, stands as a botanical
+    marvel worthy of scientific inquiry and conservation efforts. Understanding its
+    taxonomy, morphology, ecological roles, chemical properties, and cultural uses,
+    including its potential toxicity, is essential for appreciating its evolutionary
+    history and harnessing its benefits for human well-being and environmental sustainability.
+    \n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -343,8 +335,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -409,7 +401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310, y: 439}
+  m_AnchoredPosition: {x: 308, y: 423}
   m_SizeDelta: {x: 349.875, y: 41.5449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &207431827
@@ -591,6 +583,12 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
+  - {fileID: 1830629675}
+  - {fileID: 1408959147}
+  - {fileID: 493088873}
+  - {fileID: 1505417224}
   isClicked: 0
   isPressed: 0
 --- !u!1 &311410537
@@ -1289,6 +1287,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472660344}
   m_CullTransparentMesh: 1
+--- !u!1 &493088873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493088876}
+  - component: {fileID: 493088875}
+  - component: {fileID: 493088874}
+  m_Layer: 0
+  m_Name: ParrotImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &493088874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493088873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e2a22d3ac7c193747949222ee92b87cd, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &493088875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493088873}
+  m_CullTransparentMesh: 1
+--- !u!224 &493088876
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493088873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611303557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 327, y: -159}
+  m_SizeDelta: {x: 112.5897, y: 123.6058}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &500339719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1541,12 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
+  - {fileID: 1830629675}
+  - {fileID: 1408959147}
+  - {fileID: 493088873}
+  - {fileID: 1505417224}
   isClicked: 0
   isPressed: 0
 --- !u!1 &531175293
@@ -1637,6 +1716,12 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
+  - {fileID: 1830629675}
+  - {fileID: 1408959147}
+  - {fileID: 493088873}
+  - {fileID: 1505417224}
   isClicked: 0
   isPressed: 0
 --- !u!1 &543683260
@@ -1803,7 +1888,7 @@ MonoBehaviour:
   backWrongText: {fileID: 773196671}
   pictureList:
   - {fileID: 472660344}
-  - {fileID: 0}
+  - {fileID: 2068061491}
   textLeftList:
   - {fileID: 1464946098}
   textRightList:
@@ -1811,6 +1896,8 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
   isClicked: 0
   isPressed: 0
 --- !u!1 &548724651
@@ -2265,22 +2352,7 @@ MonoBehaviour:
     cultivated as a potted plant or hanging basket specimen in temperate climates,
     where it adds a splash of tropical color to gardens, conservatories, and indoor
     spaces. Cultivation requires attention to environmental conditions, including
-    moderate temperatures, high humidity, and well-drained, acidic soil. Additionally,
-    propagation is typically achieved through stem cuttings or seed sowing, with
-    care taken to mimic its natural habitat requirements.
-
-
-
-    Conservation Status:
-
-    Despite
-    its popularity in cultivation, Parrot''s Beak faces threats in its native habitat
-    due to deforestation, habitat fragmentation, and illegal collection for the horticultural
-    trade. Overexploitation of wild populations poses a significant risk to its long-term
-    survival, prompting conservation organizations and botanical institutions to
-    prioritize its protection through habitat conservation, ex-situ conservation
-    programs, and community-based initiatives.
-
+    moderate temperatures, high humidity, and well-drained, acidic soil.
 
 
     Conclusion:
@@ -2320,8 +2392,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2820,7 +2892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 287, y: 280}
+  m_AnchoredPosition: {x: 289, y: 250}
   m_SizeDelta: {x: 286.81, y: 415.3866}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847662183
@@ -2843,40 +2915,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Moreover, ivy contributes to soil stabilization, erosion control, and
-    biodiversity conservation in urban and natural landscapes.
-
-
-    Cultural Symbolism:
-
-    Throughout
-    history, ivy has held symbolic significance in various cultures, representing
-    resilience, longevity, and fidelity. In ancient Greek mythology, ivy was associated
-    with Dionysus, the god of wine and revelry, symbolizing vitality and celebration.
-    In Christianity, ivy symbolizes resurrection and eternal life, often depicted
-    in religious art and architecture. Additionally, ivy has inspired poets, artists,
-    and writers, evoking themes of love, endurance, and the passage of time.
-
-
-    Cultivation
-    and Management:
-
-    Ivy is widely cultivated for its ornamental value in gardens,
-    landscapes, and indoor settings. With numerous cultivars offering different leaf
-    shapes, colors, and growth habits, ivy provides versatile options for horticultural
-    enthusiasts. However, its vigorous growth and climbing behavior require careful
-    management to prevent invasive tendencies and potential damage to structures
-    and trees.
-
-
-    Conclusion:
-
-    Hedera helix, with its enigmatic beauty, ecological
-    significance, cultural symbolism, and horticultural versatility, stands as a
-    timeless emblem of nature''s resilience and human ingenuity. Understanding its
-    taxonomy, morphology, ecological roles, and cultural context enhances our appreciation
-    for this iconic plant species and underscores the importance of its conservation
-    and sustainable management in an ever-changing world.'
+  m_text: "Cultural Symbolism:\nThroughout history, ivy has held symbolic significance
+    in various cultures, representing resilience, longevity, and fidelity. In ancient
+    Greek mythology, ivy was associated with Dionysus, the god of wine and revelry,
+    symbolizing vitality and celebration. In Christianity, ivy symbolizes resurrection
+    and eternal life, often depicted in religious art and architecture. \n\nConclusion:\nHedera
+    helix, with its enigmatic beauty, ecological significance, cultural symbolism,
+    and horticultural versatility, stands as a timeless emblem of nature's resilience
+    and human ingenuity. Understanding its taxonomy, morphology, ecological roles,
+    and cultural context enhances our appreciation for this iconic plant species
+    and underscores the importance of its conservation and sustainable management
+    in an ever-changing world."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -2904,8 +2953,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3055,24 +3104,14 @@ MonoBehaviour:
     to its practical applications in landscaping and traditional medicine.
 
 
-    Taxonomy
-    and Morphology:
+    Ecological
+    Roles:
 
-    Taxonomically, Hedera helix is classified within the genus
-    Hedera, comprising several species and numerous cultivars. Morphologically, ivy
-    is characterized by its woody stems, glossy, dark green leaves with distinctive
-    lobes, and aerial rootlets that enable it to cling to various surfaces. Its growth
-    habit ranges from ground covers to climbing vines, exhibiting remarkable adaptability
-    to different environmental conditions.
-
-
-    Ecological Roles:
-
-    Ivy plays
-    vital ecological roles in its native habitats and beyond, providing shelter and
-    food for diverse wildlife, including birds, insects, and mammals. Its dense foliage
-    offers nesting sites and protection for small animals, while its flowers and
-    berries serve as important food sources, particularly during winter months. '
+    Ivy plays vital ecological roles in its native habitats and beyond,
+    providing shelter and food for diverse wildlife, including birds, insects, and
+    mammals. Its dense foliage offers nesting sites and protection for small animals,
+    while its flowers and berries serve as important food sources, particularly during
+    winter months. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -3100,8 +3139,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3451,7 +3490,7 @@ MonoBehaviour:
   backWrongText: {fileID: 773196671}
   pictureList:
   - {fileID: 472660344}
-  - {fileID: 0}
+  - {fileID: 2068061491}
   textLeftList:
   - {fileID: 1464946098}
   textRightList:
@@ -3459,6 +3498,8 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
   isClicked: 0
   isPressed: 0
 --- !u!1 &1172216310
@@ -3819,31 +3860,41 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Title: Orchidaceae: A Botanical Marvel\r\n\r\nAbstract:\r\nOrchidaceae,
+  m_text: 'Title: Orchidaceae: A Botanical Marvel
+
+
+
+    Abstract:
+
+    Orchidaceae,
     commonly known as orchids, comprises one of the largest and most diverse families
     within the plant kingdom. Renowned for their intricate floral structures and
     remarkable adaptations, orchids captivate botanists and enthusiasts alike. This
     paper delves into the taxonomy, morphology, reproductive strategies, ecological
     significance, conservation challenges, and future research directions of orchids,
-    shedding light on their evolutionary prowess and ecological importance.\r\n\r\nIntroduction:\r\nOrchids,
+    shedding light on their evolutionary prowess and ecological importance.
+
+
+
+    Introduction:
+
+    Orchids,
     belonging to the family Orchidaceae, encompass over 25,000 species distributed
     across every continent except Antarctica. Their evolutionary history dates back
     approximately 100 million years, showcasing remarkable adaptability to diverse
     ecological niches. Orchids exhibit an array of morphological features and reproductive
     strategies, making them a subject of fascination for botanists and evolutionary
-    biologists.\r\n\r\nTaxonomy and Morphology:\r\nThe taxonomy of Orchidaceae is
-    intricate, with numerous subfamilies, tribes, genera, and species. Morphologically,
+    biologists.
+
+
+
+    Taxonomy and Morphology:
+
+    The taxonomy of Orchidaceae
+    is intricate, with numerous subfamilies, tribes, genera, and species. Morphologically,
     orchids display unique characteristics, such as bilateral symmetry, fused floral
     parts forming a distinctive column, and specialized structures like pseudobulbs,
-    rhizomes, and aerial roots. The diversity in flower morphology, size, color,
-    and fragrance across orchid species is unparalleled in the plant kingdom.\r\n\r\nReproductive
-    Strategies:\r\nOrchids have evolved an array of reproductive strategies, often
-    intricately linked with specific pollinators. From deceptive tactics employing
-    mimicry to attract pollinators without offering rewards to mutualistic relationships
-    providing nectar or shelter, orchids showcase unparalleled diversity in reproductive
-    mechanisms. Notably, orchid seeds are minuscule and lack endosperm, relying on
-    mycorrhizal fungi for germination\u2014a process vital for their survival in
-    often nutrient-poor habitats.\r"
+    rhizomes, and aerial roots. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -3871,8 +3922,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3965,7 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c04801f8e2e3e34ea3a01763016a2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameLevelt: QuinnDate1Part2
+  newGameLevelt: QuinnDate1Part22
 --- !u!1 &1386198199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4253,7 @@ RectTransform:
   - {fileID: 2068061492}
   - {fileID: 316760646}
   - {fileID: 919158217}
+  - {fileID: 1611303557}
   - {fileID: 578973354}
   - {fileID: 1133600681}
   - {fileID: 543683265}
@@ -4255,6 +4307,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393977555}
   m_CullTransparentMesh: 1
+--- !u!1 &1408959147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408959150}
+  - component: {fileID: 1408959149}
+  - component: {fileID: 1408959148}
+  m_Layer: 0
+  m_Name: OrkideImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1408959148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408959147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5cfd9dbd2ffbda74fb5b74b7e095eb9d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1408959149
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408959147}
+  m_CullTransparentMesh: 1
+--- !u!224 &1408959150
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408959147}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611303557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 263.1099, y: -154.29742}
+  m_SizeDelta: {x: 143.26, y: 139.3429}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1436782131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +4719,81 @@ RectTransform:
   m_AnchoredPosition: {x: -526, y: 348}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1505417224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505417227}
+  - component: {fileID: 1505417226}
+  - component: {fileID: 1505417225}
+  m_Layer: 0
+  m_Name: EuphorbiaImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1505417225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505417224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 946811c3d9833684ca09c9b6b3040757, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1505417226
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505417224}
+  m_CullTransparentMesh: 1
+--- !u!224 &1505417227
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505417224}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611303557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 289.52393, y: -149.88461}
+  m_SizeDelta: {x: 133.048, y: 137.7692}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1537375135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,7 +4992,7 @@ MonoBehaviour:
   backWrongText: {fileID: 773196671}
   pictureList:
   - {fileID: 472660344}
-  - {fileID: 0}
+  - {fileID: 2068061491}
   textLeftList:
   - {fileID: 1464946098}
   textRightList:
@@ -4798,6 +5000,8 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
   isClicked: 0
   isPressed: 0
 --- !u!1 &1561114338
@@ -4934,6 +5138,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561114338}
   m_CullTransparentMesh: 1
+--- !u!1 &1611303556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611303557}
+  m_Layer: 0
+  m_Name: FlowerImages
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611303557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611303556}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 109.36011, y: -19.780579, z: 2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1830629678}
+  - {fileID: 1408959150}
+  - {fileID: 493088876}
+  - {fileID: 1505417227}
+  - {fileID: 1651035675}
+  m_Father: {fileID: 1393977559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1613778319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5308,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613778319}
   m_CullTransparentMesh: 1
+--- !u!1 &1651035672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651035675}
+  - component: {fileID: 1651035674}
+  - component: {fileID: 1651035673}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1651035673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651035672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1651035674
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651035672}
+  m_CullTransparentMesh: 1
+--- !u!224 &1651035675
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651035672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611303557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 751.0399, y: 469.78058}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1800950984
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,6 +5458,81 @@ RectTransform:
   m_AnchoredPosition: {x: -1086, y: 344}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1830629675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830629678}
+  - component: {fileID: 1830629677}
+  - component: {fileID: 1830629676}
+  m_Layer: 0
+  m_Name: HederaHelixImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1830629676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830629675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffafe9c260f73b24ba40ad25d5c85f25, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1830629677
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830629675}
+  m_CullTransparentMesh: 1
+--- !u!224 &1830629678
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830629675}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.193007}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1611303557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 248.6399, y: -148.78943}
+  m_SizeDelta: {x: 114.3263, y: 112.5355}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1883030955
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,6 +5712,12 @@ MonoBehaviour:
   buttonYesList:
   - {fileID: 1133600680}
   - {fileID: 543683260}
+  imageList:
+  - {fileID: 1651035672}
+  - {fileID: 1830629675}
+  - {fileID: 1408959147}
+  - {fileID: 493088873}
+  - {fileID: 1505417224}
   isClicked: 0
   isPressed: 0
 --- !u!1 &1925323381
@@ -5494,19 +5890,17 @@ MonoBehaviour:
     plant species renowned for its resemblance to a parrot''s vibrant plumage. Endemic
     to the cloud forests of Southeast Asia, Parrot''s Beak boasts intricate floral
     structures and striking coloration, making it a prized specimen among botanists
-    and horticultural enthusiasts. This paper explores the taxonomy, morphology,
-    habitat, cultivation, and conservation status of Parrot''s Beak, shedding light
-    on its ecological importance and cultural significance.
+    and horticultural enthusiasts.
 
 
     Introduction:
 
-    Impatiens
-    psittacina, a member of the genus Impatiens within the family Balsaminaceae,
-    is native to the montane forests of Thailand, Myanmar, and Laos. Its common name,
-    Parrot''s Beak, derives from the distinctive shape and coloration of its flowers,
-    which resemble the curved beak and vibrant plumage of a parrot. Parrot''s Beak
-    has captured the imagination of plant lovers worldwide, earning a place of honor
+    Impatiens psittacina,
+    a member of the genus Impatiens within the family Balsaminaceae, is native to
+    the montane forests of Thailand, Myanmar, and Laos. Its common name, Parrot''s
+    Beak, derives from the distinctive shape and coloration of its flowers, which
+    resemble the curved beak and vibrant plumage of a parrot. Parrot''s Beak has
+    captured the imagination of plant lovers worldwide, earning a place of honor
     in botanical gardens and collections.
 
 
@@ -5516,19 +5910,7 @@ MonoBehaviour:
     Impatiens psittacina is classified within the diverse genus Impatiens, which
     comprises over 1,000 species of annual and perennial herbs. Morphologically,
     Parrot''s Beak is characterized by its pendulous, tubular flowers with curved
-    spurs and vibrant hues of red, purple, and green. The intricate floral structure,
-    including a unique hooded petal arrangement, serves as an adaptation for attracting
-    pollinators and facilitating successful reproduction.
-
-
-    Habitat and Distribution:
-
-    Parrot''s
-    Beak is typically found in the cool, moist environments of montane cloud forests,
-    where it thrives in the dappled sunlight and rich, well-drained soils. It often
-    grows as an epiphyte or lithophyte, clinging to tree branches or rocky outcrops,
-    where it benefits from the high humidity and abundant rainfall characteristic
-    of its native habitat.'
+    spurs and vibrant hues of red, purple, and green.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -5556,8 +5938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5622,7 +6004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -497, y: 515}
+  m_AnchoredPosition: {x: -495, y: 496}
   m_SizeDelta: {x: 230.2569, y: 160.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1993407806
@@ -5682,42 +6064,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ecological Significance:
-
-    Orchids play crucial ecological roles in
-    various ecosystems, serving as indicators of environmental health and supporting
-    diverse faunal communities as both food sources and habitats. Their intricate
-    relationships with pollinators, mycorrhizal fungi, and other organisms highlight
-    their ecological interconnectedness and importance in maintaining ecosystem stability.
-    Moreover, orchids contribute to ecosystem services such as soil stabilization,
-    nutrient cycling, and water retention.
-
-
-
-    Conservation Challenges:
-
-    Despite
-    their ecological importance, orchids face numerous threats, including habitat
-    loss, illegal trade, climate change, and invasive species. Many orchid species
-    are highly specialized and vulnerable to habitat destruction and fragmentation.
-    Additionally, overcollection for horticultural trade exacerbates their decline
-    in the wild. Conservation efforts must prioritize habitat protection, restoration,
-    and sustainable trade practices to ensure the survival of orchid populations
-    worldwide.
-
-
-
-    Future Research Directions:
-
-    Future research on orchids
-    should focus on various aspects, including taxonomy, phylogenetics, reproductive
-    biology, population genetics, and conservation biology. Integrating molecular
-    techniques with traditional morphological methods can provide insights into orchid
-    evolution, speciation, and adaptation. Furthermore, studying the interactions
-    between orchids, their pollinators, and mycorrhizal fungi can enhance our understanding
-    of co-evolutionary processes and ecosystem dynamics.
-
-'
+  m_text: "Ecological Significance:\nOrchids play crucial ecological roles in various
+    ecosystems, serving as indicators of environmental health and supporting diverse
+    faunal communities as both food sources and habitats. Their intricate relationships
+    with pollinators, mycorrhizal fungi, and other organisms highlight their ecological
+    interconnectedness and importance in maintaining ecosystem stability. \n\nFuture
+    Research Directions:\nFuture research on orchids should focus on various aspects,
+    including taxonomy, phylogenetics, reproductive biology, population genetics,
+    and conservation biology. Integrating molecular techniques with traditional morphological
+    methods can provide insights into orchid evolution, speciation, and adaptation.
+    Furthermore, studying the interactions between orchids, their pollinators, and
+    mycorrhizal fungi can enhance our understanding of co-evolutionary processes
+    and ecosystem dynamics.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -5745,8 +6103,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5968,47 +6326,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Title: Euphorbia: Exploring the Fascinating World of Spurges
-
-
-
-    Abstract:
-
-    Euphorbia,
+  m_text: "Title: Euphorbia: Exploring the Fascinating World of Spurges\n\n\nAbstract:\nEuphorbia,
     commonly known as spurges, comprises a diverse and globally distributed genus
     within the family Euphorbiaceae. With over 2,000 species exhibiting remarkable
     morphological diversity and ecological adaptations, Euphorbia plants play significant
     roles in ecosystems worldwide and have captured the interest of botanists, ecologists,
-    and horticulturists. This paper explores the taxonomy, morphology, ecological
-    roles, chemical properties, medicinal uses, and toxicity of Euphorbia, shedding
-    light on its evolutionary history and cultural significance.
-
-
-
-    Introduction:
-
-    The
-    genus Euphorbia is one of the largest and most complex genera of flowering plants,
-    encompassing a wide range of growth forms, from succulent shrubs to herbaceous
-    perennials and even trees. Its global distribution spans diverse habitats, including
-    deserts, grasslands, forests, and coastal areas, reflecting its remarkable adaptability
-    to varied environmental conditions. Euphorbias have a long history of human interaction,
-    with cultural, medicinal, and economic importance in many societies.
-
-
-
-    Taxonomy
-    and Morphology:
-
-    Taxonomically, Euphorbia is characterized by its distinctive
-    flower structures, known as cyathia, which consist of reduced male and female
-    flowers surrounded by specialized bracts. Morphologically, Euphorbia species
-    exhibit a wide range of leaf shapes, stem structures, and reproductive adaptations.
-    Some species possess succulent stems and leaves adapted for water storage, while
-    others feature intricate inflorescences or defensive structures such as spines
-    or latex.
-
-'
+    and horticulturists. \n\nIntroduction:\nThe genus Euphorbia is one of the largest
+    and most complex genera of flowering plants, encompassing a wide range of growth
+    forms, from succulent shrubs to herbaceous perennials and even trees. Its global
+    distribution spans diverse habitats, including deserts, grasslands, forests,
+    and coastal areas, reflecting its remarkable adaptability to varied environmental
+    conditions.\n\nTaxonomy and Morphology:\nTaxonomically, Euphorbia is characterized
+    by its distinctive flower structures, known as cyathia, which consist of reduced
+    male and female flowers surrounded by specialized bracts. Morphologically, Euphorbia
+    species exhibit a wide range of leaf shapes, stem structures, and reproductive
+    adaptations. Some species possess succulent stems and leaves adapted for water
+    storage, while others feature intricate inflorescences or defensive structures
+    such as spines or latex."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf97a8c407dbb4518a96552a50183801, type: 2}
   m_sharedMaterial: {fileID: 4673469316188623025, guid: cf97a8c407dbb4518a96552a50183801,
@@ -6036,8 +6370,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
-  m_fontSizeBase: 17
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6072,7 +6406,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -14.049896, y: 0, z: -321.0434, w: -438.4423}
+  m_margin: {x: -36.08191, y: 0, z: -321.0434, w: -438.4423}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
