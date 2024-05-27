@@ -219,7 +219,7 @@ public class HospitalDialogueManager : MonoBehaviour
         }
         else if (currentScene.name == "Home1")
         {
-           nextSceneName = "PHONE";
+            nextSceneName = "PHONE";
         }
         else if (currentScene.name == "Home2")
         {
@@ -229,7 +229,7 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Graveyard";
         }
-        else if (currentScene.name == "Date2Quinn") 
+        else if (currentScene.name == "Date2Quinn")
         {
             Debug.Log("Mini");
             nextSceneName = "MiniGameQuinn";
@@ -238,7 +238,7 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             if (loveAmount <= -100)
             {
-                nextSceneName="LunaMurder";
+                nextSceneName = "LunaMurder";
             }
             else if (PlayerPrefs.GetInt("love") <= 0)
             {
@@ -248,6 +248,14 @@ public class HospitalDialogueManager : MonoBehaviour
             {
                 nextSceneName = "LunaGoodEnding";
             }
+        }
+        else if (currentScene.name == "LunaMurder")
+        {
+            nextSceneName = "DeadEnding";
+        }
+        else if (currentScene.name == "DeadEnding")
+        {
+            nextSceneName = "Credits";
         }
 
         // Load the next scene
