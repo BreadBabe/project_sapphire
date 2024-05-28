@@ -10,7 +10,7 @@ public class ButtonBehaviourScript : MonoBehaviour
     [SerializeField]
     private GameObject startbutton;
     [SerializeField]
-    private GameObject button;
+    private GameObject logo;
     private SceneChanger sceneChanger; //Script for changing scene
     [SerializeField]
     private string sceneToLoad; //string with the same name as the scene you want to change to
@@ -21,6 +21,7 @@ public class ButtonBehaviourScript : MonoBehaviour
         PlayerPrefs.DeleteAll();
         sceneChanger = new SceneChanger();
         startbutton.GetComponent<Button>().onClick.AddListener(OnClick);
+        
     }
 
     private IEnumerator SleepDestroy()
@@ -33,8 +34,7 @@ public class ButtonBehaviourScript : MonoBehaviour
 
     void OnClick()
     {
-        //StartCoroutine(SleepDestroy());
-        
+        logo.GetComponent<Animator>().Play("Pressed");
         sceneChanger.ChangeScreen(sceneToLoad);
     }
 
