@@ -55,8 +55,6 @@ You are who i think you are right? I am Noah.
         ***[mhm]
             ...
             -> TABLE_BAD_MOOD
- *[GO TO END]
-    ->END()
 
 == TABLE_DEFAULT ==
 *[Walk to table]
@@ -193,8 +191,6 @@ You are who i think you are right? I am Noah.
 *[Walk to table]
     //-> BAD_DATE_END()
     
-    ~MadResponse()
-    ~MadResponse()
     ~MadResponse()
     
     -> TABLE_DRINK()
