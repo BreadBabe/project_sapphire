@@ -280,18 +280,19 @@ public class PhoneUIManHome2 : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         string nextSceneName = "";
+        Scene currentScene = SceneManager.GetActiveScene();
 
-        if( phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Luna)
+        if (currentScene.name == "Home2Luna")
         {
-            nextSceneName = "Date2";  // put Luna date2 name
+            nextSceneName = "LunaHome";  // put Luna date2 name
         }
-        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Noah)
+        if (currentScene.name == "Home2Noah")
         {
             nextSceneName = "NoahDoor";  // put Noah date2 name
         }
-        if (phoneUI.datingAppState == PhoneUIManager.DatingAppStates.Quinn)
+        if (currentScene.name =="Home2Quinn")
         {
-            nextSceneName = "Date2";  // put Luna Quinn name
+            nextSceneName = "QuinnDate2";  // put Luna Quinn name
         }
 
 
