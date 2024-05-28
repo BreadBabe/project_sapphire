@@ -229,9 +229,13 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "PHONE";
         }
-        else if (currentScene.name == "Date1")
+        else if (currentScene.name == "LunaDate1")
         {
             nextSceneName = "Graveyard";
+        }
+        else if (currentScene.name == "Graveyard")
+        {
+            nextSceneName = "Home2Luna";
         }
         else if (currentScene.name == "Date2Quinn")
         {
@@ -242,6 +246,10 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             Debug.Log("Mini");
             nextSceneName = "QuinnMinigame2";
+        }
+        else if (currentScene.name == "LunaHome")
+        {
+            nextSceneName = "Snooping";
         }
         else if (currentScene.name == "Snooping")
         {
@@ -261,6 +269,14 @@ public class HospitalDialogueManager : MonoBehaviour
         else if (currentScene.name == "LunaMurder")
         {
             nextSceneName = "DeadEnding";
+        }
+        else if (currentScene.name == "QuinnMurder")
+        {
+            nextSceneName = "DeadEnding";
+        }
+        else if (currentScene.name == "QuinnDate1Part22")
+        {
+            nextSceneName = "Home2Quinn"; //Add home2 Quinn
         }
         else if (currentScene.name == "DeadEnding")
         {
