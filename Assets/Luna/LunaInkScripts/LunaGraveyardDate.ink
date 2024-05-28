@@ -53,9 +53,10 @@ Hey! Why are you wandering around here all by yourself?
                ~SmileResponse()
                Great, let's start over. No harm done, but your clothes might get a bit dirty..
                ->DIRTY
-               *****[I'm out.]
-               Honestly, fuck off. I don't have time for people like you anyway. Good riddance, and try not to be too boring without me. Bye!
-               ->END
+               *****[Alright. I guess..]
+               ~PissedResponse()
+               Your attitude is pissing me off, so it will be so satisfying seeing your precious clothes getting absolutely destroyed. You seem like the type to hate getting dirty.
+               ->DIRTY
                       
               ****[Just don't do it again]
                      ~charEmotion= "Indifferent"
@@ -120,14 +121,14 @@ Hey! Why are you wandering around here all by yourself?
              -> ENDING
              
     *[Fuck yes!]
-    ~HappyResponse()
+    ~LoveResponse()
     That's the spirit! If we're lucky we might find something of value. Or not, but wouldn't you love to see a dead person anyway? SPOOKY.
     **[Alright!]
     -> ENDING
     
 
    *[Uhm, what the actual fuck?]
-         ~AnnoyedResponse()
+         ~PissedResponse()
          Hey, don't freak out, okay? It was right there in my bio: 'I like chilling with my cat and occasionally, you know, exploring cemeteries'. You did read it, right? Showing up here in the dead of night sort of implies you were at least a little curious.
        **[I thougt you were joking!]
        ~IndifferentResponse()
@@ -175,6 +176,12 @@ Hey! Why are you wandering around here all by yourself?
 
 -->END
     
+===function PissedResponse===
+~charEmotion="Pissed"
+~loveAmount--
+===function LoveResponse===
+~charEmotion="Love"
+~loveAmount++
 
 === function IndifferentResponse ===
 ~charEmotion="Indifferent"
@@ -191,15 +198,15 @@ Hey! Why are you wandering around here all by yourself?
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
-        ~ loveAmount++
-        ~ charEmotion = "Happy"
+  ~ loveAmount++
+  ~ charEmotion = "Happy"
         
 === function AnnoyedResponse ===
-        ~ loveAmount--
-        ~ charEmotion="Annoyed"
+   ~ loveAmount--
+   ~ charEmotion="Annoyed"
 
 === function AngryResponse ===
-        ~ loveAmount--
-        ~ charEmotion = "Angry"
+  ~ loveAmount--
+  ~ charEmotion = "Angry"
         
         

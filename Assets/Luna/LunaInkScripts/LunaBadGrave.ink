@@ -34,7 +34,7 @@ Aww, come on! It's just a bit of harmless fun with the dearly departed. You're n
         
 *[It was amazing, surprisingly!]
 Duh, that's what I've been saying. And those bones.. there's something eerily beautiful about them, don't you think?
-~HappyResponse()
+~LoveResponse()
 
         ** [Wait, what?]
         ~NeutralResponse()
@@ -53,6 +53,23 @@ Oh... That's kind of a bummer. Looks like it's seen better days- kind of like th
         ~SmileResponse()
         Sure, we can go with that. Im impressed with the rose's will to live though, it still has some color. Can't relate. Anyway, what else have you found?
         ->DEADCAT
+*[I actually prefer not to tell you anything I've found.]
+Wait. You're joking, right?... Oh no... You aren't. Come on, spill the beans, I want to know!
+     **[Alright, I'll tell you.]
+     ~LoveResponse()
+     YES! Come on, hurry up, show me. What did you find?
+      ->DEADCAT
+     **[I don't rob and tell!]
+     Why do you have to be so boring? Imagine waking up every morning and just choosing to be as boring as you. Has to be exhausting, really.
+          ***[Fine, I'll tell you.]
+          ~IndifferentResponse()
+          That's what I'm talking about, a true redemption arc. Hurry up, what did you find?
+          ->DEADCAT
+          ***[I'd rather just keep it for myself.]
+          ~PissedResponse()
+          Alright, I guess. It's getting really dark anyway, and I gotta get home to my cat.
+          ->NEXTDATE
+    
 
 ==DEADCAT==
 *[A dead cat..]
@@ -96,8 +113,8 @@ Wait, you wanted to keep the dead cat? I'd rather the kitty gets to rest in peac
 I know, right? Totally worth the creepy factor. Now, imagine what we could do on future dates? The opportunities are endelss!
 ~HappyResponse()
     ** [I'd love that!]
-        ~SmileResponse()
-        Perfect! It's a date. There's a haunted house next town over that I've been dying to check out. Literally. It's gonna be a killer! Anyway, it's getting dark.
+        ~LoveResponse()
+        Perfect! There's a haunted house next town over that I've been dying to check out. Literally! Anyway, it's getting dark.
         ->NEXTDATE
     **[I'm not so sure..]
     ~AnnoyedResponse()
@@ -115,30 +132,38 @@ Probably. It does feel a bit weird to walk away with these things, especially th
         ~HappyResponse()
         ->NEXTDATE
     
-    ==NEXTDATE==
+==NEXTDATE==
 *[I'd really like to see you again.]
 ~SmileResponse()
 Sure, why not? If you're brave enough to handle another night of mischief with me, how about we make it a bit more personal? My place, next time. I promise it's only slightly less creepy than here.
      ** [I'd love that!]
      Fantastic! Can't wait to show you my collection of oddities. Maybe we'll even stir up some spritis- if we're lucky. Catch you soon, devil!
-        ~HappyResponse()
+        ~LoveResponse()
         ->END
-     **[I'm not so sure..]
-     Fine. Your loss, anyway. If you can't handle a little excitement, then maybe you're better off sticking to the mundane. Don't come crawling back when you realize how dull normal is. Good riddance, and try not to be too boring without me. Bye!
-        ~UpsetResponse()
+     **[I might have to think about it..]
+    ~UpsetResponse()
+        Okay...? But I do need someone who can keep up with me, remember that. So, I'll talk to you later, I guess? Bye!
         ->END
+        
 *[I had fun, but I'm not sure if we're a good match.]
 Really? What a shocker. Listen, I don't have time for half hearted whims. Either you're all in, or you're out. Seems like you've made your choice, so let's not waste any more of each other's time before one of us gets cursed.
-~AngryResponse()
+~PissedResponse()
     ** [You know what, I do want to see you again!]
         ~NeutralResponse()
         Fine, but don't expect me to hold your hand through it. If we're doing this, you're going to have to prove you can handle it. I'm not here to babysit, got it? Let's see if you can actually keep up next time. Talk to you later, I guess. Bye!
         ->END
-    **[It's for the best.]
+    **[I probably have to think about it.]
     ~UpsetResponse()
-        Sure, run away. It's obviously too much for you. I need someone who can keep up with me anyway, not someone who gets cold feet. Good riddance, and try not to be too boring without me. Bye!
+        Okay...? But I do need someone who can keep up with me, rmember that. So, I'll talk to you later, I guess? Bye!
         ->END
         
+
+===function PissedResponse===
+~charEmotion="Pissed"
+~loveAmount--
+===function LoveResponse===
+~charEmotion="Love"
+~loveAmount++
 
 === function IndifferentResponse ===
 ~charEmotion="Indifferent"
@@ -155,15 +180,15 @@ Really? What a shocker. Listen, I don't have time for half hearted whims. Either
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
-        ~ loveAmount++
-        ~ charEmotion = "Happy"
+  ~ loveAmount++
+  ~ charEmotion = "Happy"
         
 === function AnnoyedResponse ===
-        ~ loveAmount--
-        ~ charEmotion="Annoyed"
+   ~ loveAmount--
+   ~ charEmotion="Annoyed"
 
 === function AngryResponse ===
-        ~ loveAmount--
-        ~ charEmotion = "Angry"
+  ~ loveAmount--
+  ~ charEmotion = "Angry"
         
         
