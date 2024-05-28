@@ -867,7 +867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -255}
+  m_AnchoredPosition: {x: 611, y: -252}
   m_SizeDelta: {x: 485.6491, y: 626.1192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622622341
@@ -1187,7 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 373212629}
   typingSpeed: 30
-  inkJSONAsset: {fileID: 4900000, guid: 122a3e6a9ac18544093564dacad5e869, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: aa94e04fd8b692d4987dbe2775ee6c15, type: 3}
   dialoguebox: {fileID: 1203517500}
   choicebox: {fileID: 2006490885}
   textPrefab: {fileID: 11456674, guid: 64533f8b200644a02aa01745976dae7c, type: 3}
