@@ -1323,7 +1323,7 @@ MonoBehaviour:
   dialoguebox: {fileID: 708733039}
   choicebox: {fileID: 1462862114}
   textPrefab: {fileID: 11456674, guid: 0439cda2460274d6c8310c07125733ce, type: 3}
-  buttonPrefab: {fileID: 11455116, guid: 38cb33bc224304517a642e9624e86206, type: 3}
+  buttonPrefab: {fileID: 11455116, guid: 5c350d2d16c574a17866f09199dc9904, type: 3}
   Character: {fileID: 562448294}
   Audio: {fileID: 1777606290}
   startButton: {fileID: 1459774622}

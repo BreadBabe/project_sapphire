@@ -207,21 +207,9 @@ public class NoahDialogueManager : MonoBehaviour
                 int newLove = PlayerPrefs.GetInt("love") + (int)loveAmount;
                 PlayerPrefs.SetInt("love", newLove);
 
-                //if (ScreenFader != null)
-                //{
-                //ScreenFader.StartFadeOut();
 
                 StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
-                //SceneChanger.ChangeScreen("DrinkPickGame");
-                 //}
-                //else
-                //{
-                //    Debug.Log("pizza not found");
-                //}
-                //Button choice = CreateChoiceView("End of story.\nRestart?");
-                //choice.onClick.AddListener(delegate {
-                //    StartStory();
-                //});
+                
             }
 
             IEnumerator LoadNextSceneAfterDelay(float delay)
@@ -235,7 +223,7 @@ public class NoahDialogueManager : MonoBehaviour
                 }
                 else if(currentScene.name == "DrinkPickGame")
                 {
-                    SceneManager.LoadScene("NoahDoor");
+                    SceneManager.LoadScene("Home2Noah");
                 }
                 else if (currentScene.name == "NoahClicking") 
                 {
