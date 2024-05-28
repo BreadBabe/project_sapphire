@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2715,7 +2715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 783354944}
   typingSpeed: 30
-  inkJSONAsset: {fileID: 4900000, guid: 6e5e6f9b21cbf4c2184c6b1c86cf8bd4, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 2b652603c7cb4453cac2f1941a999450, type: 3}
   dialoguebox: {fileID: 1940692181}
   choicebox: {fileID: 1044220001}
   textPrefab: {fileID: 11456674, guid: e29963836c2c541ffbd58777de03ea4c, type: 3}

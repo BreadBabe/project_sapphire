@@ -531,4 +531,4 @@ Okay! Let me go get one for you. I promise it’s really good! I’ll be right b
 
 === function NegativeResponse ===
         ~ loveAmount--
-        ~ charEmotion = "Angry"
+        ~ charEmotion = "Mad"
