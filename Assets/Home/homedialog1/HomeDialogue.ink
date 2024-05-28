@@ -13,7 +13,7 @@ VAR charSound=""
             ~ PositiveResponse()
             ***[Right?]
             Plus, think of the bragging rights. “Oh, you found your soulmate by a common interest? That’s cute. Me? Oh, I just found mine under the pressure of fulfilling a dying wish.”
-            ~ BarkResponse()
+            ~ HowlResponse()
 
                ****[You’re a genius!]
                 I can totally do this. Time to put on my game face and dive into the wacky world of dating apps, and maybe even a little online stalking. Let the games begin!!
@@ -38,3 +38,6 @@ VAR charSound=""
 === function NeutralResponse===
 ~charEmotion="Neutral"
 ~ charSound=""
+===function HowlResponse===
+~charSound="Howl"
+~charEmotion="Howl"
