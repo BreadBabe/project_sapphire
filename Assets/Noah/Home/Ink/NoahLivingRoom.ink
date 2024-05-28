@@ -389,39 +389,39 @@ Oh okay… Thanks! I still miss him to this day…
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
         ~ charSound=""
         
 === function MadResponse ====
-        ~ charEmotion="Mad"
-        ~ charSound=""
-        ~ loveAmount--
+        ~charEmotion="Mad"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
         
 === function AnnoyedResponse ====
-        ~ charEmotion="Annoyed"
-        ~ charSound=""
-        ~ loveAmount--
+        ~charEmotion="Annoyed"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
         
 === function ContentResponse ====
-        ~ charEmotion="Content"
-        ~ charSound=""
+        ~charEmotion="Content"
+        ~charSound=""
         ~ loveAmount++
         
 === function SmileResponse ====
-        ~ charEmotion="Smile"
-        ~ charSound=""
+        ~charEmotion="Smile"
+        ~charSound=""
         
 === function ConfusedResponse ====
-        ~ charEmotion="Confused"
-        ~ charSound=""
-        ~ loveAmount--
+        ~charEmotion="Confused"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
         
 === function BlushResponse ====
-        ~ charEmotion="Blush"
-        ~ charSound=""
+        ~charEmotion="Blush"
+        ~charSound=""
         ~ loveAmount++
         
 === function NoNoah ====

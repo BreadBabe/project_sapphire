@@ -379,54 +379,6 @@ Say i got something special planned for tonight, privilege of having a chill bos
             -> END
 *[*say nothing*]
 -> END
-
-
-=== function HappyResponse ===
-        ~ charEmotion = "Happy"
-        ~ charSound=""
-        ~ loveAmount++
-        
-=== function SadResponse ===
-        ~ charEmotion = "Sad"
-        ~ charSound=""
-        ~ loveAmount--
-        
-=== function NeutralResponse===
-        ~ charEmotion="Neutral"
-        ~ charSound=""
-        
-=== function MadResponse ====
-        ~charEmotion="Mad"
-        ~charSound=""
-        ~ loveAmount--
-        
-=== function AnnoyedResponse ====
-        ~charEmotion="Annoyed"
-        ~charSound=""
-        ~ loveAmount--
-        
-=== function ContentResponse ====
-        ~charEmotion="Content"
-        ~charSound=""
-        ~ loveAmount++
-        
-=== function SmileResponse ====
-        ~charEmotion="Smile"
-        ~charSound=""
-        
-=== function ConfusedResponse ====
-        ~charEmotion="Confused"
-        ~charSound=""
-        ~ loveAmount--
-        
-=== function BlushResponse ====
-        ~charEmotion="Blush"
-        ~charSound=""
-        ~ loveAmount++
-        
-=== function NoNoah ====
-        ~charEmotion="Empty"
-        ~charSound=""
         
         
 //Storing results for options that lead to same outcome to prevent too much clutter
@@ -472,6 +424,50 @@ Say i got something special planned for tonight, privilege of having a chill bos
             You will get there i belive in you!
             ->PickingDrink()
             
-
-
-
+            
+=== function HappyResponse ===
+        ~ charEmotion = "Happy"
+        ~ charSound=""
+        ~ loveAmount++
+        
+=== function SadResponse ===
+        ~ charEmotion = "Sad"
+        ~ charSound=""
+        ~ loveAmount = loveAmount - 3
+        
+=== function NeutralResponse===
+        ~ charEmotion="Neutral"
+        ~ charSound=""
+        
+=== function MadResponse ====
+        ~charEmotion="Mad"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
+        
+=== function AnnoyedResponse ====
+        ~charEmotion="Annoyed"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
+        
+=== function ContentResponse ====
+        ~charEmotion="Content"
+        ~charSound=""
+        ~ loveAmount++
+        
+=== function SmileResponse ====
+        ~charEmotion="Smile"
+        ~charSound=""
+        
+=== function ConfusedResponse ====
+        ~charEmotion="Confused"
+        ~charSound=""
+        ~ loveAmount = loveAmount - 3
+        
+=== function BlushResponse ====
+        ~charEmotion="Blush"
+        ~charSound=""
+        ~ loveAmount++
+        
+=== function NoNoah ====
+        ~charEmotion="Empty"
+        ~charSound=""
