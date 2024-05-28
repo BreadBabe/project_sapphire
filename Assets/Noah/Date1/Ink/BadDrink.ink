@@ -40,7 +40,7 @@ Noah tries the drink that you just concocted together... He makes a worried face
             ~ConfusedResponse()
             It is definitely an acquired taste! I'm gonna need to let it simmer for a bit haha.
             ***[I'm sure it would take the world by storm!]
-                That is 
+                Right... yea!
                 ****[...]
                     -> UhOhTime()
             ***[Ohh. I might need to learn a thing or two from you.]

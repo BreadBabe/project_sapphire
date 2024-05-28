@@ -55,8 +55,6 @@ You are who i think you are right? I am Noah.
         ***[mhm]
             ...
             -> TABLE_BAD_MOOD
- *[GO TO END]
-    ->END()
 
 == TABLE_DEFAULT ==
 *[Walk to table]
@@ -194,8 +192,6 @@ You are who i think you are right? I am Noah.
     //-> BAD_DATE_END()
     
     ~MadResponse()
-    ~MadResponse()
-    ~MadResponse()
     
     -> TABLE_DRINK()
      //Might not be used in final product, time constraints:(
@@ -269,6 +265,7 @@ You are who i think you are right? I am Noah.
             ~NeutralResponse()
             It all just blends into the surroundings for me, kinda relaxing honestly not like a metal concert or anything thats fucking loud if anything.
             ***[Got something against metal?]
+                ~ MadResponse()
                 Meh, just not my thing really. Prefer other types of music but i dont have any grudge against it or anything, plenty of good bars out there playing metal on repeat if youre interested.
                 ->MusicDiscourse()
             ***[I mean sure]

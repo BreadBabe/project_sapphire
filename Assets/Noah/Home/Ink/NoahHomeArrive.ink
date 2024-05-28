@@ -62,7 +62,7 @@ Hey!... You actually came, that's great to see!
 				Ha! i knew it! Am just so terrible at cleaning everything except the kitchen, cause that i cant be caught not cleaning at work noone wants to buy a drink at a dirty establishment and i would never serve a drink in a dirty glass! *Noah starts walking towards the kitchen*
 				    ->LivingRoom
 			***[could have cleaned…]
-				~ConfusedResponse()
+				~ ConfusedResponse()
 				Well I didn't… it’s just here, the kitchen is much nicer you wont be drinking out of a dirty glass i assure you… *Noah leaves and starts walking towards the kitchen*
 				->LivingRoom
 		**[Oh.. That makes more sense!]
