@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Noah/Home/NoahDoor.unity
     guid: 189583ae0a93bdf4183ab952885c57f9
   - enabled: 1
-    path: Assets/Noah/Home/Home2Noah.unity
+    path: Assets/Home/Home2Noah.unity
     guid: 230ceb4de0495e34ab9a10cf9426b834
   - enabled: 1
     path: Assets/Hospital/DeadEnding/DeadEnding.unity
