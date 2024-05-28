@@ -17,7 +17,7 @@ public class QuinnButtonUI2 : MonoBehaviour
 
     public void NewGameButtont()
     {
-        SceneManager.LoadScene(newGameLevelt);
+        SceneManager.LoadScene("QuinnDate1Part2");
     }
 
     //void Start()
