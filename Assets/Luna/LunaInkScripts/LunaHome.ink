@@ -92,7 +92,7 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
             Whatever. Just don't come over with that attitude again, I'm done with people like that in my life, its enough enduring that from my parents.
             -> DAY
             ***[I was bored.]
-             ~AngryResponse()
+             ~PissedResponse()
              Bored? You should really keep some thoughts for yourself, because guess what, not everyone gives a shit about your opinion. Especially not me.
               ****[I don't care about your opinion either.]
               ~AnnoyedResponse()
@@ -101,9 +101,9 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
                ~charEmotion="Indifferent"
                Yeah, you are. I'm used to it, just don't come over with that attitude again. I'm done with people like that in my life, it's enough enduring that from my parents. Anyway, how was your day?
                ->DAY
-               *****[Alright, I'm leaving.]
-               ~UpsetResponse()
-               Please, you'll be doing me a favor. Try not to be too boring without me, but I think you're managing that just fine. Go fuck yourself.
+               *****[Can we stop fighting?]
+               ~IndifferentResponse()
+               Whatever. As long as you remember that you're boring. Anyway, how was your day?
                ->END
                       
               ****[That was rude of me.]
@@ -263,7 +263,6 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
          ***[You're funny, I'll give that to you.]
         -> CIGARETTES
 
-    
 *[It was nothing special, just rotted in bed.]
      ~charEmotion="Neutral"
      Rotting is underrated. I like to pretend that I'm a decaying corpse when I lay in bed sometimes. There's something weirdly comforting about that. Just wasting away, you know.
@@ -295,7 +294,7 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
 ~charEmotion="Smile"
     Oh, you have a dog? Even if I'm obviously a cat person, I love dogs. I don't really care for humans that much, but animals are the only good part of this world.
    ** [Honestly, same.]
-   ~HappyResponse()
+   ~LoveResponse()
    I think hanging out with an animal has always been like an escape for me, ever since I was a kid. It's this kind of unconditional love that you can't really find in any other being, at least if your parents are like mine.
           ***[Facts!]
           ->CIGARETTES
@@ -303,7 +302,7 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
           ->CIGARETTES
 
    **[Humans are superior.]
-   ~AngryResponse()
+   ~PissedResponse()
    That must be the most stupid thing I've heard in the two decades that I've been alive. I think we should just all stop reproducing, and walk hand in hand into extinction. Just like Rust said in True Detective you know?
          ***[What's True Detective?]
           Dude. You've got some learning to do.
@@ -313,48 +312,19 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
          ->CIGARETTES
        
    **[I love animals!]
-   ~HappyResponse()
+   ~LoveResponse()
        I think hanging out with an animal has always been like an escape for me, ever since I was a kid. It's this kind of unconditional love that you can't really find in any other being, at least if your parents are like mine.
           ***[Facts!]
           ->CIGARETTES
           ***[What about your parents?]
           ->CIGARETTES
-  
- == DOG ==  
- 
-   *[Is your cat okay with dogs?]
-         ~charEmotion= "Indifferent"
-          Well, only if you get caught, And I happen to be a professional. I promise it will be fun, we might even make a profit out of it. 
-          **[Alright!]
-             -> CIGARETTES
-             
-    *[His name is Astro.]
-    ~HappyResponse()
-    That's the spirit! If we're lucky we might find something of value. Or not, but wouldn't you love to see a dead person anyway? SPOOKY.
-    **[Alright!]
-    -> CIGARETTES
-    
-
-   *[I was thinking about bringing him over.]
-         ~AnnoyedResponse()
-         Hey, don't freak out, okay? It was right there in my bio: 'I like chilling with my cat and occasionally, you know, exploring cemeteries'. You did read it, right? Showing up here in the dead of night sort of implies you were at least a little curious.
-       **[I thougt you were joking!]
-       ~IndifferentResponse()
-             Nope. What part of 'meeting in a graveyard at night' screams 'just kidding' to you? I thought the part where I told you to make sure you're not followed would have been a clear giveaway. 
-       ***[Maybe you're right, it could be kinda fun]
-            ~NeutralResponse()
-             Now that's the spirit! There's something thrilling about uncovering stories, and hopefully gold, that was buried along with bones. So, shovel in hand, let's do this. It's your first time after all, and I want it to be memorable.
-             ****[Alright]
-                 ->CIGARETTES
-                 
-                 
                  
 
 == CIGARETTES==  
 ~charEmotion="Annoyed"
  FUCK! Sorry for cutting you off. I just realized that I forgot to buy cigarettes. I know. Probably a turn off, right? But what can I do, everyone in my band smokes like Snoop Dogg. I don't do the weed though, only on special occasions.
    *[I smoke too!]
-         ~HappyResponse()
+         ~LoveResponse()
           You do? I'll buy two packs then. And we can smoke the night away, just like Satan intended us to. I'll be right back, and don't do anything weird to Lucifer!
              **[See you soon!]
              -> END
@@ -374,6 +344,12 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
 
 
     
+===function PissedResponse===
+~charEmotion="Pissed"
+~loveAmount--
+===function LoveResponse===
+~charEmotion="Love"
+~loveAmount++
 
 === function IndifferentResponse ===
 ~charEmotion="Indifferent"
@@ -390,15 +366,15 @@ Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should pro
     ~ charEmotion="Smile"
 
 === function HappyResponse ===
-        ~ loveAmount++
-        ~ charEmotion = "Happy"
+  ~ loveAmount++
+  ~ charEmotion = "Happy"
         
 === function AnnoyedResponse ===
-        ~ loveAmount--
-        ~ charEmotion="Annoyed"
+   ~ loveAmount--
+   ~ charEmotion="Annoyed"
 
 === function AngryResponse ===
-        ~ loveAmount--
-        ~ charEmotion = "Angry"
-        
+  ~ loveAmount--
+  ~ charEmotion = "Angry"
+     
         
