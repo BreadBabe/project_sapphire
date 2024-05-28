@@ -117,7 +117,7 @@ Hey!... You actually came, that's great to see!
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -126,12 +126,12 @@ Hey!... You actually came, that's great to see!
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function ContentResponse ====
         ~charEmotion="Content"
@@ -145,7 +145,7 @@ Hey!... You actually came, that's great to see!
 === function ConfusedResponse ====
         ~charEmotion="Confused"
         ~charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function BlushResponse ====
         ~charEmotion="Blush"

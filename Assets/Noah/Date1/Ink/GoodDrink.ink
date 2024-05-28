@@ -87,7 +87,7 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -96,12 +96,12 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
-        ~ loveAmount--
+        ~ loveAmount = loveAmount - 3
         
 === function ContentResponse ====
         ~charEmotion="Content"
@@ -111,11 +111,11 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
-        ~ loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
         ~charSound=""
+        ~ loveAmount = loveAmount - 3
         
 === function BlushResponse ====
         ~charEmotion="Blush"
@@ -125,4 +125,3 @@ Nooo! Just realized my shift starts now and I'm totally not prepared..
 === function NoNoah ====
         ~charEmotion="Empty"
         ~charSound=""
-        
