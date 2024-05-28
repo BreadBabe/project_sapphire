@@ -75,7 +75,7 @@ public class PhoneUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhoneIcon.SetActive(true);
+        PhoneIcon.SetActive(false);
         notif.SetActive(false);
         lockedDate.SetActive(false);
         PhoneUI.SetActive(false);

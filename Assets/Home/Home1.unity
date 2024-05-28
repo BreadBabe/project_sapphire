@@ -1583,12 +1583,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GoToSleep
-
-'
+  m_text: SLEEP
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 162bbe67b6c6e45edbe574bda698107d, type: 2}
+  m_sharedMaterial: {fileID: -6456160762661615171, guid: 162bbe67b6c6e45edbe574bda698107d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1612,8 +1611,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2771,8 +2770,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4bcc2c3773a7dd648a7cca9a28a7eb7a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3003,7 +3002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211.19165, y: 170.6626}
+  m_AnchoredPosition: {x: 148, y: 207}
   m_SizeDelta: {x: 215.6168, y: 59.3253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1037639034
@@ -3082,7 +3081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 594c99d6d71947c4d9043c2ca221f12e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 951e4aaf2fef33d4898a6b04281fc5c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3499,7 +3498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1492, y: 171.23}
+  m_AnchoredPosition: {x: -1442, y: 204}
   m_SizeDelta: {x: 202.66, y: 58.1817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191925071
@@ -3578,7 +3577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e275391c13804b17825b8c97be1ebeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ff373988f85fbe4b8f153e1befd8b52, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6780,8 +6779,8 @@ MonoBehaviour:
   goToSleepButton: {fileID: 947074220}
   closeUpImageObject: {fileID: 1572706914}
   newspaper: {fileID: 21300000, guid: fe491da5931203248afd64351b9b8187, type: 3}
-  bedroom: {fileID: 21300000, guid: 4cac0826d18c544daa2611f427d51044, type: 3}
-  kitchen: {fileID: 21300000, guid: b5887607509e46649afb4935b3439867, type: 3}
+  bedroom: {fileID: 21300000, guid: 9d192295d40511c46b2a9a55f7d17c05, type: 3}
+  kitchen: {fileID: 21300000, guid: a17e32c80426a1443b230d5d8f433643, type: 3}
   dogToy: {fileID: 21300000, guid: 9f69ac34bad1cad449ac1d035b09641a, type: 3}
   coffeCup: {fileID: 21300000, guid: 18c3a125b46ba87459dc0f5b92699a19, type: 3}
   Picture: {fileID: 21300000, guid: 62e8c156077de8442bb6dbda1a7b2d56, type: 3}
