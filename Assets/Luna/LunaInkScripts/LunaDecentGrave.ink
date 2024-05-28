@@ -53,12 +53,14 @@ Earrings, huh? Well, they're classic. A bit too 'everyday undead' for my taste t
         Simplicity has its charm, I suppose, especially when it's centuries old. It whispers of past lives... and quiet days. Maybe the next find will have a bit more shadow to it. Lets see it!
         ->WATCH
 *[I actually prefer not to tell you anything I've found.]
+~IndifferentResponse()
 Wait. You're joking, right?... Oh no... You aren't. Come on, spill the beans, I want to know!
      **[Alright, I'll tell you.]
      ~LoveResponse()
      YES! Come on, hurry up, show me. What did you find?
       ->WATCH
      **[I don't rob and tell!]
+     ~AngryResponse()
      Why do you have to be so boring? Imagine waking up every morning and just choosing to be as boring as you. Has to be exhausting, really.
           ***[Fine, I'll tell you.]
           ~IndifferentResponse()
@@ -67,7 +69,7 @@ Wait. You're joking, right?... Oh no... You aren't. Come on, spill the beans, I 
           ***[I'd rather just keep it for myself.]
           ~PissedResponse()
           Alright, I guess. It's getting really dark anyway, and I gotta get home to my cat.
-          ->WATCH
+          ->NEXTDATE
 
 ==WATCH==
 *[A pocket watch!]

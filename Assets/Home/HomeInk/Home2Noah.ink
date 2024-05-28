@@ -15,11 +15,12 @@ Hey Astro! I'm back! Missed you, buddy. Sorry for being gone for so long.
             But it was surprisingly fun, in a messed up way, like he made it fun. I hope grandma would be proud of me, well maybe not the drinking part... 
             ~ BarkResponse()
             ****[Speaking of grandma!]
-                Back to reality, Astro. Grandma's wish won't fulfill itself, you know. And dating these days makes me want to vomit. What's up with all those fish pictures? Does anyone find that attractive?
+                Back to reality, Astro. Grandma's wish won't fulfill itself, you know. And dating these days makes me want to vomit. What's up with all those fish pictures? Does anyone find that attractive? I'm glad Noah seems different.
                     ~ NeutralResponse()
               *****[Anyway, gotta stay focused.]
               ~PhoneResponse()
-                 Hold up, I think I just got a text. Is it Noah or the Pizza Hut delivery guy? Let's find out!**[I should open my phone!]
+                 Hold up, I think I just got a text. Is it Noah or the Pizza Hut delivery guy? Let's find out!
+                 ******[I should open my phone!]
 --> END
 
 ===function PhoneResponse===
