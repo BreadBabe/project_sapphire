@@ -83,4 +83,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hospital/QuinnEnding/QuinnGoodEnding.unity
     guid: 99ba3ee1eae6b40dfa1d5ccd656a24cf
+  - enabled: 1
+    path: Assets/Credits/Credits.unity
+    guid: c1c67d9de5c6a45299f24155ea597a74
   m_configObjects: {}

@@ -266,6 +266,10 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "DeadEnding";
         }
+        else if (currentScene.name == "QuinnDate1Part22")
+        {
+            nextSceneName = "Home2Quinn"; //Add home2 Quinn
+        }
         else if (currentScene.name == "DeadEnding")
         {
             nextSceneName = "Credits";
