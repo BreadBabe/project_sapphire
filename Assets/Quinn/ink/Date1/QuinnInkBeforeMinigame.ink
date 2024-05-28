@@ -11,451 +11,406 @@ Hey, I'm Quinn. I suppose you're my date?
     ~HappyResponse()
     Well, if you take a look around, there's only two people here... And it's us. Statistically, you most likely are.
       **[Shoot, you got me.]
-      That's what I thought, math never lies! It's nice to meet you! Have you ever been here before?
+      ~SmileResponse()
+      That's what I thought! Math never lies. It's nice to meet you! By the way, have you ever been to this bookstore before? It's one of my favorite places.
       ->BEENBEFORE()
-      **[Statistically, I also couldn't be.]
-      That's true. But I just saw our messages on your phone, so. It's nice to meet you! Have you ever been here before?
+      **[Well, technically I could still be someone else.]
+      ~AnnoyedResponse()
+      True, peaking on your phone where you have our messages open kind of gives it away, sorry.. Anyway, it's nice to meet you in person! Have you ever visited this bookstore before?
     ->BEENBEFORE()
-*[I suppose I am!]
+*[I suppose I am?]
     ~AnnoyedResponse()
-    You don't even know who you are? Well, that's slightly disappointing.
-    **[Well I guess I am then!]
-        ~SmileResponse()
-        Alright, if you say so... Have you been here before?
+    You don't even know who you are? Well, that's a bit disappointing.
+    **[Well, I guess I am then!]
+        ~HappyResponse()
+        Alright, if you say so... Have you been to this bookstore before, or is this your first time? 
         ->BEENBEFORE()
     **[Does anybody really know who they are?]
-        ~HappyResponse()
+        ~BlushResponse()
         I guess you have a point! But at your age, I kind if think you should have at least some stuff figured out... Anyway, have you ever been here before?
         ->BEENBEFORE()
 *[Um... Sure.]
     ~ConfusedResponse()
-    What do you even mean by that? That was a easy yes or no question.
+    What do you even mean by that? That was a simple yes or no question. Are you always this ambiguous?
     **[Sorry, I didn't mean it like that, nice to meet you.]
         ~NeutralResponse()
-         Well then. Welcome to my favorite place, the bookstore! I spend way more time here then I would ever admit. But now I somehow did..
-        ***[Thanks]
-            ~SmileResponse()
-            Have You been here before?
+         Well then, thanks for meeting me here! I spend more time here than I'd like to admit. But now I somehow did...
+        ***[I'm actually not that into books..]
+            ~AnnoyedResponse()
+            Well, I guess everyone can't be a bookworm.. So I guess you haven't been here before?
             ->BEENBEFORE()
-        ***[Okay, thanks?]
-            ~NeutralResponse()
-            Have you been here before?
+        ***[I read as much as possible when I have time!]
+            ~HappyResponse()
+            There's something magical about getting lost in a good book. Have you been here before? It's my favorite spot in town. The smell of books, the quiet corners... It's like a little sanctuary.
             ->BEENBEFORE()
     **[Nothing, nice to meet you]
         ~NeutralResponse()
-        Nice to meet you to! Welcome to my favorite place, the bookstore.
-        ***[Thanks]
-            I suppose that you're not here that often. Or have you been here before?
+        Nice to meet you too! This is my little sanctuary. I can spend hours browsing through the shelves.
+        ***[That sounds really calming.]
+         ~HappyResponse()
+          It is! There's something magical about getting lost in a good book. Have you been here before? It's my favorite spot in town. The smell of books, the quiet corners... It's like a little sanctuary.
             -> BEENBEFORE()
         ***[Is this really your favorite place?]
-            Yes and? I suppose that you're not here that often. Or have you been here before?
+         ~NeutralResponse()
+            It is. The smell of books, the quiet corners... It's like a little sanctuary. Have you ever been here before?
             -> BEENBEFORE()
 
 == BEENBEFORE ==
-*[Yes I have]
-  Really? Are you lying?
-    **[No?]
-        ~NeutralResponse()  
-        Well good for you! I have never seen you here before.
-        ***[Okay]
-            ~HappyResponse()
-                Can you help me find a book?
-                ****[Is that the only reason that we are here?]
-                        ->REASON()
-        ***[...]
-                Anyways...
-                ****[...]
-                        Can you help me find a book?
-                        *****[Is that the only reason that we are here?]
-                                ->REASON()
-                ****[Why are we at the bookstore?]
-                    I was hoping that you could help me find a book.
-                    *****[Is that the only reason that we are here?]
-                                ->REASON()
-    **[Maybe]
+*[Of course I have!]
+~NeutralResponse()
+ Why do I get the feeling that you're lying..?
+    **[I'm not!]
+        ~SmileResponse()  
+        Really? That’s great then! I must’ve missed you. Do you have a favorite section or genre in books?
+        ***[Fantasy, of course!]
         ~HappyResponse()
-            Haha you're funny!
-        ***[Thanks!]
-                Can you help me find a book?
-                ****[Is that the only reason that we are here?]
-                        ->REASON()
-        ***[I know]
-                ~HappyResponse()
-                Hahahahah
-                ****[So what are we doing at the bookstore?]
-                        ~NeutralResponse()
-                        I need help to find a book
-                        *****[Okay, is that the only reason why we are here?]
-                            ->REASON()
-                ****[How are you today?]
-                        ~ConfusedResponse()
-                        Great I am always happy at the bookstore
-                        *****[Nice, what are we doing here?]
-                                I need help to find a book!
-                            ******[Is that the only reason that we are here?]
-                                    ->REASON()
-                        *****[Great!]
-                                I need some help to find a book!
-                            ******[Is that the only reason that we are here?]
-                                    ->REASON()
-        ***[I guess.]
-            ~HappyResponse()
-            Okay?
-                ****[Anyways what are we doing here?]
-                        ~ContentResponse()
-                        I need help to find a book, actually.
-                        *****[Is that the only reason why we are here?]
-                            ~HappyResponse()
-                            -> REASON()
-                ****[You are also funny!]
-                        ~ContentResponse()
-                         Thanks! I was waiting for you to say that. I actually think so as well. Can you help me find a book?
-                         *****[Is that the only reason why we are here?]
-                            ~SmileResponse()
-                            -> REASON()
-    **[Yes I am]
+        Fantasy is amazing! The worlds, the characters, the endless possibilities… It’s like living multiple lives. I could talk about that for hours, but I actually invited you here to ask you if you could help me look for a specific book..
+             ****[So that's the reason we're here?]
+             ->REASON()
+             ****[As long as it's not about murderers...]
+             ->REASON()
+        ***[Educational books!]
+        ~BlushResponse()
+        Really? You don't strike me as the type, but I guess the world is full of surprises!
+             ****[That's rude!]
+             ~AnnoyedResponse()
+             I'm sorry, I'm better with plants than people.. Anyway, I kind of invited you here to ask if you could help me look for a specific book!
+                  *****[So that's the reason we're here?]
+                  ->REASON()
+                  *****[As long as it's not about murderers...]
+                   ->REASON()
+             ****[So, why did you invite me here?]
+             ~SmileResponse()
+             To show you my favourite place, of course?... Well, I'm lying. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+                 *****[So that's the reason we're here?]
+                 ->REASON()
+                 *****[As long as it's not about murderers...]
+                 ->REASON()
+        ***[I don't really have a favorite.]
+        ~AnnoyedResponse()
+        That's fine, I guess. But also kind of boring.
+             ****[That's rude!]
+             ~NeutralResponse()
+             I'm sorry, I'm better with plants than people.. Anyway, I kind of invited you here to ask if you could help me look for a specific book!
+                 *****[So that's the reason we're here?]
+                  ->REASON()
+                 *****[As long as it's not about murderers...]
+                   ->REASON()
+             ****[So, why did you invite me here?]
+             ~SmileResponse()
+              To show you my favourite place, of course?... Well, I'm lying. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+                  *****[So that's the reason we're here?]
+                      ->REASON()
+                  *****[As long as it's not about murderers...]
+                      ->REASON()
+        
+    **[Maybe..]
+    ~HappyResponse()
+    You're funny... I like that. But seriously, spill the beans, have you actually been here before, or are you just messing with me?
+        ***[Nope, never stepped foot in here.]
         ~NeutralResponse()
-        Okay thats weird.
-            ***[Sorry my bad]
-                    Right, can you maybe help me find a book?
-                ****[Is that the only reason why we are here?]
-                            ~SmileResponse()
-                            -> REASON()
-            ***[Anyways]
-                    ~SmileResponse()
-                    Can you help me find a book?
-                    *****[Is that the only reason why we are here?]
-                            -> REASON()
-*[No, I haven't]
-    Then welcome! This is the place were I am the most happy!
-    **[That is so nice!]
-        ~NeutralResponse()  
-        I am happy to introduce you to the bookstore! I really hope that you will like it here!
-        ***[I also hope so]
+           Ah, a newcomer! Welcome to our little sanctuary of literature and knowledge. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+              ****[So that's the reason we're here?]
+              ->REASON()
+              *****[As long as it's not about murderers...]
+              ->REASON()
+        ***[Yeah, I've been here a few times!]
+           ~HappyResponse()
+           Oh, a seasoned visitor, I see! Well, welcome back. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+               ->REASON()
+             *****[As long as it's not about murderers...]
+               ->REASON()
+               
+        ***[Maybe once, but it was ages ago.]
+         ~NeutralResponse()
+          Ah, a fuzzy memory kind of person, I can relate to that. No worries, we'll make some new memories today. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+               ->REASON()
+             *****[As long as it's not about murderers...]
+               ->REASON()
+               
+    **[Sorry, I totally am.]
+    ~NeutralResponse()
+      No need to apologize! Honestly, I find it kind of charming. So, spill the beans, have you actually been here before, or are you just pulling my leg?
+        ***[Nope, never stepped foot in here.]
+        ~NeutralResponse()
+           Ah, a newcomer! Welcome to our little sanctuary of literature and knowledge. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+              ****[So that's the reason we're here?]
+              ->REASON()
+              *****[As long as it's not about murderers...]
+              ->REASON()
+        ***[Yeah, I've been here a few times!]
+           ~HappyResponse()
+           Oh, a seasoned visitor, I see! Well, welcome back. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+               ->REASON()
+             *****[As long as it's not about murderers...]
+               ->REASON()
+                                    
+        ***[Maybe once, but it was ages ago.]
             ~HappyResponse()
-                Can you maybe help me find a book?
-                ****[Is that the only reason that we are here?]
-                        ->REASON()
-        ***[We will see]
-                Yees, I will try to make you like it here.
-                ****[Thanks!]
-                        Can you help me find a book?
-                        *****[Is that the only reason that we are here?]
-                                ->REASON()
-                ****[Why are we at the bookstore?]
-                    I was hoping that you could help me find a book.
-                    *****[Is that the only reason that we are here?]
-                                ->REASON()
-    **[Okay.. Kinda lame]
-        ~HappyResponse()
-            What do you mean by that? At least I am more educated than you!
-        ***[You don't know that]
-                Anyways...Can you help me find a book?
-                ****[Is that really the only reason that we are here?]
-                        ->REASON()
-        ***[Well, we will see about that..]
-                ~HappyResponse()
-                I guess you're right.
-                ****[So what are we doing at the bookstore?]
-                        ~NeutralResponse()
-                        I need help to find a book.
-                        *****[Okay, is that the only reason why we are here?]
-                            ->REASON()
-                ****[How are you today?]
-                        ~ConfusedResponse()
-                        Great, I am always happy at the bookstore!
-                        *****[Nice, what are we doing here?]
-                                I need help to find a book!
-                            ******[Is that the only reason that we are here?]
-                                    ->REASON()
-                        *****[Okay, good for you!]
-                                I need some help to find a book!
-                            ******[Is that the only reason that we are here?]
-                                    ->REASON()
+          Ah, a fuzzy memory kind of person, I can relate to that. No worries, we'll make some new memories today. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+               ->REASON()
+             *****[As long as it's not about murderers...]
+               ->REASON()
+
+*[No, I haven't.]
+~NeutralResponse()
+You haven't? Well, in that case, welcome to our little corner of bookish paradise! If that's something you're into.. So, do you have any favourite genre of books?
+      **[Fantasy, of course!]
+      ~HappyResponse()
+      Fantasy is amazing! The worlds, the characters, the endless possibilities… It’s like living multiple lives. I could talk about that for hours, but I actually invited you here to ask you if you could help me look for a specific book..
+         ***[So that's the reason we're here?]
+          ->REASON()
+         ***[As long as it's not about murderers...]
+         ->REASON()
+     **[Educational books!]
+     ~BlushResponse()
+     Really? You don't strike me as the type, but I guess the world is full of surprises!
+         ***[That's rude!]
+         ~NeutralResponse()
+         I'm sorry, I'm better with plants than people.. Anyway, I kind of invited you here to ask if you could help me look for a specific book!
+             ****[So that's the reason we're here?]
+             ->REASON()
+             ****[As long as it's not about murderers...]
+             ->REASON()
+         ***[So, why did you invite me here?]
+         ~SmileResponse()
+         To show you my favourite place, of course?... Well, I'm lying. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+             ->REASON()
+             ****[As long as it's not about murderers...]
+             ->REASON()
+      **[I don't really read that much.]
+      ~AnnoyedResponse()
+        That's fine, I guess. But also kind of boring.
+         ***[That's rude!]
+         ~NeutralResponse()
+         I'm sorry, I'm better with plants than people.. Anyway, I kind of invited you here to ask if you could help me look for a specific book!
+             ****[So that's the reason we're here?]
+             ->REASON()
+             ****[As long as it's not about murderers...]
+             ->REASON()
+         ***[So, why did you invite me here?]
+         ~HappyResponse()
+         To show you my favourite place, of course?... Well, I'm lying. I actually need help finding a specific book, and I thought it might be a cute first-date activity?
+             ****[So that's the reason we're here?]
+             ->REASON()
+             ****[As long as it's not about murderers...]
+             ->REASON()
 == REASON ==
-Kinda but I also wanted you to meet me here and so that we could get to know eachother.
-    ~SmileResponse()
-    *[Alright, I guess?]
-    I need a book about euphorbias.
+Maybe... That's probably pretty boring of me. I thought that it would be a fun way to get to know eachother, kind of like an escape room situation, but also not at all.
+~SmileResponse()
+*[Sounds fun!]
+~BlushResponse()
+  Right? I mean, who needs cliché dinner dates when you can embark on a botanical adventure? Plus, it's a great icebreaker! Anyway, I'm looking for a book about euphorbias.
     **[Isn't that plant toxic?]
         ~ContentResponse()
-        Maybe that's exactly why I need a book about it
-            ***[What did you say?]
-                ~HappyResponse()
-                Ehhhh.. It is only toxic if you consume it.
-                    ****[Okay good point]
-                        ~SmileResponse()
-                        Right! I have alot of plants at home so I need to know things like that.
-                        -> KNOWTHINGS()
-                    ****[Right]
-                        ~SmileResponse()
-                        Anyways, I have alot of plants at home.
-                            *****[Okay?]
-                                So that's why I need to know things like that.
-                                    ->KNOWTHINGS()
-            ***[Suspisious..]
-                ~SmileResponse()
-                Nothing weird going on, I just love plants so I need to know things like that.
+     Ah, the million-dollar question! Maybe that's why I'm looking for it...
+         ***[Wait, what?]
+          ~HappyResponse()
+          Euphorbias are only toxic if ingested, so no worries there. It's all about knowing the right facts when you're a plant enthusiast like me.
+              ****[Actually, good point.]
+              ~SmileResponse()
+              I've got a whole bunch of plants at home, and trust me, I've learned my fair share of quirky plant facts!
+              -> KNOWTHINGS()
+              ****[Still.. kind of concerning.]
+               ~MadResponse()
+              Concerning? Look, I've got this covered, alright? No need to question my expertise.
+              I've got a lot of plants at home, so I have to know these things.
+              ->KNOWTHINGS()
+
+         ***[Suspisious..]
+           ~MadResponse()
+           Suspisious? Look, I've got this covered, alright? No need to question my expertise. I've got a lot of plants at home, so I have to know these things.
                     ->KNOWTHINGS()
-    **[Euphorbia?]
-        ~ContentResponse()
-        Yes a plant that I have? Do you not know what a euphorbia are?
-            ***[No?]
-                ~HappyResponse()
-                Okay lame, I have alot of plants at home so maybe that's the reason I know things like that!
+     **[Euphorbias?]
+       ~ContentResponse()
+      Euphorbias are this fascinating group of plants that come in all shapes and sizes. It's like discovering a whole new world within the world of plants. Have you never heard of them before?
+            ***[It seems like you know a lot about plants]
+              ~HappyResponse()
+              I've spent countless hours studying and caring for my plant babies at home. It's amazing what you can learn when you're passionate about something, right?
                         -> KNOWTHINGS()
             ***[Suspisious...]
-                ~SmileResponse()
-                Nothing weird going on, I just love plants so I need to know things like that.
+             ~MadResponse()
+              Suspisious? Look, I've got this covered, alright? No need to question my expertise. I've got a lot of plants at home, so I have to know these things.
                     ->KNOWTHINGS()
-    *[Nice!]
-    But I still need a book tho!
-    **[Okay, what book?]
-        ~ContentResponse()
-        I am studying plants so right now I need a book about euphorbias!
-            ***[Isn't that book toxic for humans?]
-                ~HappyResponse()
-                Ehhhh.. It is only toxic if you consume it.
-                    ****[Okay, that is good to know]
-                        ~SmileResponse()
-                        Right! I have alot of plants at home so I need to know things like that.
+*[Sounds like a weird date activity to me..]
+~AnnoyedResponse()
+Weird? Seriously? Look, I thought this would be a fun way to get to know each other. Like, a little adventure, you know? But hey, if you're not into it, you can always bail. Otherwise, I'm looking for a book about euphorbias,
+    **[Isn't that plant toxic?]
+     ~ContentResponse()
+     Ah, the million-dollar question! Maybe that's why I'm looking for it...
+         ***[Wait, what?]
+          ~HappyResponse()
+          Euphorbias are only toxic if ingested, so no worries there. It's all about knowing the right facts when you're a plant enthusiast like me.
+              ****[Actually, good point.]
+              ~SmileResponse()
+              I've got a whole bunch of plants at home, and trust me, I've learned my fair share of quirky plant facts!
+              -> KNOWTHINGS()
+              ****[Still.. kind of concerning.]
+               ~AnnoyedResponse()
+              Concerning? Look, I've got this covered, alright? No need to question my expertise.
+              I've got a lot of plants at home, so I have to know these things.
+              ->KNOWTHINGS()
+
+         ***[Suspisious..]
+           ~SmileResponse()
+           Suspisious? Look, I've got this covered, alright? No need to question my expertise. I've got a lot of plants at home, so I have to know these things.
+           ->KNOWTHINGS()
+           
+     **[Euphorbias?]
+       ~ContentResponse()
+      Euphorbias are this fascinating group of plants that come in all shapes and sizes. It's like discovering a whole new world within the world of plants. Have you never heard of them before?
+            ***[It seems like you know a lot about plants]
+              ~HappyResponse()
+              I've spent countless hours studying and caring for my plant babies at home. It's amazing what you can learn when you're passionate about something, right?
                         -> KNOWTHINGS()
-                    ****[Right..]
-                        ~SmileResponse()
-                        Anyways, I have alot of plants at home.
-                            *****[Okay?]
-                                So that's why I need to know things like that.
-                                    ->KNOWTHINGS()
-            ***[Euphorbia? Is that a plant?]
-                ~SmileResponse()
-                Yes or maybe more like a collection of many plants. But I see my plant as only a euphorbia!
-                    ****[It seems like you know alot about plants]
-                        ~SmileResponse()
-                        Yes! I have alot of plants at home so I need to know things like that.
-                        -> KNOWTHINGS()
-                    ****[Okay!]
-                        ~SmileResponse()
-                        Anyways, I have alot of plants at home. So that's why I know things like that.
-                                    ->KNOWTHINGS()
-    **[Okay, sounds fun!]
-        ~ContentResponse()
-        I am studying plants so right now I need a book about euphorbias!
-            ***[Isn't that book toxic for humans?]
-                ~HappyResponse()
-                Ehhhh.. It is only toxic if you consume it.
-                    ****[Okay, that is good to know]
-                        ~SmileResponse()
-                        Right! I have alot of plants at home so I need to know things like that.
-                        -> KNOWTHINGS()
-                    ****[Right]
-                        ~SmileResponse()
-                        Anyways, I have alot of plants at home.
-                            *****[Okay?]
-                                So that's why I need to know things like that.
-                                    ->KNOWTHINGS()
-                            *****[Nice]
-                                So that's why I need to know things like that.
-                                    ->KNOWTHINGS()
-            ***[Euphorbia? Is that a plant?]
-                ~SmileResponse()
-                Yes or maybe more like a collection of many plants. But I see my plant as only a euphorbia!
-                    ****[It seems like you know alot about plants]
-                        ~SmileResponse()
-                        Yes! I have alot of plants at home so I need to know things like that.
-                        -> KNOWTHINGS()
-                    ****[Okay!]
-                        ~SmileResponse()
-                        Anyways, I have alot of plants at home. So that's why I know things like that.
-                                    ->KNOWTHINGS()
+            ***[Suspisious...]
+             ~MadResponse()
+              Suspisious? Look, I've got this covered, alright? No need to question my expertise. I've got a lot of plants at home, so I have to know these things.
+                    ->KNOWTHINGS()
 == KNOWTHINGS ==
-    *[Good point]
-        Do you like plants?
-        **[I don't know, a little maybe]
-            ~HappyResponse()
-            Nice, I will make you love plants more. Just wait.
-                ***[Hahahah, how many plants do you have?]
-                    ~ContentResponse()
-                    Many but I need many more.
-                        ****[Hahahah okay]
-                            ~SmileResponse()
-                            heh.
-                            *****[Well]
-                                -> STUNGBYBEE()
-                        ****[Right]
-                            ->STUNGBYBEE()
-                ***[Okay?]
-                    ->STUNGBYBEE()
-        **[Yes alot]
-            Hope you don't copy all of my interests
-                ***[You don't have to worry about that]
-                        ->STUNGBYBEE()
-                ***[We will see about that haha]
-                    ->STUNGBYBEE()
-    *[Okay]
-        Do you like plants?
-        **[I don't know, a little maybe..]
-            ~HappyResponse()
-            Nice, I will make you love plants more. Just wait.
-                ***[How many plants do you have?]
-                    ~ContentResponse()
-                    Many but I need many more.
-                        ****[Alright!]
-                            ~SmileResponse()
-                            Heh.
-                            *****[Well]
-                                -> STUNGBYBEE()
-                        ****[Right?]
-                            ->STUNGBYBEE()
-                ***[Okay?]
-                    ->STUNGBYBEE()
-        **[Yes alot]
-            Hope you don't copy all of my interests
-                ***[You don't have to worry about that]
-                        ->STUNGBYBEE()
-                ***[We will see about that haha]
-                    ->STUNGBYBEE()
-== STUNGBYBEE ==
-OMG have I told you that I got stung by a bee yesterday?
-*[No, ouch]
-    ~SmileResponse()
-    Yes it really hurt and it had been itching all night. Weird conversation but I guess I had to say it.
-    **[Hope it doesn't itch too much tonight]
-        ~NeutralResponse()
-        I also hope so, I didn't get much sleep last night so it would have been nice to make up some hours..
-        ***[I understand that]
-                    ->LIKEBEES()
-        ***[Right]
-                    ->LIKEBEES()
-    **[Love the conversation]
-        ~HappyResponse()
-        That is kinda strange that you like the conversation but I am here for it.
-        ***[Well I like strange.]
-                    ->LIKEBEES()
-*[I really hate bees]
-    ~AnnoyedResponse()
-    I like them, they are good for plants, but it is kinda annoying to get stung.
-    **[Does it itch?]
-        ~NeutralResponse()
-        Yes I didn't get much sleep last night because of the itching.
-        ***[I understand that..]
-                    ->FURTHER()
-        ***[Right..]
-                    ->FURTHER()
-    **[How are they good for plants?]
-        ~SmileResponse()
-        Bees plays a crucial role in spreading pollen.
-        ***[Aha!]
-                    ->FURTHER()
-        ***[Lame]
-                    ->FURTHER()
-== LIKEBEES ==
-Do you like bees?
-*[Yes, actually!]
-    ~HappyResponse()
-    Me too!! They are good for plants and the nature!
-    **[Why?]
-        Bees plays a crucial role in spreading pollen.
-        ***[I actually didn't now that!]
-                    ->WEIRD()
-        ***[That's so nice!]
-                    ->WEIRD()
-    **[Yes, that's why I like them!]
-        Not many people know that. They just kill the bees when they see them, they deserve to live!
-        ***[We should change that]
-                    ->WEIRD()
-        ***[I would still kill them if I see them tho]
-                    ->WEIRD()
-*[Sometimes..]
-    ~NeutralResponse()
-    Why only sometimes? You do know that they are good for the plants and nature?
-    **[Yes I know]
-        So why don't you like them all the time?
-        ***[They still scare me either way.]
-                    ->WEIRD()
-        ***[Don't know, I will think about that]
-                    ->WEIRD()
-    **[Why are they good?]
-        ~HappyResponse()
-        Bees play a crucial role in spreading pollen.
-        ***[Ahaa nice!]
-                    ->WEIRD()
-        ***[Kinda lame, but okay.]
-                    ->WEIRD()
-*[Not at all]
-    ~AnnoyedResponse()
-    Come on! Can't you think about something that is nice about them? They are cute and good for the plants.
-    **[It dosen't change my opinion]
-        Well okay, but you may think about it. They plays a crucial role in spreading pollen.
-        ***[Yes, I know, but still]
-                    ->WEIRD()
-        ***[Okay, I will think about it.]
-                    ->WEIRD()
-    **[How are they good for plants?]
-        ~HappyResponse()
-        Bees plays a crucial role in spreading pollen. So think about it, they are not that bad as they seem.
-        ***[I will think about it]
-                    ->WEIRD()
-        ***[It doesn't change my opinion tho]
-                    ->WEIRD()
-== FURTHER ==
-Why don't you like bees?
-*[They scare me]
-    ~NeutralResponse()
-    Okay, I understand that! They can be a little too aggresive sometimes. 
-    **[Yes, exactly]
-        But most of them are actually very friendly! So if you are friendly back then they will be nice.
-        ***[...They still scare me]
-                    ->WEIRD
-        ***[I will try that next time]
-                    ->WEIRD
-    **[And they will sting me]
-        ~HappyResponse()
-        Not if you are friendly to them. If you are nice to them they will be nice back. 
-        ***[Right, sure]
-                    ->WEIRD
-        ***[True]
-                    ->WEIRD
-*[I don't know they are just too much for me]
-    ~SmileResponse()
-    Haha okay! I can get that!
-                    ->WEIRD
-== WEIRD ==
-Shall we maybe try to start to find the book?
+*[How do you know so much about plants?]
+~charEmotion="Smile"
+I'm studying biology. I know, kind of nerdy. But I've always enjoyed being outside, being alone with plants and animals. Don't you?
+     **[I don't know, a little maybe.]
+     ~AnnoyedResponse()
+     Well, I'll make you love it. I hope. You know, liking animals and plants is a green flag, right? And I do have way too many plants.. Anyway, should we start looking for the book?
+         ***[Wait, how many plants do you have?]
+         ~BlushResponse()
+         A lot. Let's just say, many. But I totally need more, helps me relax, you know?
+             ****[Yeah, I get that. Plants are calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+              ****[I'd probably kill them all if I tried.]
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+                     
+         ***[I suppose so, we'll see.]
+         ~AnnoyedResponse()
+         Hey, I'll take that as a compliment! Just wait and see, you might find yourself becoming a plant nerd before you know it.
+             ****[Maybe, plants are kind of calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+             ****[I'd probably kill them all if I tried.]
+             ~AnnoyedResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+     **[Of course I do!]
+     ~HappyResponse()
+     That's what I'm talking about. It's like a natural remedy for stress. Nothing beats a quiet walk in the woods or a stroll through a garden. Or just showering your plants.
+         ***[Wait, how many plants do you have?]
+         ~ContentResponse()
+         A lot. Let's just say, many. But I totally need more, helps me relax, you know?
+             ****[Yeah, I get that. Plants are calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+              ****[I'd probably kill them all if I tried.]
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+         ***[Sounds kind of boring to me..]
+         ~NeutralResponse()
+         You know what, I'll take that as a compliment! Boring is underrated. Just wait and see, you might find yourself becoming a plant nerd before you know it.
+             ****[Maybe, plants are kind of calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+             ****[I'd probably kill them all if I tried.]
+             ~AnnoyedResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+              
+*[Why do you even care that much about plants?]
+~charEmotion="Smile"
+I'm studying biology. I know, kind of nerdy. But I've always enjoyed being outside, being alone with plants and animals. Don't you?
+     **[I don't know, a little maybe.]
+     ~AnnoyedResponse()
+     Well, I'll make you love it. I hope. You know, liking animals and plants is a green flag, right? And I do have way too many plants.. 
+         ***[Wait, how many plants do you have?]
+         ~ContentResponse()
+         A lot. Let's just say, many. But I totally need more, helps me relax, you know?
+             ****[Yeah, I get that. Plants are calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+              ****[I'd probably kill them all if I tried.]
+              ~MadResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+                     
+         ***[I suppose so, we'll see.]
+         ~ContentResponse()
+         Hey, I'll take that as a compliment! Just wait and see, you might find yourself becoming a plant nerd before you know it.
+             ****[Maybe, plants are kind of calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+             ****[I'd probably kill them all if I tried.]
+             ~AnnoyedResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+     **[Of course I do!]
+     ~HappyResponse()
+     That's what I'm talking about. It's like a natural remedy for stress. Nothing beats a quiet walk in the woods or a stroll through a garden. Or just showering your plants.
+         ***[Wait, how many plants do you have?]
+         ~BlushResponse()
+         A lot. Let's just say, many. But I totally need more, helps me relax, you know?
+             ****[Yeah, I get that. Plants are calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+              ****[I'd probably kill them all if I tried.]
+              ~AnnoyedResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment.. Anyway, should we start looking for the book?
+              ->BOOK
+         ***[Sounds kind of boring to me..]
+         ~NeutralResponse()
+         You know what, I'll take that as a compliment! Boring is underrated. Just wait and see, you might find yourself becoming a plant nerd before you know it.
+             ****[Maybe, plants are kind of calming.]
+              ~SmileResponse()
+              Exactly! Finally, someone who gets it. There's just this peaceful vibe they bring to any space. Anyway, should we start looking for the book?
+              ->BOOK
+             ****[I'd probably kill them all if I tried.]
+             ~AnnoyedResponse()
+              Ha, fair enough! But hey, fake plants are a thing too, you know? No shame in that game. Except that plastic is bad for the enviournment... Anyway, should we start looking for the book?
+              ->BOOK
+== BOOK ==
 *[...Sure]
-    ~AnnoyedResponse()
-    If you don't like it here then you can leave. You don't have to look for my book if you don't want to.
-    **[Mhm..]
-        I can look for the book myself
-        ***[I will help you don't worry]
-                    ->END
-    **[No, sorry]
-        ~SmileResponse()
-        Okay then, you wanna help me?
-        ***[Yes I will help you don't worry]
-                    ->END
-    **[Okay!]
-        ~SmileResponse()
-        You're kidding right?
-        ***[Yes, of course. I will help you find the book.]
-        ->END
-*[Sure!]
-    ~SmileResponse()
-    Thank you for helping me! It is really nice of you. 
-    **[No problem]
-                    ->END
-    **[It will be fun]
-        ~HappyResponse()
-        Yes time to start!
-        ***[Alright!]
-                    ->END
+~MadResponse()
+Well, If you don't like it here then you can leave. You don't have to look for my book if you don't want to. I can look for the book by myself, you know.
+    **[I guess I'll help you. Reluctantly.]
+    ~ConfusedResponse()
+     Great, I guess... So, let's get started. I'll meet you back here if you find it!
+     ->END
+    **[I'm sorry, let's do this!]
+     ~SmileResponse()
+     Thank you for helping me! I really appreciate it. And hey, you might even learn something! I'll meet you back here if you find it!
+      ->END
+*[Let's do it!]
+~BlushResponse()
+Thank you for helping me! I really appreciate it. And hey, you might even learn something!
+    **[Let's do it!]
+     I'll meet you back here if you find it!
+     ->END
+    **[I guess I'll help you. Reluctantly.]
+     Great, I guess... So, let's get started. I'll meet you back here if you find it!
+     ->END
 
 === function HappyResponse ===
         ~ charEmotion = "Happy"
         ~ charSound=""
+        ~loveAmount++
         
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
+        ~loveAmount--
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
@@ -464,18 +419,22 @@ Shall we maybe try to start to find the book?
 === function MadResponse ====
         ~charEmotion="Mad"
         ~charSound=""
+        ~loveAmount--
         
 === function AnnoyedResponse ====
         ~charEmotion="Annoyed"
         ~charSound=""
+        ~loveAmount--
         
 === function ContentResponse ====
         ~charEmotion="Content"
         ~charSound=""
+        ~loveAmount++
         
 === function SmileResponse ====
         ~charEmotion="Smile"
         ~charSound=""
+        ~loveAmount++
         
 === function ConfusedResponse ====
         ~charEmotion="Confused"
@@ -484,8 +443,7 @@ Shall we maybe try to start to find the book?
 === function BlushResponse ====
         ~charEmotion="Blush"
         ~charSound=""
+        ~loveAmount++
         
-=== function NoNoah ====
-    ~charEmotion="Empty"
-    ~charSound=""    
+
 

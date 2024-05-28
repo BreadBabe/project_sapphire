@@ -3023,7 +3023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 373212629}
-  typingSpeed: 50
+  typingSpeed: 30
   inkJSONAsset: {fileID: 4900000, guid: 0359eb0bd48ef2a42be6e545d0f51a79, type: 3}
   dialoguebox: {fileID: 1150907984}
   choicebox: {fileID: 1357987151}
