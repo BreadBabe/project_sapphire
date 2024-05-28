@@ -389,7 +389,7 @@ Oh okay… Thanks! I still miss him to this day…
 === function SadResponse ===
         ~ charEmotion = "Sad"
         ~ charSound=""
-        ~ loveAmount = loveAmount - 3
+        //~ loveAmount = loveAmount - 3
         
 === function NeutralResponse===
         ~ charEmotion="Neutral"
