@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6779,12 +6779,12 @@ MonoBehaviour:
   posterButton: {fileID: 2043893365}
   goToSleepButton: {fileID: 947074220}
   closeUpImageObject: {fileID: 1572706914}
-  newspaper: {fileID: 21300000, guid: d0359f806f6ce6d418c5f72f5a9f5d76, type: 3}
+  newspaper: {fileID: 21300000, guid: fe491da5931203248afd64351b9b8187, type: 3}
   bedroom: {fileID: 21300000, guid: 4cac0826d18c544daa2611f427d51044, type: 3}
   kitchen: {fileID: 21300000, guid: b5887607509e46649afb4935b3439867, type: 3}
-  dogToy: {fileID: 21300000, guid: f34cbb607e5a34414b768f6fdf90cd54, type: 3}
-  coffeCup: {fileID: 21300000, guid: bec1a52086fdf574eb4da74b51e44cd8, type: 3}
-  Picture: {fileID: 21300000, guid: ac43d6ed2f7882247ad517c7f42240df, type: 3}
+  dogToy: {fileID: 21300000, guid: 9f69ac34bad1cad449ac1d035b09641a, type: 3}
+  coffeCup: {fileID: 21300000, guid: 18c3a125b46ba87459dc0f5b92699a19, type: 3}
+  Picture: {fileID: 21300000, guid: 62e8c156077de8442bb6dbda1a7b2d56, type: 3}
   poster: {fileID: 21300000, guid: 2fba6954ef732564280713ef370b5799, type: 3}
   nextDayScene: {fileID: 1945880395}
   BackButton: {fileID: 1956261952}
