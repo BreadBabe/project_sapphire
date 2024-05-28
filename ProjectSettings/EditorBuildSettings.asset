@@ -89,4 +89,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Home/Home2Luna.unity
     guid: dbd7f8158780ea540b0652c37f48d368
+  - enabled: 1
+    path: Assets/Quinn/Date2/QuinnMurder.unity
+    guid: 59c6cf8e1f3444bfcb772ca5bdd5a2a1
+  - enabled: 1
+    path: Assets/Quinn/Date2/QuinnDate2.unity
+    guid: c76ba1ddda0367c4ab09fa74d9f9d036
+  - enabled: 1
+    path: Assets/Quinn/Date2/MiniGameQuinn.unity
+    guid: c7c2b5a199a81a046b8f88e90c6ae449
   m_configObjects: {}
