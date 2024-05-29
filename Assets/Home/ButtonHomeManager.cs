@@ -138,7 +138,7 @@ public class ButtonHomeManager : MonoBehaviour
         switch (phoneUIManager.datingAppState)
         {
             case PhoneUIManager.DatingAppStates.Quinn:
-                nextSceneName = "Date1Quinn";
+                nextSceneName = "QuinnDate1";
                 break;
             case PhoneUIManager.DatingAppStates.Luna:
                 nextSceneName = "LunaDate1";
