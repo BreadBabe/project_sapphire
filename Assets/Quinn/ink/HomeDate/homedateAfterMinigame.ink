@@ -20,13 +20,13 @@ Sorry, that took a bit longer than expected. I hope you found some way to entert
    Did you pet Basil? 
   *[Basil?]
      Ah, yeah I forgot to tell you, Basil is the name of my dog. The little cutie over there in her dogbed. 
-     **[Aw, so that's her name]
-          ~HappyResponse()
+     **[Aw, that's her name!]
+            ~HappyResponse()
             I know it's not the most usual, but it was the first plant I got when I moved here, so it has a special place in my heart, just like her. 
-            ***[That's a weird story]
+            ***[That's a wierd story]
                 ~NeutralResponse()
                 I guess it can be viewed as such. Since you say you didn't look around that much, would you like me to give you a brief tour of some of the things I have?
-                ****[Yeah, That would be nice]
+                ****[Yeah, that would be nice]
                      ~HappyResponse()
                       What would you like to know more about? ->Items
                 ****[Not really]
@@ -35,7 +35,7 @@ Sorry, that took a bit longer than expected. I hope you found some way to entert
             ***[That's really sweet]
                 ~SmileResponse() 
                 I'm glad you think so, Since you say you didn't look around that much, would you like me to give you a brief tour of some of the things I have?
-                 ****[Yeah, That would be nice]
+                ****[Yeah, That would be nice]
                      ~HappyResponse()
                       What would you like to know more about? ->Items
                 ****[Not really]
@@ -44,10 +44,10 @@ Sorry, that took a bit longer than expected. I hope you found some way to entert
      **[What kind of name is Basil..?]
          ~SmileResponse() 
          I know it's not the most usual, but it was the first plant I got when I moved here, so it has a special place in my heart, just like her. 
-          ***[Oh, Did you move recently]  
+          ***[Oh, Did you move recently]
               ~HappyResponse() 
               I did actually. Oh, since you say you didn't look around that much, would you like me to give you a brief tour of some of the things I have?
-                   ****[Yeah, That would be nice]
+                   ****[Yeah, that would be nice]
                      ~HappyResponse()
                       What would you like to know more about? ->Items
                 ****[Not really]
