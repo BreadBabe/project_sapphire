@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/Main Menu/Main Menu.unity
+    guid: b56e16a5fe20c5a4fa8cf9598bd92b8d
   - enabled: 0
     path: Assets/Scenes/DialogueScreen2.unity
     guid: 99c9720ab356a0642a771bea13969a05
@@ -49,7 +52,7 @@ EditorBuildSettings:
     guid: c2210a4ee575b2d4599045cc8bee5eff
   - enabled: 1
     path: Assets/Quinn/Date1/QuinnDate1Part2.unity
-    guid: fb4c3f8f4b7a54f42811bb340e59fe90
+    guid: 8310ca0ca0b3ad4499d49e3679adaabe
   - enabled: 1
     path: Assets/Quinn/Date1/QuinnDate1Part2.unity
     guid: 8310ca0ca0b3ad4499d49e3679adaabe
@@ -61,7 +64,7 @@ EditorBuildSettings:
     guid: 189583ae0a93bdf4183ab952885c57f9
   - enabled: 1
     path: Assets/Home/Home2Noah.unity
-    guid: 230ceb4de0495e34ab9a10cf9426b834
+    guid: 0e310d124fe604d26a0dc23c34f9e724
   - enabled: 1
     path: Assets/Hospital/DeadEnding/DeadEnding.unity
     guid: 2d7cfd36f184943a39091b8d5569b7c0
