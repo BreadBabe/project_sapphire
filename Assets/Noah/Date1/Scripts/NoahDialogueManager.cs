@@ -70,11 +70,6 @@ public class NoahDialogueManager : MonoBehaviour
         
     }
 
-    //void Awake() Legacy Start
-    //{
-    //    RemoveChildren();
-    //    StartStory();
-    //}
 
     void StartStory()
     {
@@ -113,20 +108,22 @@ public class NoahDialogueManager : MonoBehaviour
         storyText = Instantiate(textPrefab) as Text;
         storyText.text = ""; // Start with empty text
         storyText.transform.SetParent(dialoguebox.transform, false);
-
-
+        
+        // get variables from the ink dialogue script for dynamic sprite etc grabbing
         charEmotion = (string)story.variablesState["charEmotion"];
 
+        // fetch correct sprite for character from resources
         Sprite spr = Resources.Load($"{charName}{charEmotion}", typeof(Sprite)) as Sprite;
         Character.GetComponent<Image>().sprite = spr;
 
+        // fetch appropriate sound clip from resources from resources
         charSound = (string)story.variablesState["charSound"];
         AudioClip soundEffect = Resources.Load($"{charName}{charSound}", typeof(AudioClip)) as AudioClip;
         Audio.GetComponent<AudioSource>().clip = soundEffect;
         Audio.GetComponent<AudioSource>().Play();
 
+        // update script variable
         loveAmount = (int)story.variablesState["loveAmount"];
-        //lovemeterShutter.transform.localScale = new Vector3(1 - (loveAmount / 10), 1, 1);
 
         StartCoroutine(TypeText(text)); // Start typing effect
     }
@@ -194,6 +191,7 @@ public class NoahDialogueManager : MonoBehaviour
         {
             if (story.currentChoices.Count > 0)
             {
+                // when choices are avilable, create them
                 for (int i = 0; i < story.currentChoices.Count; i++)
                 {
                     Choice choice = story.currentChoices[i];
@@ -208,16 +206,17 @@ public class NoahDialogueManager : MonoBehaviour
                 PlayerPrefs.SetInt("love", newLove);
 
 
-                StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
+                StartCoroutine(LoadNextSceneAfterDelay(2f)); //load scene after a delay of 2 seconds
                 
             }
 
+            // if else snake for switching between scenes
             IEnumerator LoadNextSceneAfterDelay(float delay)
             {
                 yield return new WaitForSeconds(delay);
                 Scene currentScene = SceneManager.GetActiveScene();
                
-                if (currentScene.name == "Date1Noah") // Adjust the scene name as needed
+                if (currentScene.name == "Date1Noah") //adjust the scene name to yours
                 {
                     SceneManager.LoadScene("DrinkPickGame"); 
                 }
@@ -259,7 +258,7 @@ public class NoahDialogueManager : MonoBehaviour
                 {
                     SceneManager.LoadScene("DeadEnding");
                 }
-                // Add more conditions for other scenes if needed
+                //add more conditions for other scenes when necesarry
             }
 
         }
