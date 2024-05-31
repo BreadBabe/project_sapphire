@@ -2715,7 +2715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingAudioSource: {fileID: 783354944}
   typingSpeed: 30
-  inkJSONAsset: {fileID: 4900000, guid: 6e5e6f9b21cbf4c2184c6b1c86cf8bd4, type: 3}
+  inkJSONAsset: {fileID: 4900000, guid: 6b72ca8f307f04a738638e867f8ee373, type: 3}
   dialoguebox: {fileID: 1940692181}
   choicebox: {fileID: 1044220001}
   textPrefab: {fileID: 11456674, guid: e29963836c2c541ffbd58777de03ea4c, type: 3}

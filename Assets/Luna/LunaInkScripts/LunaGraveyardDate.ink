@@ -1,5 +1,4 @@
 VAR charName="Luna"
-
 VAR charEmotion="Indifferent"
 VAR loveAmount=0
 
@@ -172,9 +171,7 @@ Hey! Why are you wandering around here all by yourself?
              Wait...? Are those your arms? Oh. Thought you had attached the arms of one of the skeletons. Anyway, pick one of the three graves and I'll meet you back here when you're done!
              ***[Sounds like a plan!]
              ->END
-
-
--->END
+             
     
 ===function PissedResponse===
 ~charEmotion="Pissed"

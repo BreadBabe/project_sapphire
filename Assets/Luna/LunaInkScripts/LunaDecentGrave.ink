@@ -1,5 +1,4 @@
 VAR charName="Luna"
-
 VAR charEmotion="Smile"
 VAR loveAmount=0
 

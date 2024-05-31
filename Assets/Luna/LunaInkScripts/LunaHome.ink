@@ -4,8 +4,6 @@ VAR charEmotion="Indifferent"
 VAR loveAmount=0
 
 Jeez, sorry. My cat totally freaked out when you rang the doorbell. I should probably take that shit down.
-*[Straight to end]
-      ->END
 *[Oops!]
      ~charEmotion= "Neutral"
      It's fine, he can be a bit of a drama queen. Wondering where he got that? I'm happy you made it here and weren't swepped away in the rain! It's really been pouring all day. I love it.
