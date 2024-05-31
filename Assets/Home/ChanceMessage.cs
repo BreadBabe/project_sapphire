@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class chanceMessage : MonoBehaviour
 {
 
-
+    // class that handles the sating state enum and its logic
     [SerializeField] PhoneUIManager phoneUIman;
     [SerializeField] Button myButton;
 

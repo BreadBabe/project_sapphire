@@ -10,6 +10,7 @@ using UnityEngine.Windows.Speech;
 
 public class ButtonHomeManager : MonoBehaviour
 {
+    // All objects that need to be initialized in the unity inspector
     [SerializeField] GameObject newspaperButton;
     [SerializeField] GameObject bedroomButton;
     [SerializeField] GameObject kitchenButton;
@@ -17,24 +18,19 @@ public class ButtonHomeManager : MonoBehaviour
     [SerializeField] GameObject CoffeCupButton;
     [SerializeField] GameObject PictureButton;
     [SerializeField] GameObject posterButton;
-
     [SerializeField] GameObject goToSleepButton;
-
     [SerializeField] GameObject closeUpImageObject;
-
     [SerializeField] Sprite newspaper,bedroom,kitchen,dogToy,coffeCup,Picture,poster;
-
     [SerializeField] GameObject nextDayScene;
-
-
     [SerializeField] GameObject BackButton;
     [SerializeField] GameObject background;
     Image closeUpImage;
 
-
+    // An enum that stores and changes what close up image should be displayed
     public enum CloseUpImage{ newsPaper,Bedroom, Kitchen, dogToy, Coffe, Picture, poster }
     public CloseUpImage image;
 
+    // An instance for the phoneUI manager is needed as we use information from it
     [SerializeField] PhoneUIManager phoneUIManager = new PhoneUIManager();
 
     // Start is called before the first frame update
@@ -42,6 +38,7 @@ public class ButtonHomeManager : MonoBehaviour
     {
         closeUpImage = closeUpImageObject.GetComponent<Image>();
 
+        //Setting everything to false in the begining to avoid errors
         newspaperButton.SetActive(false);
         bedroomButton.SetActive(false);
         kitchenButton.SetActive(false);           
@@ -52,12 +49,11 @@ public class ButtonHomeManager : MonoBehaviour
         closeUpImageObject.SetActive(false);
         goToSleepButton.SetActive(false);
 
-
-
         BackButton.SetActive(false);
         background.SetActive(false);
     }
 
+    //Mwthods for when a certain item get interacted with
     public void newsPaperClick()
     {
         image = CloseUpImage.newsPaper;
@@ -87,7 +83,6 @@ public class ButtonHomeManager : MonoBehaviour
         image = CloseUpImage.Picture;
         Information();
     }
-
     public void posterClick()
     {
         image = CloseUpImage.poster;
@@ -101,6 +96,7 @@ public class ButtonHomeManager : MonoBehaviour
         Information();
     }
 
+    //closes the menu for the close up image
     public void BackButtonPressed()
     {
         background.SetActive(false);
@@ -110,6 +106,7 @@ public class ButtonHomeManager : MonoBehaviour
         nextDayScene.SetActive(false);
     }
 
+// End the current scene and sends the player to the next scene, the next date
     public void GoToSleepSelected()
     {
         closeUpImageObject.SetActive(false);
@@ -129,7 +126,7 @@ public class ButtonHomeManager : MonoBehaviour
             StartCoroutine(LoadNextSceneAfterDelay(2f)); // Load scene index 1 after a delay of 2 seconds
         }
     }
-
+    // the method that loads the next scenen
     IEnumerator LoadNextSceneAfterDelay(float  delay) 
     {
         yield return new WaitForSeconds(delay);
@@ -157,6 +154,7 @@ public class ButtonHomeManager : MonoBehaviour
         }
     }
 
+    //This is the cases that decide which close up image gets displayed
     public void Information()
     {
         background.SetActive(true);

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PhoneUIManHome2 : MonoBehaviour
 
-{
+{// this class functions in the exact same way as the PhoneUI manager, with a few exections and sections removed for easier use 
     PhoneUIManager phoneUI;
     [SerializeField] GameObject PhoneIcon;
     [SerializeField] GameObject PhoneUI;
