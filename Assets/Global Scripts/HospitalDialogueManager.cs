@@ -313,7 +313,22 @@ public class HospitalDialogueManager : MonoBehaviour
         {
             nextSceneName = "Credits";
         }
-
+        else if (currentScene.name == "QuinnBadEnding")
+        {
+            nextSceneName = "Credits";
+        }
+        else if (currentScene.name == "LunaBadEnding")
+        {
+            nextSceneName = "Credits";
+        }
+        else if (currentScene.name == "QuinnGoodEnding")
+        {
+            nextSceneName = "Credits";
+        }
+        else if (currentScene.name == "LunaGoodEnding")
+        {
+            nextSceneName = "Credits";
+        }
         // Load the next scene
         if (!string.IsNullOrEmpty(nextSceneName))
         {

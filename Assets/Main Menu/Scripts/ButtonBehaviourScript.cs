@@ -18,7 +18,9 @@ public class ButtonBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // reset playerprefs stored in registry
         PlayerPrefs.DeleteAll();
+
         sceneChanger = new SceneChanger();
         startbutton.GetComponent<Button>().onClick.AddListener(OnClick);
         
@@ -27,7 +29,9 @@ public class ButtonBehaviourScript : MonoBehaviour
     private IEnumerator SleepDestroy()
     {
         yield return new WaitForSeconds(0.30f);
+
         //Debug.Log("Destroy");
+        // destroy start button/logo
         Destroy(startbutton);
         yield return null;
     }
@@ -38,8 +42,8 @@ public class ButtonBehaviourScript : MonoBehaviour
         sceneChanger.ChangeScreen(sceneToLoad);
     }
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         
     }

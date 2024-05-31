@@ -26,6 +26,7 @@ public class NoahDoor : MonoBehaviour
     {
         transform.GetComponent<AudioSource>().Play();
 
+        // if not knocked before, start scene switch coroutine
         if (!knockedOnce)
         {
             knockedOnce = true;
